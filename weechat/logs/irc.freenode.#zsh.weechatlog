@@ -1,0 +1,1745 @@
+2016-01-06 00:51:19	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-06 00:51:19	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-06 00:51:19	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-06 00:51:19	ℹ	Channel #zsh: 413 nicks (0 ops, 0 voices, 413 normals)
+2016-01-06 00:51:19	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-06 00:51:19	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-06 00:51:37	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-06 00:52:21	▶	italoacasas (~italoacas@221.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-06 00:52:24	◀	jaagr (~jaagr@h29n6-vrr-a31.ias.bredband.telia.com) has quit (Quit: Laters.)
+2016-01-06 00:53:37	sputnick	<danielsh> sputnick, didn't seotpt extendedglob
+2016-01-06 00:53:40	sputnick	why not ?
+2016-01-06 00:54:22	▶	jaagr (~jaagr@h29n6-vrr-a31.ias.bredband.telia.com) has joined #zsh
+2016-01-06 00:54:42	◀	italoacasas (~italoacas@221.sub-166-241-20.myvzw.com) has quit (Max SendQ exceeded)
+2016-01-06 00:56:26	▶	italoacasas (~italoacas@221.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-06 00:57:18	◀	axc1298 (~axc1298@unaffiliated/axc1298) has quit (Quit: Leaving)
+2016-01-06 01:01:38	ℹ	irc: disconnected from server
+2016-01-06 01:02:49	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-06 01:02:49	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-06 01:02:49	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-06 01:02:49	ℹ	Channel #zsh: 412 nicks (0 ops, 0 voices, 412 normals)
+2016-01-06 01:02:49	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-06 01:02:49	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-06 01:03:10	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-06 01:03:40	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-06 01:05:11	▶	cdown (~cdown@dab-crx1-h-22-7.dab.02.net) has joined #zsh
+2016-01-06 01:09:20	◀	colinbits (~colinbits@104.192.139.250) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-01-06 01:11:06	◀	jaagr (~jaagr@h29n6-vrr-a31.ias.bredband.telia.com) has quit (Quit: Laters.)
+2016-01-06 01:12:37	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Ping timeout: 256 seconds)
+2016-01-06 01:14:48	◀	cdown (~cdown@dab-crx1-h-22-7.dab.02.net) has quit (Remote host closed the connection)
+2016-01-06 01:17:15	▶	cdown (~cdown@dab-crx1-h-22-1.dab.02.net) has joined #zsh
+2016-01-06 01:17:49	◀	meloc__ (~geomyidae@pdpc/supporter/professional/geomyidae) has quit (Quit: Lost terminal)
+2016-01-06 01:18:16	▶	meloc_ (~geomyidae@pdpc/supporter/professional/geomyidae) has joined #zsh
+2016-01-06 01:19:18	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-06 01:23:19	ℹ	irc: disconnected from server
+2016-01-06 22:34:57	▶	pzyq (~Psyq@131.164.213.2) has joined #zsh
+2016-01-06 22:34:57	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-06 22:34:57	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-06 22:34:57	ℹ	Channel #zsh: 420 nicks (0 ops, 0 voices, 420 normals)
+2016-01-06 22:34:57	ℹ	Notice(hitchcock.freenode.net): [freenode-info] channel trolls and no channel staff around to help? please check with freenode support: http://freenode.net/faq.shtml#gettinghelp
+2016-01-06 22:34:57	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-06 22:34:57	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-06 22:35:17	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-06 22:37:31	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-06 22:38:44	ℹ	irc: disconnected from server
+2016-01-07 20:25:24	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-07 20:25:24	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-07 20:25:24	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-07 20:25:24	ℹ	Channel #zsh: 423 nicks (0 ops, 0 voices, 423 normals)
+2016-01-07 20:25:24	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-07 20:25:24	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-07 20:25:45	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-07 20:26:39	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 255 seconds)
+2016-01-07 20:29:54	▶	bapt_ (~bapt@ns3301091.ip-178-32-217.eu) has joined #zsh
+2016-01-07 20:30:11	▶	k00mi (~koomi@moshbit.net) has joined #zsh
+2016-01-07 20:30:17	▶	jhujhiti_ (~jhujhiti@elara.adjectivism.org) has joined #zsh
+2016-01-07 20:30:37	◀	koomi (~koomi@moshbit.net) has quit (Disconnected by services)
+2016-01-07 20:30:43	ℹ	k00mi is now known as koomi
+2016-01-07 20:31:18	▶	DANtheBE- (dan@soupwhale.com) has joined #zsh
+2016-01-07 20:31:19	▶	djmentos_ (djmentos@nat/intel/x-cugiyutufjnmjmvr) has joined #zsh
+2016-01-07 20:31:36	◀	jhujhiti (~jhujhiti@elara.adjectivism.org) has quit (Disconnected by services)
+2016-01-07 20:31:55	▶	Balliad (~textual@82.217.109.67) has joined #zsh
+2016-01-07 20:32:02	ℹ	jhujhiti_ is now known as jhujhiti
+2016-01-07 20:32:15	◀	jhujhiti (~jhujhiti@elara.adjectivism.org) has quit (Client Quit)
+2016-01-07 20:32:37	▶	Amplificator_ (~quassel@unaffiliated/amplificator) has joined #zsh
+2016-01-07 20:33:37	▶	ComradeP (P@unaffiliated/comradep) has joined #zsh
+2016-01-07 20:33:49	▶	geheimni1` (~geheimnis@23.226.237.192) has joined #zsh
+2016-01-07 20:33:52	phy1729	it was a pedantic point from the beginning
+2016-01-07 20:33:58	▶	Laynef_ (~Laynef@70.70.88.91.rev.sfr.net) has joined #zsh
+2016-01-07 20:34:10	▶	Spr1ng_ (~Spr1ng@162.219.4.89) has joined #zsh
+2016-01-07 20:34:31	▶	MinceR_ (~mincer@unaffiliated/mincer) has joined #zsh
+2016-01-07 20:35:01	▶	fengshaun_ (~fengshaun@unaffiliated/fengshaun) has joined #zsh
+2016-01-07 20:35:48	▶	roolebo_ (sid64806@gateway/web/irccloud.com/x-tgqojqotyulyxjnc) has joined #zsh
+2016-01-07 20:36:00	◀	D630 (~D630@unaffiliated/d630) has quit (Quit: quit)
+2016-01-07 20:36:07	▶	AlissaSquared (AlissaSqua@lightning.bouncer.ml) has joined #zsh
+2016-01-07 20:36:43	▶	pcarrier_ (sid12046@gateway/web/irccloud.com/x-amrroiowebvzcsbl) has joined #zsh
+2016-01-07 20:37:19	▶	n-st_ (~n-st@unaffiliated/n-st) has joined #zsh
+2016-01-07 20:37:29	▶	DaveQB14 (~DaveQB@ppp255-134.static.internode.on.net) has joined #zsh
+2016-01-07 20:37:31	▶	[ahutsona] (~smuxi@104-54-220-51.lightspeed.austtx.sbcglobal.net) has joined #zsh
+2016-01-07 20:37:35	▶	dshoreman_ (~dshoreman@unaffiliated/accidentalmonkey) has joined #zsh
+2016-01-07 20:37:38	▶	alip (~alip@exherbo/developer/alip) has joined #zsh
+2016-01-07 20:38:38	◀	toogley (~toogley@46.79.46.95) has quit (*.net *.split)
+2016-01-07 20:38:39	◀	shamus150 (~shamus150@46.17.164.68) has quit (*.net *.split)
+2016-01-07 20:38:40	◀	woky (~woky@woky.biz) has quit (*.net *.split)
+2016-01-07 20:38:40	◀	Spr1ng (~Spr1ng@unaffiliated/spr1ng) has quit (*.net *.split)
+2016-01-07 20:38:41	◀	fengshaun (~fengshaun@unaffiliated/fengshaun) has quit (*.net *.split)
+2016-01-07 20:38:41	◀	meloc_ (~geomyidae@pdpc/supporter/professional/geomyidae) has quit (*.net *.split)
+2016-01-07 20:38:42	◀	tzero (~tzero@unaffiliated/tzero) has quit (*.net *.split)
+2016-01-07 20:38:42	◀	synic (~squish@pdpc/supporter/student/synic) has quit (*.net *.split)
+2016-01-07 20:38:42	◀	bapt (~bapt@freebsd/developer/bapt) has quit (*.net *.split)
+2016-01-07 20:38:43	◀	Trieste (~Trieste@unaffiliated/trieste) has quit (*.net *.split)
+2016-01-07 20:38:44	◀	Amplificator (~quassel@unaffiliated/amplificator) has quit (*.net *.split)
+2016-01-07 20:38:44	◀	kalz (~kalz@2602:fff6:f:29c9::2c33) has quit (*.net *.split)
+2016-01-07 20:38:44	◀	Alissa- (AlissaSqua@lightning.bouncer.ml) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	ggherdov` (sid11402@gateway/web/irccloud.com/x-smqwzjkxfotiqgpt) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	geheimnis` (~geheimnis@23.226.237.192) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	pcarrier (sid12046@gateway/web/irccloud.com/x-lsfnngefagdcbptv) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	roolebo (sid64806@gateway/web/irccloud.com/x-dirzuigaydfvnoaa) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	MinceR (~mincer@unaffiliated/mincer) has quit (*.net *.split)
+2016-01-07 20:38:45	◀	KittyKatt (~kittykatt@unaffiliated/kittykatt) has quit (*.net *.split)
+2016-01-07 20:38:46	◀	johnny56 (~johnny56@unaffiliated/johnny56) has quit (*.net *.split)
+2016-01-07 20:38:47	◀	bogner (~bogner@li325-42.members.linode.com) has quit (*.net *.split)
+2016-01-07 20:38:47	◀	gkatsev (~gkatsev@oftn/board/gkatsev) has quit (*.net *.split)
+2016-01-07 20:38:47	◀	DANtheBEASTman (dan@2a01:4f8:190:5145::2) has quit (*.net *.split)
+2016-01-07 20:38:48	◀	Laynef (~Laynef@70.70.88.91.rev.sfr.net) has quit (*.net *.split)
+2016-01-07 20:38:48	◀	DaveQB (~DaveQB@ppp255-134.static.internode.on.net) has quit (*.net *.split)
+2016-01-07 20:38:48	◀	linuxmodder (linuxmodde@unaffiliated/corey84) has quit (*.net *.split)
+2016-01-07 20:38:48	◀	devster31 (~devsterkn@2001:41d0:1:a3af::1) has quit (*.net *.split)
+2016-01-07 20:38:48	◀	Nanuq (~nanuq@tlalocan.teotlalli.ecks.ca) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	parrhesiastes (~alip@exherbo/developer/alip) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	djmentos (djmentos@nat/intel/x-uzygxtyhvjbiydxr) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	yeled (~yeled@spodder.com) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	ylt` (ylt@d3s.co) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	n-st (~n-st@unaffiliated/n-st) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	dshoreman (~dshoreman@unaffiliated/accidentalmonkey) has quit (*.net *.split)
+2016-01-07 20:38:49	◀	ComradeP_ (P@tux.lithitux.org) has quit (*.net *.split)
+2016-01-07 20:38:50	◀	timewalker (~timewalke@eth0.nu) has quit (*.net *.split)
+2016-01-07 20:38:51	ℹ	geheimni1` is now known as geheimnis`
+2016-01-07 20:38:51	ℹ	DaveQB14 is now known as DaveQB
+2016-01-07 20:38:51	ℹ	n-st_ is now known as n-st
+2016-01-07 20:38:52	ℹ	dshoreman_ is now known as dshoreman
+2016-01-07 20:39:06	ℹ	MinceR_ is now known as MinceR
+2016-01-07 20:39:22	▶	ylt (ylt@5.9.84.39) has joined #zsh
+2016-01-07 20:39:33	osse	so... 13 it is then. no need to re-run it
+2016-01-07 20:39:37	▶	gkatsev (~gkatsev@oftn/board/gkatsev) has joined #zsh
+2016-01-07 20:39:52	osse	is that the investigative comittee's conclusion?
+2016-01-07 20:40:10	▶	johnny56_ (~johnny56@209.95.50.58) has joined #zsh
+2016-01-07 20:40:10	▶	Nanuq (~nanuq@tlalocan.teotlalli.ecks.ca) has joined #zsh
+2016-01-07 20:40:11	▶	synic (~squish@li74-118.members.linode.com) has joined #zsh
+2016-01-07 20:40:11	◀	synic (~squish@li74-118.members.linode.com) has quit (Changing host)
+2016-01-07 20:40:11	▶	synic (~squish@pdpc/supporter/student/synic) has joined #zsh
+2016-01-07 20:40:15	▶	ggherdov`_ (sid11402@gateway/web/irccloud.com/x-hlypfcsaovkodxjw) has joined #zsh
+2016-01-07 20:40:35	▶	devster31 (~devsterkn@2001:41d0:1:a3af::1) has joined #zsh
+2016-01-07 20:40:39	Mikachu	it's one of those "the backside of the wardrobe has a scratch" things, nobody will know but the person who made it or if someone looks very carefully :P
+2016-01-07 20:40:46	▶	shamus150 (~shamus150@46.17.164.68) has joined #zsh
+2016-01-07 20:40:46	▶	Trieste (~Trieste@unaffiliated/trieste) has joined #zsh
+2016-01-07 20:40:55	▶	bogner (~bogner@li325-42.members.linode.com) has joined #zsh
+2016-01-07 20:41:31	▶	meloc_ (~geomyidae@pdpc/supporter/professional/geomyidae) has joined #zsh
+2016-01-07 20:41:37	▶	jhujhiti (~jhujhiti@elara.adjectivism.org) has joined #zsh
+2016-01-07 20:41:39	▶	yeled (~yeled@spodder.com) has joined #zsh
+2016-01-07 20:41:48	▶	woky (~woky@woky.biz) has joined #zsh
+2016-01-07 20:41:48	ℹ	woky is now known as Guest93142
+2016-01-07 20:42:10	ℹ	roolebo_ is now known as roolebo
+2016-01-07 20:42:18	▶	toogley (~toogley@46.79.46.95) has joined #zsh
+2016-01-07 20:42:49	▶	starcraftman (~quassel@ubuntu/member/starcraftman) has joined #zsh
+2016-01-07 20:43:07	▶	tzero (~tzero@unaffiliated/tzero) has joined #zsh
+2016-01-07 20:44:12	▶	KittyKatt (~kittykatt@unaffiliated/kittykatt) has joined #zsh
+2016-01-07 20:44:23	▶	timewalker (~timewalke@eth0.nu) has joined #zsh
+2016-01-07 20:45:30	ℹ	ggherdov`_ is now known as ggherdov`
+2016-01-07 20:45:50	◀	nat26101 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-07 20:46:58	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-07 20:50:46	ℹ	pcarrier_ is now known as pcarrier
+2016-01-07 20:50:58	▶	kalz (~kalz@2602:fff6:f:29c9::2c33) has joined #zsh
+2016-01-07 20:53:22	◀	sanketdg (~sanketdg@103.251.83.162) has quit (Quit: Leaving)
+2016-01-07 20:53:35	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-07 20:55:07	◀	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has quit (Ping timeout: 250 seconds)
+2016-01-07 20:55:46	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-07 20:57:12	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-07 20:57:15	▶	hxegon_ (~textual@162.216.46.161) has joined #zsh
+2016-01-07 20:57:32	▶	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has joined #zsh
+2016-01-07 20:58:17	ℹ	Guest93142 is now known as woky_
+2016-01-07 20:58:51	◀	slester (~slester@cpe-75-80-117-157.san.res.rr.com) has quit (Remote host closed the connection)
+2016-01-07 20:59:55	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-07 21:00:41	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 21:01:07	ℹ	irc: disconnected from server
+2016-01-07 21:01:43	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-07 21:01:43	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-07 21:01:43	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-07 21:01:43	ℹ	Channel #zsh: 421 nicks (0 ops, 0 voices, 421 normals)
+2016-01-07 21:01:43	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-07 21:01:43	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-07 21:02:05	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-07 21:07:46	ℹ	DANtheBE- is now known as DANtheBEASTman
+2016-01-07 21:09:23	▶	meh` (~meh@151.42.172.120) has joined #zsh
+2016-01-07 21:11:41	◀	craigp (~craigp@dsl-197-245-165-151.voxdsl.co.za) has quit
+2016-01-07 21:12:24	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-07 21:18:51	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 21:24:02	◀	hxegon_ (~textual@162.216.46.161) has quit (Read error: Connection reset by peer)
+2016-01-07 21:24:52	▶	amcsi (~amcsi@cpc2-slam5-2-0-cust325.2-4.cable.virginm.net) has joined #zsh
+2016-01-07 21:25:09	amcsi	how do I have zsh chdir to target directory I give it as a parameter?
+2016-01-07 21:25:14	amcsi	when running zsh as a command
+2016-01-07 21:26:02	thrig	zsh -c 'cd /etc; pwd'
+2016-01-07 21:26:13	thrig	and uh error checking
+2016-01-07 21:27:28	◀	otome (~otome@155.4.61.11) has quit (Quit: WeeChat 1.3)
+2016-01-07 21:29:17	▶	harai54 (~b@d108-180-145-61.bchsia.telus.net) has joined #zsh
+2016-01-07 21:30:35	▶	dsdeiz (~dsdeiz@121.54.58.242) has joined #zsh
+2016-01-07 21:30:42	◀	harai (~b@node-1w7jr9srwviohui7y5jvgsza4.ipv6.telus.net) has quit (Ping timeout: 240 seconds)
+2016-01-07 21:31:38	amcsi	thrig, and I want to keep the shell interactive
+2016-01-07 21:31:49	Mikachu	cd /etc; zsh
+2016-01-07 21:32:48	Valodim	if you don't want to chdir in the outer shell, use a subshell: (cd /etc; zsh)
+2016-01-07 21:33:12	Mikachu	i meant that to be the command in the -c, but yeah
+2016-01-07 21:33:19	▶	haraigo (~b@104.200.154.37) has joined #zsh
+2016-01-07 21:33:27	thrig	... plus error checking, so set -e or cd && blahdeblah
+2016-01-07 21:33:37	Mikachu	thrig likes his error checking
+2016-01-07 21:33:43	thrig	guess why!
+2016-01-07 21:33:50	Mikachu	if it's an interactive shell, you'll see the error
+2016-01-07 21:34:30	▶	m0viefreak (~asdf@unaffiliated/m0viefreak) has joined #zsh
+2016-01-07 21:34:46	Mikachu	error checking important, modulus bias whatever
+2016-01-07 21:35:55	amcsi	Mikachu, the problem I have is zsh can't recognize my current directory by itself, because I'm using cygwin. That's why I would like a way to specify startup arguments like "cd". If I call zsh at the end of a command, I get the same issue, and I'm just taken to $HOME
+2016-01-07 21:35:59	◀	harai54 (~b@d108-180-145-61.bchsia.telus.net) has quit (Ping timeout: 256 seconds)
+2016-01-07 21:36:18	Mikachu	maybe your interactive init files change directory
+2016-01-07 21:36:25	Mikachu	you should fix them if that's the case
+2016-01-07 21:36:56	amcsi	Mikachu, but it's dynamic which directory I need to chdir into
+2016-01-07 21:37:13	amcsi	in PHPStorm it can be passed as a dynamic %d parameter
+2016-01-07 21:37:22	Mikachu	the issue is probably that your init files changes to your home directory
+2016-01-07 21:37:29	Mikachu	fix that
+2016-01-07 21:37:32	Mikachu	and you can be wherever you want
+2016-01-07 21:38:08	Mikachu	if you do this in a shell
+2016-01-07 21:38:10	Mikachu	cd /etc; zsh
+2016-01-07 21:38:12	Mikachu	are you still in /etc?
+2016-01-07 21:39:34	amcsi	Mikachu, oh nvm!
+2016-01-07 21:39:49	amcsi	I could just put 'cd $OLDPWD' in my .zshrc
+2016-01-07 21:39:51	amcsi	and that worked
+2016-01-07 21:40:10	Mikachu	you can do that if you're too lazy to read it, i guess
+2016-01-07 21:40:36	▶	xargs (~zmisc@209.sub-75-219-4.myvzw.com) has joined #zsh
+2016-01-07 21:43:28	▶	bb010g (uid21050@gateway/web/irccloud.com/x-wryetziruchnedtb) has joined #zsh
+2016-01-07 21:50:54	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 21:50:59	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-07 21:52:05	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-07 21:54:08	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 21:54:39	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-07 22:05:02	▶	cfricke (~cfricke@unaffiliated/cfricke) has joined #zsh
+2016-01-07 22:08:14	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-07 22:13:33	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-07 22:14:10	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 22:15:02	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-07 22:15:27	◀	plovs (~plovs@62.84.24.209) has quit (Ping timeout: 260 seconds)
+2016-01-07 22:15:39	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 22:16:23	▶	laurensclaessen (~laurenscl@ptr-2hj4tbhbclh5dhhcxei6wiqgd.ip6.access.telenet.be) has joined #zsh
+2016-01-07 22:21:23	◀	Balliad (~textual@82.217.109.67) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-07 22:26:02	◀	strull (~strull@pD9F4B0A7.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-01-07 22:27:02	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 22:27:24	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 22:27:32	◀	xargs (~zmisc@209.sub-75-219-4.myvzw.com) has quit (Quit: jmIrc destroyed by the OS)
+2016-01-07 22:28:15	◀	laurensclaessen (~laurenscl@ptr-2hj4tbhbclh5dhhcxei6wiqgd.ip6.access.telenet.be) has quit (Remote host closed the connection)
+2016-01-07 22:28:43	◀	Jesin (~Jesin@198.24.30.100) has quit (Quit: Leaving)
+2016-01-07 22:30:09	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-07 22:31:03	▶	ph88^ (~ph88@541E4F6E.cm-5-7b.dynamic.ziggo.nl) has joined #zsh
+2016-01-07 22:43:40	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-07 22:44:30	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-07 22:50:23	◀	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	bogner (~bogner@li325-42.members.linode.com) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	[ahutsona] (~smuxi@104-54-220-51.lightspeed.austtx.sbcglobal.net) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	roolebo (sid64806@gateway/web/irccloud.com/x-tgqojqotyulyxjnc) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	ggherdov` (sid11402@gateway/web/irccloud.com/x-hlypfcsaovkodxjw) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	rrichard_ (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	d10n (~d10n@unaffiliated/d10n) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	luzie (~ne@unaffiliated/ne) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	AfroThundr (~AfroThund@2601:147:c001:6667:9c20:ccd0:104e:ae4a) has quit (*.net *.split)
+2016-01-07 22:50:23	◀	llua (~llua@unaffiliated/llua) has quit (*.net *.split)
+2016-01-07 22:50:24	◀	AustinMatherne (~AustinMat@li1047-129.members.linode.com) has quit (*.net *.split)
+2016-01-07 22:50:24	◀	Kabaka (kyle@botters/kabaka) has quit (*.net *.split)
+2016-01-07 22:50:36	▶	AustinMatherne (~AustinMat@li1047-129.members.linode.com) has joined #zsh
+2016-01-07 22:51:17	◀	tibbs|w (~tibbs@fedora/tibbs) has quit
+2016-01-07 22:51:42	▶	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has joined #zsh
+2016-01-07 22:51:42	▶	bogner (~bogner@li325-42.members.linode.com) has joined #zsh
+2016-01-07 22:51:42	▶	[ahutsona] (~smuxi@104-54-220-51.lightspeed.austtx.sbcglobal.net) has joined #zsh
+2016-01-07 22:51:42	▶	rrichard_ (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-07 22:51:42	▶	luzie (~ne@unaffiliated/ne) has joined #zsh
+2016-01-07 22:51:42	▶	AfroThundr (~AfroThund@2601:147:c001:6667:9c20:ccd0:104e:ae4a) has joined #zsh
+2016-01-07 22:51:42	▶	llua (~llua@unaffiliated/llua) has joined #zsh
+2016-01-07 22:51:50	▶	roolebo (sid64806@gateway/web/irccloud.com/x-afckwdocucllbowb) has joined #zsh
+2016-01-07 22:51:57	◀	rrichard_ (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Max SendQ exceeded)
+2016-01-07 22:51:57	◀	AfroThundr (~AfroThund@2601:147:c001:6667:9c20:ccd0:104e:ae4a) has quit (Max SendQ exceeded)
+2016-01-07 22:51:58	◀	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has quit (Max SendQ exceeded)
+2016-01-07 22:52:07	▶	d10n (~d10n@107.170.121.245) has joined #zsh
+2016-01-07 22:52:07	◀	d10n (~d10n@107.170.121.245) has quit (Changing host)
+2016-01-07 22:52:07	▶	d10n (~d10n@unaffiliated/d10n) has joined #zsh
+2016-01-07 22:52:12	▶	cschneid (cschneid@2600:3c00::f03c:91ff:fe73:9540) has joined #zsh
+2016-01-07 22:52:23	▶	AfroThundr (~AfroThund@2601:147:c001:6667:9c20:ccd0:104e:ae4a) has joined #zsh
+2016-01-07 22:52:35	◀	dsdeiz (~dsdeiz@121.54.58.242) has quit (Ping timeout: 272 seconds)
+2016-01-07 22:52:43	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-07 22:53:11	▶	Kabaka (kyle@botters/kabaka) has joined #zsh
+2016-01-07 22:53:13	▶	tibbs|w (~tibbs@fedora/tibbs) has joined #zsh
+2016-01-07 22:53:16	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Max SendQ exceeded)
+2016-01-07 22:53:50	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-07 22:54:20	▶	nat26101 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-07 22:54:20	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Read error: Connection reset by peer)
+2016-01-07 22:55:03	◀	tibbs|w (~tibbs@fedora/tibbs) has quit (Client Quit)
+2016-01-07 22:56:01	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Ping timeout: 260 seconds)
+2016-01-07 22:56:37	▶	tjt263 (~RAPSCA77I@unaffiliated/tjt263) has joined #zsh
+2016-01-07 22:58:08	▶	lysanderslair (~lysander@dsl-173-206-42-226.tor.primus.ca) has joined #zsh
+2016-01-07 22:58:15	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 22:58:43	◀	lysander (~lysander@108.63.145.124) has quit (Ping timeout: 256 seconds)
+2016-01-07 22:59:25	◀	tjt263 (~RAPSCA77I@unaffiliated/tjt263) has left #zsh
+2016-01-07 23:00:15	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 23:01:25	◀	snuffeluffegus (~snuffeluf@cpe-174-99-0-200.nc.res.rr.com) has quit (Quit: leaving)
+2016-01-07 23:02:58	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Client Quit)
+2016-01-07 23:03:19	▶	ggherdov` (sid11402@gateway/web/irccloud.com/x-tovzdmhoesaiyjpk) has joined #zsh
+2016-01-07 23:04:50	◀	[ahutsona] (~smuxi@104-54-220-51.lightspeed.austtx.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-01-07 23:05:57	◀	jakk (~jakk@naisu.org) has quit (Ping timeout: 265 seconds)
+2016-01-07 23:06:05	▶	Fullma (~fullma@ram94-2-82-66-69-246.fbx.proxad.net) has joined #zsh
+2016-01-07 23:08:13	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-07 23:09:13	▶	tibbs|w (~tibbs@fedora/tibbs) has joined #zsh
+2016-01-07 23:10:31	tibbs|w	Hey, folks, I'm wondering about the necessity for the versioned directory in /usr/share/zsh.
+2016-01-07 23:10:32	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 23:10:44	▶	jakk (~jakk@naisu.org) has joined #zsh
+2016-01-07 23:11:07	Mikachu	the answer is yes, it is
+2016-01-07 23:11:16	tibbs|w	Whenever the zsh package updates, existing shells start having issues because an important component of $fpath is now missing.
+2016-01-07 23:11:31	tibbs|w	I was toying with the idea of getting rid of it or doing some things with symlinks.
+2016-01-07 23:11:32	Mikachu	only if you delete files expected by a running program
+2016-01-07 23:11:43	Mikachu	the same happens if you uninstall anything else while using it
+2016-01-07 23:11:49	phy1729	tibbs|w: they could also break by not supporting what the new scripts use
+2016-01-07 23:11:53	tibbs|w	Well, it's not uninstalled; it was updated.
+2016-01-07 23:12:17	tibbs|w	Since that directory changes names on even a subminor version bump, it's kind of annoying.
+2016-01-07 23:12:41	tibbs|w	Anyway, I think that yes, there's the potential for breakage.  That breakage can't be much worse than not having anything there at all.
+2016-01-07 23:12:56	Mikachu	just don't uninstall the old version before you stop using it
+2016-01-07 23:13:07	tibbs|w	Distros don't work that way.
+2016-01-07 23:13:14	phy1729	homebrew doesn't use the version'd path fwiw
+2016-01-07 23:13:16	Mikachu	that isn't zsh's fault
+2016-01-07 23:13:18	tibbs|w	You update the package; you get the new stuff.
+2016-01-07 23:13:30	tibbs|w	I never said it was zsh's fault, did I?
+2016-01-07 23:13:31	phy1729	not saying you should emulate homebrew though
+2016-01-07 23:13:47	tibbs|w	I'm merely asking if there's some deeper reason for that versioned directory.
+2016-01-07 23:14:14	tibbs|w	Good to know that homebrew doesn't use it.
+2016-01-07 23:14:37	tibbs|w	I'll have to see how it gets disabled.
+2016-01-07 23:15:49	tibbs|w	I wonder what other distributions do.
+2016-01-07 23:15:55	Mikachu	well, if you didn't have a versioned directory, installing different versions would clobber eachother's files
+2016-01-07 23:16:07	tibbs|w	We don't install multiple versions at once.
+2016-01-07 23:16:15	Mikachu	who is we?
+2016-01-07 23:16:18	tibbs|w	Fedora.
+2016-01-07 23:16:22	tibbs|w	The distribution.
+2016-01-07 23:16:40	tibbs|w	If you're rolling your own, surely you could put those files wherever you wanted.
+2016-01-07 23:19:09	Mikachu	i hope you never look in the lib directory
+2016-01-07 23:19:54	Mikachu	it's literally full of versioned files
+2016-01-07 23:20:06	llua	i hope that doesn't affect centos eventually.
+2016-01-07 23:20:08	tibbs|w	Any shell that has them dlopened will still have access to them regardless of what gets deleted.
+2016-01-07 23:20:19	tibbs|w	llua: What is "that"?
+2016-01-07 23:20:30	Mikachu	if you happened to dlopen them before you delete running software, yeah
+2016-01-07 23:20:43	Mikachu	the same applies to autoloaded functions
+2016-01-07 23:20:45	llua	your change
+2016-01-07 23:20:55	tibbs|w	I didn't make any change, did I?
+2016-01-07 23:21:04	Mikachu	oh if you're some sort of official person, please don't break this in an official package
+2016-01-07 23:21:05	tibbs|w	Jeez, people, I'm just asking questions.
+2016-01-07 23:21:08	tibbs|w	Why the hostility?
+2016-01-07 23:21:22	Mikachu	who's hostile?
+2016-01-07 23:21:30	tibbs|w	Erm, uh, well, you.
+2016-01-07 23:21:34	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Quit: Apparantly my attempt to stay awake has failed...)
+2016-01-07 23:21:57	tibbs|w	I mean, just say that it's a bad idea because we've run into problems with that before.
+2016-01-07 23:22:00	tibbs|w	If that's actually the case.
+2016-01-07 23:22:30	Mikachu	i'm like 99% sure debian has a zsh and a zsh-beta package, for example
+2016-01-07 23:22:51	tibbs|w	Well, maybe, but going from 5.1.1 to 5.2 doesn't involve a beta.
+2016-01-07 23:23:28	Mikachu	considering the bugs fixed since 5.2, it probably should ;)
+2016-01-07 23:24:32	tibbs|w	Anyway, a very large part of the ecosystem seems to get away without having everything versioned like this.
+2016-01-07 23:25:29	tibbs|w	I just wondered why it was necessary to have it versioned down to the very minor release.
+2016-01-07 23:26:28	▶	dsdeiz (~dsdeiz@122.53.137.187) has joined #zsh
+2016-01-07 23:26:51	tibbs|w	And, yes, having the dlopened stuff break would be not-great, but it breaks anyway.
+2016-01-07 23:27:38	Mikachu	if you want, you can zcompile the system fpath dirs into your user directory, and they won't be affected
+2016-01-07 23:27:42	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-07 23:28:04	tibbs|w	Also, even INSTALL suggests not using the version directory if you're only ever going to have one version installed at a time.
+2016-01-07 23:28:13	tibbs|w	So, perhaps someone should patch that if it's such a bad idea.
+2016-01-07 23:28:18	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-07 23:29:22	▶	hpt (~hpt@123.114.130.151) has joined #zsh
+2016-01-07 23:29:22	Mikachu	that's a very creative interpretation of the text actually written
+2016-01-07 23:29:31	▶	huytxr (~huytxr@120.22.212.75) has joined #zsh
+2016-01-07 23:29:42	tibbs|w	"f you only run one version of zsh at once, installing into a common directory such as /usr/local/share/zsh/functions is fine"
+2016-01-07 23:29:50	Mikachu	"note, however, that uninstallation is more likely to create problems in this case."
+2016-01-07 23:29:56	tibbs|w	The bit about uninstallation obviously doesn't apply in the case of a package manager.
+2016-01-07 23:30:01	Mikachu	it is exactly the opposite recommendation of what you claimed
+2016-01-07 23:30:11	tibbs|w	And are the only arguments against this related to uninstallation?
+2016-01-07 23:30:18	tibbs|w	Again, wow.
+2016-01-07 23:30:35	Mikachu	am i aggressive for pointing out that you're lying now?
+2016-01-07 23:30:38	m0viefreak	i dont see how the same function dir would improve things when updating
+2016-01-07 23:30:42	tibbs|w	Lying?
+2016-01-07 23:30:53	Mikachu	you claimed install recommended not using version files, when it recommends using them
+2016-01-07 23:30:57	m0viefreak	instead of errors about files not found you'll eventually run into other errors
+2016-01-07 23:31:05	m0viefreak	because the files that are present dont match the running version
+2016-01-07 23:31:25	m0viefreak	which is even worse, since users might be tempted to have an old version running way longer than it should
+2016-01-07 23:31:27	tibbs|w	I wrote "suggests", didn't I?  I mean, if I see "it's fine to do this except in this case you don't care about" then I'm going to interpret that as "it's fine".
+2016-01-07 23:31:48	tibbs|w	m0viefreak: Now that's a reasonable argument.
+2016-01-07 23:32:02	m0viefreak	this really is the same with nearly every package, tho
+2016-01-07 23:32:17	m0viefreak	updating tmux while having an old version running leads to problems
+2016-01-07 23:32:23	tibbs|w	Indeed.  And a lot of them don't do the versioning trick.
+2016-01-07 23:32:26	m0viefreak	same for wine, ...
+2016-01-07 23:32:27	m0viefreak	and so on
+2016-01-07 23:32:30	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Ping timeout: 246 seconds)
+2016-01-07 23:32:44	tibbs|w	Some make the argument that you shouldn't update anything without a reboot.
+2016-01-07 23:32:49	m0viefreak	correct
+2016-01-07 23:32:57	m0viefreak	people feel "safe" updating openssl
+2016-01-07 23:33:06	Mikachu	tibbs|w: ls /usr/share/*/(<->.)#<-> -d
+2016-01-07 23:33:11	m0viefreak	but dont restart the programs that were using the old one
+2016-01-07 23:33:27	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 23:33:34	tibbs|w	Meanwhile in the real world.
+2016-01-07 23:33:35	Mikachu	12 different packages there, excluding the terminfo dirs
+2016-01-07 23:33:43	◀	hpt (~hpt@123.114.130.151) has quit (Ping timeout: 250 seconds)
+2016-01-07 23:33:59	▶	b (~coffee@unaffiliated/ridout) has joined #zsh
+2016-01-07 23:34:02	Mikachu	deleting the emacs runtime while running emacs is probably exciting too, i'm guessing
+2016-01-07 23:34:23	tibbs|w	Mikachu: And how many which aren't versioned?  For me much more, though I never even claimed a majority.  I just write "a lot".
+2016-01-07 23:34:35	tibbs|w	Anyway, isn't that kind of pointless?
+2016-01-07 23:35:05	tibbs|w	I have some good arguments, though I wonder what problems exist with the way homebrew does it.
+2016-01-07 23:35:21	Mikachu	the versioned directory allows you to update without breaking the running version, (as well as having multiple versions installed at once)
+2016-01-07 23:35:32	Mikachu	and ensures you don't accidentally run code for another version
+2016-01-07 23:37:04	tibbs|w	Perhaps related, is the stuff in fndir actually that bound to the zsh version?  I would think that with a shell you'd expect quite a high level of cross-version compatibility for minor version bumps.
+2016-01-07 23:37:32	m0viefreak	it is
+2016-01-07 23:37:41	Mikachu	it would be more likely to not cause problems when downgrading
+2016-01-07 23:37:44	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-07 23:37:48	▶	linux-modder (~corey84@65.210.14.85) has joined #zsh
+2016-01-07 23:37:48	◀	linux-modder (~corey84@65.210.14.85) has quit (Changing host)
+2016-01-07 23:37:48	▶	linux-modder (~corey84@unaffiliated/corey84) has joined #zsh
+2016-01-07 23:38:01	tibbs|w	Since you can copy those into a personal directory and just use them.  And occasionally I've checked them out of the zsh repository and used them with the current version I have running.  I wouldn't generally expect problems there.
+2016-01-07 23:38:16	◀	coredump (~coredump|@38.88.32.98) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-07 23:38:33	Mikachu	it's better to be systematically correct than 'hopefully nothing breaks'
+2016-01-07 23:38:40	tibbs|w	I guess someone might immediately make use of a new feature, since that's what features are for.
+2016-01-07 23:38:56	Mikachu	and that person is too lazy to type 'exec zsh'?
+2016-01-07 23:39:05	llua	7 chars too many
+2016-01-07 23:39:11	◀	e1f (~user@141.117.1.137) has quit (Remote host closed the connection)
+2016-01-07 23:39:19	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 23:39:27	▶	e1f (~user@141.117.1.156) has joined #zsh
+2016-01-07 23:40:46	tibbs|w	Would be fun to do some magic in precmd or some other relevant hook to have that happen automatically.
+2016-01-07 23:41:09	Mikachu	yeah, goodbye all internal state randomly :P
+2016-01-07 23:41:13	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Client Quit)
+2016-01-07 23:41:32	tibbs|w	Well, the shell is broken anyway, isn't it?
+2016-01-07 23:41:42	Mikachu	only if you deleted it
+2016-01-07 23:42:14	tibbs|w	I'm speaking specifically in the case of the thing being managed by one of the usual package managers, where it was deleted.
+2016-01-07 23:42:41	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-07 23:42:46	tibbs|w	Maybe I just wasn't clear about the context up front.  The old fndir is not going to be there.  That's not something we can change.
+2016-01-07 23:43:27	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-07 23:43:29	tibbs|w	So, how do we (i.e. people who package and care about these things from a distro standpoint) deal with that?  Not changing fndir with each zsh release is one way.
+2016-01-07 23:43:47	m0viefreak	why do you need to deal with it?
+2016-01-07 23:44:00	tibbs|w	Because it causes problems for users, who ask about it.
+2016-01-07 23:44:00	m0viefreak	isnt it the user's task to restart the thing they were updating?
+2016-01-07 23:44:07	tibbs|w	The system updates itself.
+2016-01-07 23:44:14	Mikachu	you can have /etc/zshrc zcompile system fpath into users ~/.zsh/foo-version.zwc or so
+2016-01-07 23:44:24	Mikachu	if you put that file first in fpath, the actual system fpath dirs will never be examined
+2016-01-07 23:44:33	tibbs|w	Hmm.
+2016-01-07 23:44:45	Mikachu	that will leave a bunch of old files in ~/.zsh eventually though
+2016-01-07 23:46:02	phy1729	tibbs|w: cheating would be don't clean up fpath and do it on next boot
+2016-01-07 23:46:38	tibbs|w	Indeed, except that's not generally the kind of thing a package manager would do.
+2016-01-07 23:46:40	m0viefreak	the running shells will be fine until they need something from pfath that hasnt been autoloaded yet
+2016-01-07 23:47:05	tibbs|w	Actually that doesn't seem to be the case.
+2016-01-07 23:47:23	tibbs|w	I would have thought it would be the case, though.
+2016-01-07 23:47:51	m0viefreak	it is
+2016-01-07 23:48:06	m0viefreak	everything thats loaded doesnt rely on external files anymore
+2016-01-07 23:48:41	tibbs|w	Is that recent?  I'll have to downgrade to 5.1.1 and then update to 5.2 again and catalog exactly what breaks.
+2016-01-07 23:49:20	m0viefreak	no
+2016-01-07 23:49:36	Mikachu	if you never pressed tab, then you're fucked
+2016-01-07 23:49:41	m0viefreak	yep
+2016-01-07 23:49:53	tibbs|w	Ah, that must be it.
+2016-01-07 23:50:09	m0viefreak	and in that case you will get error messages, and the user will known that they need to restart the shell
+2016-01-07 23:50:14	Mikachu	you can of course also just change $fpath in your running shell if you want
+2016-01-07 23:50:39	tibbs|w	True.  But then just running exec is shorter.
+2016-01-07 23:50:40	Mikachu	(i don't suggest this) ;)
+2016-01-07 23:50:54	tibbs|w	Unless you have state you can't handle losing.
+2016-01-07 23:51:26	llua	updating zsh at that moment prob wasn't a good idea then
+2016-01-07 23:51:57	tibbs|w	That's all true, though sometimes it's not something over which you have control.
+2016-01-07 23:52:11	tibbs|w	Sure, you could not have automatic updates.
+2016-01-07 23:52:33	Mikachu	you can do the windows way, and popup a window saying "okay, we're going to reboot now, fuck you"
+2016-01-07 23:52:36	tibbs|w	Would be kind of nice if more programs could tell you that they need to be restarted.
+2016-01-07 23:52:39	phy1729	I thought the kernel does something special to not delete the files for a while
+2016-01-07 23:52:50	tibbs|w	phy1729: Yeah, the kernel is magical.
+2016-01-07 23:52:50	Mikachu	phy1729: it does if they're open
+2016-01-07 23:52:59	Mikachu	the entire point of autoload is that we _don't_ open the files though
+2016-01-07 23:53:09	phy1729	well rpm does something special with the kernel package
+2016-01-07 23:53:18	tibbs|w	Yeah, I thought that's what you meant.
+2016-01-07 23:53:32	tibbs|w	kernel packages have no conflicting files, so you can install several.
+2016-01-07 23:53:35	Mikachu	cat $^fpath/*(N.) > /dev/null  0.01s user 0.05s system 1% cpu 4.427 total
+2016-01-07 23:53:50	Mikachu	that would be a painful cost at startup
+2016-01-07 23:54:19	tibbs|w	Yeah, autoloads are still a good thing even in this age of huge RAM and SSDs.
+2016-01-07 23:54:20	phy1729	tibbs|w: could split fpath stuff into a subpackage so the subpackages don't conflict
+2016-01-07 23:54:55	tibbs|w	That's kind of a possibility, but then the behavior of the kernel package is actually used only for the kernel package.
+2016-01-07 23:55:13	tibbs|w	Some of us have been talking about making that not be the case, though.
+2016-01-07 23:55:22	tibbs|w	Anyway, probably offtopic for #zsh.
+2016-01-07 23:55:53	◀	pantoffelgenbaum (~what@unaffiliated/oxfeedbacc) has quit (Quit: quit pro quo)
+2016-01-07 23:56:36	tibbs|w	And for the record, rpm will allow that for any package, but the higher level package management system (dnf or yum or whatever) doesn't (except for the kernel).
+2016-01-07 23:56:49	tibbs|w	Well, any package that doesn't have conflicting files.
+2016-01-07 23:57:08	◀	linux-modder (~corey84@unaffiliated/corey84) has quit (Quit: Leaving)
+2016-01-07 23:57:11	phy1729	out of curiosity, what is it that does that?
+2016-01-07 23:57:58	tibbs|w	Sorry, what to you refer to by "that"?
+2016-01-07 23:58:16	tibbs|w	At this point I'm even losing track of what I'm saying.
+2016-01-07 23:58:37	phy1729	that allows multiple versions of one package
+2016-01-07 23:58:49	tibbs|w	rpm will allow it for any package that does not have conflicting files.
+2016-01-07 23:59:17	tibbs|w	dnf and yum have a rule of "one version at a time only" except that they have plugins which handle the special case of the kernel.
+2016-01-08 00:00:07	Mikachu	% zsh-5.0.7
+2016-01-08 00:00:07	Mikachu	prompt_mikachu_setup:38: unknown file attribute: \n
+2016-01-08 00:00:11	Mikachu	that's a funny error
+2016-01-08 00:00:39	Mikachu	local -A highlight=(
+2016-01-08 00:01:03	Mikachu	example of thing that might break when running newer function code btw
+2016-01-08 00:01:44	llua	zypper doesn't have that restriction
+2016-01-08 00:02:42	Mikachu	this syntax is already used in the distribution too
+2016-01-08 00:03:23	tibbs|w	phy1729: BTW, it's /usr/lib/python3.4/site-packages/dnf/const.py, INSTALLONLYPKGS.
+2016-01-08 00:03:46	Mikachu	zsh was in dev-mode (4.3) for a lot of years, i think most of the devs forgot how to release a stable version as the main branch
+2016-01-08 00:03:58	▶	michimuellae (~micha@p57B8D8B7.dip0.t-ipconnect.de) has joined #zsh
+2016-01-08 00:04:03	phy1729	I'm on C6 over here so python3 and dnf are mythical creatures
+2016-01-08 00:04:09	tibbs|w	Yes, I was surprised when 5.0 came out and things picked up again.
+2016-01-08 00:04:27	Mikachu	it's basically same threshold of releasing as on 4.3 now
+2016-01-08 00:04:35	tibbs|w	phy1729: At least you aren't on EL5.
+2016-01-08 00:05:40	ℹ	qbitor is now known as qbi
+2016-01-08 00:05:41	◀	Telvana (~digits@cpe-104-231-81-226.neo.res.rr.com) has quit (Ping timeout: 245 seconds)
+2016-01-08 00:05:42	m0viefreak	Mikachu: i got a question about the zle-pre-redraw hook. it looks like the hook is not called while isearch is active and the BUFFER changes (i.e. typing in there). is that intentional or a bug?
+2016-01-08 00:06:08	Mikachu	probably more like an unimplemented feature
+2016-01-08 00:06:24	Mikachu	there's another hook for isearch redrawing
+2016-01-08 00:06:32	▶	Telvana (~digits@cpe-104-231-81-226.neo.res.rr.com) has joined #zsh
+2016-01-08 00:06:56	◀	nchambers (~nchambers@69.84.207.155) has quit (Ping timeout: 245 seconds)
+2016-01-08 00:07:05	◀	huytxr (~huytxr@120.22.212.75) has quit (Remote host closed the connection)
+2016-01-08 00:07:07	m0viefreak	yeah, zle-isearch-update. i was just wondering
+2016-01-08 00:07:19	Mikachu	does it work if you call your hook from that hook too?
+2016-01-08 00:07:50	m0viefreak	yeah, kinda.
+2016-01-08 00:07:53	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 00:08:51	m0viefreak	i was just wondering why it doesnt call pre-redraw, too
+2016-01-08 00:08:57	m0viefreak	since the BUFFER is actually changing
+2016-01-08 00:09:15	Mikachu	well, the code doesn't care if buffer changes, it cares if zle_redraw() gets called
+2016-01-08 00:09:21	Mikachu	more or less
+2016-01-08 00:09:38	Mikachu	i guess i can just add the hook call where isearch hook is called
+2016-01-08 00:09:47	◀	cfricke (~cfricke@unaffiliated/cfricke) has quit (Quit: leaving)
+2016-01-08 00:10:06	Mikachu	ah yes, i moved the pre hook to the zle input loop
+2016-01-08 00:10:11	Mikachu	which presumably isn't called from minibuffers
+2016-01-08 00:10:18	m0viefreak	ah
+2016-01-08 00:10:31	Mikachu	calling it from inside redraw() was overly excessive
+2016-01-08 00:10:35	▶	tibbs_ (~tibbs@fedora/tibbs) has joined #zsh
+2016-01-08 00:10:42	Mikachu	like that function sometimes gets called 3-4 times in a row
+2016-01-08 00:10:43	◀	tibbs|w (~tibbs@fedora/tibbs) has quit (Ping timeout: 265 seconds)
+2016-01-08 00:10:57	Mikachu	(don't ask me why)
+2016-01-08 00:11:22	m0viefreak	i guess for zsh-syntax-highlighting the best approach would then be a combinatino of pre-redraw and a manual wrapping of isearch-update
+2016-01-08 00:11:33	m0viefreak	i wish there was a add-zsh-hook for those zle-* widgets, too
+2016-01-08 00:12:17	Mikachu	i don't use those, so that's probably why :P
+2016-01-08 00:12:40	m0viefreak	;)
+2016-01-08 00:14:02	▶	Phantom7 (~textual@69.204.251.52) has joined #zsh
+2016-01-08 00:14:23	▶	OxFEEDBACC (~what@176.2.101.110) has joined #zsh
+2016-01-08 00:14:23	◀	OxFEEDBACC (~what@176.2.101.110) has quit (Changing host)
+2016-01-08 00:14:23	▶	OxFEEDBACC (~what@unaffiliated/oxfeedbacc) has joined #zsh
+2016-01-08 00:16:56	▶	scottj (~scott@unaffiliated/scottj) has joined #zsh
+2016-01-08 00:18:03	◀	haraigo (~b@104.200.154.37) has quit (Ping timeout: 256 seconds)
+2016-01-08 00:21:52	▶	Jesin (~Jesin@pool-108-45-39-144.washdc.fios.verizon.net) has joined #zsh
+2016-01-08 00:23:35	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-08 00:27:19	◀	michimuellae (~micha@p57B8D8B7.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2016-01-08 00:29:12	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 255 seconds)
+2016-01-08 00:30:20	◀	Phantom7 (~textual@69.204.251.52) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 00:30:30	▶	Mikachuz (~Mikachu@h-88-110.a230.priv.bahnhof.se) has joined #zsh
+2016-01-08 00:31:13	◀	Mikachu (~Mikachu@gimp/developer/Mikachu) has quit (Disconnected by services)
+2016-01-08 00:31:17	ℹ	Mikachuz is now known as Mikachu
+2016-01-08 00:31:26	◀	Mikachu (~Mikachu@h-88-110.a230.priv.bahnhof.se) has quit (Changing host)
+2016-01-08 00:31:26	▶	Mikachu (~Mikachu@gimp/developer/Mikachu) has joined #zsh
+2016-01-08 00:31:55	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-08 00:35:49	◀	tibbs_ (~tibbs@fedora/tibbs) has quit (Ping timeout: 272 seconds)
+2016-01-08 00:37:08	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Ping timeout: 276 seconds)
+2016-01-08 00:37:37	ℹ	irc: disconnected from server
+2016-01-08 19:47:28	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-08 19:47:28	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-08 19:47:28	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-08 19:47:28	ℹ	Channel #zsh: 405 nicks (0 ops, 0 voices, 405 normals)
+2016-01-08 19:47:28	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-08 19:47:28	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-08 19:47:50	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-08 19:48:54	▶	ascarter (~ascarter@50.248.196.145) has joined #zsh
+2016-01-08 19:48:54	◀	ascarter (~ascarter@50.248.196.145) has quit (Read error: Connection reset by peer)
+2016-01-08 19:51:20	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-08 19:51:24	◀	cdown (~cdown@dab-rcn1-h-1-2.dab.02.net) has quit (Remote host closed the connection)
+2016-01-08 19:51:33	machabot	 % command # elsewhere
+2016-01-08 19:53:07	◀	machabot (~machabot@macha.mac-anu.org) has quit (Remote host closed the connection)
+2016-01-08 19:53:24	▶	machabot (~machabot@macha.mac-anu.org) has joined #zsh
+2016-01-08 19:54:04	ℹ	krion_ is now known as kriob
+2016-01-08 19:54:10	ℹ	kriob is now known as krion
+2016-01-08 19:55:41	◀	lysanderslair (~lysander@dsl-173-206-42-226.tor.primus.ca) has quit (Ping timeout: 260 seconds)
+2016-01-08 19:57:13	▶	lysanderslair (~lysander@dsl-173-206-12-167.tor.primus.ca) has joined #zsh
+2016-01-08 20:00:23	▶	plovs (~plovs@62.84.24.209) has joined #zsh
+2016-01-08 20:03:50	◀	colinbits (~colinbits@104.192.139.250) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 20:04:38	▶	michimuellae (~micha@p57B8D80D.dip0.t-ipconnect.de) has joined #zsh
+2016-01-08 20:05:14	▶	colinbits (~colinbits@104.192.139.250) has joined #zsh
+2016-01-08 20:06:05	◀	linux-modder (~corey84@unaffiliated/corey84) has quit (Ping timeout: 245 seconds)
+2016-01-08 20:07:11	▶	cdown (~cdown@dab-rcn1-h-55-9.dab.02.net) has joined #zsh
+2016-01-08 20:11:21		[psyq away: doing something with my head]
+2016-01-08 20:12:00	▶	italoacasas (~italoacas@199.72.84.54) has joined #zsh
+2016-01-08 20:16:36	▶	BadCoderFinger (~BadCoderF@216.160.187.37) has joined #zsh
+2016-01-08 20:26:41	◀	colinbits (~colinbits@104.192.139.250) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 20:28:55	▶	colinbits (~colinbits@104.192.139.250) has joined #zsh
+2016-01-08 20:32:00	◀	leonarth (~leonarth@unaffiliated/leonarth) has quit
+2016-01-08 20:39:59	▶	Ascetik (~Ascetik@50.234.96.50) has joined #zsh
+2016-01-08 20:44:12	◀	Haudegen (~quassel@85.124.51.57) has quit (Ping timeout: 272 seconds)
+2016-01-08 20:45:09	◀	cdown (~cdown@dab-rcn1-h-55-9.dab.02.net) has quit (Remote host closed the connection)
+2016-01-08 20:46:30	◀	treaki_ (~treaki@p5B11CC0D.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2016-01-08 20:54:01	▶	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has joined #zsh
+2016-01-08 20:56:23	◀	cargill (~ondra@host86-166-135-137.range86-166.btcentralplus.com) has quit (Ping timeout: 250 seconds)
+2016-01-08 20:58:40	◀	AfroThundr (~AfroThund@2601:147:c001:6667:ec37:e2e8:a4be:a70c) has quit (Quit: Leaving)
+2016-01-08 20:59:47	▶	Haudegen (~quassel@85.124.51.57) has joined #zsh
+2016-01-08 21:00:14	▶	AfroThundr (~AfroThund@2601:147:c001:6667:ec37:e2e8:a4be:a70c) has joined #zsh
+2016-01-08 21:02:54	▶	m0viefreak (~asdf@unaffiliated/m0viefreak) has joined #zsh
+2016-01-08 21:09:58	▶	cargill (~ondra@host86-166-135-137.range86-166.btcentralplus.com) has joined #zsh
+2016-01-08 21:10:56	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-08 21:11:47	▶	PityDaFool (~AfroThund@166.170.32.200) has joined #zsh
+2016-01-08 21:11:48	◀	PityDaFool (~AfroThund@166.170.32.200) has quit (Max SendQ exceeded)
+2016-01-08 21:13:28	▶	PityDaFool (~AfroThund@166.170.32.200) has joined #zsh
+2016-01-08 21:13:30	◀	PityDaFool (~AfroThund@166.170.32.200) has quit (Max SendQ exceeded)
+2016-01-08 21:17:09	▶	PityDaFool (~AfroThund@166.170.32.200) has joined #zsh
+2016-01-08 21:17:12	◀	PityDaFool (~AfroThund@166.170.32.200) has quit (Max SendQ exceeded)
+2016-01-08 21:19:42	▶	PityDaFool (~AfroThund@166.170.32.200) has joined #zsh
+2016-01-08 21:20:26	▶	amcsi (~amcsi@cpc2-slam5-2-0-cust325.2-4.cable.virginm.net) has joined #zsh
+2016-01-08 21:21:31	▶	mmc (~michal@ip913579f5.adsl-surfen.hetnet.nl) has joined #zsh
+2016-01-08 21:26:23	▶	flavius (~flavius@unaffiliated/flavius) has joined #zsh
+2016-01-08 21:26:43	▶	haraigoshi (~b@104.200.154.83) has joined #zsh
+2016-01-08 21:33:41	◀	kfunk (~krf@kde/kfunk) has quit (Ping timeout: 255 seconds)
+2016-01-08 21:36:31	▶	kfunk (~krf@kde/kfunk) has joined #zsh
+2016-01-08 21:40:55	◀	PityDaFool (~AfroThund@166.170.32.200) has quit (Read error: Connection reset by peer)
+2016-01-08 21:47:08	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-08 21:48:29	◀	txtsd (~txtsd@103.39.31.214) has quit (Quit: WeeChat 1.3)
+2016-01-08 21:49:00	▶	txtsd (~txtsd@103.39.31.214) has joined #zsh
+2016-01-08 21:50:25	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-08 21:50:43	▶	licensed_ (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-08 21:51:14	◀	strull (~strull@pD9F4B3D2.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2016-01-08 21:52:12	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-08 21:52:27	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-08 21:54:23	◀	licensed (~licensed@unaffiliated/licensed) has quit (Ping timeout: 255 seconds)
+2016-01-08 21:57:40	◀	michimuellae (~micha@p57B8D80D.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2016-01-08 22:03:37		[psyq back: gone 01:52:16]
+2016-01-08 22:05:20	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-08 22:07:08	◀	asyncsrc (~textual@64.120.50.58) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-01-08 22:10:04	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-08 22:10:42	◀	txtsd (~txtsd@103.39.31.214) has quit (Quit: WeeChat 1.3)
+2016-01-08 22:11:29	◀	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has quit (Client Quit)
+2016-01-08 22:12:15	▶	txtsd (~txtsd@103.39.31.214) has joined #zsh
+2016-01-08 22:13:27	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-08 22:21:30	◀	glasnak (~glasnak@nat5.vcit.vutbr.net) has quit (Ping timeout: 245 seconds)
+2016-01-08 22:23:51	▶	glasnak (~glasnak@nat5.vcit.vutbr.net) has joined #zsh
+2016-01-08 22:31:09	▶	esc (esc@gentoo/contributor/esc) has joined #zsh
+2016-01-08 22:38:08	◀	cfricke (~cfricke@unaffiliated/cfricke) has quit (Ping timeout: 246 seconds)
+2016-01-08 22:41:21	◀	Ascetik (~Ascetik@50.234.96.50) has quit (Ping timeout: 260 seconds)
+2016-01-08 22:45:49	▶	Jesin (~Jesin@198.24.30.116) has joined #zsh
+2016-01-08 22:53:37	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Remote host closed the connection)
+2016-01-08 22:54:03	◀	colinbits (~colinbits@104.192.139.250) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 23:00:41	▶	cdown (~cdown@dab-rcn1-h-55-3.dab.02.net) has joined #zsh
+2016-01-08 23:04:18	◀	davidosomething (~davidosom@69.60.15.194) has quit (Quit: Lost terminal)
+2016-01-08 23:07:31	◀	backslash (~Amt@bagers.net) has quit (Remote host closed the connection)
+2016-01-08 23:10:08	◀	Haudegen (~quassel@85.124.51.57) has quit (Ping timeout: 265 seconds)
+2016-01-08 23:10:49	◀	Pankhurst (Pankhurst@93.204.110.119) has quit (Read error: Connection reset by peer)
+2016-01-08 23:13:35	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-08 23:18:01	◀	gaboesquivel (~gaboesqui@ip106-142-159-186.ct.co.cr) has quit (Remote host closed the connection)
+2016-01-08 23:18:05	◀	nchambers (~nchambers@69.84.207.155) has quit (Ping timeout: 250 seconds)
+2016-01-08 23:19:22	▶	ZyX-I (~ZyX-I@broadband-77-37-230-22.nationalcablenetworks.ru) has joined #zsh
+2016-01-08 23:20:31	◀	italoacasas (~italoacas@199.72.84.54) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 23:22:52	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Ping timeout: 240 seconds)
+2016-01-08 23:22:58	▶	rrichard_ (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-08 23:23:30	◀	rrichard_ (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Max SendQ exceeded)
+2016-01-08 23:24:05	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-08 23:28:06	▶	Haudegen (~quassel@85.124.51.57) has joined #zsh
+2016-01-08 23:29:46	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Quit: He who dares .... wins.)
+2016-01-08 23:31:06	▶	bb010g (uid21050@gateway/web/irccloud.com/x-likhsiegaymsasft) has joined #zsh
+2016-01-08 23:32:24	◀	coredump (~coredump|@38.88.32.98) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-08 23:34:58	◀	Jesin (~Jesin@198.24.30.116) has quit (Quit: Leaving)
+2016-01-08 23:38:16	▶	nchambers (~nchambers@71-46-197-191.res.bhn.net) has joined #zsh
+2016-01-08 23:41:42	◀	cdown (~cdown@dab-rcn1-h-55-3.dab.02.net) has quit (Remote host closed the connection)
+2016-01-08 23:48:03	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-08 23:49:21	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-08 23:53:02	▶	cdown (~cdown@dab-rcn1-h-1-2.dab.02.net) has joined #zsh
+2016-01-08 23:53:04	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-08 23:53:10	◀	RobotsOnDrugs (~robotsond@freebsd/lover/iamtheclaw) has quit (Ping timeout: 245 seconds)
+2016-01-08 23:56:46	▶	RobotsOnDrugs (~robotsond@freebsd/lover/iamtheclaw) has joined #zsh
+2016-01-09 00:01:24	◀	cdown (~cdown@dab-rcn1-h-1-2.dab.02.net) has quit (Ping timeout: 250 seconds)
+2016-01-09 00:05:44	llua	can you invert the auto suffix removal logic? when completing a dynamic directory i want the ] suffix to appear when an non-escaped space is inserted on the line.
+2016-01-09 00:06:45	llua	i have this hack to replace the ] when / is used currently: http://sprunge.us/dNjR
+2016-01-09 00:07:02	Mikachu	you can probably pass appropriate things to the compadd in your c) case
+2016-01-09 00:07:04	Mikachu	mine is tricky
+2016-01-09 00:07:36	Mikachu	http://mika.l3ib.org/tmp/ddd2d41075749252b50dc89774dab79f.txt _wanted -V dynamic-dirs expl ${${types[(r)$PREFIX[1]*]}[3,-1]} compadd -P $PREFIX[1] -qQS / -d description - ${(q)^vals}\]
+2016-01-09 00:07:47	Mikachu	don't ask me what's going on there
+2016-01-09 00:08:02	Mikachu	actually i think i just totally disable suffixes and insert the ] as part of the string itself
+2016-01-09 00:09:34	▶	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-09 00:10:02	llua	even that would be better than what i have now
+2016-01-09 00:11:28	▶	dunolie (~Robbie@unaffiliated/bingowingz) has joined #zsh
+2016-01-09 00:11:53	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-09 00:18:15	llua	i guess that function predates zsh_directory_name_functions existing? stuffing everything into that one function is kinda hard to follow.
+2016-01-09 00:21:09	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-09 00:23:59	◀	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-09 00:24:22	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-09 00:39:41	Mikachu	well, i can't use the _functions thing because that would require duplicating a lot of stuff
+2016-01-09 00:39:50	▶	cfricke (~cfricke@unaffiliated/cfricke) has joined #zsh
+2016-01-09 00:39:58	◀	cfricke (~cfricke@unaffiliated/cfricke) has quit (Client Quit)
+2016-01-09 00:41:57	▶	blackmesa (~blackmesa@aftr-37-201-227-86.unity-media.net) has joined #zsh
+2016-01-09 00:51:58	▶	dsdeiz (~dsdeiz@121.54.58.244) has joined #zsh
+2016-01-09 00:54:51	▶	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #zsh
+2016-01-09 01:02:02	◀	WonderWoofy (~curtisshi@2601:646:8201:bbb1:213:20ff:fefe:3184) has quit (Ping timeout: 255 seconds)
+2016-01-09 01:05:18	▶	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-09 01:08:41	◀	meh` (~meh@151.42.172.120) has quit (Ping timeout: 264 seconds)
+2016-01-09 01:10:52	ℹ	irc: disconnected from server
+2016-01-09 01:11:30	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-09 01:11:30	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-09 01:11:30	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-09 01:11:30	ℹ	Channel #zsh: 403 nicks (0 ops, 0 voices, 403 normals)
+2016-01-09 01:11:31	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-09 01:11:31	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-09 01:11:52	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-09 01:11:54	◀	mmc (~michal@ip913579f5.adsl-surfen.hetnet.nl) has quit (Quit: Leaving.)
+2016-01-09 01:13:57	◀	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has quit (Max SendQ exceeded)
+2016-01-09 01:17:38	▶	cdown (~cdown@dab-rcn1-h-55-9.dab.02.net) has joined #zsh
+2016-01-09 01:17:56	▶	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-09 01:23:48	◀	italoacasas (~italoacas@211.sub-166-241-20.myvzw.com) has quit (Max SendQ exceeded)
+2016-01-09 01:27:16	▶	WonderWoofy (~curtisshi@c-73-241-7-232.hsd1.ca.comcast.net) has joined #zsh
+2016-01-09 01:28:51	▶	meh` (~meh@host67-159-static.253-95-b.business.telecomitalia.it) has joined #zsh
+2016-01-09 01:33:05	◀	amcsi (~amcsi@cpc2-slam5-2-0-cust325.2-4.cable.virginm.net) has quit (Ping timeout: 255 seconds)
+2016-01-09 01:49:38	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-09 01:49:51	▶	blackmes1 (~blackmesa@aftr-37-201-227-86.unity-media.net) has joined #zsh
+2016-01-09 01:51:52	◀	blackmesa (~blackmesa@aftr-37-201-227-86.unity-media.net) has quit (Ping timeout: 240 seconds)
+2016-01-09 01:54:24	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-09 01:58:43	◀	bb010g (uid21050@gateway/web/irccloud.com/x-likhsiegaymsasft) has quit (Quit: Connection closed for inactivity)
+2016-01-09 02:00:31	◀	blackmes1 (~blackmesa@aftr-37-201-227-86.unity-media.net) has quit (Quit: WeeChat 1.3)
+2016-01-09 02:07:32	▶	noh (~noh@unaffiliated/noh) has joined #zsh
+2016-01-09 02:08:29	◀	stepnem (~stepnem@185.112.167.114) has quit (Ping timeout: 246 seconds)
+2016-01-09 02:14:03	◀	plovs (~plovs@62.84.24.209) has quit (Quit: Konversation terminated!)
+2016-01-09 02:16:57	◀	toogley (~toogley@2.171.174.132) has quit (Quit: toogley)
+2016-01-09 02:20:10	▶	harai (~b@d108-180-145-61.bchsia.telus.net) has joined #zsh
+2016-01-09 02:22:16	ℹ	irc: disconnected from server
+2016-01-09 21:20:20	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-09 21:20:20	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-09 21:20:20	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-09 21:20:20	ℹ	Channel #zsh: 410 nicks (0 ops, 0 voices, 410 normals)
+2016-01-09 21:20:20	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-09 21:20:20	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-09 21:20:39	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-09 21:23:34	◀	Pankhurst (Pankhurst@p5B340BFC.dip0.t-ipconnect.de) has quit
+2016-01-09 21:25:50	ℹ	gkatsev_ is now known as gkatsev
+2016-01-09 21:28:26	psprint	> :
+2016-01-09 21:28:30	psprint	llua: why?
+2016-01-09 21:35:24	▶	dsdeiz (~dsdeiz@121.54.58.245) has joined #zsh
+2016-01-09 21:42:58	◀	max_dev (~max_dev@189.27.22.168.dynamic.adsl.gvt.net.br) has quit (Quit: Lost terminal)
+2016-01-09 21:43:48	▶	max_dev (~max_dev@189.27.22.168.dynamic.adsl.gvt.net.br) has joined #zsh
+2016-01-09 21:43:49	◀	max_dev (~max_dev@189.27.22.168.dynamic.adsl.gvt.net.br) has quit (Client Quit)
+2016-01-09 21:44:15	▶	max_dev (~max_dev@189.27.22.168.dynamic.adsl.gvt.net.br) has joined #zsh
+2016-01-09 21:44:46	Faux	> false
+2016-01-09 21:44:47	machabot	Faux: No output, exitstatus: 1
+2016-01-09 21:45:28	◀	Jesin (~Jesin@pool-108-48-137-141.washdc.east.verizon.net) has quit (Quit: Leaving)
+2016-01-09 21:45:45	◀	max_dev (~max_dev@189.27.22.168.dynamic.adsl.gvt.net.br) has quit (Client Quit)
+2016-01-09 21:50:55	▶	snuffeluffegus (~snuffeluf@108-218-46-60.lightspeed.rlghnc.sbcglobal.net) has joined #zsh
+2016-01-09 21:51:45	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-09 21:53:21	◀	dsdeiz (~dsdeiz@121.54.58.245) has quit (Ping timeout: 256 seconds)
+2016-01-09 21:55:03	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Client Quit)
+2016-01-09 21:56:29	▶	orbiting (~orbiting@71-19-183-102.dedicated.allstream.net) has joined #zsh
+2016-01-09 22:05:44	▶	Amplificator (~quassel@unaffiliated/amplificator) has joined #zsh
+2016-01-09 22:07:16	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-09 22:09:27	◀	Gabri (~Gabri@2a02:a441:9f5:0:157e:3574:e7f6:7652) has quit (Quit: WeeChat 1.3)
+2016-01-09 22:15:16	◀	chrootzius (~chrootziu@x5f72de36.dyn.telefonica.de) has quit (Quit: WeeChat 1.3)
+2016-01-09 22:21:11	▶	glosoli (~textual@unaffiliated/glosoli) has joined #zsh
+2016-01-09 22:24:40	◀	kaiza (~kaiza@172.98.67.29) has quit (Remote host closed the connection)
+2016-01-09 22:25:24	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-09 22:28:07	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-09 22:28:52	▶	kaiza (~kaiza@71-17-31-175.sktn.hsdb.sasknet.sk.ca) has joined #zsh
+2016-01-09 22:34:01	◀	kaiza (~kaiza@71-17-31-175.sktn.hsdb.sasknet.sk.ca) has quit (Read error: Connection reset by peer)
+2016-01-09 22:34:39	◀	michimuellae (~micha@p57B8C0C8.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-01-09 22:35:22	▶	kaiza (~kaiza@71-17-31-175.sktn.hsdb.sasknet.sk.ca) has joined #zsh
+2016-01-09 22:35:32	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-09 22:36:15	▶	jsoh (~jsoh@stjhnf0157w-142166159083.dhcp-dynamic.FibreOP.nl.bellaliant.net) has joined #zsh
+2016-01-09 22:43:01	▶	pamplemousse (~pamplemou@bas1-montreal30-1177586886.dsl.bell.ca) has joined #zsh
+2016-01-09 22:52:09	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-09 23:02:53	▶	gaboesquivel (~gaboesqui@ip106-142-159-186.ct.co.cr) has joined #zsh
+2016-01-09 23:03:20	◀	glosoli (~textual@unaffiliated/glosoli) has left #zsh ("Textual IRC Client: www.textualapp.com")
+2016-01-09 23:04:21	◀	pocek_ (pock@77-254-36-89.adsl.inetia.pl) has quit (Remote host closed the connection)
+2016-01-09 23:04:23	◀	limon (~limon@unaffiliated/limon) has quit (Remote host closed the connection)
+2016-01-09 23:04:28	▶	pocek (pock@77-254-36-89.adsl.inetia.pl) has joined #zsh
+2016-01-09 23:07:08	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-09 23:08:08	◀	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has quit (Remote host closed the connection)
+2016-01-09 23:13:03	◀	nilsma (~nilsma@unaffiliated/nilsma) has left #zsh
+2016-01-09 23:17:32	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-09 23:19:30	▶	limon (~limon@unaffiliated/limon) has joined #zsh
+2016-01-09 23:20:17	▶	nilsma (~nilsma@unaffiliated/nilsma) has joined #zsh
+2016-01-09 23:23:50	◀	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-09 23:25:23	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-09 23:29:05	◀	endiruna (~endiendir@x590f02ed.dyn.telefonica.de) has quit (Quit: WeeChat 1.3)
+2016-01-09 23:31:29	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-09 23:33:35	◀	nchambers (~nchambers@71-46-197-191.res.bhn.net) has quit (Ping timeout: 276 seconds)
+2016-01-09 23:39:26	◀	ZyX-I (~ZyX-I@broadband-77-37-230-22.nationalcablenetworks.ru) has quit (Ping timeout: 276 seconds)
+2016-01-09 23:44:17	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Ping timeout: 272 seconds)
+2016-01-09 23:48:26	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-09 23:53:23	ℹ	irc: disconnected from server
+2016-01-10 18:56:12	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-10 18:56:12	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-10 18:56:12	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-10 18:56:12	ℹ	Channel #zsh: 402 nicks (0 ops, 0 voices, 402 normals)
+2016-01-10 18:56:12	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-10 18:56:12	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-10 18:56:32	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-10 18:59:26	◀	Jesin (~Jesin@pool-108-48-137-141.washdc.east.verizon.net) has quit (Quit: Leaving)
+2016-01-10 19:00:22	◀	djcb (~user@91-159-155-61.elisa-laajakaista.fi) has quit (Ping timeout: 240 seconds)
+2016-01-10 19:10:59	ℹ	txtsd is now known as Guest49266
+2016-01-10 19:10:59	◀	Guest49266 (~txtsd@103.39.31.214) has quit (Killed (leguin.freenode.net (Nickname regained by services)))
+2016-01-10 19:11:19	▶	txtsd (~txtsd@103.39.31.214) has joined #zsh
+2016-01-10 19:16:19	◀	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2016-01-10 19:16:25	▶	nat2610 (~Adium@2601:645:4000:7a28:384f:49cf:9708:bca8) has joined #zsh
+2016-01-10 19:16:25	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-10 19:18:39	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-10 19:18:41	▶	alegen (alegen@2a01:7e00::f03c:91ff:fe73:780d) has joined #zsh
+2016-01-10 19:18:50	▶	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #zsh
+2016-01-10 19:18:53	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-10 19:20:26	◀	nat2610 (~Adium@2601:645:4000:7a28:384f:49cf:9708:bca8) has quit (Client Quit)
+2016-01-10 19:21:04	psprint	danielsh: ok
+2016-01-10 19:21:12	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-10 19:21:52	danielsh	thanks psprint
+2016-01-10 19:28:51	phy1729	llua: but I want the opposite of what :# gives me
+2016-01-10 19:29:22	llua	remove the (M) then
+2016-01-10 19:29:40	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-10 19:30:04	phy1729	oh that's nifty  (I missed the (M))
+2016-01-10 19:31:16	▶	nilsma (~nilsma@unaffiliated/nilsma) has joined #zsh
+2016-01-10 19:31:42	◀	Gabri1 (~Gabri@2a02:a441:9f5:0:f931:9a7c:bd5d:1ffb) has quit (Ping timeout: 240 seconds)
+2016-01-10 19:37:10	◀	causasui (~causasui@50.131.188.139) has quit (Changing host)
+2016-01-10 19:37:10	▶	causasui (~causasui@wikipedia/causa-sui) has joined #zsh
+2016-01-10 19:37:32	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-10 19:42:08	▶	Gabri1 (~Gabri@2a02:a441:9f5:0:2d89:868a:d861:c30a) has joined #zsh
+2016-01-10 19:43:01	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-10 19:43:15	phy1729	in  Completion/Unix/Command/_init_d   what is the purpose of the  (( $+functions[_init_d_fullpath] )) ||    guards? Is it really so bad to define a function twice?
+2016-01-10 19:43:22	◀	Spr1ng (~Spr1ng@unaffiliated/spr1ng) has quit (Ping timeout: 240 seconds)
+2016-01-10 19:46:35	◀	cdown (~cdown@dab-rcn1-h-32-1.dab.02.net) has quit (Remote host closed the connection)
+2016-01-10 19:48:02	danielsh	phy1729, to let the user define the functino in his .zshrc and have that override the upstream version
+2016-01-10 19:48:18	phy1729	ah that makes sense
+2016-01-10 19:48:23	danielsh	does it?
+2016-01-10 19:48:54	▶	cdown (~cdown@dab-rcn1-h-1-8.dab.02.net) has joined #zsh
+2016-01-10 19:49:15	phy1729	the completion system seems built around let the user override EVERYTHING
+2016-01-10 19:49:39	◀	causasui (~causasui@wikipedia/causa-sui) has quit (Read error: Connection reset by peer)
+2016-01-10 19:49:56	▶	causasui (~causasui@c-50-131-188-139.hsd1.ca.comcast.net) has joined #zsh
+2016-01-10 19:49:56	◀	causasui (~causasui@c-50-131-188-139.hsd1.ca.comcast.net) has quit (Changing host)
+2016-01-10 19:49:56	▶	causasui (~causasui@wikipedia/causa-sui) has joined #zsh
+2016-01-10 19:50:34	danielsh	there's a switch somewhere that if set makes the completion system exec bash in a zpty, feed $BUFFER<TAB> to it, and parse its output
+2016-01-10 19:51:05	danielsh	I guess it's undocumented (like other helpers and knobs)
+2016-01-10 19:51:19	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-10 19:51:47	▶	njbair (~njbair@75-40-83-45.lightspeed.motloh.sbcglobal.net) has joined #zsh
+2016-01-10 19:52:12	llua	_zpty_to_bash_exec_also_read_output -i "$BUFFER"
+2016-01-10 19:52:51	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 19:56:46	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 19:56:50	◀	cdown (~cdown@dab-rcn1-h-1-8.dab.02.net) has quit (Remote host closed the connection)
+2016-01-10 20:04:07	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 20:06:04	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 20:07:57	◀	danielsh (~danielsh@apache/committer/danielsh) has quit (Quit: danielsh)
+2016-01-10 20:12:59	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-10 20:13:35	▶	haraigoshi (~b@d108-180-145-61.bchsia.telus.net) has joined #zsh
+2016-01-10 20:14:40	▶	Gabri2 (~Gabri@162.216.46.101) has joined #zsh
+2016-01-10 20:15:15	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-10 20:16:42	◀	Gabri1 (~Gabri@2a02:a441:9f5:0:2d89:868a:d861:c30a) has quit (Ping timeout: 240 seconds)
+2016-01-10 20:17:39	llua	phy1729: normally that check is used to allow a user to override the function with their own.
+2016-01-10 20:17:59	llua	oh, it was already answered
+2016-01-10 20:18:22	◀	haraigoshi (~b@d108-180-145-61.bchsia.telus.net) has quit (Ping timeout: 260 seconds)
+2016-01-10 20:19:08	▶	Rodya_ (~Rodya_@c-50-191-18-213.hsd1.pa.comcast.net) has joined #zsh
+2016-01-10 20:19:30	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 20:20:10	▶	oats (hurr@durr/im/a/sheep) has joined #zsh
+2016-01-10 20:20:10	◀	Rodya_ (~Rodya_@c-50-191-18-213.hsd1.pa.comcast.net) has quit (Read error: Connection reset by peer)
+2016-01-10 20:20:22	oats	Is there a way to have no limit on $SAVEHIST?
+2016-01-10 20:20:47	Mikachu	no, your hard drive will eventually run out of space
+2016-01-10 20:24:58	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 20:29:06	▶	cdown (~cdown@dab-rcn1-h-32-3.dab.02.net) has joined #zsh
+2016-01-10 20:32:04	◀	fengshaun (~fengshaun@unaffiliated/fengshaun) has quit (Ping timeout: 255 seconds)
+2016-01-10 20:34:26	◀	cdown (~cdown@dab-rcn1-h-32-3.dab.02.net) has quit (Remote host closed the connection)
+2016-01-10 20:34:48	▶	fengshaun (~fengshaun@unaffiliated/fengshaun) has joined #zsh
+2016-01-10 20:39:46	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 20:40:01	▶	pamplemousse (~pamplemou@bas1-montreal30-1177586886.dsl.bell.ca) has joined #zsh
+2016-01-10 20:42:44	◀	Mekanik (~vov314156@c-24-16-99-74.hsd1.wa.comcast.net) has quit (Quit: Buy...)
+2016-01-10 20:43:29	▶	spectromas (~spectroma@201.198.1.149) has joined #zsh
+2016-01-10 20:44:17	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-10 20:45:26	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 20:47:12	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Client Quit)
+2016-01-10 20:49:35	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 20:50:03	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Client Quit)
+2016-01-10 20:51:39	▶	harai (~b@104.156.228.102) has joined #zsh
+2016-01-10 20:52:29	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-10 20:52:54	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 21:01:34	◀	nilsma (~nilsma@unaffiliated/nilsma) has left #zsh
+2016-01-10 21:02:11	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-10 21:12:25	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-10 21:16:56	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-10 21:19:42	▶	libera (ae026b58@gateway/web/freenode/ip.174.2.107.88) has joined #zsh
+2016-01-10 21:21:54	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 264 seconds)
+2016-01-10 21:27:07	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 21:27:11	▶	D630 (~D630@unaffiliated/d630) has joined #zsh
+2016-01-10 21:30:53	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 21:31:12	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-10 21:36:49	◀	Gabri2 (~Gabri@162.216.46.101) has quit (Ping timeout: 256 seconds)
+2016-01-10 21:38:53	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-10 21:38:56	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-10 21:39:14	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-10 21:39:45	▶	nat2610 (~Adium@c-76-126-172-175.hsd1.ca.comcast.net) has joined #zsh
+2016-01-10 21:40:19	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 21:41:57	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-10 21:44:22	◀	nat2610 (~Adium@c-76-126-172-175.hsd1.ca.comcast.net) has quit (Client Quit)
+2016-01-10 21:45:02	◀	vlnx (~NIL@199-185-131-233.fttp.usinternet.com) has quit (Quit: leaving)
+2016-01-10 21:45:55	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-10 21:47:10	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-10 21:49:20	◀	plovs (~plovs@62.84.24.209) has quit (Quit: Konversation terminated!)
+2016-01-10 21:50:54	▶	licensed_ (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-10 21:54:37	◀	licensed (~licensed@unaffiliated/licensed) has quit (Ping timeout: 260 seconds)
+2016-01-10 21:55:01	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-10 21:56:08	◀	njbair (~njbair@75-40-83-45.lightspeed.motloh.sbcglobal.net) has quit (Ping timeout: 250 seconds)
+2016-01-10 22:00:01	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-10 22:02:00	◀	toogley (~toogley@2.171.174.132) has quit (Quit: toogley)
+2016-01-10 22:04:06	◀	spectromas (~spectroma@201.198.1.149) has quit (Quit: WeeChat 1.3)
+2016-01-10 22:05:04	▶	Gabri2 (~Gabri@162.216.46.9) has joined #zsh
+2016-01-10 22:11:30	◀	Haudegen (~quassel@85.124.51.57) has quit (Ping timeout: 255 seconds)
+2016-01-10 22:12:44	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-10 22:14:54	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-10 22:16:28	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-10 22:24:13	ℹ	Gabri2 is now known as Gabri
+2016-01-10 22:26:37	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-10 22:26:58	◀	Gabri (~Gabri@162.216.46.9) has quit (Quit: WeeChat 1.3)
+2016-01-10 22:29:22	▶	ahmedelgabri (~ahmedelga@162.216.46.9) has joined #zsh
+2016-01-10 22:30:20	◀	ahmedelgabri (~ahmedelga@162.216.46.9) has quit (Client Quit)
+2016-01-10 22:31:01	▶	vlnx (~NIL@199-185-131-233.fttp.usinternet.com) has joined #zsh
+2016-01-10 22:33:54	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-10 22:34:00		[psyq away: not here right now brb]
+2016-01-10 22:35:17	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-10 22:36:18	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-10 22:38:31	▶	Haudegen (~quassel@85.124.51.57) has joined #zsh
+2016-01-10 22:45:57	▶	Wibblit (~wobblit@host86-159-245-27.range86-159.btcentralplus.com) has joined #zsh
+2016-01-10 22:46:46	◀	italoacasas (~italoacas@c-98-211-138-15.hsd1.fl.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-10 22:48:30	◀	Wobblit (~wobblit@host86-159-245-27.range86-159.btcentralplus.com) has quit (Ping timeout: 260 seconds)
+2016-01-10 22:51:01	◀	libera (ae026b58@gateway/web/freenode/ip.174.2.107.88) has quit (Quit: Page closed)
+2016-01-10 22:55:28	▶	raboof (~pi@pdpc/supporter/professional/raboof) has joined #zsh
+2016-01-10 22:55:42	▶	codelurker (~codelurke@38.124.29.75) has joined #zsh
+2016-01-10 22:59:08	raboof	are there any common ways of performance profiling a zsh script?
+2016-01-10 22:59:44	raboof	I've been having some fun with xtrace and post-processing the output myself, but perhaps there's ready-to-go tools? :)
+2016-01-10 23:01:52	ft	man zshmodules | less -p 'ZSH.ZPROF'
+2016-01-10 23:04:05	▶	nilsma (~nilsma@unaffiliated/nilsma) has joined #zsh
+2016-01-10 23:06:11	raboof	cool
+2016-01-10 23:07:55	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-10 23:10:34	raboof	the zprof output doesn't show on which line of a function that time is spent, is that information available somewhere?
+2016-01-10 23:14:03	◀	codelurker (~codelurke@38.124.29.75) has quit (Quit: Leaving)
+2016-01-10 23:16:05	ft	No, IIRC a function is the finest unit that can be measured.
+2016-01-10 23:20:37	raboof	http://imagebin.ca/v/2T1Qgm1b24Ke <- i cooked this up based on xtrace output - nicely shows microseconds per line and sums per function, but lacks caller/callee relationships at this point
+2016-01-10 23:21:02		[psyq back: gone 00:47:02]
+2016-01-10 23:23:46	raboof	this'll break badly if there's any parallelism going on though, zprof probably does better in that case
+2016-01-10 23:26:22	ft	*nod* I don't know a lot about zprof's implementation anyway.
+2016-01-10 23:29:41	◀	AfroThundr (~AfroThund@2601:147:c001:6667:fd06:1a9a:23b6:18b8) has quit (Read error: Connection reset by peer)
+2016-01-10 23:30:36	ℹ	irc: disconnected from server
+2016-01-10 23:33:02	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-10 23:33:02	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-10 23:33:02	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-10 23:33:02	ℹ	Channel #zsh: 398 nicks (0 ops, 0 voices, 398 normals)
+2016-01-10 23:33:02	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-10 23:33:02	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-10 23:33:21	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-10 23:35:44	◀	D630 (~D630@unaffiliated/d630) has left #zsh ("parted")
+2016-01-10 23:38:48	◀	mmc (~michal@ip913579f5.adsl-surfen.hetnet.nl) has quit (Quit: Leaving.)
+2016-01-10 23:41:14	ℹ	irc: disconnected from server
+2016-01-10 23:43:55	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-10 23:43:55	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-10 23:43:55	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-10 23:43:55	ℹ	Channel #zsh: 396 nicks (0 ops, 0 voices, 396 normals)
+2016-01-10 23:43:55	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-10 23:43:55	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-10 23:44:14	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-10 23:47:53	◀	ssmedley_ (~ssmedley@aaodelhi.aao.GOV.AU) has quit (Quit: Leaving)
+2016-01-10 23:48:34	◀	Wibblit (~wobblit@host86-159-245-27.range86-159.btcentralplus.com) has quit (Quit: WeeChat 1.3)
+2016-01-10 23:56:56	▶	nchambers (~nchambers@71-46-197-191.res.bhn.net) has joined #zsh
+2016-01-11 00:10:23	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 276 seconds)
+2016-01-11 00:19:58	◀	RobotsOnDrugs (~robotsond@freebsd/lover/iamtheclaw) has quit (Ping timeout: 260 seconds)
+2016-01-11 00:21:32	▶	RobotsOnDrugs (~robotsond@freebsd/lover/iamtheclaw) has joined #zsh
+2016-01-11 00:24:19	◀	oats (hurr@durr/im/a/sheep) has left #zsh ("WeeChat 1.3")
+2016-01-11 00:24:42	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Ping timeout: 255 seconds)
+2016-01-11 00:25:50	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-11 00:27:14	▶	gaboesquivel (~gaboesqui@ip106-142-159-186.ct.co.cr) has joined #zsh
+2016-01-11 00:31:04	▶	cdown (~cdown@dab-rcn1-h-1-5.dab.02.net) has joined #zsh
+2016-01-11 00:35:16	◀	jsoh (~jsoh@stjhnf0157w-142166159083.dhcp-dynamic.FibreOP.nl.bellaliant.net) has quit (Ping timeout: 245 seconds)
+2016-01-11 00:41:48	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Remote host closed the connection)
+2016-01-11 00:42:15	◀	stepnem (~stepnem@185.112.167.114) has quit (Ping timeout: 276 seconds)
+2016-01-11 00:45:08	◀	nilsma (~nilsma@unaffiliated/nilsma) has left #zsh
+2016-01-11 00:51:49	◀	m0viefreak (~asdf@unaffiliated/m0viefreak) has quit (Remote host closed the connection)
+2016-01-11 00:52:20	▶	harai54 (~b@104.156.228.125) has joined #zsh
+2016-01-11 00:53:42	◀	harai (~b@104.156.228.102) has quit (Ping timeout: 240 seconds)
+2016-01-11 01:15:17	◀	johnnyfive (~johnnyfiv@unaffiliated/isalive) has quit (Ping timeout: 260 seconds)
+2016-01-11 01:18:40	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-11 01:22:57	▶	johnnyfive (~johnnyfiv@unaffiliated/isalive) has joined #zsh
+2016-01-11 01:23:12	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 255 seconds)
+2016-01-11 01:26:10	▶	Jesin (~Jesin@pool-108-45-39-144.washdc.fios.verizon.net) has joined #zsh
+2016-01-11 01:28:09	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-11 01:28:45	◀	nchambers (~nchambers@71-46-197-191.res.bhn.net) has quit (Ping timeout: 246 seconds)
+2016-01-11 01:32:30	▶	nchambers (~nchambers@71-46-197-191.res.bhn.net) has joined #zsh
+2016-01-11 01:40:22	◀	nchambers (~nchambers@71-46-197-191.res.bhn.net) has quit (Ping timeout: 240 seconds)
+2016-01-11 01:52:49	◀	skylite (~skylite@business-178-48-4-145.business.broadband.hu) has quit (Read error: Connection reset by peer)
+2016-01-11 01:53:14	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-11 01:55:47	◀	cdown (~cdown@dab-rcn1-h-1-5.dab.02.net) has quit (Ping timeout: 256 seconds)
+2016-01-11 01:57:55	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-11 02:00:50	▶	cdown (~cdown@dab-rcn1-h-1-8.dab.02.net) has joined #zsh
+2016-01-11 02:04:57	▶	MrMeowMeow (~MrMeowMeo@2602:306:b826:6950::44) has joined #zsh
+2016-01-11 02:05:26	◀	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-11 02:06:24	◀	lysanderslair (~lysander@108.63.113.131) has quit (Ping timeout: 255 seconds)
+2016-01-11 02:06:26	▶	lysander (~lysander@dsl-173-206-77-27.tor.primus.ca) has joined #zsh
+2016-01-11 02:07:25	▶	Phantom7 (~textual@cpe-69-204-251-52.nyc.res.rr.com) has joined #zsh
+2016-01-11 02:07:49	▶	hpt (~hpt@123.114.120.108) has joined #zsh
+2016-01-11 02:09:19	ℹ	irc: disconnected from server
+2016-01-11 20:34:46	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-11 20:34:46	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-11 20:34:46	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-11 20:34:46	ℹ	Channel #zsh: 400 nicks (0 ops, 0 voices, 400 normals)
+2016-01-11 20:34:47	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-11 20:34:47	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-11 20:35:05	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-11 20:47:10	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-11 20:56:26	◀	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-11 21:01:45	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-11 21:04:08	▶	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has joined #zsh
+2016-01-11 21:07:58	◀	leonarth (~leonarth@unaffiliated/leonarth) has quit
+2016-01-11 21:13:06	▶	jxs_ (~jxs@ip9234f4be.dynamic.kabel-deutschland.de) has joined #zsh
+2016-01-11 21:13:21	▶	Synthase_ (uid63346@gateway/web/irccloud.com/x-flxpclrfsbdgrukd) has joined #zsh
+2016-01-11 21:14:44	◀	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-11 21:14:53	◀	lysander (~lysander@dsl-173-206-77-27.tor.primus.ca) has quit (Ping timeout: 240 seconds)
+2016-01-11 21:20:07	◀	jxs_ (~jxs@ip9234f4be.dynamic.kabel-deutschland.de) has quit (Ping timeout: 250 seconds)
+2016-01-11 21:24:36	▶	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has joined #zsh
+2016-01-11 21:24:41	▶	danielsh (~danielsh@apache/committer/danielsh) has joined #zsh
+2016-01-11 21:26:36	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-11 21:27:09	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-11 21:29:56	▶	cargill_ (~ondra@host81-155-85-26.range81-155.btcentralplus.com) has joined #zsh
+2016-01-11 21:30:43	▶	Amt (~Amt@bagers.net) has joined #zsh
+2016-01-11 21:31:38	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-11 21:31:57	◀	danielsh (~danielsh@apache/committer/danielsh) has quit (Quit: danielsh)
+2016-01-11 21:32:24	◀	cargill (~ondra@host81-155-85-26.range81-155.btcentralplus.com) has quit (Ping timeout: 246 seconds)
+2016-01-11 21:33:02	▶	jxs_ (~jxs@ip9234f4be.dynamic.kabel-deutschland.de) has joined #zsh
+2016-01-11 21:33:30	▶	meh` (~meh@151.42.168.193) has joined #zsh
+2016-01-11 21:35:03	◀	cargill_ (~ondra@host81-155-85-26.range81-155.btcentralplus.com) has quit (Ping timeout: 255 seconds)
+2016-01-11 21:39:47	ℹ	irc: disconnected from server
+2016-01-12 20:42:20	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-12 20:42:20	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-12 20:42:20	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-12 20:42:20	ℹ	Channel #zsh: 405 nicks (0 ops, 0 voices, 405 normals)
+2016-01-12 20:42:21	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-12 20:42:21	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-12 20:42:24	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-12 20:42:41	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-12 20:50:33	◀	Haudegen (~quassel@85.124.51.57) has quit (Ping timeout: 240 seconds)
+2016-01-12 20:51:27	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-12 20:52:40	◀	majuscule (~dylan@dylansserver.com) has left #zsh
+2016-01-12 20:58:08	◀	stef204 (~stef204@unaffiliated/stef-204/x-384198) has quit (Quit: WeeChat 1.3)
+2016-01-12 20:58:46	▶	meloc (~geomyidae@pdpc/supporter/professional/geomyidae) has joined #zsh
+2016-01-12 20:59:44	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-12 21:02:42	▶	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #zsh
+2016-01-12 21:03:53	◀	lysanderslair (~lysander@dsl-173-206-99-36.tor.primus.ca) has quit (Ping timeout: 240 seconds)
+2016-01-12 21:04:53	◀	Kryptron_ (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 240 seconds)
+2016-01-12 21:05:41	◀	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Quit: .)
+2016-01-12 21:06:55	▶	PaulCapestany (~PaulCapes@204.28.124.82) has joined #zsh
+2016-01-12 21:12:30	ℹ	Sornaensis is now known as NUMIDIUM
+2016-01-12 21:16:02	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 240 seconds)
+2016-01-12 21:16:18	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-12 21:18:41	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-12 21:21:55	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-12 21:22:23	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-12 21:28:52	▶	Haudegen (~quassel@85.124.51.57) has joined #zsh
+2016-01-12 21:32:15	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-12 21:33:27	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-12 21:38:19	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 256 seconds)
+2016-01-12 21:39:09	◀	plovs (~plovs@62.84.24.209) has quit (Quit: Konversation terminated!)
+2016-01-12 21:46:28	▶	lysanderslair (~lysander@dsl-173-206-74-5.tor.primus.ca) has joined #zsh
+2016-01-12 21:49:16	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-12 21:50:30	▶	dsdeiz (~dsdeiz@121.54.58.243) has joined #zsh
+2016-01-12 21:51:44	▶	Atm0spher1c (~future@unaffiliated/atm0spher1c) has joined #zsh
+2016-01-12 21:52:26	▶	hubutm20 (~hubutm20@79.114.123.92) has joined #zsh
+2016-01-12 21:52:30	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 264 seconds)
+2016-01-12 21:53:33	◀	nilsma (~nilsma@unaffiliated/nilsma) has left #zsh
+2016-01-12 21:55:36	◀	cdown (~cdown@31.72.6.162) has quit (Ping timeout: 265 seconds)
+2016-01-12 22:00:37	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-12 22:01:36	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 255 seconds)
+2016-01-12 22:07:17	▶	cdown (~cdown@31.72.6.162) has joined #zsh
+2016-01-12 22:16:17	▶	nilsma (~nilsma@unaffiliated/nilsma) has joined #zsh
+2016-01-12 22:16:26	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-12 22:20:00	▶	hahuang61 (~hahuang65@12.111.82.9) has joined #zsh
+2016-01-12 22:20:41	◀	hahuang61 (~hahuang65@12.111.82.9) has quit (Remote host closed the connection)
+2016-01-12 22:21:01	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-12 22:21:03	▶	hahuang65 (~hahuang65@12.111.82.9) has joined #zsh
+2016-01-12 22:23:18	◀	Kryptron (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 276 seconds)
+2016-01-12 22:25:04	▶	slester (~slester@cpe-76-88-8-120.san.res.rr.com) has joined #zsh
+2016-01-12 22:25:07	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-12 22:27:43	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-12 22:28:45	◀	bb010g (uid21050@gateway/web/irccloud.com/x-tefnhqddktbrccoi) has quit (Quit: Connection closed for inactivity)
+2016-01-12 22:31:20	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-12 22:32:12	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 255 seconds)
+2016-01-12 22:33:18	◀	cdown (~cdown@31.72.6.162) has quit (Ping timeout: 265 seconds)
+2016-01-12 22:34:11	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-12 22:36:37	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-12 22:39:06	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2016-01-12 22:42:59	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-12 22:49:18	◀	dsdeiz (~dsdeiz@121.54.58.243) has quit (Ping timeout: 276 seconds)
+2016-01-12 22:54:37	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-12 22:56:03	▶	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has joined #zsh
+2016-01-12 22:58:22	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-12 22:58:25	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-12 22:59:58	▶	nat26101 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-12 22:59:58	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Read error: Connection reset by peer)
+2016-01-12 23:00:21	◀	Gabri (~ahmedelga@2a02:a441:9f5:0:110:f8a5:7c27:4ba) has quit (Quit: WeeChat 1.4)
+2016-01-12 23:00:54	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-12 23:02:10	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-12 23:04:41	◀	Wobblit (~wobblit@host86-159-245-27.range86-159.btcentralplus.com) has quit (Read error: Connection reset by peer)
+2016-01-12 23:05:39	◀	snuffeluffegus (~snuffeluf@cpe-174-99-0-200.nc.res.rr.com) has quit (Quit: leaving)
+2016-01-12 23:06:21	◀	cfricke (~cfricke@unaffiliated/cfricke) has quit (Quit: leaving)
+2016-01-12 23:07:01	◀	nat26101 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-12 23:07:37	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-12 23:07:49	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Remote host closed the connection)
+2016-01-12 23:09:43	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-12 23:10:40	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-12 23:14:34	◀	txtsd (~txtsd@103.39.31.214) has quit (Quit: WeeChat 1.3)
+2016-01-12 23:15:19	◀	Jesin (~Jesin@pool-108-45-39-144.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2016-01-12 23:15:21	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 250 seconds)
+2016-01-12 23:15:44	◀	slester (~slester@cpe-76-88-8-120.san.res.rr.com) has quit
+2016-01-12 23:17:00	▶	bb010g (uid21050@gateway/web/irccloud.com/x-beqwmhdtctlhxaey) has joined #zsh
+2016-01-12 23:18:14	▶	txtsd (~txtsd@103.39.31.214) has joined #zsh
+2016-01-12 23:19:02	▶	danielsh (~danielsh@apache/committer/danielsh) has joined #zsh
+2016-01-12 23:19:47	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-12 23:24:22	▶	dsdeiz (~dsdeiz@122.53.137.187) has joined #zsh
+2016-01-12 23:25:35	▶	licensed (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-12 23:25:57	▶	cerebro (~cerebro@goo.atnf.csiro.au) has joined #zsh
+2016-01-12 23:27:56	◀	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-12 23:30:09	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-12 23:31:18	◀	cerebro (~cerebro@goo.atnf.csiro.au) has quit (Ping timeout: 265 seconds)
+2016-01-12 23:32:51	▶	cerebro (~cerebro@goo.atnf.csiro.au) has joined #zsh
+2016-01-12 23:33:18	◀	cerebro (~cerebro@goo.atnf.csiro.au) has quit (Read error: Connection reset by peer)
+2016-01-12 23:33:31	▶	cerebro (~cerebro@goo.atnf.csiro.au) has joined #zsh
+2016-01-12 23:36:05	◀	Sasazuka (~Sasazuka@unaffiliated/sasazuka) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-12 23:37:08	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Remote host closed the connection)
+2016-01-12 23:37:34	▶	Sasazuka (~Sasazuka@unaffiliated/sasazuka) has joined #zsh
+2016-01-12 23:37:41	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-12 23:37:45	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-12 23:40:15	◀	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-01-12 23:40:32	▶	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #zsh
+2016-01-12 23:40:33	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-12 23:41:04	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-12 23:42:02	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 240 seconds)
+2016-01-12 23:44:49	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2016-01-12 23:47:17	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-12 23:47:35	◀	nchambers (~nchambers@botters/nchambers) has quit (Remote host closed the connection)
+2016-01-12 23:47:56	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-12 23:50:27	◀	hahuang65 (~hahuang65@12.111.82.9) has quit (Ping timeout: 250 seconds)
+2016-01-12 23:53:41	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-12 23:57:49	◀	danielsh (~danielsh@apache/committer/danielsh) has quit (Quit: danielsh)
+2016-01-13 00:07:02	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 240 seconds)
+2016-01-13 00:08:16	▶	b (~coffee@unaffiliated/ridout) has joined #zsh
+2016-01-13 00:12:33	◀	stepnem (~stepnem@185.112.167.114) has quit (Ping timeout: 255 seconds)
+2016-01-13 00:15:40	▶	doppo (doppo@2604:180::e0fc:a07f) has joined #zsh
+2016-01-13 00:20:12	◀	doppo (doppo@2604:180::e0fc:a07f) has quit (Ping timeout: 255 seconds)
+2016-01-13 00:30:45	ℹ	irc: disconnected from server
+2016-01-13 20:41:04	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-13 20:41:04	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-13 20:41:04	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-13 20:41:04	ℹ	Channel #zsh: 409 nicks (0 ops, 0 voices, 409 normals)
+2016-01-13 20:41:05	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-13 20:41:05	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-13 20:41:28	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-13 20:42:43	◀	Sasazuka (~Sasazuka@unaffiliated/sasazuka) has quit (Quit: Quit!)
+2016-01-13 20:48:21	tailgate	is compdef ... or zstyle considered 'better' for completions? Is there an overview of their differences?
+2016-01-13 20:49:13	thrig	zstyle is ornamentation on the church that is compdef
+2016-01-13 20:49:26	osse	*sniff
+2016-01-13 20:49:32	osse	beautifully said
+2016-01-13 20:51:48	▶	Sasazuka (~Sasazuka@unaffiliated/sasazuka) has joined #zsh
+2016-01-13 20:55:22	▶	cdown (~cdown@dab-far1-h-31-9.dab.02.net) has joined #zsh
+2016-01-13 20:56:12	danielsh	tailgate, compdef maps a command to a completion function. zstyle stores user settings.
+2016-01-13 20:56:45	tailgate	danielsh: in that context, what is a 'command'?
+2016-01-13 20:57:35	danielsh	tailgate, a hashed command name (i.e., something from $PATH), a function name, etc
+2016-01-13 20:58:33	danielsh	tailgate, is there a larger question this is a part of?
+2016-01-13 20:59:24	tailgate	I'm writing a completion function for a directory where all the files are of the form year-month-day-title.md
+2016-01-13 20:59:35	tailgate	I want to type the title and complete on that rather than the date
+2016-01-13 21:00:05	▶	tibbs_ (~tibbs@fedora/tibbs) has joined #zsh
+2016-01-13 21:00:09	◀	tibbs|w (~tibbs@fedora/tibbs) has quit (Read error: Connection reset by peer)
+2016-01-13 21:00:23	◀	licensed (~licensed@unaffiliated/licensed) has quit (Ping timeout: 240 seconds)
+2016-01-13 21:00:31	◀	cdown (~cdown@dab-far1-h-31-9.dab.02.net) has quit (Ping timeout: 276 seconds)
+2016-01-13 21:00:35	ℹ	tibbs_ is now known as tibbs|w
+2016-01-13 21:01:35	danielsh	Interesting task
+2016-01-13 21:01:47	danielsh	I assume you'll want that rule to be used whenever file completion would be used?
+2016-01-13 21:01:53	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-13 21:01:54	danielsh	e.g., for $EDITOR, ls, cat, not just for one command
+2016-01-13 21:02:24	tailgate	yep
+2016-01-13 21:02:25	thrig	might require fiddling around with _files ?
+2016-01-13 21:02:38	tailgate	yeah, so far I've been reading up on that
+2016-01-13 21:02:42	tailgate	_files -W dir
+2016-01-13 21:04:16	▶	m0viefreak (~asdf@unaffiliated/m0viefreak) has joined #zsh
+2016-01-13 21:04:37	danielsh	perhaps you need to set zstyle that applies to the 'files' tag ....
+2016-01-13 21:04:55	danielsh	morning m0viefreak
+2016-01-13 21:09:24	m0viefreak	hi
+2016-01-13 21:10:01	danielsh	thanks for the followup the other day
+2016-01-13 21:13:08	▶	noaon (~noaon@2605:e000:6286:2000:98bf:605a:e86:7cc2) has joined #zsh
+2016-01-13 21:14:44	▶	jsoh (~jsoh@stjhnf0157w-142166159083.dhcp-dynamic.FibreOP.nl.bellaliant.net) has joined #zsh
+2016-01-13 21:20:05	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-13 21:30:20	▶	Xeago_ (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-13 21:33:31	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 250 seconds)
+2016-01-13 21:37:10	▶	Gabri1 (~ahmedelga@162.216.46.55) has joined #zsh
+2016-01-13 21:39:34	◀	Gabri (~ahmedelga@2a02:a441:9f5:0:657e:c4f3:b3ee:a336) has quit (Ping timeout: 255 seconds)
+2016-01-13 21:40:47	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 260 seconds)
+2016-01-13 21:43:11	◀	Xeago_ (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-13 21:43:20	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-13 21:44:40	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-13 21:48:35	llua	tailgate: _needful() _files -W dir -g '*.md(e.REPLY=\${REPLY##*-}.)'; compdef _{,needful}
+2016-01-13 21:48:59	llua	or _foo() _files -W dir -g '*-*.md(e.REPLY=\${REPLY##*-}.)'; compdef _foo foo
+2016-01-13 21:53:32	llua	i don't see that is going to work out in the end tho.
+2016-01-13 21:58:01	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Quit: WeeChat 1.4-dev)
+2016-01-13 21:59:01	◀	Haudegen (~quassel@85.124.51.57) has quit (Ping timeout: 276 seconds)
+2016-01-13 21:59:27	llua	and it isn't~
+2016-01-13 22:01:21	▶	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has joined #zsh
+2016-01-13 22:02:33	◀	bjoe2k4 (bjoe2k4@kalzium.d9c.eu) has quit (Ping timeout: 250 seconds)
+2016-01-13 22:02:40	▶	Xeago_ (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-13 22:03:25	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-13 22:04:26	llua	zstyle -e, the files tag and matcher-list style can do what you want
+2016-01-13 22:04:43	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 260 seconds)
+2016-01-13 22:08:46	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 276 seconds)
+2016-01-13 22:09:15	◀	Gabri1 (~ahmedelga@162.216.46.55) has quit (Ping timeout: 260 seconds)
+2016-01-13 22:09:25	◀	nchambers (~nchambers@botters/nchambers) has quit (Changing host)
+2016-01-13 22:09:25	▶	nchambers (~nchambers@botters/nchambers/Squawker) has joined #zsh
+2016-01-13 22:10:33	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Remote host closed the connection)
+2016-01-13 22:10:36	▶	Gabri1 (~ahmedelga@162.216.46.161) has joined #zsh
+2016-01-13 22:10:49	◀	nchambers (~nchambers@botters/nchambers/Squawker) has quit (Changing host)
+2016-01-13 22:10:49	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-13 22:16:30	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Quit: Apparantly my attempt to stay awake has failed...)
+2016-01-13 22:16:56	▶	italoacasas (~italoacas@199.72.84.54) has joined #zsh
+2016-01-13 22:19:06	◀	italoacasas (~italoacas@199.72.84.54) has quit (Client Quit)
+2016-01-13 22:19:22	◀	n-st (~n-st@unaffiliated/n-st) has quit (Ping timeout: 260 seconds)
+2016-01-13 22:19:23	▶	italoacasas (~italoacas@199.72.84.54) has joined #zsh
+2016-01-13 22:22:53	◀	toogley (~toogley@2.165.248.167) has quit (Quit: toogley)
+2016-01-13 22:29:29	◀	irco (~irco@HSI-KBW-078-042-015-165.hsi3.kabel-badenwuerttemberg.de) has quit (Quit: au revoir)
+2016-01-13 22:30:04	▶	Haudegen (~quassel@85.124.51.57) has joined #zsh
+2016-01-13 22:38:32	▶	irco (~irco@HSI-KBW-078-042-015-165.hsi3.kabel-badenwuerttemberg.de) has joined #zsh
+2016-01-13 22:38:38	◀	bb010g (uid21050@gateway/web/irccloud.com/x-xxlqsvhcovzvmwaa) has quit (Quit: Connection closed for inactivity)
+2016-01-13 22:47:02	▶	Atm0spher1c (~future@162.219.3.190) has joined #zsh
+2016-01-13 22:48:10	▶	e1f` (~user@141.117.1.142) has joined #zsh
+2016-01-13 22:48:10	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-13 22:48:18	◀	Atm0spher1c (~future@162.219.3.190) has quit (Client Quit)
+2016-01-13 22:48:59	▶	Atm0spher1c (~future@unaffiliated/atm0spher1c) has joined #zsh
+2016-01-13 22:50:04	◀	e1f (~user@141.117.1.153) has quit (Ping timeout: 250 seconds)
+2016-01-13 22:50:35	◀	haraigo (~b@204.152.214.170) has quit (Ping timeout: 264 seconds)
+2016-01-13 22:56:35	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 264 seconds)
+2016-01-13 22:57:59	▶	cdown (~cdown@dab-far1-h-31-9.dab.02.net) has joined #zsh
+2016-01-13 22:58:17	◀	italoacasas (~italoacas@199.72.84.54) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-13 23:02:11	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-13 23:02:35	◀	hahuang61 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has quit (Quit: WeeChat 1.4)
+2016-01-13 23:02:48	▶	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has joined #zsh
+2016-01-13 23:03:08	◀	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has quit (Client Quit)
+2016-01-13 23:03:17	◀	Wobblit (~wobblit@host86-159-245-27.range86-159.btcentralplus.com) has quit (Quit: WeeChat 1.3)
+2016-01-13 23:03:30	▶	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has joined #zsh
+2016-01-13 23:06:53	▶	osa1 (~omer@2601:801:1:4a07:2ab2:bdff:fedf:fa66) has joined #zsh
+2016-01-13 23:06:53	◀	osa1 (~omer@2601:801:1:4a07:2ab2:bdff:fedf:fa66) has quit (Changing host)
+2016-01-13 23:06:53	▶	osa1 (~omer@haskell/developer/osa1) has joined #zsh
+2016-01-13 23:09:44	◀	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has quit (Quit: WeeChat 1.4)
+2016-01-13 23:09:57	▶	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has joined #zsh
+2016-01-13 23:13:53	◀	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has quit (Client Quit)
+2016-01-13 23:14:11	▶	hahuang65 (~hahuang65@2601:647:4000:52:19ce:b6df:f7af:6ec4) has joined #zsh
+2016-01-13 23:16:53	◀	hubutm20 (~hubutm20@79.114.123.92) has quit (Read error: Connection reset by peer)
+2016-01-13 23:18:58	tibbs|w	I know a common test for a key being in an array is (( ${+ARR[foo]} )) && stuff.
+2016-01-13 23:19:02	◀	leonarth (~leonarth@unaffiliated/leonarth) has quit
+2016-01-13 23:19:34	tibbs|w	But if I want to use an if-fi block, is there a simpler test than "if [[ ${ARG[foo]} -gt 0 ]];" ?
+2016-01-13 23:20:08	tibbs|w	Oops, missed the '+' in there.  "if [[ ${+ARR[foo]} ]];"
+2016-01-13 23:20:16	m0viefreak	if (( ${+ARR[foo]} )); then
+2016-01-13 23:20:17	phy1729	if (( ${+ARR[foo]} )); then ?
+2016-01-13 23:20:22	Mikachu	you accidentally wrote [[ instead of (( there
+2016-01-13 23:20:31	Mikachu	[[ $+ is always true, both 0 and 1 are nonempty strings
+2016-01-13 23:20:38	tibbs|w	Oh, you can use (( )) in an if block.  I guess I'm dumb.
+2016-01-13 23:20:44	Mikachu	you can use any command you want
+2016-01-13 23:21:05	◀	cdown (~cdown@dab-far1-h-31-9.dab.02.net) has quit (Remote host closed the connection)
+2016-01-13 23:21:14	Mikachu	if [[ $opt[(I)--] == 0 ]]; then; while case ${@[#]:-} in
+2016-01-13 23:21:29	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-13 23:21:39	Mikachu	i'm still proud of this
+2016-01-13 23:21:39	tibbs|w	True.  I'm just used to the old days where you actually used /bin/[ and didn't think of (( )) as a "command" in that context.
+2016-01-13 23:22:00	Mikachu	certainly anything you can put && after, you can use as an if condition
+2016-01-13 23:22:11	▶	dsdeiz (~dsdeiz@122.53.137.187) has joined #zsh
+2016-01-13 23:22:27	phy1729	tibbs|w: you could still use /bin/grep instead of /bin/[
+2016-01-13 23:22:32	tibbs|w	Yes, that clears it up nicely.
+2016-01-13 23:23:03	tibbs|w	phy1729: That I know.  My mistake was in thinking that (( )) was somehow magical and couldn't go there.
+2016-01-13 23:23:33	Mikachu	> if if true; then :; fi; then :; fi
+2016-01-13 23:23:34	machabot	Mikachu: No output, exitstatus: 0
+2016-01-13 23:23:41	Mikachu	i honestly didn't think that would work
+2016-01-13 23:35:05	◀	nchambers (~nchambers@botters/nchambers) has quit (Ping timeout: 276 seconds)
+2016-01-13 23:38:05	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 246 seconds)
+2016-01-13 23:38:14	◀	Gabri1 (~ahmedelga@162.216.46.161) has quit (Quit: WeeChat 1.4)
+2016-01-13 23:39:28	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 250 seconds)
+2016-01-13 23:40:43	▶	italoacasas (~italoacas@199.72.84.54) has joined #zsh
+2016-01-13 23:51:11	◀	italoacasas (~italoacas@199.72.84.54) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-13 23:52:31	ℹ	irc: disconnected from server
+2016-01-13 23:54:01	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-13 23:54:01	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-13 23:54:01	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-13 23:54:01	ℹ	Channel #zsh: 400 nicks (0 ops, 0 voices, 400 normals)
+2016-01-13 23:54:02	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-13 23:54:02	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-13 23:54:22	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-13 23:56:13	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-13 23:57:26	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Client Quit)
+2016-01-13 23:58:18	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-13 23:59:33	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-13 23:59:34	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-14 00:00:40	◀	irco (~irco@HSI-KBW-078-042-015-165.hsi3.kabel-badenwuerttemberg.de) has quit (Ping timeout: 260 seconds)
+2016-01-14 00:02:22	◀	Atm0spher1c (~future@unaffiliated/atm0spher1c) has quit (Ping timeout: 244 seconds)
+2016-01-14 00:04:06	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-14 00:05:20	◀	sandlst (~sandlst@h98.133.138.40.static.ip.windstream.net) has quit (Ping timeout: 260 seconds)
+2016-01-14 00:08:50	◀	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has quit (Ping timeout: 260 seconds)
+2016-01-14 00:08:50	◀	linduxed (~linduxed@h77-53-188-24.dynamic.se.alltele.net) has quit (Ping timeout: 260 seconds)
+2016-01-14 00:09:02	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 260 seconds)
+2016-01-14 00:09:16	▶	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has joined #zsh
+2016-01-14 00:10:06	▶	bjoe2k4 (bjoe2k4@kalzium.d9c.eu) has joined #zsh
+2016-01-14 00:12:41	▶	cow_2001 (~weechat@unaffiliated/wabisabi) has joined #zsh
+2016-01-14 00:12:48	cow_2001	i am trying to make this thing work inside byobu
+2016-01-14 00:12:50	cow_2001	http://darcs.nomeata.de/arbtt/doc/users_guide/effective-use.html
+2016-01-14 00:13:05	cow_2001	the bit where you trap on DEBUG
+2016-01-14 00:13:16	cow_2001	trap 'echo -ne "\033]2;$(pwd); $(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
+2016-01-14 00:13:38	cow_2001	it mentioned /etc/profile.d/vte.sh
+2016-01-14 00:13:46	◀	Kryptron_ (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 240 seconds)
+2016-01-14 00:13:46	cow_2001	i've got no clue what i'm doing
+2016-01-14 00:14:52	▶	italoacasas (~italoacas@229.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-14 00:15:19	llua	nor so we.
+2016-01-14 00:15:25	llua	do*
+2016-01-14 00:15:37	cow_2001	:(
+2016-01-14 00:17:27	◀	italoacasas (~italoacas@229.sub-166-241-20.myvzw.com) has quit (Max SendQ exceeded)
+2016-01-14 00:17:45	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-14 00:22:45	▶	linduxed (~linduxed@h77-53-188-24.dynamic.se.alltele.net) has joined #zsh
+2016-01-14 00:25:14	▶	OxFEEDBACC (~what@unaffiliated/oxfeedbacc) has joined #zsh
+2016-01-14 00:25:46	▶	licensed (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-14 00:29:26	▶	italoacasas (~italoacas@229.sub-166-241-20.myvzw.com) has joined #zsh
+2016-01-14 00:30:15	◀	Xeago_ (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-14 00:31:55	◀	italoacasas (~italoacas@229.sub-166-241-20.myvzw.com) has quit (Max SendQ exceeded)
+2016-01-14 00:35:30	devster31	hi people, if I want to customize the prompt should I set PS1 or PROMPT in the zshrc?
+2016-01-14 00:35:39	danielsh	yes
+2016-01-14 00:35:44	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-14 00:35:46	danielsh	(it doesn't matter which)
+2016-01-14 00:35:47	ntnn	:D
+2016-01-14 00:36:17	ntnn	devster31: what danielsh means is - it's the same variable for zsh
+2016-01-14 00:36:23	devster31	even with promptinit? the prompt command seems to set PS1, which seems to have higher priority
+2016-01-14 00:36:32	danielsh	> PS1=foo; echo $PROMPT
+2016-01-14 00:36:33	machabot	danielsh: foo
+2016-01-14 00:36:38	danielsh	> PROMPT=bar; echo $PS1
+2016-01-14 00:36:38	machabot	danielsh: bar
+2016-01-14 00:36:45	devster31	alright
+2016-01-14 00:36:50	devster31	thanks
+2016-01-14 00:36:52	danielsh	np
+2016-01-14 00:36:59	danielsh	ntnn, thanks for clarifying
+2016-01-14 00:37:32	ℹ	irc: disconnected from server
+2016-01-14 20:00:09	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-14 20:00:09	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-14 20:00:09	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-14 20:00:09	ℹ	Channel #zsh: 414 nicks (0 ops, 0 voices, 414 normals)
+2016-01-14 20:00:10	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-14 20:00:10	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-14 20:00:33	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-14 20:01:32	▶	nilsma (~nilsma@unaffiliated/nilsma) has joined #zsh
+2016-01-14 20:01:40	▶	jsoh (~jsoh@stjhnf0157w-142166159083.dhcp-dynamic.FibreOP.nl.bellaliant.net) has joined #zsh
+2016-01-14 20:01:59	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 264 seconds)
+2016-01-14 20:04:40	◀	cargill (~ondra@host86-182-2-170.range86-182.btcentralplus.com) has quit (Ping timeout: 260 seconds)
+2016-01-14 20:06:21	◀	pegmanm (~pegmanm@86-43-199-167-dynamic.b-ras1.wtd.waterford.eircom.net) has quit (Read error: Connection reset by peer)
+2016-01-14 20:09:31	▶	pegmanm (~pegmanm@86-43-199-167-dynamic.b-ras1.wtd.waterford.eircom.net) has joined #zsh
+2016-01-14 20:09:37	▶	Gabri1 (~ahmedelga@162.216.46.36) has joined #zsh
+2016-01-14 20:11:46	◀	kaiza (~kaiza@71-17-31-175.sktn.hsdb.sasknet.sk.ca) has quit (Ping timeout: 240 seconds)
+2016-01-14 20:12:15	◀	Gabri (~ahmedelga@2a02:a441:9f5:0:da:2699:a0fa:6002) has quit (Ping timeout: 260 seconds)
+2016-01-14 20:13:27	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-14 20:16:00	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-14 20:16:10	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 272 seconds)
+2016-01-14 20:17:35	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 240 seconds)
+2016-01-14 20:17:48	▶	cargill (~ondra@host86-182-2-170.range86-182.btcentralplus.com) has joined #zsh
+2016-01-14 20:17:51	▶	kaiza (~kaiza@172.98.67.83) has joined #zsh
+2016-01-14 20:19:21	▶	D630 (~D630@unaffiliated/d630) has joined #zsh
+2016-01-14 20:23:28	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-14 20:24:50	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-14 20:28:23	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Ping timeout: 264 seconds)
+2016-01-14 20:29:35	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 264 seconds)
+2016-01-14 20:33:58	▶	irco (~irco@HSI-KBW-078-042-015-165.hsi3.kabel-badenwuerttemberg.de) has joined #zsh
+2016-01-14 20:34:38	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-14 20:35:26	◀	ZyX-I (~ZyX-I@broadband-77-37-230-22.nationalcablenetworks.ru) has quit (Ping timeout: 240 seconds)
+2016-01-14 20:39:41	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-14 20:59:14	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-14 20:59:14	▶	sword- (~sword@162.242.216.132) has joined #zsh
+2016-01-14 20:59:29	sword-	hey does anyone have a guide on keybindings in iterm2 for osx
+2016-01-14 21:00:00	sword-	my beginning of line / end of line key bindings don't work properly in iterm, but my zshrc file works fine in linux
+2016-01-14 21:02:23	◀	nilsma (~nilsma@unaffiliated/nilsma) has left #zsh
+2016-01-14 21:04:05	▶	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has joined #zsh
+2016-01-14 21:04:30	◀	pegmanm (~pegmanm@86-43-199-167-dynamic.b-ras1.wtd.waterford.eircom.net) has quit (Quit: WeeChat 1.3)
+2016-01-14 21:04:37	llua	step 1) run cat - step 2) press key - step 3) copy output - step 4) exit cat - step 5) type bindkey - step 6) paste - step 7) type widget - step 8) press enter
+2016-01-14 21:05:12	izabera	too manyyyy
+2016-01-14 21:05:14	psprint	Will be 4 hours in a bus tomorrow, taking hardcopy of zshcompwid with me
+2016-01-14 21:07:51	◀	D630 (~D630@unaffiliated/d630) has quit (Quit: quit)
+2016-01-14 21:10:02	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-14 21:10:05	◀	coredump (~coredump|@38.88.32.98) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-14 21:10:42	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-14 21:11:47	▶	leonarth (~leonarth@unaffiliated/leonarth) has joined #zsh
+2016-01-14 21:12:43	◀	machabot (~machabot@macha.mac-anu.org) has quit (Remote host closed the connection)
+2016-01-14 21:12:48	leonarth	how can I make this alias work?
+2016-01-14 21:12:49	leonarth	alias a2strace='ps auxw | grep sbin/apache | awk '{print "-p " $2}' | xargs strace'
+2016-01-14 21:12:59	▶	machabot (~machabot@macha.mac-anu.org) has joined #zsh
+2016-01-14 21:13:01	llua	quoting correctly
+2016-01-14 21:13:07	llua	but just use a function
+2016-01-14 21:13:22	leonarth	could you show me how to quote correctly?
+2016-01-14 21:15:00	llua	a2strace() { ps auxw | grep sbin/apache | awk '{print "-p " $2}' | xargs strace; }
+2016-01-14 21:15:11	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 264 seconds)
+2016-01-14 21:16:12	▶	coredump (~coredump|@38.88.32.98) has joined #zsh
+2016-01-14 21:17:34	leonarth	that's cheating llua :)
+2016-01-14 21:17:48	llua	http://unix.stackexchange.com/questions/202003/zsh-alias-with-linefeeds-commas-and-quotes
+2016-01-14 21:18:41	leonarth	thank you very much llua
+2016-01-14 21:19:42	thrig	and possibly pgrep to avoid the ps/grep and then grep matching itself fun
+2016-01-14 21:20:49	◀	govg_ (~govg@unaffiliated/govg) has quit (Quit: leaving)
+2016-01-14 21:21:28	▶	govg (~govg@unaffiliated/govg) has joined #zsh
+2016-01-14 21:22:06	sword-	any reason why my history would only show me the last 16 lines of my history but .zsh_history has everything stored?
+2016-01-14 21:22:36	sword-	I can show you my history env settings
+2016-01-14 21:22:55	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 240 seconds)
+2016-01-14 21:23:09	danielsh	thrig, I just ran into that yesterday...  in a cron job that I wrote three years ago, and was fine for all those years.
+2016-01-14 21:23:34	Mikachu	just put a [s] in there and it won't match itself
+2016-01-14 21:24:13	thrig	sword-: what happens if you put a 1 after history?
+2016-01-14 21:24:55	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-14 21:25:39	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-14 21:26:16	sword-	it shows me all my entries then thrig
+2016-01-14 21:27:28	sword-	but history by itself doesn't
+2016-01-14 21:28:05	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-14 21:28:30	llua	so now you know to add 1.
+2016-01-14 21:30:05	sword-	lmao
+2016-01-14 21:30:25	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-01-14 21:30:38	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 256 seconds)
+2016-01-14 21:31:09	danielsh	I know that Mikael, that's what I did
+2016-01-14 21:31:39	Mikachu	just out of curiosity, why did you type out my name instead of completing my nickname? :P
+2016-01-14 21:32:44	danielsh	lazyness?
+2016-01-14 21:33:00	Mikachu	that seems counterintuitive
+2016-01-14 21:34:39	◀	sinkensabe (~sinkensab@213.115.244.180) has quit (Remote host closed the connection)
+2016-01-14 21:35:05	Valodim	laziness as in habit inertia
+2016-01-14 21:35:11	▶	sinkensabe (~sinkensab@213.115.244.180) has joined #zsh
+2016-01-14 21:38:00	◀	mwoodson (mwoodson@nat/redhat/x-vjrinzqecftnqygz) has quit (Ping timeout: 256 seconds)
+2016-01-14 21:38:38	◀	bb010g (uid21050@gateway/web/irccloud.com/x-jrdjnzrjcswzopde) has quit (Quit: Connection closed for inactivity)
+2016-01-14 21:39:19	◀	sinkensabe (~sinkensab@213.115.244.180) has quit (Ping timeout: 245 seconds)
+2016-01-14 21:41:14	◀	JamesOff (james@freenode/staff-emeritus/jamesoff) has quit (Ping timeout: 255 seconds)
+2016-01-14 21:41:24	◀	rkuris (~quassel@rkuris-2-pt.tunnel.tserv3.fmt2.ipv6.he.net) has quit (Quit: No Ping reply in 180 seconds.)
+2016-01-14 21:41:31	▶	rkuris (~quassel@rkuris-2-pt.tunnel.tserv3.fmt2.ipv6.he.net) has joined #zsh
+2016-01-14 21:42:53	▶	kalz (~kalz@2602:fff6:f:29c9::2c33) has joined #zsh
+2016-01-14 21:43:12	▶	mwoodson (mwoodson@nat/redhat/x-bhevzzfvvsbjymlp) has joined #zsh
+2016-01-14 21:45:00	◀	hahuang61 (~hahuang65@2601:647:4000:52:b9b5:5881:2591:17ba) has quit (Ping timeout: 260 seconds)
+2016-01-14 21:45:45	▶	dsdeiz (~dsdeiz@121.54.58.245) has joined #zsh
+2016-01-14 21:46:32	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-14 21:48:39	▶	jottr (~jottr@unaffiliated/jottr) has joined #zsh
+2016-01-14 21:49:56	▶	JamesOff (james@freenode/staff-emeritus/jamesoff) has joined #zsh
+2016-01-14 21:51:12	▶	licensed_ (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-14 21:52:51	▶	cespare (~cespare@ec2-54-174-208-173.compute-1.amazonaws.com) has joined #zsh
+2016-01-14 21:54:08	◀	licensed (~licensed@unaffiliated/licensed) has quit (Ping timeout: 250 seconds)
+2016-01-14 21:54:22	▶	hahuang65 (~hahuang65@2601:647:4000:52:b9b5:5881:2591:17ba) has joined #zsh
+2016-01-14 22:12:30	◀	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:15:12	◀	DANtheBEASTman (dan@soupwhale.com) has quit (Quit: I hate quit messages.)
+2016-01-14 22:18:18	▶	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has joined #zsh
+2016-01-14 22:20:05	◀	dsdeiz (~dsdeiz@121.54.58.245) has quit (Ping timeout: 276 seconds)
+2016-01-14 22:20:17	◀	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has quit (Remote host closed the connection)
+2016-01-14 22:20:50	▶	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has joined #zsh
+2016-01-14 22:21:10	◀	plovs (~plovs@62.84.24.209) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:23:08	◀	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has quit (Read error: Connection reset by peer)
+2016-01-14 22:23:32	▶	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has joined #zsh
+2016-01-14 22:26:05	▶	DANtheBEASTman (~DANtheBEA@new.bananabo.xyz) has joined #zsh
+2016-01-14 22:26:32	◀	Jesin (~Jesin@pool-108-45-39-144.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2016-01-14 22:26:35	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-14 22:26:50	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-14 22:27:32	ℹ	e1f` is now known as e1f
+2016-01-14 22:27:33	◀	DANtheBEASTman (~DANtheBEA@new.bananabo.xyz) has quit (Client Quit)
+2016-01-14 22:27:58	▶	DANtheBEASTman (dan@2a01:4f8:190:5145::2) has joined #zsh
+2016-01-14 22:28:36	◀	rkuris (~quassel@rkuris-2-pt.tunnel.tserv3.fmt2.ipv6.he.net) has quit (Quit: No Ping reply in 180 seconds.)
+2016-01-14 22:28:42	▶	rkuris (~quassel@rkuris-2-pt.tunnel.tserv3.fmt2.ipv6.he.net) has joined #zsh
+2016-01-14 22:29:14	◀	alem0lars (alem0lars@0xcc.alem0lars.me) has quit (Ping timeout: 250 seconds)
+2016-01-14 22:29:14	◀	murph (murph@welcome.to.the.darkside.panicbnc.us) has quit (Ping timeout: 250 seconds)
+2016-01-14 22:31:47	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-01-14 22:33:11	◀	JamesOff (james@freenode/staff-emeritus/jamesoff) has quit (Ping timeout: 264 seconds)
+2016-01-14 22:34:23	◀	bps (~bps@glebe.tech) has quit (Ping timeout: 264 seconds)
+2016-01-14 22:40:18	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-14 22:40:52	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Max SendQ exceeded)
+2016-01-14 22:41:56	◀	teeteewhy (~teeteewhy@2001:41d0:8:67d2::1337) has quit (Ping timeout: 240 seconds)
+2016-01-14 22:42:22	▶	teeteewhy (~teeteewhy@2001:41d0:8:67d2::1337) has joined #zsh
+2016-01-14 22:42:28	▶	JamesOff (james@freenode/staff-emeritus/jamesoff) has joined #zsh
+2016-01-14 22:43:38	▶	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has joined #zsh
+2016-01-14 22:44:12	◀	rrichardsr3 (~rrichards@pdpc/supporter/professional/rrichardsr3) has quit (Max SendQ exceeded)
+2016-01-14 22:46:30	◀	kanha (0e8b5206@gateway/web/freenode/ip.14.139.82.6) has quit (Ping timeout: 252 seconds)
+2016-01-14 22:46:33	▶	Ascetik_ (~Ascetik@50.234.96.50) has joined #zsh
+2016-01-14 22:47:27	▶	bps (~bps@glebe.tech) has joined #zsh
+2016-01-14 22:48:00	◀	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:48:34	▶	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has joined #zsh
+2016-01-14 22:49:45	◀	Ascetik (~Ascetik@50.234.96.50) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:51:21	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-14 22:53:06	◀	Ascetik_ (~Ascetik@50.234.96.50) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:54:12	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-14 22:55:07	◀	Kryptron_ (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 265 seconds)
+2016-01-14 22:57:07	▶	murph (murph@welcome.to.the.darkside.panicbnc.us) has joined #zsh
+2016-01-14 22:57:32	ℹ	murph is now known as Guest71348
+2016-01-14 22:58:23	◀	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Ping timeout: 264 seconds)
+2016-01-14 22:58:37	◀	coredump (~coredump|@38.88.32.98) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-14 22:59:03	▶	alem0lars (alem0lars@0xcc.alem0lars.me) has joined #zsh
+2016-01-14 22:59:05	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Ping timeout: 260 seconds)
+2016-01-14 22:59:43	▶	s00pcan (~chris@209.197.20.201) has joined #zsh
+2016-01-14 23:02:47	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-14 23:04:59	◀	s00pcan (~chris@209.197.20.201) has quit (Ping timeout: 264 seconds)
+2016-01-14 23:05:57	▶	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #zsh
+2016-01-14 23:09:41	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-14 23:16:22	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-14 23:17:10	▶	nat2610 (~Adium@208.90.213.202) has joined #zsh
+2016-01-14 23:23:30	◀	hxegon_ (~textual@198.8.80.216) has quit (Quit: BRB)
+2016-01-14 23:23:35	◀	nchambers (~nchambers@botters/nchambers) has quit (Ping timeout: 240 seconds)
+2016-01-14 23:27:16	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-14 23:32:20	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-01-14 23:32:41	▶	dsdeiz (~dsdeiz@122.53.137.187) has joined #zsh
+2016-01-14 23:33:19	◀	danielsh (~danielsh@apache/committer/danielsh) has quit (Quit: danielsh)
+2016-01-14 23:33:26	◀	mugiwaraYaRob (~strawHatR@120.59.4.114) has quit (Ping timeout: 246 seconds)
+2016-01-14 23:42:16	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-14 23:43:04	▶	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has joined #zsh
+2016-01-14 23:47:11	▶	Jesin (~Jesin@wsip-98-175-164-85.dc.dc.cox.net) has joined #zsh
+2016-01-14 23:51:50	◀	nat2610 (~Adium@208.90.213.202) has quit (Quit: Leaving.)
+2016-01-14 23:52:12	▶	OxFEEDBACC (~what@unaffiliated/oxfeedbacc) has joined #zsh
+2016-01-14 23:52:38	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-14 23:54:15	◀	jottr (~jottr@unaffiliated/jottr) has quit (Quit: WeeChat 1.4)
+2016-01-14 23:54:25	▶	dsdeiz_ (~dsdeiz@122.53.137.187) has joined #zsh
+2016-01-14 23:56:11	◀	dsdeiz (~dsdeiz@122.53.137.187) has quit (Ping timeout: 246 seconds)
+2016-01-14 23:56:54	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-15 00:04:27	▶	snuffeluffegus (~snuffeluf@cpe-75-177-183-224.nc.res.rr.com) has joined #zsh
+2016-01-15 00:07:23	◀	Gabri1 (~ahmedelga@162.216.46.36) has quit (Ping timeout: 246 seconds)
+2016-01-15 00:09:30	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-15 00:11:02	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-15 00:14:52	▶	AtnevRed (~atnevred@82.168.162.118) has joined #zsh
+2016-01-15 00:14:57	▶	nat2610 (~Adium@208.90.213.202) has joined #zsh
+2016-01-15 00:17:51	◀	nat2610 (~Adium@208.90.213.202) has quit (Client Quit)
+2016-01-15 00:18:15	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-15 00:19:44	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-15 00:20:00	◀	AtnevRed (~atnevred@82.168.162.118) has quit (Ping timeout: 272 seconds)
+2016-01-15 00:20:38	◀	blackmesa (~blackmesa@aftr-37-201-227-248.unity-media.net) has quit (Ping timeout: 272 seconds)
+2016-01-15 00:25:51	◀	ntnn (~ntnn@h2452363.stratoserver.net) has quit (Quit: Wombat combat!)
+2016-01-15 00:26:11	▶	ntnn (~ntnn@h2452363.stratoserver.net) has joined #zsh
+2016-01-15 00:26:32	▶	Ascetik (~Ascetik@108-243-31-137.lightspeed.tukrga.sbcglobal.net) has joined #zsh
+2016-01-15 00:26:35	◀	nchambers (~nchambers@botters/nchambers) has quit (Ping timeout: 260 seconds)
+2016-01-15 00:28:04	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-15 00:31:24	◀	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has quit (Ping timeout: 245 seconds)
+2016-01-15 00:32:26	▶	gigetoo (~gigetoo@c83-250-102-187.bredband.comhem.se) has joined #zsh
+2016-01-15 00:32:35	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 246 seconds)
+2016-01-15 00:35:50	◀	stepnem (~stepnem@185.112.167.114) has quit (Ping timeout: 255 seconds)
+2016-01-15 00:38:33	◀	irco (~irco@HSI-KBW-078-042-015-165.hsi3.kabel-badenwuerttemberg.de) has quit (Ping timeout: 265 seconds)
+2016-01-15 00:39:18	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-15 00:42:44	◀	leonarth (~leonarth@unaffiliated/leonarth) has quit
+2016-01-15 00:43:09	◀	snuffeluffegus (~snuffeluf@cpe-75-177-183-224.nc.res.rr.com) has quit (Quit: leaving)
+2016-01-15 00:43:52	◀	nchambers (~nchambers@botters/nchambers) has quit (Ping timeout: 256 seconds)
+2016-01-15 00:44:21	◀	ungali (ungali@unaffiliated/ungali) has quit (Ping timeout: 265 seconds)
+2016-01-15 00:44:48	▶	ungali (ungali@unaffiliated/ungali) has joined #zsh
+2016-01-15 00:46:34	▶	leonarth (~leonarth@unaffiliated/leonarth) has joined #zsh
+2016-01-15 00:47:35	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-15 00:55:10	◀	harai54 (~b@104.200.154.53) has quit (Ping timeout: 260 seconds)
+2016-01-15 00:56:35	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-15 00:57:26	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Ping timeout: 250 seconds)
+2016-01-15 00:58:34	◀	toogley (~toogley@2.165.248.167) has quit (Quit: toogley)
+2016-01-15 01:00:39	▶	cdown_ (~cdown@dab-far1-h-32-1.dab.02.net) has joined #zsh
+2016-01-15 01:03:04	◀	cdown (~cdown@199.201.66.3) has quit (Ping timeout: 245 seconds)
+2016-01-15 01:03:11	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Read error: Connection reset by peer)
+2016-01-15 01:03:26	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-15 01:08:20	▶	cdown (~cdown@dab-far1-h-66-4.dab.02.net) has joined #zsh
+2016-01-15 01:09:14	◀	cdown (~cdown@dab-far1-h-66-4.dab.02.net) has quit (Remote host closed the connection)
+2016-01-15 01:10:13	▶	cdown (~cdown@213.205.251.147) has joined #zsh
+2016-01-15 01:10:41	ℹ	irc: disconnected from server
+2016-01-15 21:11:42	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-15 21:11:42	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-15 21:11:42	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-15 21:11:42	ℹ	Channel #zsh: 403 nicks (0 ops, 0 voices, 403 normals)
+2016-01-15 21:11:43	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-15 21:11:43	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-15 21:12:02	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-15 21:12:41	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-15 21:15:32	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-15 21:22:16	◀	coredump|br (~coredump|@c-73-163-164-87.hsd1.dc.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-15 21:23:18	◀	emilford (~Eric@179.53.153.253) has quit (Read error: Connection reset by peer)
+2016-01-15 21:25:52	▶	codeNgamer (~codeNgame@98.196.19.54) has joined #zsh
+2016-01-15 21:27:35	◀	govg (~govg@unaffiliated/govg) has quit (Ping timeout: 240 seconds)
+2016-01-15 21:28:23	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-15 21:28:39	▶	emilford (~Eric@190.166.39.18) has joined #zsh
+2016-01-15 21:33:15	◀	emilford (~Eric@190.166.39.18) has quit (Ping timeout: 240 seconds)
+2016-01-15 21:34:25	tailgate	what is the diffrence between RBUFFER=${RBUFFER%%[[:space:]]#} and RBUFFER=${RBUFFER##[[:space:]]#}
+2016-01-15 21:34:51	tailgate	I understand it removes whitespace from the end, but I'm not sure about ## vs %%
+2016-01-15 21:34:59	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 21:35:07	izabera	## removes from the beginning of the string
+2016-01-15 21:35:11	ntnn	## from left, %% from right
+2016-01-15 21:35:29	tailgate	ah
+2016-01-15 21:35:33	ntnn	man zshexpn
+2016-01-15 21:35:43	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-15 21:38:07	▶	govg (~govg@unaffiliated/govg) has joined #zsh
+2016-01-15 21:38:19	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-15 21:39:32	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-15 21:43:02	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 255 seconds)
+2016-01-15 21:58:22	▶	minde (~minde@unaffiliated/minde) has joined #zsh
+2016-01-15 21:59:36	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-15 22:00:00	◀	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has quit (Quit: WeeChat 1.3)
+2016-01-15 22:07:15	◀	nioncode (nioncode@karif.server-speed.net) has quit (Ping timeout: 240 seconds)
+2016-01-15 22:09:32	▶	jayne_ (~jayne@freenode/staff/jayne) has joined #zsh
+2016-01-15 22:09:32	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-15 22:11:30	◀	jayne (~jayne@freenode/staff/jayne) has quit (*.net *.split)
+2016-01-15 22:13:34	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-15 22:13:47	◀	sinkensabe (~sinkensab@213-65-123-236-no78.tbcn.telia.com) has quit (Remote host closed the connection)
+2016-01-15 22:14:39	▶	nioncode (nioncode@karif.server-speed.net) has joined #zsh
+2016-01-15 22:14:55	◀	govg (~govg@unaffiliated/govg) has quit (Quit: leaving)
+2016-01-15 22:15:13	▶	govg (~govg@unaffiliated/govg) has joined #zsh
+2016-01-15 22:17:40	◀	nat2610 (~Adium@obvious1.static.monkeybrains.net) has quit (Quit: Leaving.)
+2016-01-15 22:18:26	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 246 seconds)
+2016-01-15 22:22:45	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 22:24:09	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-15 22:24:27	tailgate	is there a glob for digits only?
+2016-01-15 22:24:37	izabera	<->
+2016-01-15 22:24:53	tailgate	thanks
+2016-01-15 22:25:44	▶	nat2610 (~Adium@208.90.213.202) has joined #zsh
+2016-01-15 22:26:06	▶	coredump (~coredump|@50.153.246.105) has joined #zsh
+2016-01-15 22:26:49	llua	it will match leading zeros too.
+2016-01-15 22:27:28	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 250 seconds)
+2016-01-15 22:27:35	izabera	leading zeros aren't digits?
+2016-01-15 22:28:05	ThiefMaster	he probably meant something like 123xxx
+2016-01-15 22:28:20	llua	one may be surprised foo<1-10> matches foo01, foo02, etc.
+2016-01-15 22:29:01	Mikachu	sometimes people even expect foo<1-9>* not to match foo15
+2016-01-15 22:29:09	tailgate	are compset patterns the same as globs?
+2016-01-15 22:29:29	Mikachu	they're more like [[ foo = *patterns* ]]
+2016-01-15 22:29:49	Mikachu	but yeah, they are more or less the same as globs with some small differences
+2016-01-15 22:30:03	Mikachu	isn't special for example, when you're just doing a string pattern match
+2016-01-15 22:30:07	Mikachu	/
+2016-01-15 22:30:56	◀	Gabri (~ahmedelga@2a02:a441:9f5:0:c4b9:c20e:f4fc:4f9a) has quit (Ping timeout: 250 seconds)
+2016-01-15 22:31:47	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 22:36:17	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 246 seconds)
+2016-01-15 22:39:07	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-15 22:40:51	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 22:43:51	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2016-01-15 22:45:47	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 264 seconds)
+2016-01-15 22:48:08	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Remote host closed the connection)
+2016-01-15 22:48:30	llua	hm, i wonder if you can use (#q) to force globbing there now.
+2016-01-15 22:49:56	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 22:50:02	◀	nat2610 (~Adium@208.90.213.202) has quit (Quit: Leaving.)
+2016-01-15 22:50:26	▶	nat2610 (~Adium@obvious1.static.monkeybrains.net) has joined #zsh
+2016-01-15 22:51:27	◀	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has quit (Remote host closed the connection)
+2016-01-15 22:51:51	▶	Ascetik_ (~Ascetik@50.234.96.50) has joined #zsh
+2016-01-15 22:52:51	llua	guess not
+2016-01-15 22:52:57	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-15 22:54:44	◀	Ascetik (~Ascetik@50.234.96.50) has quit (Ping timeout: 245 seconds)
+2016-01-15 22:54:58	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 265 seconds)
+2016-01-15 22:56:00	▶	snuffeluffegus (~snuffeluf@108-218-46-60.lightspeed.rlghnc.sbcglobal.net) has joined #zsh
+2016-01-15 22:58:29	◀	Ascetik_ (~Ascetik@50.234.96.50) has quit (Ping timeout: 245 seconds)
+2016-01-15 22:58:30	▶	coredump|br (~coredump|@73.212.166.164) has joined #zsh
+2016-01-15 22:58:39	◀	bb010g (uid21050@gateway/web/irccloud.com/x-zaftewabykefftgv) has quit (Quit: Connection closed for inactivity)
+2016-01-15 22:58:42	▶	meloc_ (~geomyidae@pdpc/supporter/professional/geomyidae) has joined #zsh
+2016-01-15 22:59:00	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 22:59:14	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-15 23:00:17	◀	coredump (~coredump|@50.153.246.105) has quit (Ping timeout: 265 seconds)
+2016-01-15 23:01:18	◀	minde (~minde@unaffiliated/minde) has quit (Quit: WeeChat 1.4-dev)
+2016-01-15 23:03:29	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 245 seconds)
+2016-01-15 23:08:09	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:13:36	izabera	what does this do?     time () { echo hi }
+2016-01-15 23:13:42	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 272 seconds)
+2016-01-15 23:13:54	◀	nchambers (~nchambers@botters/nchambers) has quit (Ping timeout: 245 seconds)
+2016-01-15 23:15:30	izabera	it doesn't print anything and it doesn't define a function
+2016-01-15 23:17:15	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:18:15	◀	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has quit (Remote host closed the connection)
+2016-01-15 23:22:01	Mikachu	it would appear that it does nothing
+2016-01-15 23:22:08	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 246 seconds)
+2016-01-15 23:22:57	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-15 23:25:02	◀	toogley (~toogley@2.165.248.167) has quit (Quit: toogley)
+2016-01-15 23:26:16	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:28:07	thrig	prints hi under 5.0.5, skips the time stuff
+2016-01-15 23:30:29	◀	codeNgamer (~codeNgame@98.196.19.54) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-15 23:30:59	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 245 seconds)
+2016-01-15 23:33:34	▶	nchambers (~nchambers@botters/nchambers) has joined #zsh
+2016-01-15 23:33:37	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2016-01-15 23:33:41	▶	bb010g (uid21050@gateway/web/irccloud.com/x-pqkpjpdirxycolsj) has joined #zsh
+2016-01-15 23:34:11	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-15 23:35:24	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:39:59	▶	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has joined #zsh
+2016-01-15 23:40:18	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 272 seconds)
+2016-01-15 23:41:14	◀	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has quit (Remote host closed the connection)
+2016-01-15 23:44:29	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:44:50	◀	Rodya_ (~Rodya_@pool-108-52-28-121.phlapa.fios.verizon.net) has quit (Ping timeout: 256 seconds)
+2016-01-15 23:46:06	◀	snuffeluffegus (~snuffeluf@108-218-46-60.lightspeed.rlghnc.sbcglobal.net) has quit (Quit: leaving)
+2016-01-15 23:46:53	▶	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has joined #zsh
+2016-01-15 23:47:10	▶	psyq_ (~psyq@178.62.210.183) has joined #zsh
+2016-01-15 23:49:23	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 264 seconds)
+2016-01-15 23:51:58	phy1729	passes ('{' 'echo' 'hi' '}') to an empty anon function?
+2016-01-15 23:52:24	▶	Ascetik (~Ascetik@108-243-31-137.lightspeed.tukrga.sbcglobal.net) has joined #zsh
+2016-01-15 23:52:53	◀	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-01-15 23:53:33	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-15 23:54:39	phy1729	>> time (){echo "$@";} { echo hi
+2016-01-15 23:54:40	machabot	phy1729: { echo hi
+2016-01-15 23:54:44	phy1729	>> time (){echo "$@";} { echo hi }
+2016-01-15 23:54:54	machabot	phy1729: Timeout (no output).
+2016-01-15 23:55:27	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-15 23:57:55	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 240 seconds)
+2016-01-15 23:59:07	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-15 23:59:11	_rgn	what does <<< do?
+2016-01-15 23:59:43	ntnn	man zshall | less +/\<\<\<
+2016-01-15 23:59:44	llua	does what a here doc does, but with a string
+2016-01-16 00:02:23	_rgn	so it's kind of like using echo "whatever" | on the left hand side
+2016-01-16 00:02:45	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-16 00:03:06	llua	yes
+2016-01-16 00:07:08	◀	alem0lars (alem0lars@0xcc.alem0lars.me) has quit (Ping timeout: 250 seconds)
+2016-01-16 00:07:34	◀	Guest71348 (murph@welcome.to.the.darkside.panicbnc.us) has quit (Ping timeout: 250 seconds)
+2016-01-16 00:07:59	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 264 seconds)
+2016-01-16 00:11:56	▶	emilford (~Eric@179.53.153.253) has joined #zsh
+2016-01-16 00:13:02	▶	lysander (~lysander@108.63.181.182) has joined #zsh
+2016-01-16 00:13:30	◀	lysanderslair (~lysander@108.63.104.139) has quit (Ping timeout: 260 seconds)
+2016-01-16 00:13:57	_rgn	thanks
+2016-01-16 00:20:24	◀	gaboesquivel (~gaboesqui@ip106-142-159-186.ct.co.cr) has quit (Remote host closed the connection)
+2016-01-16 00:20:56	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 00:24:09	◀	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has quit (Quit: WeeChat 1.3)
+2016-01-16 00:25:22	▶	davidosomething (~davidosom@69.60.15.194) has joined #zsh
+2016-01-16 00:28:34	▶	cdown (~cdown@199.201.66.3) has joined #zsh
+2016-01-16 00:29:05	▶	murph (murph@welcome.to.the.darkside.panicbnc.us) has joined #zsh
+2016-01-16 00:29:28	ℹ	murph is now known as Guest70081
+2016-01-16 00:32:39	◀	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has quit (Remote host closed the connection)
+2016-01-16 00:32:42	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 00:34:20	▶	cerebro (~cerebro@123-243-231-21.static.tpgi.com.au) has joined #zsh
+2016-01-16 00:35:12	◀	cdown (~cdown@199.201.66.3) has quit (Read error: Connection reset by peer)
+2016-01-16 00:36:33	▶	cdown (~cdown@dab-far1-h-1-5.dab.02.net) has joined #zsh
+2016-01-16 00:37:02	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-16 00:47:43	▶	Xeago (~Xeago@unaffiliated/xeago) has joined #zsh
+2016-01-16 00:48:38	▶	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has joined #zsh
+2016-01-16 00:51:12	◀	licensed (~licensed@unaffiliated/licensed) has quit (Read error: Connection reset by peer)
+2016-01-16 00:51:26	◀	coredump|br (~coredump|@73.212.166.164) has quit (Read error: Connection reset by peer)
+2016-01-16 00:51:34	▶	licensed (~licensed@unaffiliated/licensed) has joined #zsh
+2016-01-16 00:52:25	▶	alem0lars (alem0lars@0xcc.alem0lars.me) has joined #zsh
+2016-01-16 00:53:29	◀	AtnevRed (~atnevred@82-168-162-118.ip.telfort.nl) has quit (Ping timeout: 245 seconds)
+2016-01-16 00:54:15	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 00:54:58	▶	cxki (~cxki@unaffiliated/cxki) has joined #zsh
+2016-01-16 00:56:01	▶	coredump (~coredump|@c-73-212-166-164.hsd1.dc.comcast.net) has joined #zsh
+2016-01-16 00:56:06	◀	firstdayonthejob (~firstdayo@cpc91184-cmbg18-2-0-cust232.5-4.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 00:57:38	◀	coredump (~coredump|@c-73-212-166-164.hsd1.dc.comcast.net) has quit (Max SendQ exceeded)
+2016-01-16 00:58:44	▶	coredump (~coredump|@c-73-212-166-164.hsd1.dc.comcast.net) has joined #zsh
+2016-01-16 00:59:02	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Client Quit)
+2016-01-16 01:02:36	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 01:02:41	▶	Gabri (~ahmedelga@2a02:a441:9f5:0:d904:90b8:825f:e414) has joined #zsh
+2016-01-16 01:06:47	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 246 seconds)
+2016-01-16 01:08:20	◀	govg (~govg@unaffiliated/govg) has quit (Ping timeout: 272 seconds)
+2016-01-16 01:08:26	▶	Balliad (~textual@52D96D43.cm-11-1b.dynamic.ziggo.nl) has joined #zsh
+2016-01-16 01:08:50	▶	emilford (~Eric@190.166.39.18) has joined #zsh
+2016-01-16 01:12:22	▶	causasui (~causasui@c-50-131-188-139.hsd1.ca.comcast.net) has joined #zsh
+2016-01-16 01:16:02	◀	irco (~irco@vpn205-016.rzuser.uni-heidelberg.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 01:19:55	▶	govg (~govg@unaffiliated/govg) has joined #zsh
+2016-01-16 01:20:58	◀	plovs (~plovs@62.84.24.209) has quit (Read error: Connection reset by peer)
+2016-01-16 01:22:21	◀	causasui (~causasui@c-50-131-188-139.hsd1.ca.comcast.net) has quit (Changing host)
+2016-01-16 01:22:21	▶	causasui (~causasui@wikipedia/causa-sui) has joined #zsh
+2016-01-16 01:23:54	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 01:24:11	ℹ	irc: disconnected from server
+2016-01-16 14:28:56	▶	psyq (~Psyq@unaffiliated/psyq) has joined #zsh
+2016-01-16 14:28:56	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-16 14:28:56	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-16 14:28:56	ℹ	Channel #zsh: 406 nicks (0 ops, 0 voices, 406 normals)
+2016-01-16 14:28:56	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-16 14:28:56	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-16 14:29:17	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-16 14:29:36	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Remote host closed the connection)
+2016-01-16 14:33:48	▶	Gabri2 (~ahmedelga@ip4da074e6.direct-adsl.nl) has joined #zsh
+2016-01-16 14:36:07	ungali	> ls
+2016-01-16 14:36:08	machabot	ungali: No output, exitstatus: 0
+2016-01-16 14:36:13	ungali	> pwd
+2016-01-16 14:36:14	machabot	ungali: /root
+2016-01-16 14:36:27	ungali	> curl
+2016-01-16 14:36:28	machabot	ungali: zsh: command not found: curl
+2016-01-16 14:36:32	ungali	> wget
+2016-01-16 14:36:33	machabot	ungali: zsh: command not found: wget
+2016-01-16 14:36:42	ungali	> ls /bin
+2016-01-16 14:36:43	machabot	ungali: [   dash    getent    ls      pax       sleep  true      zsh-3.0.8
+2016-01-16 14:36:43	machabot	ungali: awk   date    getopt    lsblk   pgrep     snice  truncate    zsh-3.1.9
+2016-01-16 14:36:43	machabot	ungali: basename  dd    grep      mawk    pkill     sort  tty      zsh-4.0.9
+2016-01-16 14:36:44	machabot	ungali: 16 more lines ( http://sprunge.us/ZgGS )
+2016-01-16 14:37:23	ungali	> chsh -s /bin/bash # ;)
+2016-01-16 14:37:23	machabot	ungali: zsh: command not found: chsh
+2016-01-16 14:37:32	OxFEEDBACC	:-)
+2016-01-16 14:39:30	OxFEEDBACC	i was just trying to figure out why my(?) rsync swallows *.*.sample files... #rsync isn't that responsive and a quick grep over my $(rpm -qlf =rsync) files didn't reveal a system issue)
+2016-01-16 14:47:00	psprint	to remove empty elements from array, one should do array=( $array[@] ) ?
+2016-01-16 14:47:48	◀	yumaokao (~yumaokao@218-161-54-18.HINET-IP.hinet.net) has quit (Quit: WeeChat 1.3)
+2016-01-16 14:48:52	osse	psprint: that works, but then if $array[2] is removed then $array[3] will become $array[2] etc
+2016-01-16 14:49:15	▶	yumaokao (~yumaokao@128.199.95.42) has joined #zsh
+2016-01-16 14:50:39	psprint	that's fine
+2016-01-16 14:51:49	osse	it usually is
+2016-01-16 14:52:07	osse	maybe there's a more proper way to do it with fancy parameter expansion
+2016-01-16 14:52:14	◀	jottr (~jottr@unaffiliated/jottr) has quit (Quit: WeeChat 1.4)
+2016-01-16 14:52:27	osse	hmm, i think you want array=( "$array[@]" ). can't remember
+2016-01-16 14:52:29	▶	_rgn (~rgn@unaffiliated/rgn/x-3325643) has joined #zsh
+2016-01-16 14:54:23	psprint	this will preserve empty elements
+2016-01-16 14:55:07	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-16 14:55:19	osse	oh right
+2016-01-16 14:58:59	◀	txtsd (~txtsd@103.39.31.193) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:06:04	◀	nl6720 (~nl6720@unaffiliated/nl6720) has quit (Remote host closed the connection)
+2016-01-16 15:08:10	▶	txtsd (~txtsd@103.39.31.193) has joined #zsh
+2016-01-16 15:10:13	▶	nl6720 (~nl6720@unaffiliated/nl6720) has joined #zsh
+2016-01-16 15:11:20	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 15:14:55	◀	Kryptron (~Kryptron@unaffiliated/kryptron) has quit (Quit: WeeChat 1.3)
+2016-01-16 15:17:23	ℹ	irc: disconnected from server

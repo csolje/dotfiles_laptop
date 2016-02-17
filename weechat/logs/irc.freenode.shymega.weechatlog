@@ -1,0 +1,38 @@
+2015-11-28 21:29:48	shymega	Fedora at the moment on my mancubus, desktop, and then tomorrow I'm getting Fedora 23 on my revenant, laptop
+2015-11-28 21:45:04	psyq	so you are a fedora/redhat guy?
+2015-11-28 21:53:03	shymega	I've used a lot over the years to be frank
+2015-11-28 21:53:16	psyq	sweet
+2015-11-28 21:53:35	shymega	Arch, Gentoo, Knoppix, Debian, RHEL, Void, CentOS, Ubuntu (704-910)
+2015-11-28 21:54:21	shymega	there's probably more, but this version of Fedora is definitely my favourite, dnf is more efficent than yum for sure, i'm not waiting for ages now :D
+2015-11-28 21:54:53	shymega	oh yeah, and guixsd for a brief period but i wouldn't endorse it right now, it's heavily under development and very much in alpha xD
+2015-11-28 21:58:06	psyq	guixsd?
+2015-11-28 21:58:08	psyq	what is that
+2015-11-28 21:58:40	shymega	https://www.gnu.org/software/guix/
+2016-01-10 21:21:36	shymega	err, i've been using it for a bit, I come from a Golang background, so still getting used to things like Error classess, etc. How could/can I help?
+2016-01-10 21:23:52	psyq	I have two lists where I should take the amount and the prices and get the total of it I am just a bit in the wind of how I should do it
+2016-01-10 21:23:52	ℹ	[shymega] is away: sleep
+2016-01-10 21:24:19	shymega	OK... could you put your code so far on a paste?
+2016-01-10 21:24:23	shymega	If that's possible
+2016-01-10 21:24:44	psyq	sure
+2016-01-10 21:27:09	psyq	http://pastebin.com/8akKYDR2
+2016-01-10 21:27:15	shymega	ok, looking
+2016-01-10 21:27:38	shymega	:)
+2016-01-10 21:27:48	shymega	i'll put it back on a gist, and i'll comment what to do if that's allright?
+2016-01-10 21:31:20	shymega	What version of Python were you doing this in? There isn't a shebang or other identifier to tell me. Sorry
+2016-01-10 21:34:44	psyq	I think py2
+2016-01-10 21:35:03	shymega	oh right, haha, i've been working on in py3, i'll check as well
+2016-01-10 21:35:19	shymega	yeah, still works in py2 \o/
+2016-01-10 21:35:27	psyq	it is alright 
+2016-01-10 21:35:29	psyq	:)
+2016-01-10 21:39:57	shymega	Here you go! https://gist.github.com/shymega/c5fb40ea7e48c6f097e0
+2016-01-10 21:40:19	shymega	So as you can see I've commented various bits and pieces of use to you, but please ask me questions if you have any
+2016-01-10 21:40:29	shymega	The diff file is to show the changes from your original paste.
+2016-01-10 21:43:55	psyq	thanks shymega 
+2016-01-10 21:44:37	shymega	No problem :D
+2016-01-10 21:45:04	shymega	So that'll run in both Python2 and Python3 BTW.
+2016-01-10 21:47:38	psyq	sweet
+2016-01-10 21:53:44	psyq	thank you shymega 
+2016-01-10 22:00:05	shymega	no problem :)
+2016-01-10 22:34:00		[psyq away: not here right now brb]
+2016-01-10 23:21:02		[psyq back: gone 00:47:02]
+2016-01-10 23:30:36	ℹ	irc: disconnected from server

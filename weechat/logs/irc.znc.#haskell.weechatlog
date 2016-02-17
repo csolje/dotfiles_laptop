@@ -1,0 +1,660 @@
+2016-01-16 15:16:47	▶	psyq_ (~psyq@178.62.210.183) has joined #haskell
+2016-01-16 15:16:47	ℹ	Topic for #haskell is "http://www.haskell.org/ | https://wiki.haskell.org/IRC_channel | Paste code/errors: http://lpaste.net/new/haskell | Logs: http://tunes.org/~nef/logs/haskell/?C=M;O=D http://ircbrowse.net/day/haskell/today?mode=recent | http://reddit.com/r/haskell | Administrative issues: #haskell-ops | Hackage status? http://status.haskell.org | http://downloads.haskell.org"
+2016-01-16 15:16:47	ℹ	Topic set by quicksilver on Wed, 07 Oct 2015 16:39:51
+2016-01-16 15:16:47	ℹ	Channel #haskell: 1481 nicks (1 op, 0 voices, 1480 normals)
+2016-01-16 15:16:47	***	Buffer Playback...
+2016-01-16 15:16:47	m1dnight_	[11:28:49] Kweet het eerlijk gezegd niet
+2016-01-16 15:16:47	m1dnight_	[11:28:52] ma ik zou gokken van wel.
+2016-01-16 15:16:47	m1dnight_	[11:30:18] Oh, that last part was the wrong window, excuse me..
+2016-01-16 15:16:47	nut_	[11:44:40] anyone knows a good yesod+mongodb example site with code ?
+2016-01-16 15:16:47	cocreature	[11:46:08] jle`: what do you mean by “globally installed stack packages”? packages in a snapshot? in that case look at the output of stack path in particular snapshot-doc-root
+2016-01-16 15:16:47	jle`	[11:46:43] oh yes true, they're installed in snapshots
+2016-01-16 15:16:47	jle`	[11:47:05] found them! thanks :)
+2016-01-16 15:16:47	cocreature	[11:47:08] yw
+2016-01-16 15:16:47	sanotehu	[11:50:55] r = a + if condition then b else 0
+2016-01-16 15:16:47	sanotehu	[11:51:10] is that the cleanest way to write that in one line?
+2016-01-16 15:16:47	sanotehu	[11:51:25] or is there nicer syntax that accomplishes the same thing?
+2016-01-16 15:16:47	jle`	[11:52:36] r | condition = a + b
+2016-01-16 15:16:47	jle`	[11:52:38]   | otherwise = a
+2016-01-16 15:16:47	jle`	[11:52:40] maybe?
+2016-01-16 15:16:47	JamesJRH	[11:58:28] liste: What version of NixOS do you have?
+2016-01-16 15:16:47	sanotehu	[12:03:53] jle`: yeah that's probably more readable, thanks
+2016-01-16 15:16:47	jle`	[12:04:59] sanotehu: np.  you can also use 'bool' as a nice function to replace 'if' if you don't need layouting; bool f t b = if b then t else f
+2016-01-16 15:16:47	jle`	[12:05:08] but that can probably lead to unreadable code pretty fast
+2016-01-16 15:16:47	lyxia	[12:12:49] if-then-else wastes three potential function names :(
+2016-01-16 15:16:47	JamesJRH	[12:22:38] What is Data.Bytestring versus Data.Bytestring.Base64?
+2016-01-16 15:16:47	JamesJRH	[12:23:00] Is at least one of them a ‘module’?
+2016-01-16 15:16:47	JamesJRH	[12:23:46] How does it work that I can have Data.Bytestring without Data.Bytestring.Base64?
+2016-01-16 15:16:47	jle`	[12:24:35] JamesJRH: they're modules, but they're from different packages
+2016-01-16 15:16:47	JamesJRH	[12:25:58] jle`: How is that possible/allowed?
+2016-01-16 15:16:47	JamesJRH	[12:26:08] That's such a crazy idea.
+2016-01-16 15:16:47	jle`	[12:26:13] packages export modules
+2016-01-16 15:16:47	jle`	[12:26:23] modules sort of all exist on a global namespace
+2016-01-16 15:16:47	jle`	[12:26:36] for example, i might make a package "foo", and provide my things in a module Data.Foo
+2016-01-16 15:16:47	jle`	[12:26:58] that doesn't mean that i had to talk to anyone to allow me to use "Data"
+2016-01-16 15:16:47	jle`	[12:27:16] the `bytestring` package provides a module called Data.ByteString
+2016-01-16 15:16:47	JamesJRH	[12:27:38] What's wrong with each package having its own module name and not mixing with other packages?
+2016-01-16 15:16:47	jle`	[12:27:40] the `base64-bytestring` package provides a module called Data.ByteString.Base64
+2016-01-16 15:16:47	JamesJRH	[12:28:00] What is the advantage of mixing the namespace?
+2016-01-16 15:16:47	sanotehu	[12:28:10] is there strong preference for (-10) or (negate 10)?
+2016-01-16 15:16:47	sanotehu	[12:28:42] I'd assume negate is better used with results from functions like (negate $ f 10) ?
+2016-01-16 15:16:47	jle`	[12:29:17] JamesJRH: i'm not sure if there is a particular exceptional advantage, but it's sort of convenient in a lot of things
+2016-01-16 15:16:47	jle`	[12:30:00] you can think of module hierarchies as categories of functionality
+2016-01-16 15:16:47	jle`	[12:30:05] not inherent to any packages
+2016-01-16 15:16:47	JamesJRH	[12:30:18] I suppose so.
+2016-01-16 15:16:47	JamesJRH	[12:30:32] Hmmm.
+2016-01-16 15:16:47	jle`	[12:30:48] for exmaple i might make a package for parsing yaml files, call it "yaml", and export a module Data.Yaml
+2016-01-16 15:16:47	jle`	[12:30:55] "Data" is like a category, here
+2016-01-16 15:16:47	jle`	[12:31:01] it doesn't mean that it's realted to some package called 'data'
+2016-01-16 15:16:47	jle`	[12:31:03] *related
+2016-01-16 15:16:47	JamesJRH	[12:31:33] Now I have ideas that relate back to packaging specifics again and NixOS again.
+2016-01-16 15:16:47	JamesJRH	[12:32:07] This topic straddles packaging and Haskell's module system.
+2016-01-16 15:16:47	JamesJRH	[12:36:20] jle`: What has come to mind is that, yes, I see the advantage – it's nice to be able to split-up the namespace into separate small packages that don't clump together – but the problem that I see is solvable in another way. There can be 2 packages that provide each module: 1 that provides just that part; and 1 that depends on that as well as /everything/ below it.
+2016-01-16 15:16:47	quchen	[12:39:35] sanotehu: it doesn't really matter, use whatever works for you.
+2016-01-16 15:16:47	quchen	[12:40:41] sanotehu: There is a subtlety with negative literals in your code though, see https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/syntax-extns.html#negative-literals
+2016-01-16 15:16:47	⚡	hackagebot [12:59:24] resolve-trivial-conflicts 0.3.2.2 - Remove trivial conflict markers in a git repository  https://hackage.haskell.org/package/resolve-trivial-conflicts-0.3.2.2 (EyalLotem)
+2016-01-16 15:16:47	roelof	[13:09:03] A off-topic question : I try to make a layout for a web app. Does anyone know a good free  html5 editor ? 
+2016-01-16 15:16:47	EvilMachine	[13:22:02] Yaay! I am actually building GHC 7.10.3 on an ARMv7hf box with only 1GB of RAM! (currently in stage 2) :D
+2016-01-16 15:16:47	roelof	[13:22:26] EvilMachine:  congrats
+2016-01-16 15:16:47	EvilMachine	[13:24:04] It only works with LLVM ≤3.3, and normal swap, because that one compile just took ~1.1GB of RAM alone. (All the others were are far from 1GB though.)
+2016-01-16 15:16:47	haskell886	[13:36:01] can someone help me with a problem on haskell
+2016-01-16 15:16:47	haskell886	[13:39:16] anyone here?
+2016-01-16 15:16:47	⚡	hackagebot [13:39:25] sexp-grammar 1.1.0 - Invertible parsers for S-expressions  https://hackage.haskell.org/package/sexp-grammar-1.1.0 (EugeneSmolanka)
+2016-01-16 15:16:47	lyxia	[13:40:47] haskell886: what is it?
+2016-01-16 15:16:47	haskell886	[13:56:33] hey
+2016-01-16 15:16:47	haskell886	[13:56:36] i need to write a function named maxDuplicate, which works with list of lists of Int. It has to find the biggest of the numbers in the list they are, which are duplicates. An example should be - maxDuplicate [[1,2,3,2],[-4,-4],[5]] -> 2
+2016-01-16 15:16:47	haskell886	[13:56:54] i'm a begginer
+2016-01-16 15:16:47	dramforever	[13:59:41] haskell886: I didn't quite understand what you are trying to do. Can you explain what "find", "biggest" and "duplicate" mean?
+2016-01-16 15:16:47	haskell886	[14:01:33] the biggest number means like in the example 
+2016-01-16 15:16:47	haskell886	[14:01:39] i have duplicates of 2s and -4s
+2016-01-16 15:16:47	haskell886	[14:01:51] and the 2 > -4 so it returns the 2
+2016-01-16 15:16:47	haskell886	[14:02:06] by find i mean return
+2016-01-16 15:16:47	dramforever	[14:03:08] haskell886: what about maxDuplicate [[1, 1], [2], [2]] ? Is 2 a duplicate?
+2016-01-16 15:16:47	haskell886	[14:04:09] no
+2016-01-16 15:16:47	haskell886	[14:04:14] it each seperate list
+2016-01-16 15:16:47	John[Lisbeth]	[14:04:36] I am trying to find the cube root of x assuming x is an integer and the answer is always going to be an integer
+2016-01-16 15:16:47	dramforever	[14:04:55] haskell886: corner cases: what about maxDuplicate [] ? maxDuplicate [[1,2,3]] ?
+2016-01-16 15:16:47	haskell886	[14:05:48] it returns 0
+2016-01-16 15:16:47	haskell886	[14:06:32] i think
+2016-01-16 15:16:47	dramforever	[14:09:36] So far so good. You said you are working on "each separate list", so first let's find the largest duplicate number in one list of numbers. Do you have any idea on that? Like, say, how would you do it by hand?
+2016-01-16 15:16:47	haskell886	[14:10:37] i have an idea but i'm not sure how to write it on haskell
+2016-01-16 15:16:47	dramforever	[14:10:45] you know, computers are not smart, so you'd better make it simple :P
+2016-01-16 15:16:47	dramforever	[14:11:23] haskell886: Yep, that's what I mean by a simple idea about how you would do it by hand
+2016-01-16 15:16:47	John[Lisbeth]	[14:11:42] basically I need to do something similar to "cube_root y = [ x | x <- [1..], (x * x * x) == y]"
+2016-01-16 15:16:47	haskell886	[14:12:14] can you write the code and explain it to me or is that too much?
+2016-01-16 15:16:47	dramforever	[14:13:25] haskell886: oh you want that kind of learning, okay
+2016-01-16 15:16:47	John[Lisbeth]	[14:13:34] The reason I am having trouble is that if I use division to uncube the cube, then I have to divide
+2016-01-16 15:16:47	John[Lisbeth]	[14:13:55] I can't preserve the int type even though I know for sure that the answer will always be an int in this set
+2016-01-16 15:16:47	dramforever	[14:28:32] haskell886: http://lpaste.net/149773 I put in the explainations as comments
+2016-01-16 15:16:47	tremon	[14:50:13] John[Lisbeth]: use div instead of (/) ?
+2016-01-16 15:16:47	haskell886	[14:51:09] hey everyone, I need some help with this problem : If a "book" is a tuple with components ("Title", "Year of release") and a "library" is a list of "books", I need to write two functions. findUniques returns a list of all the "books" released in a unique year. longestTitleYear returns the year of the book with the longest title. I'm a begginer in Haskell so any help is welcome.
+2016-01-16 15:16:47	tremon	[14:51:42] :t 27 `div` 3
+2016-01-16 15:16:47	lambdabot	[14:51:43] Integral a => a
+2016-01-16 15:16:47	haskell886	[15:02:03] anyone?
+2016-01-16 15:16:47	pavonia	[15:06:27] haskell886: What do you have so far?
+2016-01-16 15:16:47	haskell886	[15:07:39] nothing is you are asking me :/
+2016-01-16 15:16:47	jdnavarro	[15:08:02] haskell886: are you aware of `nub`? https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-List.html#g:20
+2016-01-16 15:16:47	jdnavarro	[15:08:41] for short lists should be fine
+2016-01-16 15:16:47	maerwald	[15:10:23] I wouldn't even start with a tuple, but with my own ADT
+2016-01-16 15:16:47	maerwald	[15:10:38] (String, String) is somewhat random IMO
+2016-01-16 15:16:47	jdnavarro	[15:11:17] with a `Map` should be straightforward
+2016-01-16 15:16:47	haskell886	[15:12:02] can someone write the code with explanations or is it too much to ask?
+2016-01-16 15:16:47	jdnavarro	[15:12:34] for the longest year I'd look into `sortBy` `on`
+2016-01-16 15:16:47	jdnavarro	[15:12:43] https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-List.html#g:20
+2016-01-16 15:16:47	jdnavarro	[15:13:06] sorry, this link: https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-Function.html#v:on
+2016-01-16 15:16:47	jdnavarro	[15:13:54] or with `comparing` https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-Ord.html#v:comparing
+2016-01-16 15:16:47	***	Playback Complete.
+2016-01-16 15:16:56	ℹ	Channel created on Sun, 26 Nov 2006 07:42:48
+2016-01-16 15:16:59	◀	JagaJaga (~JagaJaga@178.62.202.50) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:17:11	▶	Stratege (~Stratege@unaffiliated/stratege) has joined #haskell
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:46	▶	psyq_ (~psyq@178.62.210.183) has joined #haskell
+2016-01-16 15:17:46	ℹ	Topic for #haskell is "http://www.haskell.org/ | https://wiki.haskell.org/IRC_channel | Paste code/errors: http://lpaste.net/new/haskell | Logs: http://tunes.org/~nef/logs/haskell/?C=M;O=D http://ircbrowse.net/day/haskell/today?mode=recent | http://reddit.com/r/haskell | Administrative issues: #haskell-ops | Hackage status? http://status.haskell.org | http://downloads.haskell.org"
+2016-01-16 15:17:46	ℹ	Topic set by quicksilver on Wed, 07 Oct 2015 16:39:51
+2016-01-16 15:17:47	ℹ	Channel #haskell: 1479 nicks (1 op, 0 voices, 1478 normals)
+2016-01-16 15:17:47	▶	RegEchse (~regechse@ipbcc3a5be.dynamic.kabel-deutschland.de) has joined #haskell
+2016-01-16 15:17:56	ℹ	Channel created on Sun, 26 Nov 2006 07:42:48
+2016-01-16 15:18:12	▶	edwinvdgraaf (~edwinvdgr@095-096-024-193.static.chello.nl) has joined #haskell
+2016-01-16 15:18:46	jdnavarro	off the top of my head: `findUnique year = map fst $ filter ((year ==) . snd) $ library`
+2016-01-16 15:19:06	maerwald	haskell886: if you pay me
+2016-01-16 15:19:16	▶	mag__ (~mag@186.6.205.100) has joined #haskell
+2016-01-16 15:19:30	▶	oisdk_ (~oisdk_@95.45.70.25) has joined #haskell
+2016-01-16 15:19:31	▶	codedmart (~codedmart@c-24-10-135-105.hsd1.ut.comcast.net) has joined #haskell
+2016-01-16 15:19:37	▶	cir0x (~Adium@dslb-178-002-192-055.178.002.pools.vodafone-ip.de) has joined #haskell
+2016-01-16 15:19:45	▶	Nikotiini (~user@cable-roi-58c037-251.dhcp.inet.fi) has joined #haskell
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:22:38	▶	mjs2600 (~mjs2600@rrcs-98-101-134-254.midsouth.biz.rr.com) has joined #haskell
+2016-01-16 15:22:39	jdnavarro	haskell886: `longestTitleYear = fst $ maximumBy (\x y -> fst x > fst y) library`
+2016-01-16 15:23:04	jdnavarro	not sure it's correct but it should be something along those lines
+2016-01-16 15:24:26	◀	cir0x (~Adium@dslb-178-002-192-055.178.002.pools.vodafone-ip.de) has quit (Client Quit)
+2016-01-16 15:25:15	▶	jmcarthur (~jmcarthur@pool-72-89-137-39.nycmny.fios.verizon.net) has joined #haskell
+2016-01-16 15:25:20	▶	thunderrd (~thunderrd@110.77.238.204) has joined #haskell
+2016-01-16 15:26:28	◀	bollu (~Adium@1.186.4.177) has quit (Quit: Leaving.)
+2016-01-16 15:26:48	◀	Wuzzy (~Wuzzy@p549F9031.dip0.t-ipconnect.de) has quit (Quit: Wuzzy)
+2016-01-16 15:28:07	▶	croyd (~croyd@146-115-81-34.c3-0.sbo-ubr1.sbo.ma.cable.rcn.com) has joined #haskell
+2016-01-16 15:28:17	▶	apriori (~apriori@2a02:908:2111:5880:beae:c5ff:fe75:3056) has joined #haskell
+2016-01-16 15:28:23	◀	angerman (~m@199.241.146.163) has quit (Quit: Gone)
+2016-01-16 15:28:26	◀	mag__ (~mag@186.6.205.100) has quit (Remote host closed the connection)
+2016-01-16 15:28:31	▶	superturrican (~superturr@45.61.106.92.dynamic.wline.res.cust.swisscom.ch) has joined #haskell
+2016-01-16 15:28:44	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:29:58	◀	oisdk_ (~oisdk_@95.45.70.25) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 15:30:05	▶	thunderrd (~thunderrd@110.77.238.204) has joined #haskell
+2016-01-16 15:30:47	◀	deavmi_mobile (~deavmi@41.164.24.122) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:31:23	◀	oish (~charlie@159.22.169.217.in-addr.arpa) has quit (Ping timeout: 276 seconds)
+2016-01-16 15:31:28	▶	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has joined #haskell
+2016-01-16 15:31:34	▶	hannelita (~hannelita@2804:14c:a8:27a5:1cc9:57e4:5926:16ce) has joined #haskell
+2016-01-16 15:32:27	▶	atojs (~atota@cpe-67-243-152-217.nyc.res.rr.com) has joined #haskell
+2016-01-16 15:32:27	▶	cir0x (~Adium@dslb-178-002-192-055.178.002.pools.vodafone-ip.de) has joined #haskell
+2016-01-16 15:32:28	t0by	idiotic question of the day: why are monoids called "monoids"?
+2016-01-16 15:32:51	◀	atojs (~atota@cpe-67-243-152-217.nyc.res.rr.com) has left #haskell
+2016-01-16 15:33:24	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:34:16	▶	homovitruvius (~user@pool-108-17-70-127.pitbpa.fios.verizon.net) has joined #haskell
+2016-01-16 15:34:19	▶	homovitr` (~user@pool-108-17-70-127.pitbpa.fios.verizon.net) has joined #haskell
+2016-01-16 15:34:30	◀	dadaro (~androidde@78.173.237.110) has quit (Ping timeout: 265 seconds)
+2016-01-16 15:35:36	▶	usershell (~usershell@41.136.106.244) has joined #haskell
+2016-01-16 15:35:50	◀	piezoid (~piezoid@tsv35-1-78-232-144-90.fbx.proxad.net) has quit (Ping timeout: 246 seconds)
+2016-01-16 15:36:00	▶	adamCS (~AdamConne@cpe-74-71-211-64.nyc.res.rr.com) has joined #haskell
+2016-01-16 15:36:11	◀	hannelita (~hannelita@2804:14c:a8:27a5:1cc9:57e4:5926:16ce) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:37:04	◀	osa1 (~omer@haskell/developer/osa1) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:38:00	◀	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:38:03	◀	Wizek (~Wizek@catv-89-132-132-110.catv.broadband.hu) has quit (Remote host closed the connection)
+2016-01-16 15:38:23	apriori	t0by, no real knowledge, but how about separating the name in "mono" (aka a single) and "id"
+2016-01-16 15:38:51	t0by	apriori, please go on
+2016-01-16 15:39:05	T0BI	yo t0by
+2016-01-16 15:39:09	T0BI	same nick
+2016-01-16 15:39:24	apriori	in the sense there is only one element fulfilling the role of "id" 
+2016-01-16 15:39:31	t0by	WE MEET AT LAST
+2016-01-16 15:39:36	apriori	idk, just a random thought
+2016-01-16 15:39:39	t0by	YOU ARE THE BASTARD WHO STOLE THE GOOD NICK FROM ME.
+2016-01-16 15:39:42	t0by	sorry
+2016-01-16 15:39:48	T0BI	haha
+2016-01-16 15:39:49	t0by	still with you apriori.
+2016-01-16 15:39:50	T0BI	ok
+2016-01-16 15:39:51	t0by	:P
+2016-01-16 15:39:51	▶	hamid (~nithp@unaffiliated/hamid) has joined #haskell
+2016-01-16 15:39:54	T0BI	sorry for that
+2016-01-16 15:39:59	t0by	T0BI, just kidding :)
+2016-01-16 15:40:03	▶	micmus (~micmus@aesh240.neoplus.adsl.tpnet.pl) has joined #haskell
+2016-01-16 15:40:04	T0BI	np
+2016-01-16 15:40:10	t0by	it is in fact amusing
+2016-01-16 15:40:19	T0BI	why
+2016-01-16 15:40:25	t0by	that we have the same nick.
+2016-01-16 15:40:30	t0by	(also my real beef is with `toby`, whoever he may be :P)
+2016-01-16 15:40:34	T0BI	nice
+2016-01-16 15:40:53	t0by	apriori, I'm very confused
+2016-01-16 15:41:00	▶	oisdk_ (~oisdk_@95.45.70.25) has joined #haskell
+2016-01-16 15:41:04	◀	oisdk_ (~oisdk_@95.45.70.25) has quit (Client Quit)
+2016-01-16 15:41:10	t0by	you may very well have a point, but I'm not understanding what it is :)
+2016-01-16 15:41:49	▶	deavmi_mobile (~deavmi@41.164.24.122) has joined #haskell
+2016-01-16 15:42:24	▶	Wuzzy (~Wuzzy@p549F9031.dip0.t-ipconnect.de) has joined #haskell
+2016-01-16 15:43:43	absence	what's the rule of thumb for when newtype wrappers start costing performance?
+2016-01-16 15:44:50	◀	caumeslasal (~Thunderbi@mar92-10-82-239-65-141.fbx.proxad.net) has quit (Ping timeout: 255 seconds)
+2016-01-16 15:45:27	absence	i have a case where wrapping my numbers in newtype causes the computation to take almost twice as long
+2016-01-16 15:46:22	◀	wanderleyguima (~wanderley@199.201.64.3) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-01-16 15:46:52	exio4	absence: care to show that? sounds like it's not the newtype but optimizations not firing or something like that :P
+2016-01-16 15:47:04	▶	wanderleyguima (~wanderley@199.201.64.2) has joined #haskell
+2016-01-16 15:47:42	absence	exio4: hmm, it's big and messy, so i'd rather not
+2016-01-16 15:47:52	▶	afcondon (~afcondon@109.77.188.40) has joined #haskell
+2016-01-16 15:48:07	absence	exio4: what would cause optimisations to not fire though?
+2016-01-16 15:48:31	▶	achernyak (~artem@24-217-172-238.dhcp.stls.mo.charter.com) has joined #haskell
+2016-01-16 15:48:57	◀	usershell (~usershell@41.136.106.244) has quit (Remote host closed the connection)
+2016-01-16 15:49:07	absence	i have littered the code with "coerce" where necessary, so i can switch the newtype wrapper on or off by commenting out the newtype definition and use a type alias instead
+2016-01-16 15:49:17	absence	so it should be the same code
+2016-01-16 15:49:48	exio4	absence: I don't really know, I'd profile and see if the hot spots change, etc
+2016-01-16 15:50:03	absence	unless coerce or the derived instances for the newtype somehow don't realise they shouldn't be doing work
+2016-01-16 15:50:46	exio4	absence: if you can reduce this to a smaller test case, it'd be really nice (because you could fill an issue, etc)
+2016-01-16 15:50:58	▶	mag__ (~mag@186.6.205.100) has joined #haskell
+2016-01-16 15:51:35	◀	wanderleyguima (~wanderley@199.201.64.2) has quit (Ping timeout: 255 seconds)
+2016-01-16 15:51:39	◀	mjs2600 (~mjs2600@rrcs-98-101-134-254.midsouth.biz.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 15:51:40	▶	FreeBird_ (~freebirdl@112.20.93.243) has joined #haskell
+2016-01-16 15:52:45	▶	wanderleyguima (~wanderley@199.201.64.3) has joined #haskell
+2016-01-16 15:52:52	▶	mahasamoot (~mahasamoo@24.42.192.202) has joined #haskell
+2016-01-16 15:53:10	▶	Dfhddz (6c061478@gateway/web/cgi-irc/kiwiirc.com/ip.108.6.20.120) has joined #haskell
+2016-01-16 15:53:23	absence	exio4: yeah, not so easy with 200 lines of numeric computation, but i'll see what i can do
+2016-01-16 15:53:30	◀	homovitr` (~user@pool-108-17-70-127.pitbpa.fios.verizon.net) has left #haskell ("ERC (IRC client for Emacs 24.5.1)")
+2016-01-16 15:53:45	◀	FreeBirdLjj (~freebirdl@112.3.244.20) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:54:05	exio4	absence: I understand :/
+2016-01-16 15:54:09	◀	homovitruvius (~user@pool-108-17-70-127.pitbpa.fios.verizon.net) has left #haskell ("ERC (IRC client for Emacs 24.5.1)")
+2016-01-16 15:54:10	absence	exio4: just enabling profiling changes the performance because of the added profiling code :p
+2016-01-16 15:54:10	▶	oisdk_ (~oisdk_@95.45.70.25) has joined #haskell
+2016-01-16 15:54:48	Dfhddz	Sorry, I have a quick question. What is the simplest web framework in Haskell for quick p
+2016-01-16 15:54:48	exio4	absence: indeed, but it's more that it'd tell you where optimizations might have stopped firing, or so :P 
+2016-01-16 15:55:16	◀	pacak (~pacak@2401:7400:e800:82d5:cc7:210:afac:fa7) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:55:18	hunteriam	i love learning about the various techniques for reducing program complexity that people come up with
+2016-01-16 15:55:24	hunteriam	or generalizing things or so on
+2016-01-16 15:55:26	▶	strburst (~allen@res388d-128-61-88-50.res.gatech.edu) has joined #haskell
+2016-01-16 15:55:28	▶	nidr0x (~textual@nidr0x.ddns.jazztel.es) has joined #haskell
+2016-01-16 15:55:29	Dfhddz	Sorry, I have a question. What is the simplest web framework for stupid people like me?
+2016-01-16 15:55:30	◀	mag__ (~mag@186.6.205.100) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:55:30	hunteriam	basically the topic of haskell discussion
+2016-01-16 15:55:47	hunteriam	is there a job or summer research opportunity or intenrship that would be along those lines?
+2016-01-16 15:55:58	hunteriam	Dfhddz: Have you looked at scotty?
+2016-01-16 15:56:41	Dfhddz	No
+2016-01-16 15:56:42	hunteriam	Dfhddz: Servant is lovely if you want to write an api
+2016-01-16 15:57:33	Dfhddz	I'm really just interested in handling basic get/post requests that's simple enough for me to use
+2016-01-16 15:57:42	Dfhddz	Okay I'll look it up
+2016-01-16 15:57:50	◀	arjun_ (~arjun@122.165.225.85) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:58:13	▶	juiko (~user@190.162.146.18) has joined #haskell
+2016-01-16 15:58:19	▶	Sorella (uid49404@oftn/member/Sorella) has joined #haskell
+2016-01-16 15:58:20	▶	SrPx (~v@179.210.80.129) has joined #haskell
+2016-01-16 15:58:26	◀	emilypi (~emilypi@cpe-74-73-51-56.nyc.res.rr.com) has quit (Remote host closed the connection)
+2016-01-16 15:58:33	◀	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has quit (Remote host closed the connection)
+2016-01-16 15:59:20	▶	favetelinguis (~favetelin@78-72-40-166-no186.tbcn.telia.com) has joined #haskell
+2016-01-16 15:59:23	▶	emilypi (~emilypi@2604:2000:8006:ef00:a0d6:6975:ba0c:3f10) has joined #haskell
+2016-01-16 16:00:08	hunteriam	You may also be interested in `Spock`
+2016-01-16 16:00:51	◀	zeroed (~zeroed@unaffiliated/zeroed) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:01:14	▶	mag__ (~mag@186.6.205.100) has joined #haskell
+2016-01-16 16:01:56	◀	n__dles (~noodles@ns1-telx1-nyc-us.nexthop.no) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:02:53	▶	hilquias` (~user@179.181.42.19) has joined #haskell
+2016-01-16 16:03:48	▶	tmtwd (~tmtwd@CPE0c473da71813-CM0c473da71810.cpe.net.cable.rogers.com) has joined #haskell
+2016-01-16 16:04:01	◀	Dfhddz (6c061478@gateway/web/cgi-irc/kiwiirc.com/ip.108.6.20.120) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2016-01-16 16:04:29	⚡	hackagebot MonadRandom 0.4.2 - Random-number generation monad.  https://hackage.haskell.org/package/MonadRandom-0.4.2 (BrentYorgey)
+2016-01-16 16:04:36	◀	hilquias (~user@unaffiliated/hilquias) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:05:15	◀	wildsebastian (~wildsebas@2a02:810d:1b80:1d24:b437:2ed9:3a2b:b8f0) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:05:38	▶	mfukar (~prophet@unaffiliated/mfukar) has joined #haskell
+2016-01-16 16:06:35	◀	wanderleyguima (~wanderley@199.201.64.3) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:06:39	▶	haskman (~haskman@122.162.44.123) has joined #haskell
+2016-01-16 16:06:52	◀	strburst (~allen@res388d-128-61-88-50.res.gatech.edu) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:08:19	▶	wildsebastian (~wildsebas@2a02:810d:1b80:1d24:b437:2ed9:3a2b:b8f0) has joined #haskell
+2016-01-16 16:08:32	▶	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has joined #haskell
+2016-01-16 16:10:49	◀	mag__ (~mag@186.6.205.100) has quit (Remote host closed the connection)
+2016-01-16 16:11:06	▶	wei2912 (~wei2912@unaffiliated/wei2912) has joined #haskell
+2016-01-16 16:11:09	◀	oisdk_ (~oisdk_@95.45.70.25) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 16:11:14	▶	Vyn (~Vyn@122.179.57.114) has joined #haskell
+2016-01-16 16:12:04	◀	haskell886 (d5e23f36@gateway/web/freenode/ip.213.226.63.54) has quit (Quit: Page closed)
+2016-01-16 16:12:17	▶	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has joined #haskell
+2016-01-16 16:13:47	▶	sepp2k (~Sepp2k@x5ce77c92.dyn.telefonica.de) has joined #haskell
+2016-01-16 16:14:19	◀	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has quit (Remote host closed the connection)
+2016-01-16 16:15:10	▶	sillyotter (~sillyotte@cpe-69-135-167-37.insight.res.rr.com) has joined #haskell
+2016-01-16 16:15:58	◀	albertid (~albertid_@p5DC4D85E.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-01-16 16:16:01	▶	caumeslasal (~Thunderbi@mar92-10-82-239-65-141.fbx.proxad.net) has joined #haskell
+2016-01-16 16:17:30	▶	osa1 (~omer@haskell/developer/osa1) has joined #haskell
+2016-01-16 16:17:46	◀	wei2912 (~wei2912@unaffiliated/wei2912) has quit (Quit: Lost terminal)
+2016-01-16 16:18:19	◀	suls (~suls@ae207234.dynamic.ppp.asahi-net.or.jp) has quit (Quit: suls)
+2016-01-16 16:18:52	▶	pytmand (~pytmand@80-71-135-134.u.parknet.dk) has joined #haskell
+2016-01-16 16:18:53	▶	wvdhaute (~wvdhaute@109.130.240.47) has joined #haskell
+2016-01-16 16:19:06	▶	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has joined #haskell
+2016-01-16 16:19:30	⚡	hackagebot sign 0.4.3 - Arithmetic over signs and sets of signs  https://hackage.haskell.org/package/sign-0.4.3 (MasahiroSakai)
+2016-01-16 16:19:43	▶	jhaberku (~user@CPEbc4dfba1f693-CMbc4dfba1f690.cpe.net.cable.rogers.com) has joined #haskell
+2016-01-16 16:20:01	▶	triliyn (~lioneyes@c-24-6-242-177.hsd1.ca.comcast.net) has joined #haskell
+2016-01-16 16:21:23	▶	suls (~suls@ae207234.dynamic.ppp.asahi-net.or.jp) has joined #haskell
+2016-01-16 16:21:34	▶	strburst (~allen@r4-128-61-88-50.res.gatech.edu) has joined #haskell
+2016-01-16 16:21:46	◀	emilypi (~emilypi@2604:2000:8006:ef00:a0d6:6975:ba0c:3f10) has quit (Remote host closed the connection)
+2016-01-16 16:21:53	▶	saurabhnanda (2d7400de@gateway/web/freenode/ip.45.116.0.222) has joined #haskell
+2016-01-16 16:22:15	◀	takuan (~takuan@d8D86BFC6.access.telenet.be) has quit (Remote host closed the connection)
+2016-01-16 16:22:46	saurabhnanda	hi guys, I'm in the middle of a hackathon and the project that I'm working on is available at https://github.com/vacationlabs/nightwatch/blob/master/nightwatch.hs
+2016-01-16 16:22:48	▶	emilypi (~emilypi@2604:2000:8006:ef00:9d8a:44a0:f89a:54ce) has joined #haskell
+2016-01-16 16:22:58	saurabhnanda	I'm stuck with handling exceptions
+2016-01-16 16:23:11	saurabhnanda	the typechecker doesn't seem to to be pleased
+2016-01-16 16:23:11	◀	bamboo (~bamboo@201-68-34-79.dsl.telesp.net.br) has quit (Quit: bamboo)
+2016-01-16 16:23:42	◀	sillyotter (~sillyotte@cpe-69-135-167-37.insight.res.rr.com) has quit (Quit: leaving)
+2016-01-16 16:24:11	saurabhnanda	that's the error I'm getting: http://lpaste.net/149779
+2016-01-16 16:24:17	saurabhnanda	any help would be really appreciated
+2016-01-16 16:24:35	saurabhnanda	I've tried all sorts of syntax to handle errors, but all of them end up with the same core issue
+2016-01-16 16:24:49	saurabhnanda	IO () does not go well with IO (Response Data.ByteString.Lazy.Internal.ByteString
+2016-01-16 16:25:08	▶	wei2912 (~wei2912@unaffiliated/wei2912) has joined #haskell
+2016-01-16 16:25:10	◀	julmae (~kamak@s247.ip5.netikka.fi) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:25:18	eikke	anyone around who has a full-fledged GHC/CC toolchain for ARM available (and an ARM device, preferably) and would be willing to test something?
+2016-01-16 16:25:30	▶	julmae (~kamak@s247.ip5.netikka.fi) has joined #haskell
+2016-01-16 16:26:00	▶	Oliphaunte (~oliphaunt@ool-4573dbb0.dyn.optonline.net) has joined #haskell
+2016-01-16 16:26:19	◀	tristero (~al.f.zero@unaffiliated/transfinite) has quit (Quit: tristero)
+2016-01-16 16:26:25	▶	qmm (~daniel@unaffiliated/qmm) has joined #haskell
+2016-01-16 16:26:29	quchen	saurabhnanda: That error is unrelated to exception handling. I think you're missing a "pure ()" after line 123.
+2016-01-16 16:26:31	▶	Maplicant (~MorrisC@5ED37677.cm-7-4b.dynamic.ziggo.nl) has joined #haskell
+2016-01-16 16:26:54	▶	puregreen (~puregreen@nat4-minsk-pool-46-53-176-141.telecom.by) has joined #haskell
+2016-01-16 16:27:24	◀	emilypi (~emilypi@2604:2000:8006:ef00:9d8a:44a0:f89a:54ce) has quit (Remote host closed the connection)
+2016-01-16 16:27:35	◀	zariuq (~zar@130.226.230.9) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:27:46	quchen	Hm, that can't be it, because it's a non-terminating recursive function, so IO () should be fine, or (IO r) even.
+2016-01-16 16:27:53	▶	emilypi (~emilypi@2604:2000:8006:ef00:9d8a:44a0:f89a:54ce) has joined #haskell
+2016-01-16 16:28:02	◀	kosorith (~kosorith@dynamic-78-8-95-88.ssp.dialog.net.pl) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:28:08	saurabhnanda	quchen: could you please elaborate?
+2016-01-16 16:28:19	saurabhnanda	quchen: how exactly should I be using pure at the end of that function?
+2016-01-16 16:28:24	◀	T0BI (~ObitO@41.101.173.90) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:28:38	◀	Oliphaunte (~oliphaunt@ool-4573dbb0.dyn.optonline.net) has quit (Read error: Connection reset by peer)
+2016-01-16 16:28:39	▶	panosk (~panosk@193.92.209.97.dsl.dyn.forthnet.gr) has joined #haskell
+2016-01-16 16:28:50	quchen	You're getting a type error, so the compiler complains. Exceptions are a runtime thing, which does not apply here.
+2016-01-16 16:29:03	saurabhnanda	quchen: is the overarching concept that the main function call and the error handler need to have the same data-type?
+2016-01-16 16:29:07	◀	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 265 seconds)
+2016-01-16 16:29:20	◀	strburst (~allen@r4-128-61-88-50.res.gatech.edu) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:29:24	saurabhnanda	quchen: main function = function which is being guarded for errors
+2016-01-16 16:29:24	▶	Oliphaunte (~oliphaunt@ool-4573dbb0.dyn.optonline.net) has joined #haskell
+2016-01-16 16:30:08	▶	erkin (~erkin@unaffiliated/erkin) has joined #haskell
+2016-01-16 16:30:09	saurabhnanda	quchen: sendMessage internally calls wref get/post functions, so it's dealing with IO (Response Data.ByteString.Lazy.Internal.ByteString)
+2016-01-16 16:30:17	▶	cleamoon (~cleamoon@c-5eeaaa3b-74736162.cust.telenor.se) has joined #haskell
+2016-01-16 16:30:32	▶	zariuq (~zar@130.226.230.9) has joined #haskell
+2016-01-16 16:30:52	saurabhnanda	quchen: whereas the handler simply prints a string with putStrLn, which has type IO ()
+2016-01-16 16:30:55	◀	Deadhand (~deadf00t@69-196-158-136.dsl.teksavvy.com) has quit (Read error: Connection reset by peer)
+2016-01-16 16:30:58	saurabhnanda	is that the reason the compiler is complaining?
+2016-01-16 16:31:04	▶	Deadhand (~deadf00t@69-196-158-136.dsl.teksavvy.com) has joined #haskell
+2016-01-16 16:31:43	quchen	Oooh. I found the location of the type error, it's in column 1244323.
+2016-01-16 16:31:56	quchen	Maybe shorten that line to 80 chars.
+2016-01-16 16:32:19	▶	hannelita (~hannelita@2804:14c:a8:27a5:3cdf:f514:5ca4:8a06) has joined #haskell
+2016-01-16 16:33:18	◀	afcondon (~afcondon@109.77.188.40) has quit (Remote host closed the connection)
+2016-01-16 16:33:24	saurabhnanda	quchen: was that for me?
+2016-01-16 16:33:38	quchen	Yes.
+2016-01-16 16:34:11	quchen	That line is almost 400 characters long, which is a no-go. The type error code was hidden in the very end of it.
+2016-01-16 16:34:15	▶	afcondon (~afcondon@109.77.188.40) has joined #haskell
+2016-01-16 16:34:19	▶	hiptobecubic (~john@unaffiliated/hiptobecubic) has joined #haskell
+2016-01-16 16:34:33	quchen	saurabhnanda: How about formatting it like this? http://lpaste.net/149781
+2016-01-16 16:34:52	quchen	(by the way,   \e -> putStrLn (show e)   is equivalent to "print".
+2016-01-16 16:34:52	◀	wei2912 (~wei2912@unaffiliated/wei2912) has quit (Quit: Lost terminal)
+2016-01-16 16:34:54	quchen	)
+2016-01-16 16:35:04	saurabhnanda	okay
+2016-01-16 16:35:44	saurabhnanda	quchen: changed the code
+2016-01-16 16:35:48	saurabhnanda	quchen: still the same error
+2016-01-16 16:35:53	saurabhnanda	quchen: updated github as wel
+2016-01-16 16:37:02	◀	achernyak (~artem@24-217-172-238.dhcp.stls.mo.charter.com) has quit (Ping timeout: 276 seconds)
+2016-01-16 16:37:17	lynn	:t catch
+2016-01-16 16:37:19	lambdabot	Exception e => IO a -> (e -> IO a) -> IO a
+2016-01-16 16:37:19	◀	cir0x (~Adium@dslb-178-002-192-055.178.002.pools.vodafone-ip.de) has quit (Quit: Leaving.)
+2016-01-16 16:37:23	◀	hannelita (~hannelita@2804:14c:a8:27a5:3cdf:f514:5ca4:8a06) has quit (Ping timeout: 264 seconds)
+2016-01-16 16:37:25	quchen	Top-level type signatures for all definitions are also a best practice. It helps a reader (for example me) to see types without actually loading your program in the compiler.
+2016-01-16 16:37:28	lynn	what is `a` in your case?
+2016-01-16 16:37:43	quchen	lynn: ().
+2016-01-16 16:37:46	▶	wei2912 (~wei2912@unaffiliated/wei2912) has joined #haskell
+2016-01-16 16:37:56	quchen	Oh, you mean from sendMessage
+2016-01-16 16:38:01	saurabhnanda	quchen: I'm not sure what you mean. If you could point me to a wiki which explains this, it'd be great.
+2016-01-16 16:38:05	◀	qmm (~daniel@unaffiliated/qmm) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:38:20	▶	pilne (~pilne@75-132-212-62.dhcp.stls.mo.charter.com) has joined #haskell
+2016-01-16 16:38:24	lynn	Yeah, I'm pointing out where saurabhnanda's type error is coming from
+2016-01-16 16:38:32	▶	chrisramsey (~chrisrams@99-118-32-112.lightspeed.snantx.sbcglobal.net) has joined #haskell
+2016-01-16 16:38:54	◀	chrisramsey (~chrisrams@99-118-32-112.lightspeed.snantx.sbcglobal.net) has quit (Remote host closed the connection)
+2016-01-16 16:39:01	saurabhnanda	lynn: do you need sendmessage's type signature?
+2016-01-16 16:39:02	quchen	saurabhnanda: "foo :: a -> a" is a type signature. All top-level declarations should have one.
+2016-01-16 16:39:11	saurabhnanda	quchen: got it, thanks
+2016-01-16 16:39:13	▶	Hugehead (~Hugehead@174-17-184-100.phnx.qwest.net) has joined #haskell
+2016-01-16 16:39:25	quchen	So your code should say "getUpdates :: XXXX" right before defining getUpdates.
+2016-01-16 16:39:36	▶	dsh (~daishi@2604:2000:e0f1:2500:cc3b:4001:b24a:e7dd) has joined #haskell
+2016-01-16 16:39:46	lynn	saurabhnanda: Yeah. Its eventual result is `IO (Response ByteString)`, right?
+2016-01-16 16:39:48	quchen	saurabhnanda: Your `sendMessage` probably has a type "-> IO ByteString" or something.
+2016-01-16 16:40:12	quchen	And that's where the type error probably comes from.
+2016-01-16 16:40:19	saurabhnanda	it is internally calling wref library's post function
+2016-01-16 16:40:25	saurabhnanda	I can get :t post easily
+2016-01-16 16:40:45	quchen	You need to :t sendMessage and paste that above "sendMessage ... = ".
+2016-01-16 16:40:52	saurabhnanda	post :: wreq-0.4.1.0:Network.Wreq.Internal.Types.Postable a => String -> a -> IO (Response Data.ByteString.Lazy.Internal.ByteString)
+2016-01-16 16:40:57	quchen	You can also compile with -W to get warnings about htis.
+2016-01-16 16:41:01	◀	Oliphaunte (~oliphaunt@ool-4573dbb0.dyn.optonline.net) has quit (Remote host closed the connection)
+2016-01-16 16:41:06	lynn	 sendMessage update msg             :: IO (Response ByteString)
+2016-01-16 16:41:06	lynn	(sendMessage update msg >> pure ()) :: IO ()
+2016-01-16 16:41:16	▶	T0BI (~ObitO@41.101.180.25) has joined #haskell
+2016-01-16 16:41:30	quchen	Try:    void (sendMessage update "test") `catch` print
+2016-01-16 16:41:36	quchen	Void is from Data.Functor
+2016-01-16 16:41:42	quchen	"void", that is
+2016-01-16 16:41:58	saurabhnanda	request you to please explain the concept along with the fix
+2016-01-16 16:42:03	▶	nomicflux (~nomicflux@cpe-174-103-183-220.wi.res.rr.com) has joined #haskell
+2016-01-16 16:42:05	lynn	Ooh, `void` is the thing I was thinking of!
+2016-01-16 16:42:13	saurabhnanda	it is that both the branches (error and non-error) shouls have same data-type
+2016-01-16 16:42:18	▶	tristero (~al.f.zero@unaffiliated/transfinite) has joined #haskell
+2016-01-16 16:42:21	lynn	Yep, basically that
+2016-01-16 16:42:38	saurabhnanda	so void conversts IO (blah) to IO ()
+2016-01-16 16:42:48	saurabhnanda	is there a way to do the reverse, in case I need to do it in the future?
+2016-01-16 16:42:52	▶	jas1211 (0566dd4e@gateway/web/freenode/ip.5.102.221.78) has joined #haskell
+2016-01-16 16:43:00	lynn	Both branches of `catch` should give back the same `IO a`, but in your case, one has a response, and the other doesn't
+2016-01-16 16:43:16	jas1211	hi i know this is not qa question about haskell but its about monad and functional hopefully I can ask here
+2016-01-16 16:43:20	lynn	Hmm, well, you could do `someAction >> pure someValue`
+2016-01-16 16:43:24	▶	owenowen (~owenowen@95-45-135-165-dynamic.agg2.sks.blp-srl.eircom.net) has joined #haskell
+2016-01-16 16:43:26	jas1211	i'm reading http://techblog.realestate.com.au/how-we-used-category-theory-to-solve-a-problem-in-java/
+2016-01-16 16:43:45	Hafydd	saurabhnanda: you can use <$ from Control.Applicative for that, too.
+2016-01-16 16:43:51	jas1211	in the composing with input he has this:
+2016-01-16 16:44:02	▶	darkbolt (~darkbolt@64.187.165.143) has joined #haskell
+2016-01-16 16:44:04	jas1211	Results apply(S source, Results results);
+2016-01-16 16:44:08	◀	hpd (~hpd@hpdeifel.de) has quit (Quit: reboot)
+2016-01-16 16:44:13	jas1211	what should be the implementation of that funtion?
+2016-01-16 16:44:26	jas1211	does he store the source and results as "members"? what does he do with them in apply?
+2016-01-16 16:44:37	saurabhnanda	tried that, now 'catch' and 'show' are turning out to be ambiguous
+2016-01-16 16:44:45	jas1211	he said that the apply is a monoid
+2016-01-16 16:45:04	jas1211	so it should apply something to the results and return again a results but what does he apply to the results?
+2016-01-16 16:45:08	Hafydd	jas1211: do you really think we'll be able to help without knowing what language it's written in?
+2016-01-16 16:45:18	jas1211	its java
+2016-01-16 16:45:37	◀	srajendra (~srajendra@121.244.27.61) has quit (Remote host closed the connection)
+2016-01-16 16:45:41	quchen	Hafydd: Well, Java is in the article's title.
+2016-01-16 16:45:48	jas1211	here is the code:
+2016-01-16 16:45:49	jas1211	interface Extension<S> {       Results apply(S source, Results results);       final default Extension<S> compose(Extension<S> e) {         return (src, results) -> e.apply(src, Extension.this.apply(src, results));     }       static final Extension IDENTITY = (s, r) -> r;       static <S> Extension<S> composeAll(Extension<S>... extensions) {         return Stream.of(extensions).reduce(IDENTITY, Extension::compose);     }       defau
+2016-01-16 16:45:52	Hafydd	Oh, I missed that.
+2016-01-16 16:45:56	jas1211	oh did not get formatted
+2016-01-16 16:46:02	quchen	jas1211: Please paste your code online, not in the channel
+2016-01-16 16:46:04	quchen	?where paste
+2016-01-16 16:46:04	lambdabot	Haskell pastebin: http://lpaste.net/
+2016-01-16 16:46:28	quchen	saurabhnanda: Paste the error please
+2016-01-16 16:46:33	saurabhnanda	No instance for (Show a0) arising from a use of ‘print’
+2016-01-16 16:46:38	jas1211	pasted code:
+2016-01-16 16:46:39	jas1211	http://lpaste.net/149783
+2016-01-16 16:46:57	quchen	saurabhnanda: Paste the complete source code and the complete error somewhere please
+2016-01-16 16:46:59	▶	Oliphaunte (~oliphaunt@ool-4573dbb0.dyn.optonline.net) has joined #haskell
+2016-01-16 16:47:01	saurabhnanda	No instance for (GHC.Exception.Exception a0) arising from a use of ‘catch’. The type variable ‘a0’ is ambiguous. Note: there are several potential instances:
+2016-01-16 16:47:01	◀	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has quit (Remote host closed the connection)
+2016-01-16 16:47:03	▶	godel (~gonzalo@ip-45-3-26-27.user.start.ca) has joined #haskell
+2016-01-16 16:47:05	jas1211	so the `apply` has no implementation which is ok because its an interface
+2016-01-16 16:47:07	saurabhnanda	quchen: 2mins
+2016-01-16 16:47:08	lynn	jas1211: I'm no Java expert, but doesn't `interface` mean there is no implementation?
+2016-01-16 16:47:11	lynn	Right
+2016-01-16 16:47:12	jas1211	but what do you think should be its implementation?
+2016-01-16 16:47:21	jas1211	yes
+2016-01-16 16:47:27	quchen	lynn: Java 8 changed that, but yeah
+2016-01-16 16:47:28	jas1211	i just wonder what should the implementation of apply be
+2016-01-16 16:47:33	jas1211	i mean
+2016-01-16 16:47:35	quchen	s/changed/relaxed/
+2016-01-16 16:47:42	jas1211	some of the functions have default implementation
+2016-01-16 16:47:43	▶	voxr (94a82805@gateway/web/cgi-irc/kiwiirc.com/ip.148.168.40.5) has joined #haskell
+2016-01-16 16:47:44	lynn	Oh right, `default`
+2016-01-16 16:47:47	jas1211	this one seems not to have
+2016-01-16 16:48:08	saurabhnanda	http://lpaste.net/149784 and https://github.com/vacationlabs/nightwatch/blob/master/nightwatch.hs
+2016-01-16 16:48:31	saurabhnanda	quchen: http://lpaste.net/149784 and https://github.com/vacationlabs/nightwatch/blob/master/nightwatch.hs
+2016-01-16 16:48:34	saurabhnanda	lynn: http://lpaste.net/149784 and https://github.com/vacationlabs/nightwatch/blob/master/nightwatch.hs
+2016-01-16 16:48:44	◀	wvdhaute (~wvdhaute@109.130.240.47) has quit (Ping timeout: 276 seconds)
+2016-01-16 16:48:53	jas1211	so apply in monoid doesnt it supposed to apply something to the input and generate the same type?
+2016-01-16 16:48:58	▶	kurt11 (~Adium@99-91-2-47.lightspeed.austtx.sbcglobal.net) has joined #haskell
+2016-01-16 16:50:00	▶	usershell (~usershell@41.136.106.244) has joined #haskell
+2016-01-16 16:50:01	lynn	I don't see what the "source parameter" is used for. :<
+2016-01-16 16:50:20	saurabhnanda	lynn: is that for me?
+2016-01-16 16:50:29	voxr	what's the consensus on aeson 0.10? don't use it?
+2016-01-16 16:50:32	lynn	No, for jas1211 (I'll look at your paste in a bit!)
+2016-01-16 16:50:57	▶	hpd (~hpd@hpdeifel.de) has joined #haskell
+2016-01-16 16:51:03	▶	uncle-j_j (~unclechu@95.153.133.230) has joined #haskell
+2016-01-16 16:51:05	◀	Stratege (~Stratege@unaffiliated/stratege) has quit (Ping timeout: 246 seconds)
+2016-01-16 16:51:31	lynn	jas1211: I think the "source parameter" can just do whatever. It contains some extra info for `apply` to perform work on the Results
+2016-01-16 16:51:44	jas1211	yeah
+2016-01-16 16:51:45	lynn	And it just gets threaded through when you compose a bunch of Extensions
+2016-01-16 16:51:48	jas1211	yeah exactly
+2016-01-16 16:51:49	◀	wei2912 (~wei2912@unaffiliated/wei2912) has quit (Quit: Lost terminal)
+2016-01-16 16:51:56	◀	psyq (~psyq@178.62.210.183) has left #haskell
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #haskell
+2016-01-16 16:52:27	ℹ	Topic for #haskell is "http://www.haskell.org/ | https://wiki.haskell.org/IRC_channel | Paste code/errors: http://lpaste.net/new/haskell | Logs: http://tunes.org/~nef/logs/haskell/?C=M;O=D http://ircbrowse.net/day/haskell/today?mode=recent | http://reddit.com/r/haskell | Administrative issues: #haskell-ops | Hackage status? http://status.haskell.org | http://downloads.haskell.org"
+2016-01-16 16:52:27	ℹ	Topic set by quicksilver on Wed, 07 Oct 2015 16:39:51
+2016-01-16 16:52:27	ℹ	Channel #haskell: 1507 nicks (1 op, 0 voices, 1506 normals)
+2016-01-16 16:52:27	ℹ	URL for #haskell: http://www.haskell.org/
+2016-01-16 16:52:31	ℹ	Channel created on Sun, 26 Nov 2006 07:42:48
+2016-01-16 16:52:41	quchen	saurabhnanda: It doesn't know what you're catching, so the "e" in "\e -> print e" has ambiguous type. You'll need to spefify that type, for example like this. http://lpaste.net/149785
+2016-01-16 16:52:48	lynn	return (src, results) -> e.apply(src, Extension.this.apply(src, results));
+2016-01-16 16:52:50	jas1211	it makes sense that the purpose of source is to be threaded through but as there is no implemnetation i miss how is it being threaded through?
+2016-01-16 16:53:03	jas1211	or at least what was the meaning how would he mean to thread it through
+2016-01-16 16:53:10	jas1211	the only function which receives this source is the apply
+2016-01-16 16:53:13	lynn	The same `src` is passed to both extensions, if you compose two of them
+2016-01-16 16:53:14	▶	deavmi_mobile2 (~deavmi@41.164.24.122) has joined #haskell
+2016-01-16 16:53:17	◀	deavmi_mobile (~deavmi@41.164.24.122) has quit (Read error: No route to host)
+2016-01-16 16:53:40	▶	takle (~takle@cpc73668-dals20-2-0-cust505.20-2.cable.virginm.net) has joined #haskell
+2016-01-16 16:53:44	jas1211	unless i miss anything
+2016-01-16 16:53:48	quchen	saurabhnanda: The thing you're applying "catch" to has type "IO ()". And you're saying "catch it with a function e -> IO (), printing the thing of type "e". Printing requires a Show instance. But since "e" is fully polymorphic, GHC doesn't know which "print" function you want.
+2016-01-16 16:53:53	quchen	Is it "print an integer"?
+2016-01-16 16:53:56	◀	jeltsch (~wolfgang@85.253.142.189.cable.starman.ee) has quit (Quit: jeltsch)
+2016-01-16 16:53:57	quchen	Is it "print a String"?
+2016-01-16 16:54:07	quchen	What you want is "print a SomeException". So that's what you need to annotate.
+2016-01-16 16:54:08	◀	cleamoon (~cleamoon@c-5eeaaa3b-74736162.cust.telenor.se) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:54:09	lynn	(`e` is the next one, `this` is this one)
+2016-01-16 16:54:14	▶	nanoz (~nanoz@117.221.125.195) has joined #haskell
+2016-01-16 16:54:20	jas1211	@lynn yes
+2016-01-16 16:54:20	lambdabot	Unknown command, try @list
+2016-01-16 16:54:30	jas1211	but how does he pass the same src i mean
+2016-01-16 16:54:37	jas1211	the src is passed firstly in apply function
+2016-01-16 16:54:39	quchen	saurabhnanda: You could also write \(e :: SomeException) -> print e, but that would require a (harmless) language extension.
+2016-01-16 16:54:41	jas1211	does he store it?
+2016-01-16 16:54:52	lynn	It's a lambda argument
+2016-01-16 16:54:53	jas1211	i'm not sure which function is called first and how the src is passed at first
+2016-01-16 16:54:57	lynn	return (src results) -> ...
+2016-01-16 16:55:15	▶	kosorith (~kosorith@dynamic-78-8-95-88.ssp.dialog.net.pl) has joined #haskell
+2016-01-16 16:55:21	saurabhnanda	quchen: I'm royally confused with the syntax now
+2016-01-16 16:55:34	quchen	saurabhnanda: Which part?
+2016-01-16 16:55:35	jas1211	@lynn in `return (src, results)` how does he have access to this `src` where did it come from?
+2016-01-16 16:55:35	lambdabot	Unknown command, try @list
+2016-01-16 16:55:51	◀	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has quit (Remote host closed the connection)
+2016-01-16 16:55:55	lynn	If I have to Extension<S>'s, `a` and `b`,  `a.compose(B)` will be a new anonymous function that you can pass a source and results.
+2016-01-16 16:55:58	◀	uncle-j_j (~unclechu@95.153.133.230) has quit (Quit: Leaving.)
+2016-01-16 16:56:02	lynn	* `a.compose(b)`
+2016-01-16 16:56:12	saurabhnanda	quchen: does this seem right -- void (sendMessage update "test") `catch` (\e -> do putStrLn (show (e :: SomeException)))
+2016-01-16 16:56:13	Hafydd	jas1211: that article doesn't have anything to do with monads. I think you misread it.
+2016-01-16 16:56:15	lynn	So it uses whatever source you pass to the composition
+2016-01-16 16:56:16	▶	uncle-j_j (~unclechu@95.153.133.230) has joined #haskell
+2016-01-16 16:56:23	◀	usershell (~usershell@41.136.106.244) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:56:40	◀	markus1199 (~markus118@p4FDC1979.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2016-01-16 16:56:51	▶	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has joined #haskell
+2016-01-16 16:56:57	▶	JagaJaga (~JagaJaga@178.62.202.50) has joined #haskell
+2016-01-16 16:57:04	▶	javjarfer (~javjarfer@75.Red-81-44-195.dynamicIP.rima-tde.net) has joined #haskell
+2016-01-16 16:57:06	quchen	saurabhnanda: If it compiles then yes.
+2016-01-16 16:57:13	▶	markus1189 (~markus118@p4FDC1979.dip0.t-ipconnect.de) has joined #haskell
+2016-01-16 16:57:15	saurabhnanda	quchen: ha ha
+2016-01-16 16:57:19	quchen	saurabhnanda: "do x" is equivalent to "x".
+2016-01-16 16:57:28	quchen	putStrLn (show x) is equivalent to print x.
+2016-01-16 16:57:42	saurabhnanda	quchen: I'm trying random permutations now just to get the damn thing to compile
+2016-01-16 16:57:45	◀	wei2912 (~wei2912@unaffiliated/wei2912) has quit (Remote host closed the connection)
+2016-01-16 16:57:55	saurabhnanda	quchen: compiled. Let me run
+2016-01-16 16:58:09	lynn	jas1211: I don't know if it will help, but, imagine `Results` is just `int`, or something, and `S` is a file stream.
+2016-01-16 16:58:29	jas1211	yes i can imagine thi
+2016-01-16 16:58:30	jas1211	s
+2016-01-16 16:58:30	lynn	I could have two Extension<S>'s, which implement `apply` as follows:
+2016-01-16 16:58:38	jas1211	yes...
+2016-01-16 16:59:01	lynn	`a` will take (fileStream, x), print the int to the stream, and return x+1.
+2016-01-16 16:59:06	◀	nut_ (~nut@112.90.183.133) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:59:07	lynn	`b` will take (fileStream, x), print the int to the stream, and return x*2.
+2016-01-16 16:59:26	Hafydd	It looks like the author implemented some notion of functors in Java, then tried to impress all of their colleagues by describing it in unnecessarily abstract terms.
+2016-01-16 17:00:05	lynn	So what would happen if I do `a.apply(System.out, 3)`? And `b.apply(System.out, 3)`?
+2016-01-16 17:00:25	▶	mikeylove (~textual@24.4.189.210) has joined #haskell
+2016-01-16 17:00:41	jas1211	a.apply(System.out, 3) --> print 3 to System.out and return 4
+2016-01-16 17:01:09	jas1211	b.apply(System.out, 3) --> print 3 to steam and return 6
+2016-01-16 17:01:19	▶	thunderrd (~thunderrd@110.77.238.204) has joined #haskell
+2016-01-16 17:01:21	jas1211	(to System.out)
+2016-01-16 17:01:44	◀	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has quit (Ping timeout: 276 seconds)
+2016-01-16 17:01:48	lynn	Yeah. So now, I'll define a new `Extension<S> c = a.compose(b)`
+2016-01-16 17:01:56	◀	raichoo (~raichoo@dsl102-244.pool.bitel.net) has quit (Ping timeout: 246 seconds)
+2016-01-16 17:01:57	▶	dadaro (~androidde@78.173.237.110) has joined #haskell
+2016-01-16 17:02:03	▶	cleamoon (~cleamoon@c-5eeaaa3b-74736162.cust.telenor.se) has joined #haskell
+2016-01-16 17:02:13	lynn	The implementation of `compose` is `return (src, results) -> e.apply(src, Extension.this.apply(src, results));`
+2016-01-16 17:02:28	◀	NoCreativity (~quassel@187.110.234.144) has quit (Ping timeout: 265 seconds)
+2016-01-16 17:03:20	◀	mikeylove (~textual@24.4.189.210) has quit (Client Quit)
+2016-01-16 17:03:29	lynn	Which defines `c`'s `apply`. (The lambda anonymously overriding the only unimplemented member of Extension<S>, and all.)
+2016-01-16 17:03:47	jas1211	aha
+2016-01-16 17:04:05	jas1211	i'm beggining to grasp it
+2016-01-16 17:04:06	jas1211	thanks
+2016-01-16 17:04:10	◀	LnL (~L0CKnL0aD@2a02:1812:1634:6500:211:32ff:fe4e:8eee) has quit (Ping timeout: 250 seconds)
+2016-01-16 17:04:19	▶	manuel___ (~manuel@p57921739.dip0.t-ipconnect.de) has joined #haskell
+2016-01-16 17:04:22	lynn	So `c` will do what `a` did, and *then* do what `b` did with the same source, but `a`'s result.
+2016-01-16 17:04:27	▶	albertus1 (~albertus1@p4FF75AF6.dip0.t-ipconnect.de) has joined #haskell
+2016-01-16 17:05:10	lynn	So basically, you're chaining together the steps of some process, each of which relies on some common source (in my example, a file stream)
+2016-01-16 17:05:30	◀	govg (~govg@unaffiliated/govg) has quit (Quit: leaving)
+2016-01-16 17:05:45	▶	govg (~govg@unaffiliated/govg) has joined #haskell
+2016-01-16 17:05:46	jas1211	perfect thanks i get the picture i need to sit a few minutes alone with the details
+2016-01-16 17:05:50	◀	manuel_ (~manuel@p57920605.dip0.t-ipconnect.de) has quit (Ping timeout: 255 seconds)
+2016-01-16 17:05:50	ℹ	manuel___ is now known as manuel_
+2016-01-16 17:05:53	jas1211	:)
+2016-01-16 17:06:08	jas1211	I guess i misunderstood the apply
+2016-01-16 17:06:15	lynn	Haha, yeah, that's the best way to wrap your head around these things
+2016-01-16 17:06:16	jas1211	i get now its for the lamda
+2016-01-16 17:06:28	▶	NoCreativity (~quassel@187.110.234.144) has joined #haskell
+2016-01-16 17:07:00	lynn	And Java lambdas are weird! Like, full disclosure: I only remembered how they worked halfway through my explanation. ^^
+2016-01-16 17:07:42	jas1211	really :)
+2016-01-16 17:07:46	▶	cir0x (~Adium@dslb-178-002-192-055.178.002.pools.vodafone-ip.de) has joined #haskell
+2016-01-16 17:08:00	▶	the_2nd (~the_2nd@2a02:8070:43c2:8400:be5f:f4ff:fe08:eb05) has joined #haskell
+2016-01-16 17:08:04	◀	nkaretnikov (~nikita@unaffiliated/nkar) has quit (Ping timeout: 256 seconds)
+2016-01-16 17:08:26	jas1211	well if there was haskell on jvm which is well maintained i would seriously think of it, right now for me only java or scala as i have to work with jvm
+2016-01-16 17:08:31	the_2nd	the OpenGL lib has a Vertex2 data type : Vertex2 a
+2016-01-16 17:08:53	the_2nd	how can I define an own type of e.g. : IntVertex2 = Vertex2 Int
+2016-01-16 17:08:54	▶	LnL (~L0CKnL0aD@2a02:1812:1634:6500:211:32ff:fe4e:8eee) has joined #haskell
+2016-01-16 17:09:09	◀	taira (~quassel@taira-comp.kvi.sgsnet.se) has quit (Read error: Connection reset by peer)
+2016-01-16 17:09:55	◀	t0by (~t0by@host194-15-dynamic.41-79-r.retail.telecomitalia.it) has quit (Ping timeout: 260 seconds)
+2016-01-16 17:10:01	voxr	lynn how is java dev these days? i haven't touched java in like 15 years
+2016-01-16 17:10:04	◀	psyq (~psyq@unaffiliated/psyq) has left #haskell
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:33	▶	psyq (~psyq@178.62.210.183) has joined #haskell
+2016-01-16 17:54:33	ℹ	Topic for #haskell is "http://www.haskell.org/ | https://wiki.haskell.org/IRC_channel | Paste code/errors: http://lpaste.net/new/haskell | Logs: http://tunes.org/~nef/logs/haskell/?C=M;O=D http://ircbrowse.net/day/haskell/today?mode=recent | http://reddit.com/r/haskell | Administrative issues: #haskell-ops | Hackage status? http://status.haskell.org | http://downloads.haskell.org"
+2016-01-16 17:54:33	ℹ	Topic set by quicksilver on Wed, 07 Oct 2015 16:39:51
+2016-01-16 17:54:34	ℹ	Channel #haskell: 1512 nicks (1 op, 0 voices, 1511 normals)
+2016-01-16 17:54:34	***	Buffer Playback...
+2016-01-16 17:54:34	⚡	hackagebot [17:49:50] hackage-diff 0.1.0.1 - Compare the public API of different versions of a Hackage library  https://hackage.haskell.org/package/hackage-diff-0.1.0.1 (blitzcode)
+2016-01-16 17:54:34	***	Playback Complete.
+2016-01-16 17:54:52	ℹ	Channel created on Sun, 26 Nov 2006 07:42:48
+2016-01-16 17:55:23	▶	mahasamoot (~mahasamoo@24.42.192.202) has joined #haskell
+2016-01-16 17:55:31	▶	canyonero (~canyonero@d118-75-143-48.try.wideopenwest.com) has joined #haskell
+2016-01-16 17:55:38	◀	owenowen (~owenowen@95-45-135-165-dynamic.agg2.sks.blp-srl.eircom.net) has quit (Ping timeout: 265 seconds)
+2016-01-16 17:56:15	◀	ph88 (~ph88@541E4F6E.cm-5-7b.dynamic.ziggo.nl) has quit (Ping timeout: 250 seconds)
+2016-01-16 17:56:47	▶	nut_ (~nut@112.90.237.83) has joined #haskell
+2016-01-16 17:57:55	◀	bennofs (~benno@dslb-092-078-116-066.092.078.pools.vodafone-ip.de) has quit (Ping timeout: 240 seconds)
+2016-01-16 17:58:30	▶	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has joined #haskell
+2016-01-16 18:00:06	◀	canyonero (~canyonero@d118-75-143-48.try.wideopenwest.com) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:00:44	▶	caisah (~user@188.24.69.188) has joined #haskell
+2016-01-16 18:00:44	quchen	wz1000: race is a pretty useful function, you can also use it for implementing general timeouts for example
+2016-01-16 18:00:51	◀	caisah (~user@188.24.69.188) has left #haskell ("ERC (IRC client for Emacs 24.5.2)")
+2016-01-16 18:00:59	▶	srajendra (~srajendra@122.179.68.129) has joined #haskell
+2016-01-16 18:01:03	quchen	But you have to be careful to handle the ThreadKilled exceptions it generates properly
+2016-01-16 18:01:25	⚡	hodapp ponders whether he's masochistic enough to try this Machine Learning course for his MSCS in Haskell instead of Python or R...
+2016-01-16 18:01:53	▶	strburst (~allen@res388d-128-61-88-50.res.gatech.edu) has joined #haskell
+2016-01-16 18:02:38	▶	ype (~ype@cpc45-slam6-2-0-cust434.2-4.cable.virginm.net) has joined #haskell
+2016-01-16 18:02:52	▶	python476 (~user@2a02-8420-6f5c-4200-021f-3bff-fe7d-f603.rev.sfr.net) has joined #haskell
+2016-01-16 18:03:05	▶	PaulN_ (~PaulN@TOROON12-3096782363.sdsl.bell.ca) has joined #haskell
+2016-01-16 18:03:23	t0by	stupid question, why arent' the following equivalent?
+2016-01-16 18:03:24	t0by	1.
+2016-01-16 18:03:26	◀	danthemyth (~danthemyt@c-73-135-109-146.hsd1.wv.comcast.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:03:30	t0by	dropJ :: (Sized b, Monoid b) => Int -> JoinList b a -> JoinList b a
+2016-01-16 18:03:30	t0by	dropJ 0 = id
+2016-01-16 18:03:31	t0by	2.
+2016-01-16 18:03:36	t0by	dropJ :: (Sized b, Monoid b) => Int -> JoinList b a -> JoinList b a
+2016-01-16 18:03:36	t0by	dropJ 0 a = a
+2016-01-16 18:04:01	t0by	oh wait, probably #haskell-beginners
+2016-01-16 18:04:02	t0by	sorry
+2016-01-16 18:04:14	glguy	t0by: Beginner questions are just fine here
+2016-01-16 18:04:18	glguy	those should be the same
+2016-01-16 18:04:25	◀	quakehead (~pemican@50.153.133.137) has quit (Ping timeout: 260 seconds)
+2016-01-16 18:04:30	▶	kritzcreek (uid114400@gateway/web/irccloud.com/x-llcwocghgpocjfup) has joined #haskell
+2016-01-16 18:04:38	◀	elementalest (~elemental@unaffiliated/elementalest) has quit (Ping timeout: 272 seconds)
+2016-01-16 18:04:51	⚡	hackagebot binary-enum 0.1.2.0 - Simple wrappers around enum types  https://hackage.haskell.org/package/binary-enum-0.1.2.0 (tolysz)
+2016-01-16 18:05:06	▶	elementalest (~elemental@unaffiliated/elementalest) has joined #haskell
+2016-01-16 18:05:15	◀	rcyr (~rcyr@unaffiliated/rcyr) has quit (Quit: Bye!)
+2016-01-16 18:05:16	t0by	glguy, but I can't mix dropJ 0 = id with a definition in the form dropJ n a?
+2016-01-16 18:05:25	t0by	(for n != 0 in which I have to do some actual work)
+2016-01-16 18:05:27	glguy	t0by: However if you have other clauses they all have to have the same number of arguments
+2016-01-16 18:05:35	◀	agjacome (~agjacome@159.147.246.155) has quit (Ping timeout: 260 seconds)
+2016-01-16 18:05:39	t0by	glguy, I get it. Thanks.
+2016-01-16 18:05:41	◀	elementalest (~elemental@unaffiliated/elementalest) has quit (Max SendQ exceeded)
+2016-01-16 18:05:44	t0by	So is there a way around it?
+2016-01-16 18:05:51	t0by	I kind of like writing "id" explicitly
+2016-01-16 18:06:09	◀	ype (~ype@cpc45-slam6-2-0-cust434.2-4.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2016-01-16 18:06:16	◀	PaulN (~PaulN@TOROON12-3096782363.sdsl.bell.ca) has quit (Ping timeout: 265 seconds)
+2016-01-16 18:06:23	◀	zcourts (~zcourts@cpc5-croy18-2-0-cust555.croy.cable.virginm.net) has quit (Remote host closed the connection)
+2016-01-16 18:06:28	▶	julie-ai (~jules@70.44.244.198.res-cmts.tnk.ptd.net) has joined #haskell
+2016-01-16 18:06:30	t0by	Assuming it is "good" haskell (is it?) I like writing "id" for a function that /is/ id.
+2016-01-16 18:06:42	▶	ype (~ype@cpc45-slam6-2-0-cust434.2-4.cable.virginm.net) has joined #haskell
+2016-01-16 18:06:44	▶	elementalest (~elemental@ppp118-209-172-211.lns20.mel8.internode.on.net) has joined #haskell
+2016-01-16 18:06:44	◀	elementalest (~elemental@ppp118-209-172-211.lns20.mel8.internode.on.net) has quit (Changing host)
+2016-01-16 18:06:44	▶	elementalest (~elemental@unaffiliated/elementalest) has joined #haskell
+2016-01-16 18:06:51	▶	jophish (~jophish@dab-rcn1-h-3-7.dab.02.net) has joined #haskell
+2016-01-16 18:07:00	glguy	No, it's not better to try to use id there than the other version as far as "good haskell" goes
+2016-01-16 18:07:09	glguy	but if you just wanted to explore what's possible you could try something like:
+2016-01-16 18:07:22	glguy	dropJ n = \xs -> case xs of ....
+2016-01-16 18:07:26	glguy	for the non-zero case
+2016-01-16 18:07:49	▶	zcourts (~zcourts@cpc5-croy18-2-0-cust555.croy.cable.virginm.net) has joined #haskell
+2016-01-16 18:08:02	◀	obadz (~obadz@unaffiliated/obadz) has quit (Ping timeout: 276 seconds)
+2016-01-16 18:08:04	nut_	what is the name of a website that people can train programming skills and keep gaining levels as if in a role-playing game and it supports haskell?
+2016-01-16 18:08:15	◀	tmtwd (~tmtwd@CPE0c473da71813-CM0c473da71810.cpe.net.cable.rogers.com) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:08:18	▶	ph88 (~ph88@541E4F6E.cm-5-7b.dynamic.ziggo.nl) has joined #haskell
+2016-01-16 18:08:18	▶	PaulN__ (~PaulN@TOROON12-3096782363.sdsl.bell.ca) has joined #haskell
+2016-01-16 18:08:43	puregreen	nut_: codewars.com
+2016-01-16 18:08:48	t0by	"a bad idea"
+2016-01-16 18:08:49	t0by	(sorry)
+2016-01-16 18:08:59	hpc	idle rpg :P
+2016-01-16 18:09:08	◀	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 246 seconds)
+2016-01-16 18:09:27	wz1000	quchen: Yeah, all of asyn is pretty awesome
+2016-01-16 18:09:41	▶	dlundy (~dlundy@185.21.217.16) has joined #haskell
+2016-01-16 18:10:25	▶	kurt11 (~Adium@99-91-2-47.lightspeed.austtx.sbcglobal.net) has joined #haskell
+2016-01-16 18:10:42	▶	obadz (~obadz@unaffiliated/obadz) has joined #haskell
+2016-01-16 18:10:52	◀	umib0zu (~umib0zu@146-115-43-219.c3-0.abr-ubr1.sbo-abr.ma.cable.rcn.com) has quit (Quit: umib0zu)
+2016-01-16 18:11:31	◀	PaulN_ (~PaulN@TOROON12-3096782363.sdsl.bell.ca) has quit (Ping timeout: 260 seconds)
+2016-01-16 18:12:06	◀	zcourts (~zcourts@cpc5-croy18-2-0-cust555.croy.cable.virginm.net) has quit (Ping timeout: 240 seconds)

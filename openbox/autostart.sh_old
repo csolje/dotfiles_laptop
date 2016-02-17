@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $Id: autostart.sh 210 2013-05-06 19:22:30Z tskjoedt $
+#
+# Openbox resource configuration script
+# -------------------------------------
+#gnome-settings-daemon
+  # hvad er dette?
+#xfce-mcs-manager &
+#xdg-autostart &
+#kdeinit &
+#hsetroot -fill ~/wallpapers/wallpaper.jpg
+xcompmgr &
+#xrandr --output DP1 --mode 1920x1080 --primary --output eDP1 --mode 1366x768 --same-as DP1 &
+feh --bg-scale ~/wallpapers/wallpaper.jpg &
+setlayout 0 4 3 0 &
+#nautilus --no-default-window
+#conky -a top_left &
+#tint2 &
+xfce4-panel &
+#gnome-power-manager &
+#junglediskdesktop &
+gnome-screensaver &
+#bluetooth-applet &
+#gnome-volume-control-applet &
+xfce4-power-manager &
+xfce4-volumed &
+nm-applet &
+#pidgin &
+#dropbox start &
+#skype
+#gpodder &
+#thunderbird &
+#xinput --set-prop "MOSART Semi. 2.4G Wireless Mouse" 'Device Accel Constant Deceleration' 3 &

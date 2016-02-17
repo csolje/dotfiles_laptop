@@ -1,0 +1,55 @@
+2015-12-28 00:05:52	Santo_101	http://imgur.com/Z4fLSOP this comes up when i restart virtualbox
+2015-12-28 00:28:02	Santo_101	still around? =P
+2015-12-28 00:28:31	psyq	yes i am
+2015-12-28 00:28:55	Santo_101	okay =)
+2015-12-28 00:29:35	psyq	did you do what they write about in the wiki?
+2015-12-28 00:30:25	psyq	https://wiki.archlinux.org/index.php/Systemd-boot
+2015-12-28 00:31:30	Santo_101	i ran grub-install --target=x86_86-efi --efi-directory=/boot --bootloader-id=grub --boot-directory=-boot --recheck --debug then grub-mkconfig -o /boot/grub/grub.cfg
+2015-12-28 00:32:14	psyq	well I used the bootctl
+2015-12-28 00:32:19	Santo_101	this worked flawless on my physical hdd so not sure where i messed up
+2015-12-28 00:32:33	Santo_101	not familiar witth bootctl though =(
+2015-12-28 00:34:10	Santo_101	when i reboot without ejecting the iso, it works great, but once the iso is gone that picture is shown once starting up
+2015-12-28 00:34:22	psyq	https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#EFI_System_Partition
+2015-12-28 00:34:53	psyq	I think here you will find how to get it to work 
+2015-12-28 00:35:56	Santo_101	did that too with gpt table
+2015-12-28 00:39:02	Santo_101	the partition is efi, installed grub and efibootmgr, made the grub install as well as grub-mkconfig
+2015-12-28 00:41:40	psyq	okie that is weird
+2015-12-28 00:41:50	psyq	when I did this it worked 
+2015-12-28 00:46:30	Santo_101	http://imgur.com/d2sbFaU
+2015-12-28 00:46:54	Santo_101	this worked on true hardware not virtualbox hardware
+2015-12-28 00:48:16	psyq	that looks right too I just don't understand why yours doesn't work
+2015-12-28 00:48:45	Santo_101	me neither. thats why i feel like an idiot here
+2015-12-28 00:49:19	psyq	wait a minute what modules did you install on your virtualbox host?
+2015-12-28 00:50:19	Santo_101	grub alongside efibootmgr
+2015-12-28 00:50:52	Santo_101	if thats the modules your thinking of
+2015-12-28 00:51:28	Santo_101	everything yo see written on that first page before reboot was installed
+2015-12-28 00:54:00	Santo_101	i may be lost her =P
+2015-12-28 00:55:42	psyq	I mean the virtualbox-host-modules
+2015-12-28 00:56:14	psyq	virtualbox-host-dkms
+2015-12-28 00:56:56	Santo_101	i've got the dkms. not sure about version though
+2015-12-28 00:57:47	Santo_101	recently had an upgrade on virtualbox that is. and i got the extension pack with it
+2015-12-28 00:58:36	Santo_101	aint got the guest dkms either
+2015-12-28 00:59:13	psyq	you just need the host ones
+2015-12-28 00:59:32	psyq	that is the one that virt ur hardware
+2015-12-28 00:59:45	Santo_101	got host dkms and modules
+2015-12-28 00:59:56	psyq	okie then
+2015-12-28 01:00:05	psyq	now I am confused
+2015-12-28 01:00:21	Santo_101	more than me???? thats not possible
+2015-12-28 01:00:35	psyq	I think so heheh
+2015-12-28 01:01:23	Santo_101	haha. those to is installed, i followed that tutorial irishluck aided me with and it worked with my main system. 
+2015-12-28 01:02:18	psyq	well it is just weird that it can't on virtualbox
+2015-12-28 01:02:33	Santo_101	thats what i figured
+2015-12-28 01:02:52	psyq	well Santo_101 I am sorry but I don't know what to tell u
+2015-12-28 01:03:06	Santo_101	not to worry. it was worth a shot
+2015-12-28 01:03:23	psyq	well yeah
+2015-12-28 01:03:48	Santo_101	you want a copy of a dysfunctional arch install on virtualbox???
+2015-12-28 01:03:55	Santo_101	=P
+2015-12-28 01:04:50	psyq	heheh i will try to see if I can install one myself
+2015-12-28 01:05:24	Santo_101	give that one a try and see what happens. half hour should be enough, lol
+2015-12-28 01:07:50	psyq	lol
+2015-12-28 01:08:25	Santo_101	i must have done something wrong in there, just dunno what yet
+2015-12-28 01:16:59	Santo_101	if you get the install done and it workes afterwards i fucked up
+2015-12-28 01:17:38	psyq	We don't know yet
+2015-12-28 01:18:08	Santo_101	i decided =P
+2015-12-28 01:35:21	Santo_101	Let me know once you find something okay? =) im signing out =)
+2015-12-28 02:00:42	--	irc: disconnected from server

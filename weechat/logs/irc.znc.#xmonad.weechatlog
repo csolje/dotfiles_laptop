@@ -1,0 +1,108 @@
+2016-01-16 15:16:48	▶	psyq_ (~psyq@178.62.210.183) has joined #xmonad
+2016-01-16 15:16:48	ℹ	Topic for #xmonad is "xmonad: the tiling window manager with formally proven extensions | xmonad 0.12 released! | http://xmonad.org | http://xmonad.org/faq | cheatsheet: http://bit.ly/gz1R4"
+2016-01-16 15:16:48	ℹ	Topic set by enthropy (~aavogt@d157-103-21.home4.cgocable.net) on Tue, 22 Dec 2015 23:04:55
+2016-01-16 15:16:48	ℹ	Channel #xmonad: 196 nicks (0 ops, 1 voice, 195 normals)
+2016-01-16 15:16:48	***	Buffer Playback...
+2016-01-16 15:16:48	oldbrict	[04:00:11] hi
+2016-01-16 15:16:48	oldbrict	[04:01:26] I am having this issue "Not in scope: data constructor "Relative"" for when I use http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Actions-UpdatePointer.html in particular line 50 here: https://github.com/Newbrict/dots/blob/master/.xmonad/xmonad.hs is giving me issues... I have xmonad and xmonad-contrib installed on the machine though
+2016-01-16 15:16:48	fizzie	[04:04:15] I think that particular bit got changed in XMonad 0.12.
+2016-01-16 15:16:48	geekosaur	[04:04:23] yes
+2016-01-16 15:16:48	fizzie	[04:04:25] See https://wiki.haskell.org/Xmonad/Notable_changes_since_0.11#updatePointer
+2016-01-16 15:16:48	geekosaur	[04:04:39] and the docs aon the website are still for 0.11 because nobody seems to know who has access to update it :/
+2016-01-16 15:16:48	geekosaur	[04:05:05] and hackage isn't building docs :/
+2016-01-16 15:16:48	oldbrict	[04:05:28] goddamn lol
+2016-01-16 15:16:48	geekosaur	[04:06:14] (IIRC aavogt had to get help to update the website for 0.11. I should try digging throgh my old logs to see who was involved)
+2016-01-16 15:16:48	oldbrict	[04:06:50] alright thank you EVeRYONE that fixed it
+2016-01-16 15:16:48	oldbrict	[04:07:06] you guys are the best
+2016-01-16 15:16:48	⚡	geekosaur [04:17:26] reminded to add the getArgs things to that changes page
+2016-01-16 15:16:48	oldbrict	[04:49:44] anyone here use two monitors with xmonad?
+2016-01-16 15:16:48	geekosaur	[04:58:17] yep
+2016-01-16 15:16:48	Digit	[05:02:23] 3
+2016-01-16 15:16:48	oldbrict	[05:03:27] is it nice? I'm about to set iti up
+2016-01-16 15:16:48	geekosaur	[05:05:22] "nice" is a bit subjective...
+2016-01-16 15:16:48	geekosaur	[05:06:18] for me it's nice enough that I ran out to get an additional monitor to hook to the work laptop so I could dual-screen xmonad on it (hadn't bothered with the original work-issued laptop which was OS X)
+2016-01-16 15:16:48	geekosaur	[05:07:04] (partly because multiscreen and virtual machines really don't mix, and since I do linux and solaris related support I almost always was in the VM)
+2016-01-16 15:16:48	geekosaur	[05:08:34] that said, I ... have perceptual and sensory differences, and things that work for me don't always work for other people
+2016-01-16 15:16:48	geekosaur	[05:09:26] I will mention that many people dislike the default behavior with multiple monitors; see https://wiki.haskell.org/Xmonad/Frequently_asked_questions#Replacing_greedyView_with_view
+2016-01-16 15:16:48	oldbrict	[05:09:29] vm doesn't work well with multi monitor?
+2016-01-16 15:16:48	geekosaur	[05:10:03] vbox and parallels both have very buggy multiscreen support, vmware doesn't even try any more
+2016-01-16 15:16:48	oldbrict	[05:10:10] I must restart my computer is completely screwed
+2016-01-16 15:16:48	oldbrict	[05:10:11] brb
+2016-01-16 15:16:48	oldbrict	[05:11:22] I'm back
+2016-01-16 15:16:48	geekosaur	[05:11:33] that is, when trying to expose multiple monitors to the guest OS. they run fine on a multiscreen system but only expose 1 monitor to the guest
+2016-01-16 15:16:48	geekosaur	[05:12:58] vmware in fullscreen can expose both monitors but they look like one big monitor --- no xrandr/xinerama information
+2016-01-16 15:16:48	oldbrict	[05:13:08] ah
+2016-01-16 15:16:48	geekosaur	[05:13:49] vbox and parallels have severe drawing issues, and vbox can crash the host if you make it expose more than one monitor to the guest
+2016-01-16 15:16:48	geekosaur	[05:16:45] (noneof this is related to xmonad though; just that moving to xmonad on a dedicated machine instead of os x or xmonad in a vm on os x meant I could duplicate an xmonad+multiscreen that works well for me)
+2016-01-16 15:16:48	geekosaur	[05:18:03] anyway, xmonad will use greedyView by default: if workspace 2 is on the secondary monitor and you press mod-2 while focused in the primary monitor, it will swap the workspaces so that the active workspace is always on the primary monitor.
+2016-01-16 15:16:48	geekosaur	[05:18:43] this is because you can't tell which monitor has focus if both are empty or you suppress borders in either workspace
+2016-01-16 15:16:48	geekosaur	[05:19:51] if you do something that will show you the monitor focus (e.g. https://github.com/geekosaur/xmonad.hs/blob/pyanfar/xmonad.hs#L268) then you can switch to using view instead of greedyView, so workspaces don't get swapped between monitors
+2016-01-16 15:16:48	geekosaur	[05:20:51] (this behavior is also why smartBorders from XMonad.Layout.NoBorders will refuse to do anything in a multiscreen config. if you provide some other way to identify which monitor has focus then you can use lessBorders otherIndicated
+2016-01-16 15:16:48	oldbrict	[05:20:51] that sounds very nice
+2016-01-16 15:16:48	oldbrict	[06:16:57] omfg getting solarized colors to work with urxvt/vim is so annoying
+2016-01-16 15:16:48	⚡	geekosaur [06:43:02] PRs a proper ungrab
+2016-01-16 15:16:48	⚡	geekosaur [07:16:03] wonders if it would be easier to rewrite Cheibriados's git functionality in Haskell, or teach Cheibriados to use mueval >.>
+2016-01-16 15:16:48	geekosaur	[07:16:33] (Chei = DCSS devs' irc git bot)
+2016-01-16 15:16:48	geekosaur	[07:20:22] guess that answers that question. chei's source is apparently not available
+2016-01-16 15:16:48	geekosaur	[07:22:12] oh, there it is.
+2016-01-16 15:16:48	geekosaur	[07:22:33] not an ungodly hybrid of perl and ruby like sequell is. suppose I could hold my nose >.>
+2016-01-16 15:16:48	geekosaur	[07:24:15] (also I probably can't usefully haskell on my bouncer host, sigh)
+2016-01-16 15:16:48	johnsonSteward	[09:37:05] is the weather location of xmobar encoded using ICAO?
+2016-01-16 15:16:48	johnsonSteward	[09:40:09] i mean, if i dont live in the States, how can i get my weather with this code (seems it only has places inside the states)
+2016-01-16 15:16:48	fizzie	[10:07:32] Huh? There are ICAO codes for pretty much every airport everywhere.
+2016-01-16 15:16:48	fizzie	[10:08:19] (Which is indeed what it seems to be -- it gets the data from http://weather.noaa.gov/pub/data/observations/metar/decoded/ABCD.TXT, where ABCD is the station ID you specify.)
+2016-01-16 15:16:48	johnsonSteward	[10:13:34] fizzie: my fault.. didn't notice
+2016-01-16 15:16:48	***	Playback Complete.
+2016-01-16 15:17:12	ℹ	Channel created on Wed, 25 Apr 2007 06:33:15
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:47	▶	psyq_ (~psyq@178.62.210.183) has joined #xmonad
+2016-01-16 15:17:47	ℹ	Topic for #xmonad is "xmonad: the tiling window manager with formally proven extensions | xmonad 0.12 released! | http://xmonad.org | http://xmonad.org/faq | cheatsheet: http://bit.ly/gz1R4"
+2016-01-16 15:17:47	ℹ	Topic set by enthropy (~aavogt@d157-103-21.home4.cgocable.net) on Tue, 22 Dec 2015 23:04:55
+2016-01-16 15:17:47	ℹ	Channel #xmonad: 195 nicks (0 ops, 1 voice, 194 normals)
+2016-01-16 15:18:12	ℹ	Channel created on Wed, 25 Apr 2007 06:33:15
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:23:54	▶	jeapostrophe (~jay@racket/jeapostrophe) has joined #xmonad
+2016-01-16 15:25:20	▶	thunderrd (~thunderrd@110.77.238.204) has joined #xmonad
+2016-01-16 15:28:29	◀	jeapostrophe (~jay@racket/jeapostrophe) has quit (Ping timeout: 245 seconds)
+2016-01-16 15:28:44	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:30:03	▶	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has joined #xmonad
+2016-01-16 15:30:03	◀	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has quit (Changing host)
+2016-01-16 15:30:03	▶	jeapostrophe (~jay@racket/jeapostrophe) has joined #xmonad
+2016-01-16 15:30:05	▶	thunderrd (~thunderrd@110.77.238.204) has joined #xmonad
+2016-01-16 15:33:24	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:37:06	◀	jeapostrophe (~jay@racket/jeapostrophe) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:41:59	▶	Oxit (~oxit@ti0014a400-2600.bb.online.no) has joined #xmonad
+2016-01-16 15:49:20	▶	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has joined #xmonad
+2016-01-16 15:49:20	◀	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has quit (Changing host)
+2016-01-16 15:49:20	▶	jeapostrophe (~jay@racket/jeapostrophe) has joined #xmonad
+2016-01-16 15:58:58	▶	Paul-S_ (~paul@host-92-26-159-31.as13285.net) has joined #xmonad
+2016-01-16 16:01:23	◀	Paul-S (~paul@subtle/user/Paul-S) has quit (Ping timeout: 264 seconds)
+2016-01-16 16:08:44	◀	navi_se (~gian@93-44-191-198.ip98.fastwebnet.it) has quit (Ping timeout: 246 seconds)
+2016-01-16 16:34:34	▶	navi_se (~gian@93-44-191-198.ip98.fastwebnet.it) has joined #xmonad
+2016-01-16 16:51:03	▶	uncle-j_j (~unclechu@95.153.133.230) has joined #xmonad
+2016-01-16 16:51:57	◀	psyq (~psyq@178.62.210.183) has left #xmonad
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #xmonad
+2016-01-16 16:52:27	ℹ	Topic for #xmonad is "xmonad: the tiling window manager with formally proven extensions | xmonad 0.12 released! | http://xmonad.org | http://xmonad.org/faq | cheatsheet: http://bit.ly/gz1R4"
+2016-01-16 16:52:27	ℹ	Topic set by enthropy (~aavogt@d157-103-21.home4.cgocable.net) on Tue, 22 Dec 2015 23:04:55
+2016-01-16 16:52:27	ℹ	Channel #xmonad: 198 nicks (0 ops, 1 voice, 197 normals)
+2016-01-16 16:52:27	ℹ	URL for #xmonad: http://xmonad.org
+2016-01-16 16:52:49	ℹ	Channel created on Wed, 25 Apr 2007 06:33:15
+2016-01-16 16:55:58	◀	uncle-j_j (~unclechu@95.153.133.230) has quit (Quit: Leaving.)
+2016-01-16 16:56:16	▶	uncle-j_j (~unclechu@95.153.133.230) has joined #xmonad
+2016-01-16 17:01:19	▶	thunderrd (~thunderrd@110.77.238.204) has joined #xmonad
+2016-01-16 17:10:34	◀	psyq (~psyq@unaffiliated/psyq) has left #xmonad
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:33	▶	psyq (~psyq@178.62.210.183) has joined #xmonad
+2016-01-16 17:54:33	ℹ	Topic for #xmonad is "xmonad: the tiling window manager with formally proven extensions | xmonad 0.12 released! | http://xmonad.org | http://xmonad.org/faq | cheatsheet: http://bit.ly/gz1R4"
+2016-01-16 17:54:33	ℹ	Topic set by enthropy (~aavogt@d157-103-21.home4.cgocable.net) on Tue, 22 Dec 2015 23:04:55
+2016-01-16 17:54:33	ℹ	Channel #xmonad: 202 nicks (0 ops, 1 voice, 201 normals)
+2016-01-16 17:54:50	ℹ	Channel created on Wed, 25 Apr 2007 06:33:15
+2016-01-16 17:58:30	◀	jeapostrophe (~jay@racket/jeapostrophe) has quit (Ping timeout: 272 seconds)
+2016-01-16 18:04:07	▶	H3ruS (~ubuntu@201-67-33-160.cbace702.dsl.brasiltelecom.net.br) has joined #xmonad
+2016-01-16 18:04:07	◀	H3ruS (~ubuntu@201-67-33-160.cbace702.dsl.brasiltelecom.net.br) has quit (Changing host)
+2016-01-16 18:04:07	▶	H3ruS (~ubuntu@unaffiliated/marconm) has joined #xmonad
+2016-01-16 18:10:05	▶	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has joined #xmonad
+2016-01-16 18:10:05	◀	jeapostrophe (~jay@pool-98-110-248-55.bstnma.fios.verizon.net) has quit (Changing host)
+2016-01-16 18:10:05	▶	jeapostrophe (~jay@racket/jeapostrophe) has joined #xmonad
+2016-01-16 18:11:53	◀	H3ruS (~ubuntu@unaffiliated/marconm) has quit (Quit: WeeChat 0.4.2)

@@ -1,0 +1,1742 @@
+2016-01-05 22:26:23	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-05 22:26:23	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-05 22:26:23	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-05 22:26:23	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-05 22:26:23	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-05 22:26:25	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-05 22:31:49	Gottox	 /etc/sv
+2016-01-05 22:36:08	▶	GangstaCat (~Soak@5.79.74.167) has joined #xbps
+2016-01-05 22:38:03	◀	olivetree (~Thunderbi@180.86.249.5.rev.vodafone.pt) has quit (Quit: olivetree)
+2016-01-05 22:53:53	duncaen	/tmp/sv ;)
+2016-01-05 23:09:48	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-05 23:10:27	eater	lol duncaen
+2016-01-05 23:16:20	▶	gregf (~gregf@bb-207-5-168-94.static.gwi.net) has joined #xbps
+2016-01-05 23:29:06	GangstaCat	I'm trying to install a package I just compiled, following the wiki (xbps-src article) I'm stuck at this step:
+2016-01-05 23:29:17	GangstaCat	Once the package-step ran through successfully, you can install your package:
+2016-01-05 23:29:17	GangstaCat	 sudo xbps-install --repository=hostdir/binpkgs/my-cool-new-package-branch my-cool-new-package
+2016-01-05 23:29:50	◀	srlang (srlang@nat/ibm/x-vyvwticybsgxbksb) has quit (Ping timeout: 245 seconds)
+2016-01-05 23:29:52	eater	what do you see? what did you do?
+2016-01-05 23:30:04	GangstaCat	I'm in the void-packages folder, I do: sudo xbps-install --repository=hostdir/binpkgs/
+2016-01-05 23:30:19	GangstaCat	and I get the list of commands for xbps-install
+2016-01-05 23:30:40	duncaen	you need the packagename you want to install as last agrument so xbps-install
+2016-01-05 23:30:52	duncaen	s/so/to
+2016-01-05 23:31:01	▶	JayVii (~JayVii@unaffiliated/jayvii) has joined #xbps
+2016-01-05 23:31:14	duncaen	aka my-cool-new-package
+2016-01-05 23:31:41	GangstaCat	worked, thanks
+2016-01-05 23:31:54	GangstaCat	that's because I put the whole filename of the package
+2016-01-05 23:46:22	◀	spew (~ben@38.98.151.67) has quit (Quit: leaving)
+2016-01-06 00:34:31	◀	well_laid_lawnch (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has quit (Ping timeout: 240 seconds)
+2016-01-06 00:41:27	▶	xor29ah (~xor29ah@189.35.240.116) has joined #xbps
+2016-01-06 00:43:11	ℹ	irc: disconnected from server
+2016-01-06 01:02:48	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-06 01:02:48	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-06 01:02:48	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-06 01:02:48	ℹ	Channel #xbps: 94 nicks (0 ops, 0 voices, 94 normals)
+2016-01-06 01:02:49	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-06 01:03:02	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-06 01:03:05	▶	Hoerzoektvrouw (~nevzets@unaffiliated/nevzets) has joined #xbps
+2016-01-06 01:03:26	Hoerzoektvrouw	Is there any way within runit/1 to tell the system to skip 2 altogether and proceed straight to 3/
+2016-01-06 01:03:39	Hoerzoektvrouw	As in, immediate shutdown after a detected faulty state
+2016-01-06 01:03:40	duncaen	oO
+2016-01-06 01:03:59	Hoerzoektvrouw	duncaen, is there something weird?
+2016-01-06 01:04:13	duncaen	no your second message made it clear
+2016-01-06 01:06:56	Hoerzoektvrouw	Ahh
+2016-01-06 01:07:02	Hoerzoektvrouw	So is there a way?
+2016-01-06 01:09:04	duncaen	dont really know atm reading the source, it doesnt listen for signals except in stage 2
+2016-01-06 01:09:32	duncaen	not sure if it handles exit codes of stages and what happens
+2016-01-06 01:10:04	duncaen	from man runit
+2016-01-06 01:10:06	duncaen	"If /etc/runit/1 crashes, or exits 100, runit will skip stage 2 and enter stage 3. "
+2016-01-06 01:11:09	duncaen	Hoerzoektvrouw: thats exactly what your looking for right?
+2016-01-06 01:14:11	Hoerzoektvrouw	Ahh
+2016-01-06 01:14:15	Hoerzoektvrouw	Yes, thatis exactly what I am looking for
+2016-01-06 01:14:19	Hoerzoektvrouw	I couldn't find that
+2016-01-06 01:17:49	duncaen	interesting if stage 2 crashes or exits with 111 it kills all childs and goes back one stage
+2016-01-06 01:19:13	Vaelatern	duncaen: Do you know anything about ocaml?
+2016-01-06 01:19:21	duncaen	no sorry
+2016-01-06 01:19:31	Vaelatern	Ah well. Failing at wyrd
+2016-01-06 01:19:53	duncaen	ah yea still looked into it
+2016-01-06 01:19:54	duncaen	some
+2016-01-06 01:20:49	duncaen	somewhere it calls /usr/bin/ld instead of ${XBPS_CROSS_BASE}/usr/bin/ld
+2016-01-06 01:21:38	duncaen	there is a file something like curses/OCamleMakefile but i couldn't find the call
+2016-01-06 01:23:19	ℹ	irc: disconnected from server
+2016-01-06 22:34:57	▶	pzyq (~Psyq@131.164.213.2) has joined #xbps
+2016-01-06 22:34:57	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-06 22:34:57	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-06 22:34:57	ℹ	Channel #xbps: 103 nicks (0 ops, 0 voices, 103 normals)
+2016-01-06 22:34:57	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-06 22:35:09	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-06 22:38:44	ℹ	irc: disconnected from server
+2016-01-07 20:25:23	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-07 20:25:23	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-07 20:25:23	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-07 20:25:23	ℹ	Channel #xbps: 101 nicks (0 ops, 0 voices, 101 normals)
+2016-01-07 20:25:24	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-07 20:25:37	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-07 20:27:59	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-07 20:30:07	▶	k00mi (~koomi@moshbit.net) has joined #xbps
+2016-01-07 20:30:37	◀	koomi (~koomi@moshbit.net) has quit (Disconnected by services)
+2016-01-07 20:30:43	ℹ	k00mi is now known as koomi
+2016-01-07 20:34:18	▶	pancake_ (~pancake@li58-151.members.linode.com) has joined #xbps
+2016-01-07 20:38:42	◀	karu (~karasu@puffy.mat.univie.ac.at) has quit (*.net *.split)
+2016-01-07 20:38:47	◀	pancake (~pancake@li58-151.members.linode.com) has quit (*.net *.split)
+2016-01-07 20:40:18	▶	karu (~karasu@puffy.mat.univie.ac.at) has joined #xbps
+2016-01-07 20:55:44	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-07 21:01:07	ℹ	irc: disconnected from server
+2016-01-07 21:01:43	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-07 21:01:43	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-07 21:01:43	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-07 21:01:43	ℹ	Channel #xbps: 101 nicks (0 ops, 0 voices, 101 normals)
+2016-01-07 21:01:43	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-07 21:01:57	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-07 21:02:09	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-07 21:03:28	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-07 21:55:53	▶	gregf1 (~gregf@bb-207-5-168-94.static.gwi.net) has joined #xbps
+2016-01-07 22:04:23	▶	bheesham (~bheesham@206-47-13-9.dsl.ncf.ca) has joined #xbps
+2016-01-07 22:24:43	gattuso	no steam anymore :S
+2016-01-07 22:26:15	bougyman	huh?
+2016-01-07 22:26:18	bougyman	why not?
+2016-01-07 22:27:47	chris2	less play, more packaging!
+2016-01-07 22:28:02	◀	maroni (~maroni@91.141.1.49.wireless.dyn.drei.com) has quit (Ping timeout: 246 seconds)
+2016-01-07 22:28:22	gattuso	can't connect to steam network since two days
+2016-01-07 22:28:32	gattuso	now i'm trying with a steamos chroot
+2016-01-07 22:30:35	gattuso	doesn't works also inside archlinux :S
+2016-01-07 22:30:49	chris2	broken in arch and all forks of it
+2016-01-07 22:31:04	chris2	it worked for me yesterday on windows ;)
+2016-01-07 22:31:24	GangstaCat	https://github.com/voidlinux/void-packages/issues/3323
+2016-01-07 22:31:49	gattuso	chris2: lol fy <3
+2016-01-07 22:32:12	gattuso	GangstaCat: thank you for reporting my issue :P
+2016-01-07 22:32:24	GangstaCat	that's not me gattuso, someone else having the same problem
+2016-01-07 22:32:25	gattuso	i forgot
+2016-01-07 22:32:37	qball	steam worked for me
+2016-01-07 22:32:41	gattuso	i wrote that thing, yesterday GangstaCat :P
+2016-01-07 22:33:07	GangstaCat	ah you are thypon
+2016-01-07 22:33:26	GangstaCat	I saw your commands for my bug, but that should be fixed with a patch I think
+2016-01-07 22:33:56	GangstaCat	I'm not sure to have the knowledge to do that
+2016-01-07 22:34:08	gattuso	it's not so simple GangstaCat
+2016-01-07 22:34:32	gattuso	unfortunatly steam rewrites these binaries now and then
+2016-01-07 22:35:25	gattuso	plus some games bundles these libraries, besides steam provided ones
+2016-01-07 22:37:26	gattuso	the right way should be preparing a complete steam-runtime package, running steam with STEAM_RUNTIME=0
+2016-01-07 23:14:43	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-07 23:14:43	ℹ	Notice(void-pkgs): [void-packages] stpx pushed 1 new commit to master: http://git.io/vuP5d
+2016-01-07 23:14:43	ℹ	Notice(void-pkgs): void-packages/master cf96c98 Steve Prybylski: di: update to 4.38.
+2016-01-07 23:14:43	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-07 23:14:51	ℹ	Notice(xbps-builder): cf96c98/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8082
+2016-01-07 23:14:56	ℹ	Notice(xbps-builder): cf96c98/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7432
+2016-01-07 23:14:58	ℹ	Notice(xbps-builder): cf96c98/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7420
+2016-01-07 23:15:47	ℹ	Notice(xbps-builder): cf96c98/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19902
+2016-01-07 23:15:47	ℹ	Notice(xbps-builder): cf96c98/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19725
+2016-01-07 23:15:53	ℹ	Notice(xbps-builder): cf96c98/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20845
+2016-01-07 23:15:53	ℹ	Notice(xbps-builder): cf96c98/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20821
+2016-01-07 23:20:21	◀	srlang (srlang@nat/ibm/x-cpydwgbmkzfstmjb) has quit (Ping timeout: 255 seconds)
+2016-01-07 23:44:08	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-07 23:50:10	◀	Wermwud (~wermwud@69-29-150-18.stat.centurytel.net) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2016-01-07 23:55:49	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-07 23:55:49	ℹ	Notice(void-pkgs): [void-packages] dicktyr opened issue #3332: Package request: perl Net::DBus http://git.io/vuXJM
+2016-01-07 23:55:49	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-08 00:03:21	▶	r4yan2 (~ray@93-34-34-150.ip47.fastwebnet.it) has joined #xbps
+2016-01-08 00:03:55	◀	r4yan2 (~ray@93-34-34-150.ip47.fastwebnet.it) has quit (Client Quit)
+2016-01-08 00:18:27	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-08 00:23:19	ℹ	Notice(xbps-builder): a7e1eb8/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19903
+2016-01-08 00:23:19	ℹ	Notice(xbps-builder): a7e1eb8/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19726
+2016-01-08 00:23:20	ℹ	Notice(xbps-builder): a7e1eb8/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8083
+2016-01-08 00:23:23	ℹ	Notice(xbps-builder): a7e1eb8/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20846
+2016-01-08 00:23:24	ℹ	Notice(xbps-builder): a7e1eb8/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20822
+2016-01-08 00:23:26	ℹ	Notice(xbps-builder): a7e1eb8/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7421
+2016-01-08 00:23:26	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-08 00:23:26	ℹ	Notice(void-pkgs): [void-packages] thypon pushed 1 new commit to master: http://git.io/vuXYC
+2016-01-08 00:23:26	ℹ	Notice(void-pkgs): void-packages/master a7e1eb8 Andrea Brancaleoni: profile-sync-daemon: don't check for 6.* updates
+2016-01-08 00:23:26	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-08 00:23:26	ℹ	Notice(xbps-builder): a7e1eb8/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7433
+2016-01-08 00:24:58	duncaen	actually check for no version at all^^
+2016-01-08 00:28:16	ℹ	Notice(xbps-builder): 563bfc1/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19904
+2016-01-08 00:28:17	ℹ	Notice(xbps-builder): 563bfc1/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8084
+2016-01-08 00:28:17	ℹ	Notice(xbps-builder): 563bfc1/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19727
+2016-01-08 00:28:22	ℹ	Notice(xbps-builder): 563bfc1/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7434
+2016-01-08 00:28:22	ℹ	Notice(xbps-builder): 563bfc1/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20847
+2016-01-08 00:28:22	ℹ	Notice(xbps-builder): 563bfc1/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7422
+2016-01-08 00:28:23	ℹ	Notice(xbps-builder): 563bfc1/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20823
+2016-01-08 00:28:27	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-08 00:28:27	ℹ	Notice(void-pkgs): [void-packages] pullmoll pushed 1 new commit to master: http://git.io/vuXOo
+2016-01-08 00:28:27	ℹ	Notice(void-pkgs): void-packages/master 563bfc1 Jürgen Buchmüller: retroshare: try to fix update check
+2016-01-08 00:28:27	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-08 00:30:24	ℹ	Notice(xbps-builder): 0ce52a3/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19905
+2016-01-08 00:30:26	ℹ	Notice(xbps-builder): 0ce52a3/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8085
+2016-01-08 00:30:26	ℹ	Notice(xbps-builder): 0ce52a3/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19728
+2016-01-08 00:30:30	ℹ	Notice(xbps-builder): 0ce52a3/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20824
+2016-01-08 00:30:31	ℹ	Notice(xbps-builder): 0ce52a3/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7435
+2016-01-08 00:30:32	ℹ	Notice(xbps-builder): 0ce52a3/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7423
+2016-01-08 00:30:32	ℹ	Notice(xbps-builder): 0ce52a3/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20848
+2016-01-08 00:30:35	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-08 00:30:35	ℹ	Notice(void-pkgs): [void-packages] pullmoll pushed 1 new commit to master: http://git.io/vuX3t
+2016-01-08 00:30:35	ℹ	Notice(void-pkgs): void-packages/master 0ce52a3 Jürgen Buchmüller: retroshare: remove wrong extra bracket
+2016-01-08 00:30:35	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-08 00:36:25	▶	ohanar (3284045d@gateway/web/freenode/ip.50.132.4.93) has joined #xbps
+2016-01-08 00:37:36	ℹ	irc: disconnected from server
+2016-01-08 19:47:28	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-08 19:47:28	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-08 19:47:28	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-08 19:47:28	ℹ	Channel #xbps: 103 nicks (0 ops, 0 voices, 103 normals)
+2016-01-08 19:47:28	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-08 19:47:42	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-08 19:49:52	▶	tonk (~tonk@pD9FE906A.dip0.t-ipconnect.de) has joined #xbps
+2016-01-08 19:53:03	stevelitt	I see xlocate as one of the primary enablers of Void. Armed with xlocate, I can always find the right package (if it exists).
+2016-01-08 19:53:41	◀	derlafff1 (~user@213.24.135.66) has left #xbps
+2016-01-08 20:07:52	duncaen	FlyingJester: -I
+2016-01-08 20:08:12	duncaen	"-I  Ignore required dependencies, useful for extracting/fetching sources."
+2016-01-08 20:08:25	FlyingJester	Ah, thank you.
+2016-01-08 20:11:21		[psyq away: doing something with my head]
+2016-01-08 20:26:47	▶	ke7ofi (~ke7ofi@159.191.186.254) has joined #xbps
+2016-01-08 20:27:32	ke7ofi	What are my options for playing Flash? The only package I see is for pepper-flash.
+2016-01-08 20:28:13	FlyingJester	There is a flash-pugin.
+2016-01-08 20:28:24	FlyingJester	But I think you need to use xbps-src to install it.
+2016-01-08 20:28:26	FlyingJester	At least I did.
+2016-01-08 20:28:30	ke7ofi	What's it called? xbps-query didn't find it.
+2016-01-08 20:28:31	ke7ofi	oh
+2016-01-08 20:28:36	ke7ofi	Where can I find it?
+2016-01-08 20:28:53	FlyingJester	I did it by cloning the void-packages archive, then using xbps-src.
+2016-01-08 20:29:04	duncaen	git clone github.com/voidlinux/void-packages.git
+2016-01-08 20:29:07	FlyingJester	And by archive I meant repo :X
+2016-01-08 20:29:34	ke7ofi	So not everything in void-packages is in Void packages?
+2016-01-08 20:29:44	FlyingJester	There was also a bug with accepting the license when I tried it, but I think that was promptly fixed when I pointed it out.
+2016-01-08 20:29:58	ke7ofi	I thought that repo was the same as what I'd see running xbps-query.
+2016-01-08 20:30:05	duncaen	ke7ofi: yes all packages are in void-packages
+2016-01-08 20:30:25	FlyingJester	But there are some things in vid-packages not in repo.voidlinux.eu
+2016-01-08 20:30:39	FlyingJester	Which is especially noticeable for alternative setups, like musl
+2016-01-08 20:30:49	duncaen	yes but flash is "tagged" as restricted and won't be build by the buildserver and therefor doesn't show up in xbps-query
+2016-01-08 20:31:00	ke7ofi	thanks, that explains it
+2016-01-08 20:31:15	duncaen	https://wiki.voidlinux.eu/Flash
+2016-01-08 20:31:26	ke7ofi	This is similar to the Ubuntu restricted package?
+2016-01-08 20:31:37	ke7ofi	(or metapackage, it's been years)
+2016-01-08 20:32:49	duncaen	don't know about ubuntus ones but its like there are build templates and you can easily build them but we wont build them on the buildserver because the license disallows redistribution
+2016-01-08 20:33:07	▶	Ypnose (~Ypnose@mirbsd/mksh-lover/Ypnose) has joined #xbps
+2016-01-08 20:33:30	duncaen	Yo Ypnose
+2016-01-08 20:34:00	Ypnose	hi buddy
+2016-01-08 20:34:14	Ypnose	a warm welcome is always appreciated
+2016-01-08 20:36:11	duncaen	can send you some void stickers, but only have two left
+2016-01-08 20:36:24	Ypnose	no hurry
+2016-01-08 20:36:32	Ypnose	I can wait for Toxy
+2016-01-08 20:36:42	rehwanne	oh i dont have void stickers
+2016-01-08 20:37:20	duncaen	yea forgot to take more, he has at least 40+
+2016-01-08 20:37:49	Ypnose	just enough for my 20 thinkpads!
+2016-01-08 20:38:17	FlyingJester	Is there a package for a program called `msgfmt`? xbps-query -o msgfmt didn't return anything.
+2016-01-08 20:38:31	Ypnose	duncaen: On indiegogo page, I asked "Do you plan to provide and maintain patches in order to build Linux kernel, outside OpenWrt? Support longterm kernels like 4.1.x could be very VERY interesting…"
+2016-01-08 20:38:32	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-08 20:38:45	Ypnose	duncaen: here the answer: "Linux 4.4 will be the next longterm kernel and we plan use it for the initial release. We also plan to upstream all our patches."
+2016-01-08 20:38:47	ke7ofi	I could use a ThinkPad or 20.
+2016-01-08 20:39:05	ke7ofi	I had an E535, but it physically broke, so I got a ProBook.
+2016-01-08 20:39:11	ke7ofi	It's a bit heavy, though.
+2016-01-08 20:39:17	duncaen	Ypnose: the omnis?
+2016-01-08 20:39:20	Ypnose	ofc man
+2016-01-08 20:39:36	Ypnose	forgot to say it, indeed :)
+2016-01-08 20:39:39	duncaen	so they run openwrt with a vanilla kernel now?
+2016-01-08 20:39:56	◀	ke7ofi (~ke7ofi@159.191.186.254) has quit (Quit: Lost terminal)
+2016-01-08 20:40:05	Ypnose	they will add a few patches to the OpenWrt kernel, I guess
+2016-01-08 20:40:17	Ypnose	upstream and 4.4 is fine to me
+2016-01-08 20:40:28	Ypnose	and also ≠ OpenWrt
+2016-01-08 20:42:00	Ypnose	ke7ofi: the best thinkpads are from the business market (X series)
+2016-01-08 20:42:44	Ypnose	even recent HP ZBooks or EliteBooks are far less good
+2016-01-08 20:43:18	duncaen	ok 4 days left, and all perks reached or is there something more
+2016-01-08 20:44:13	duncaen	*goals
+2016-01-08 20:44:19	Ypnose	they will add more perks before the deadline, I think
+2016-01-08 20:44:28	duncaen	ok offsite backup is the next goal
+2016-01-08 20:44:51	Ypnose	can't judge the hw for now, but so far it's very exciting
+2016-01-08 20:45:11	Ypnose	even MikroTik hw don't give me such boner
+2016-01-08 20:50:16	▶	ke7ofi (~ke7ofi@159.191.186.254) has joined #xbps
+2016-01-08 20:50:16	Ypnose	FlyingJest: https://github.com/voidlinux/void-packages/blob/master/srcpkgs/gettext-stub/template
+2016-01-08 20:50:23	Ypnose	^ seems relevant
+2016-01-08 20:50:55	ke7ofi	I keep running into trouble with xbps-src.
+2016-01-08 20:51:22	ke7ofi	Let me get a paste of it.
+2016-01-08 20:52:24	ke7ofi	Well, apparently copy-and-paste doesn't work, at least via st.
+2016-01-08 20:52:34	ke7ofi	I'll try to figure that out first.
+2016-01-08 20:55:23	duncaen	x does copy and paste
+2016-01-08 20:56:01	▶	ke7ofi_ (~ke7ofi@159.191.186.254) has joined #xbps
+2016-01-08 20:56:05	◀	ke7ofi (~ke7ofi@159.191.186.254) has quit (Quit: Lost terminal)
+2016-01-08 20:56:13	ℹ	ke7ofi_ is now known as ke7ofi
+2016-01-08 20:56:22	ke7ofi	ok
+2016-01-08 20:56:36	duncaen	select with shift and mouse and then its in your buffer or you have to press shift+alt+c
+2016-01-08 20:56:43	ℹ	ke7ofi is now known as Guest95833
+2016-01-08 20:56:53	ℹ	Guest95833 is now known as ke7ofi_
+2016-01-08 20:57:04	ke7ofi_	I was trying C-S-c.
+2016-01-08 20:57:24	ke7ofi_	Anyway, I keep getting errors with xbps-src
+2016-01-08 20:57:25	ke7ofi_	ERROR Failed to bind mount /proc at /home/ke7ofi/void-packages/masterdir//proc (Permission denied)
+2016-01-08 20:57:38	ke7ofi_	despite having used sudo
+2016-01-08 20:57:47	duncaen	dont use sudo
+2016-01-08 20:57:51	duncaen	xbps-src works as user only
+2016-01-08 20:58:00	ke7ofi_	really?
+2016-01-08 20:58:04	duncaen	yes
+2016-01-08 20:58:14	duncaen	better remove the masterdir
+2016-01-08 20:58:18	duncaen	./xbps-src zap
+2016-01-08 20:58:19	ke7ofi_	I have another problem, then. Do I need to add myself to a group?
+2016-01-08 20:58:20	duncaen	and start new
+2016-01-08 20:58:32	duncaen	you dont need to be in a group
+2016-01-08 20:58:46	duncaen	but basically usermod -a -G $group $user
+2016-01-08 20:59:00	duncaen	append group
+2016-01-08 20:59:05	ke7ofi_	I keep getting "permission denied"
+2016-01-08 20:59:09	ke7ofi_	so...
+2016-01-08 20:59:20	ke7ofi_	That's confusing in itself.
+2016-01-08 20:59:41	duncaen	them rm -rf the masterdir
+2016-01-08 20:59:52	▶	well_laid_lawn (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has joined #xbps
+2016-01-08 21:00:16	◀	well_laid_lawn (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has left #xbps
+2016-01-08 21:00:20	ke7ofi_	I did that. I had the same problem trying to install sway, so I gave up deleted, then re-cloned.
+2016-01-08 21:00:28	ke7ofi_	It's not helping so far.
+2016-01-08 21:02:00	duncaen	what gives you the permissions denied?
+2016-01-08 21:03:03	▶	Kruppt (~Kruppt@50.111.215.153) has joined #xbps
+2016-01-08 21:03:08	ke7ofi_	I'm trying to figure that out. I may have cloned while su-ed, as the other one (...-bleeding-edge) at least let me delete it sans sudo. Still, they both gave the same packaging errors.
+2016-01-08 21:03:25	ke7ofi_	Give me a second while I re-clone.
+2016-01-08 21:03:54	duncaen	you sudo too much xd
+2016-01-08 21:04:06	ke7ofi_	even when making sandwiches
+2016-01-08 21:04:13	ke7ofi_	I'm not usually this bad.
+2016-01-08 21:04:46	duncaen	yea others ask why they cant login into the DE as root
+2016-01-08 21:05:25	ke7ofi_	aaaaahhhh
+2016-01-08 21:06:43	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-08 21:08:11	◀	srlang (srlang@nat/ibm/x-rwiavidxwyokmkzz) has quit (Ping timeout: 246 seconds)
+2016-01-08 21:10:23	ke7ofi_	wnew problem
+2016-01-08 21:10:38	ke7ofi_	Now it can't even find it.
+2016-01-08 21:10:45	ke7ofi_	=> ERROR: adobe-flash-plugin-11.2.202.548_1: failed to fetch install_flash_player_11_linux.x86_64.tar.gz.
+2016-01-08 21:12:02	ke7ofi_	Any idea how to fix the 404?
+2016-01-08 21:12:18	ke7ofi_	"fix"
+2016-01-08 21:14:03	duncaen	no way to fix a 404 xD
+2016-01-08 21:14:24	duncaen	maybe there is a new version you could search
+2016-01-08 21:14:33	duncaen	then update the version and make a PR
+2016-01-08 21:14:40	duncaen	or the url changed but can't say
+2016-01-08 21:16:23	ke7ofi_	Well, I'll keep trying with sway-git so I can at least troubleshoot my first problem.
+2016-01-08 21:19:20	◀	uriahheep (~uriah@unaffiliated/uriahheep) has quit (Read error: Connection reset by peer)
+2016-01-08 21:20:13	duncaen	he wrote a wiki page about it too https://wiki.voidlinux.eu/Sway
+2016-01-08 21:22:05	◀	Kruppt (~Kruppt@50.111.215.153) has quit (Quit: Leaving)
+2016-01-08 21:29:25	◀	ke7ofi_ (~ke7ofi@159.191.186.254) has quit (Ping timeout: 245 seconds)
+2016-01-08 21:44:09	▶	ke7ofi_ (~ke7ofi@159.191.186.254) has joined #xbps
+2016-01-08 21:59:32	Vaelatern	What do you guys do for testing code in a specific (other person's) commit?
+2016-01-08 21:59:50	Vaelatern	I'm looking for something short of adding a remote and checking out a commit from it.
+2016-01-08 22:00:06	Vaelatern	If it does something like that just in one line, I am happy.
+2016-01-08 22:02:04	duncaen	I use http://chneukirchen.org/dotfiles/bin/git-merge-pr from chris2 some times
+2016-01-08 22:03:37		[psyq back: gone 01:52:16]
+2016-01-08 22:06:54	◀	Wermwud (~wermwud@69-29-150-18.stat.centurytel.net) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2016-01-08 22:29:08	karu	Is there an easy way to get sane network interface names with voidlinux?
+2016-01-08 22:29:20	karu	(i.e. eth0, wlan0 and stuff like this)
+2016-01-08 22:29:57	karu	This wlp3s0 stuff is starting to take its toll on me.
+2016-01-08 22:29:59	Gottox	yes, there was an option somewhere in udev.
+2016-01-08 22:30:16	duncaen	or ethtool
+2016-01-08 22:30:37	karu	Gottox, I've only found the relevant systemd page but that probably doesn't apply to void.
+2016-01-08 22:31:24	duncaen	https://ivi.fnwi.uva.nl/sne/air//wiki/LogicalInterfaceNames/
+2016-01-08 22:31:56	duncaen	ah no thats orderubg
+2016-01-08 22:32:03	duncaen	*ordering
+2016-01-08 22:32:22	duncaen	but the udev roules should work
+2016-01-08 22:34:12	◀	Ypnose (~Ypnose@mirbsd/mksh-lover/Ypnose) has quit (Quit: See you in another life!)
+2016-01-08 22:35:12	karu	duncaen, thanks. The rules in there seem to depend on the mac-address, but I'll guess I'll just look at some udev rules and see if I can get the "classical" device naming scheme back.
+2016-01-08 22:36:00	duncaen	i thought its documented somewhere related to void but i cant find it
+2016-01-08 22:37:41	◀	FlyingJester (~Kashyyyk@137.229.215.43) has quit (Remote host closed the connection)
+2016-01-08 22:38:44	▶	FlyingJester (~Kashyyyk@137.229.215.43) has joined #xbps
+2016-01-08 22:40:40	duncaen	maybe net.ifnames=0
+2016-01-08 22:41:14	duncaen	http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
+2016-01-08 22:41:51	karu	duncaen, yeah, that's the site I know, but i think that's just a way to get systemd to work its magic and not to disable this on other systems.
+2016-01-08 22:42:00	karu	I may give it a try tho
+2016-01-08 22:43:49	duncaen	https://wiki.gentoo.org/wiki/Eudev#Keep_classic_.27eth0.27_naming
+2016-01-08 22:44:26	karu	duncaen, ha, nice. Thanks :)
+2016-01-08 22:45:59	karu	ENV{net.ifnames}=="0", GOTO="net_name_slot_end"
+2016-01-08 22:46:12	karu	Ha, so they kept that to be comptaible with systemd-stuff. Neat.
+2016-01-08 22:49:57	▶	tuy360 (~tuy360@184.57.28.15) has joined #xbps
+2016-01-08 23:01:39	◀	spew (~ben@38.98.151.67) has quit (Quit: leaving)
+2016-01-08 23:01:53	◀	ke7ofi_ (~ke7ofi@159.191.186.254) has quit (Quit: Lost terminal)
+2016-01-08 23:04:10	▶	muddmaker (49ef4abf@gateway/web/freenode/ip.73.239.74.191) has joined #xbps
+2016-01-08 23:11:02	▶	spew (~ben@38.98.151.67) has joined #xbps
+2016-01-08 23:16:10	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-08 23:17:51	◀	tuy360 (~tuy360@184.57.28.15) has quit (Remote host closed the connection)
+2016-01-08 23:19:14	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-08 23:28:41	Grauwolf	karu: GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 net.ifnames=0" in /etc/default/grub
+2016-01-08 23:31:43	Grauwolf	(followed by a xbps-reconfigure -f linux4.3 or so)
+2016-01-08 23:33:08	karu	Grauwolf, nah, the udev rules.d solution is much nicer.
+2016-01-08 23:42:54	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-08 23:55:05	▶	estranho_ (~estranho@unaffiliated/estranho) has joined #xbps
+2016-01-08 23:55:16	◀	estranho (~estranho@unaffiliated/estranho) has quit (Ping timeout: 256 seconds)
+2016-01-09 00:16:00	◀	[[[archtard]]] (~bonehead@46.166.137.200) has left #xbps
+2016-01-09 00:18:09	◀	duncaen (~duncaen@2a00:5300:0:2::9) has quit (Quit: ...)
+2016-01-09 00:18:52	▶	duncaen (~duncaen@2a00-5300-0-2-0-0-0-9.ipv6ptr.net) has joined #xbps
+2016-01-09 00:26:46	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-09 00:26:46	ℹ	Notice(void-pkgs): [void-packages] ohanar opened pull request #3340: libtirpc: actually fix musl (master...libtirpc-musl-fix) http://git.io/vuHIk
+2016-01-09 00:26:46	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-09 00:27:31	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-09 00:27:31	ℹ	Notice(void-pkgs): [void-packages] ohanar opened pull request #3341: libvirt: use libtirpc (master...libvirt-use-libtirpc) http://git.io/vuHIn
+2016-01-09 00:27:31	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-09 00:30:33	◀	GangstaCat (~Soak@5.79.74.167) has quit (Quit: Leaving)
+2016-01-09 00:30:59	▶	ohanar (3284045d@gateway/web/freenode/ip.50.132.4.93) has joined #xbps
+2016-01-09 00:36:11	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-09 00:36:11	ℹ	Notice(void-pkgs): [void-packages] radare opened issue #3342: Packaging packages from other Package Managers http://git.io/vuHtZ
+2016-01-09 00:36:11	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-09 00:50:30	◀	xeirrr (~xeirrr@unaffiliated/xeirrr) has quit (Quit: qicr for android: faster and better)
+2016-01-09 01:09:52	◀	yofuh (~jw@2a01:4f8:a0:4ffe::2) has quit (Ping timeout: 250 seconds)
+2016-01-09 01:10:52	ℹ	irc: disconnected from server
+2016-01-09 01:11:30	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-09 01:11:30	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-09 01:11:30	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-09 01:11:30	ℹ	Channel #xbps: 99 nicks (0 ops, 0 voices, 99 normals)
+2016-01-09 01:11:31	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-09 01:11:44	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-09 01:22:13	▶	GangstaCat (~Soak@5.79.74.167) has joined #xbps
+2016-01-09 01:23:24	◀	muddmaker (49ef4abf@gateway/web/freenode/ip.73.239.74.191) has quit (Ping timeout: 252 seconds)
+2016-01-09 01:50:09	ℹ	Notice(xbps-builder_): 7ca918d/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7469
+2016-01-09 01:50:11	ℹ	Notice(xbps-builder_): 7ca918d/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7454
+2016-01-09 01:50:14	▶	void-pkgs (~void-pkgs@192.30.252.45) has joined #xbps
+2016-01-09 01:50:14	ℹ	Notice(void-pkgs): [void-packages] thypon pushed 1 new commit to master: http://git.io/vuHB9
+2016-01-09 01:50:14	ℹ	Notice(void-pkgs): void-packages/master 7ca918d Andrea Brancaleoni: subtle: update to 0.11.3247.
+2016-01-09 01:50:14	◀	void-pkgs (~void-pkgs@192.30.252.45) has left #xbps
+2016-01-09 01:50:42	ℹ	Notice(xbps-builder_): 7ca918d/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8117
+2016-01-09 01:51:34	ℹ	Notice(xbps-builder_): 7ca918d/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20856
+2016-01-09 01:51:34	ℹ	Notice(xbps-builder_): 7ca918d/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20879
+2016-01-09 01:52:04	ℹ	Notice(xbps-builder_): 7ca918d/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19937
+2016-01-09 01:52:06	ℹ	Notice(xbps-builder_): 7ca918d/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19760
+2016-01-09 02:22:15	ℹ	irc: disconnected from server
+2016-01-09 21:20:19	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-09 21:20:19	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-09 21:20:19	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-09 21:20:19	ℹ	Channel #xbps: 99 nicks (0 ops, 0 voices, 99 normals)
+2016-01-09 21:20:20	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-09 21:20:25	◀	well_laid_lawn (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has left #xbps
+2016-01-09 21:20:31	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-09 21:24:51	maroni	hello, I'm looking forward installing xastir, but /usr/include/X11/extensions/Print.h is missing. xbps-query -o says no package contains it. How do I build it?
+2016-01-09 21:25:26	ℹ	Notice(xbps-builder): d1b342d/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7497
+2016-01-09 21:25:27	ℹ	Notice(xbps-builder): d1b342d/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7512
+2016-01-09 21:25:28	ℹ	Notice(xbps-builder): d1b342d/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20900
+2016-01-09 21:25:28	ℹ	Notice(xbps-builder): d1b342d/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20923
+2016-01-09 21:25:32	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-09 21:25:32	ℹ	Notice(void-pkgs): [void-packages] thypon pushed 1 new commit to master: http://git.io/vudoR
+2016-01-09 21:25:32	ℹ	Notice(void-pkgs): void-packages/master d1b342d Andrea Brancaleoni: atom: update to 1.3.3.
+2016-01-09 21:25:32	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-09 21:25:43	ℹ	Notice(xbps-builder): d1b342d/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8160  blame: Andrea Brancaleoni <miwaxe@gmail.com>
+2016-01-09 21:27:08	Gottox	maroni: Print.h is in printproto.
+2016-01-09 21:27:46	maldridge	maroni: oh cool, are you trying to package it?
+2016-01-09 21:28:09	Gottox	no
+2016-01-09 21:28:18	Gottox	it's already there
+2016-01-09 21:28:24	Gottox	xbps-query -o only works for installed packages.
+2016-01-09 21:28:27	maldridge	xastir is already in repo?
+2016-01-09 21:28:35	Gottox	ah, thought printproto
+2016-01-09 21:28:39	Gottox	no :)
+2016-01-09 21:28:57	maldridge	kk, that's what I thought
+2016-01-09 21:29:15	maldridge	I'm working through packaging most of the AX.25 stack, and that would mean that it was all already here!
+2016-01-09 21:29:27	Gottox	xbps-query -Ro works for all packages, but it's nearly unusable atm.
+2016-01-09 21:29:43	maldridge	because of speed issues?
+2016-01-09 21:29:56	maroni	Gottox: thanks for the quick answer, btw nice talk without kittens
+2016-01-09 21:30:06	Gottox	hehe, thanks :)
+2016-01-09 21:31:00	Gottox	maldridge: because it loads a shitload of data from remote.
+2016-01-09 21:31:44	Gottox	there's a good wrapper in xtools for that, called xlocate.
+2016-01-09 21:32:17	maldridge	ok, I figured it was something like that; though at the moment I think the slowdown is on the repo side, I'm pretty sure I'm maxing out that link
+2016-01-09 21:33:29	maroni	maldridge: I'm not good at bash at the moment, I still have no github account, I have to read more manuals, before playing around with package building, sorry.
+2016-01-09 21:33:51	maldridge	np, just wanted to make sure we weren't both working on the same thing and didn't know it
+2016-01-09 21:38:42	ℹ	Notice(xbps-builder): d1b342d/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19802
+2016-01-09 21:45:50	ℹ	Notice(xbps-builder): d1b342d/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/19980
+2016-01-09 21:50:12	chris2	... surf maintainer applies a patch where webkit reloads in a signal handler
+2016-01-09 21:50:23	chris2	what could go wrong -.-
+2016-01-09 21:51:52	qball	:D
+2016-01-09 22:09:35	gattuso	chris2, wow, i like that :)
+2016-01-09 22:33:21	▶	sunaku (~username@c-67-169-186-29.hsd1.ca.comcast.net) has joined #xbps
+2016-01-09 22:33:54	sunaku	since updating some packages yesterday, wpa_gui is not able to connect to wifi anymore
+2016-01-09 22:34:08	sunaku	it says "could not get status from wpa_supplicant"
+2016-01-09 22:34:18	sunaku	does anyone else have this problem?
+2016-01-09 22:35:46	chris2	sunaku: probably https://github.com/voidlinux/void-packages/issues/3343
+2016-01-09 22:36:01	sunaku	chris2: thanks!
+2016-01-09 22:49:01	◀	sunaku (~username@c-67-169-186-29.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-01-09 22:57:10	▶	plissken (~victimize@207-118-117-28.dyn.centurytel.net) has joined #xbps
+2016-01-09 23:02:44	mid-kid	That problem along with graphical glitches in Qt drove me to reinstall, because I thought it was only me.
+2016-01-09 23:09:26	◀	plissken (~victimize@207-118-117-28.dyn.centurytel.net) has quit (Quit: Leaving)
+2016-01-09 23:30:30	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-09 23:30:30	ℹ	Notice(void-pkgs): [void-packages] AlexKraak opened issue #3346: Package Request: GZDOOM http://git.io/vuFIo
+2016-01-09 23:30:30	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-09 23:53:23	ℹ	irc: disconnected from server
+2016-01-10 18:56:12	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-10 18:56:12	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-10 18:56:12	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-10 18:56:12	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-10 18:56:12	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-10 18:56:24	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-10 19:01:13	▶	well_laid_lawn (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has joined #xbps
+2016-01-10 19:03:17	◀	well_laid_lawn (~Jean-luc@c122-104-151-194.rochd6.qld.optusnet.com.au) has left #xbps
+2016-01-10 19:08:38	skrzyp	I thought Void Linux is used mostly by developers or experienced users…
+2016-01-10 19:09:00	skrzyp	But we're now paying the price for being more popular.
+2016-01-10 19:10:09	Ypnose	and you didn't join long time ago
+2016-01-10 19:10:15	chris2	:D
+2016-01-10 19:10:39	yofuh	skrzyp: you could just switch back to systemd, that would end this immediatly :)
+2016-01-10 19:11:24	skrzyp	Ypnose: I've started to use Void in mid-2014
+2016-01-10 19:11:39	skrzyp	Ypnose: and switched to it completely at the beginning of 2015
+2016-01-10 19:12:36	Ypnose	was talking about IRC
+2016-01-10 19:13:05	skrzyp	Ypnose: I mean whole community, newcomers are mostly posting on our forums.
+2016-01-10 19:13:11	duncaen	then your longer here than me
+2016-01-10 19:13:49	yofuh	my void istall will hav birthday next month :)
+2016-01-10 19:13:51	skrzyp	And I've stopped following that place due to lower quality than 1-2 months earlier.
+2016-01-10 19:14:06	skrzyp	And it will be even worse :(
+2016-01-10 19:14:22	chris2	how can i find out the age of installation?
+2016-01-10 19:14:31	chris2	drwxr-xr-x  2 root root   4096 Feb 21  2015 ld.so.conf.d/
+2016-01-10 19:14:36	Ypnose	I always hated popularity. It brings too much drawbacks
+2016-01-10 19:15:03	Ypnose	many*
+2016-01-10 19:15:06	▶	bra1nwave (~juslurkin@p5487D813.dip0.t-ipconnect.de) has joined #xbps
+2016-01-10 19:15:29	chris2	so yeah, next month too :)
+2016-01-10 19:15:53	skrzyp	I was done 2 or 3 reinstalls in previous year
+2016-01-10 19:16:04	yofuh	chris2: zfs get creation rpool/ROOT/voidlinux_1
+2016-01-10 19:16:12	chris2	i dont use zfs
+2016-01-10 19:16:17	yofuh	change that
+2016-01-10 19:16:23	skrzyp	mostly because some nonpackaged shit messed up my system completely
+2016-01-10 19:16:23	chris2	nah
+2016-01-10 19:16:38	⚡	chris2 never reinstalled debian nor arch nor void
+2016-01-10 19:17:03	skrzyp	yofuh: ZFS will eat me on my x201 with 4GB of RAM
+2016-01-10 19:17:07	chris2	Filesystem created:       Sat Feb  7 15:00:54 2015
+2016-01-10 19:17:15	chris2	good trick tho :)
+2016-01-10 19:17:30	yofuh	skrzyp: if cou tend to confuse caches with allocated memory, probabil
+2016-01-10 19:19:53	dominikh	oh hey, Ypnose
+2016-01-10 19:19:56	dominikh	still alive are we
+2016-01-10 19:20:08	Ypnose	I am :) More than ever!
+2016-01-10 19:20:13	Ypnose	hey bru
+2016-01-10 19:20:20	dominikh	nice to hear
+2016-01-10 19:20:41	Ypnose	can't remember if I told ya "Happy New Year" already
+2016-01-10 19:21:07	dominikh	probably not. thanks. you too. arbitrary date tho
+2016-01-10 19:21:09	gattuso	hi :P
+2016-01-10 19:21:16	skrzyp	yofuh: I heard it needs to allocate fixed amount of memory for its own things
+2016-01-10 19:21:58	dominikh	zfs recommends ample amounts of RAM because it relies heavily on its ARC to be performant. 4 GB is fine for the amount of data you use on a laptop, though.
+2016-01-10 19:22:00	yofuh	it will. but not 4gb, /proc/spl/kstat/zfs/arcstats ist your frind
+2016-01-10 19:22:02	Ypnose	sup dominikh?
+2016-01-10 19:22:11	dominikh	the only ridiculous memory consumer in zfs is the online dedup, which you are unlikely to use.
+2016-01-10 19:22:27	Ypnose	usually 1Gb of RAM per Tb
+2016-01-10 19:22:28	dominikh	Ypnose: not much. same old for me, too many noobs using Void now :P
+2016-01-10 19:22:33	Ypnose	rofl
+2016-01-10 19:22:46	Ypnose	you know how to deal with that, I guess
+2016-01-10 19:23:03	dominikh	well, I did get them to split the channel in two and move the noobs to the other channel :P
+2016-01-10 19:23:19	skrzyp	dominikh is the best person to deal with that, I guess
+2016-01-10 19:23:46	Ypnose	dominikh: that would be the perfect solution!
+2016-01-10 19:24:02	dominikh	#voidlinux exists now :P
+2016-01-10 19:24:56	Ypnose	ah, I see
+2016-01-10 19:25:25	dominikh	anyway, what are you doing with your free time now
+2016-01-10 19:25:31	dominikh	when you're not trolling us
+2016-01-10 19:26:03	yofuh	noone has only one project to troll
+2016-01-10 19:26:30	Ypnose	dominikh: mostly working hard at DAYJOB and working on my baby 'solyste' :)
+2016-01-10 19:26:43	dominikh	Ypnose: is that an actual human baby or a project?
+2016-01-10 19:26:58	dominikh	found the github repo, not a human baby
+2016-01-10 19:27:01	dominikh	thank god
+2016-01-10 19:27:13	◀	oldlaptop (~quassel@50-37-38-205.mskg.mi.frontiernet.net) has quit (Remote host closed the connection)
+2016-01-10 19:27:17	Ypnose	didn't find the one yet to build a baby
+2016-01-10 19:27:47	dominikh	also, if you want actual UNIX philosophy, use plan 9 :P
+2016-01-10 19:27:48	yofuh	you could buy a ceap build envioronment from the ucraine
+2016-01-10 19:27:55	Ypnose	when I hear coworkers, having babies is a suicide
+2016-01-10 19:28:04	dominikh	:D that's the impression I got, too
+2016-01-10 19:32:57	▶	oldlaptop (~quassel@50-37-38-205.mskg.mi.frontiernet.net) has joined #xbps
+2016-01-10 19:42:57	▶	maroni (~alice@45.32.145.44) has joined #xbps
+2016-01-10 20:23:40	Ypnose	bb all
+2016-01-10 20:23:44	◀	Ypnose (~Ypnose@mirbsd/mksh-lover/Ypnose) has quit (Quit: See you in another life!)
+2016-01-10 20:26:28	dominikh	his quit message always reads like a suicide note...
+2016-01-10 20:29:28	▶	Digit (~user@fsf/member/digit) has joined #xbps
+2016-01-10 20:43:29	▶	spectromas (~spectroma@201.198.1.149) has joined #xbps
+2016-01-10 21:07:21	Vaelatern	skrzyp: My 3 G of useable RAM are not totally eaten by ZFS
+2016-01-10 21:20:56	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-10 21:23:26	◀	gattuso (~gattuso@5.135.167.88) has quit (Remote host closed the connection)
+2016-01-10 21:24:10	▶	gattuso (~gattuso@5.135.167.88) has joined #xbps
+2016-01-10 21:24:17	◀	JayVii (~JayVii@unaffiliated/jayvii) has quit (Ping timeout: 260 seconds)
+2016-01-10 21:25:50	▶	derlafff2 (~user@84.53.241.23) has joined #xbps
+2016-01-10 21:29:00	◀	derlafff1 (~user@84.53.241.23) has quit (Ping timeout: 246 seconds)
+2016-01-10 21:54:28	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-10 21:54:28	ℹ	Notice(void-pkgs): [void-packages] jprjr opened pull request #3353: New package: lua-luadbi-0.5 (master...lua-luadbi) http://git.io/vupfH
+2016-01-10 21:54:28	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-10 22:04:06	◀	spectromas (~spectroma@201.198.1.149) has quit (Quit: WeeChat 1.3)
+2016-01-10 22:27:39	◀	bra1nwave (~juslurkin@p5487D813.dip0.t-ipconnect.de) has quit (Quit: Lost terminal)
+2016-01-10 22:34:00		[psyq away: not here right now brb]
+2016-01-10 23:08:56	◀	Turingtoast (~Tino@p548C4D25.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-10 23:21:02		[psyq back: gone 00:47:02]
+2016-01-10 23:24:32	maldridge	dominikh: got a minute to look at the cbp2make template?
+2016-01-10 23:30:36	ℹ	irc: disconnected from server
+2016-01-10 23:33:01	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-10 23:33:01	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-10 23:33:01	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-10 23:33:01	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-10 23:33:02	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-10 23:33:13	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-10 23:36:43	ℹ	Notice(xbps-builder): 2d61e2e/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7532
+2016-01-10 23:36:43	ℹ	Notice(xbps-builder): 2d61e2e/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7546
+2016-01-10 23:36:50	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-10 23:36:51	ℹ	Notice(void-pkgs): [void-packages] stpx pushed 1 new commit to master: http://git.io/vuplu
+2016-01-10 23:36:51	ℹ	Notice(void-pkgs): void-packages/master 2d61e2e Steve Prybylski: LibreCAD: update to 2.0.9.
+2016-01-10 23:36:51	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-10 23:37:58	ℹ	Notice(xbps-builder): 2d61e2e/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20957
+2016-01-10 23:38:01	ℹ	Notice(xbps-builder): 2d61e2e/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20932
+2016-01-10 23:39:17	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-10 23:39:18	ℹ	Notice(void-pkgs): [void-packages] stpx pushed 1 new commit to master: http://git.io/vuplx
+2016-01-10 23:39:18	ℹ	Notice(void-pkgs): void-packages/master ce6950a Steve Prybylski: xfce4-whiskermenu-plugin: update to 1.5.2.
+2016-01-10 23:39:18	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-10 23:40:32	ℹ	Notice(xbps-builder): ce6950a/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7533
+2016-01-10 23:40:32	ℹ	Notice(xbps-builder): ce6950a/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7547
+2016-01-10 23:40:34	ℹ	Notice(xbps-builder): ce6950a/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20933
+2016-01-10 23:40:41	ℹ	Notice(xbps-builder): ce6950a/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20958
+2016-01-10 23:41:14	ℹ	irc: disconnected from server
+2016-01-10 23:43:55	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-10 23:43:55	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-10 23:43:55	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-10 23:43:55	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-10 23:43:55	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-10 23:44:06	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-10 23:44:21	ℹ	Notice(xbps-builder): 2d61e2e/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8193
+2016-01-10 23:45:03	ℹ	Notice(xbps-builder): ce6950a/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8194
+2016-01-10 23:45:42	ℹ	Notice(xbps-builder): 2d61e2e/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20012
+2016-01-10 23:45:56	ℹ	Notice(xbps-builder): 2d61e2e/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19835
+2016-01-10 23:46:17	ℹ	Notice(xbps-builder): ce6950a/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20013
+2016-01-10 23:46:36	ℹ	Notice(xbps-builder): ce6950a/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19836
+2016-01-10 23:46:42	maldridge	np, I'm in the middle of trying to figure out why it isn't accepting $CC as an argument, but I think I'll break for dinner
+2016-01-10 23:47:37	▶	Turingtoast (~Tino@p548C4D25.dip0.t-ipconnect.de) has joined #xbps
+2016-01-10 23:56:59	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-10 23:56:59	ℹ	Notice(void-pkgs): [void-packages] jprjr opened pull request #3354: New package: lua-zlib-0.4 (master...lua-zlib) http://git.io/vupBB
+2016-01-10 23:56:59	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-10 23:57:25	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-11 00:17:27	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-11 00:22:53	ℹ	Notice(xbps-builder): 2b87c41/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20014
+2016-01-11 00:22:53	ℹ	Notice(xbps-builder): 2b87c41/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8195
+2016-01-11 00:22:54	ℹ	Notice(xbps-builder): 2b87c41/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19837
+2016-01-11 00:22:54	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-11 00:22:54	ℹ	Notice(void-pkgs): [void-packages] stpx pushed 1 new commit to master: http://git.io/vupuZ
+2016-01-11 00:22:54	ℹ	Notice(void-pkgs): void-packages/master 2b87c41 Steve Prybylski: bleachbit: update to 1.10.
+2016-01-11 00:22:54	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-11 00:22:54	ℹ	Notice(xbps-builder): 2b87c41/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20959
+2016-01-11 00:22:55	ℹ	Notice(xbps-builder): 2b87c41/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7548
+2016-01-11 00:22:55	ℹ	Notice(xbps-builder): 2b87c41/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20934
+2016-01-11 00:22:57	ℹ	Notice(xbps-builder): 2b87c41/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7534
+2016-01-11 00:37:25	◀	Digit (~user@fsf/member/digit) has quit (Quit: rebooting to have nvidia wake up aware of my 3rd monitor)
+2016-01-11 00:43:17	▶	Digit (~user@fsf/member/digit) has joined #xbps
+2016-01-11 00:44:28	◀	Turingtoast (~Tino@p548C4D25.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-11 01:34:54	▶	namra (~namra@60-250-110-226.HINET-IP.hinet.net) has joined #xbps
+2016-01-11 01:48:22	◀	xeirrr (~xeirrr@unaffiliated/xeirrr) has quit (Read error: Connection reset by peer)
+2016-01-11 02:09:19	ℹ	irc: disconnected from server
+2016-01-11 20:34:46	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-11 20:34:46	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-11 20:34:46	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-11 20:34:46	ℹ	Channel #xbps: 95 nicks (0 ops, 0 voices, 95 normals)
+2016-01-11 20:34:47	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-11 20:34:57	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-11 20:45:40	◀	srlang (srlang@nat/ibm/x-hckrdeslhcnlinnb) has quit (Ping timeout: 265 seconds)
+2016-01-11 20:52:02	▶	srlang (srlang@nat/ibm/x-bzixjlbnfkdgrdgn) has joined #xbps
+2016-01-11 20:52:53	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-11 20:52:53	ℹ	Notice(void-pkgs): [void-packages] Duncaen pushed 1 new commit to master: http://git.io/vzUqO
+2016-01-11 20:52:53	ℹ	Notice(void-pkgs): void-packages/master d353f44 Duncaen: yaml-cpp: update to 0.5.3.
+2016-01-11 20:52:53	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-11 20:53:24	ℹ	Notice(xbps-builder): d353f44/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20046
+2016-01-11 20:53:27	ℹ	Notice(xbps-builder): d353f44/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19868
+2016-01-11 20:53:27	ℹ	Notice(xbps-builder): d353f44/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20966
+2016-01-11 20:53:28	ℹ	Notice(xbps-builder): d353f44/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/20992
+2016-01-11 20:53:36	ℹ	Notice(xbps-builder): d353f44/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8230
+2016-01-11 20:53:39	ℹ	Notice(xbps-builder): d353f44/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7568
+2016-01-11 20:53:39	ℹ	Notice(xbps-builder): d353f44/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7583
+2016-01-11 20:56:54	▶	gregf (~gregf@bb-207-5-168-94.static.gwi.net) has joined #xbps
+2016-01-11 21:03:19	traeak	ahh, linux4.4 already dropped in
+2016-01-11 21:03:23	traeak	is it stable?
+2016-01-11 21:04:22	chris2	well
+2016-01-11 21:04:32	chris2	i'd wait for the first .1 but ymmv
+2016-01-11 21:09:36	traeak	its been brewing forever
+2016-01-11 21:09:45	skrzyp	https://scontent.xx.fbcdn.net/hphotos-xpf1/v/t34.0-12/12540312_447061398820464_739219102_n.jpg?oh=8c42ae5c92013b84b4b4c72b089d9dc5&oe=5695C68C - disk is OK
+2016-01-11 21:12:36	uriah	traeak: holidays does that usually
+2016-01-11 21:13:01	uriah	and, well, in terms of waiting for .1, there are very few changes between rc8 and 4.4.0
+2016-01-11 21:13:08	uriah	according to linus it should be good to go
+2016-01-11 21:13:13	uriah	we shall, however, see.
+2016-01-11 21:13:55	uriah	xtraeme: is there an easy way to get kodi to recognize that my usb keyboard can type more than just numpad-related keys when the virtual keyboard shows up?
+2016-01-11 21:23:01	Grauwolf	this is actually nice https://github.com/masmu/pulseaudio-dlna
+2016-01-11 21:23:57	◀	Turingtoast (~Tino@p548C5774.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-11 21:25:34	▶	pluesch (~pluesch@45.32.235.165) has joined #xbps
+2016-01-11 21:26:32	traeak	pulseaudio! argh
+2016-01-11 21:29:25	pluesch	Hi. Is "git submodule" not available in voids git package?
+2016-01-11 21:29:31	pluesch	I'm getting "git: 'submodule' is not a git command. See 'git --help'"
+2016-01-11 21:30:08	pluesch	using voidlinux with the glibc repo
+2016-01-11 21:31:03	dominikh	pluesch: install git-perl or git-all
+2016-01-11 21:31:50	pluesch	ty dominikh :3
+2016-01-11 21:35:30	traeak	heh
+2016-01-11 21:38:10	duncaen	last day to get an turris omnia router from indiegogo
+2016-01-11 21:38:32	dominikh	not at all an interesting device
+2016-01-11 21:38:42	duncaen	still better than the witi xd
+2016-01-11 21:38:49	chris2	at 4x the price...
+2016-01-11 21:39:08	◀	GangstaCat (~Soak@5.79.74.167) has quit (Read error: Connection reset by peer)
+2016-01-11 21:39:10	duncaen	+37$ shipping :s
+2016-01-11 21:39:14	chris2	:D
+2016-01-11 21:39:21	dominikh	the witi also wasn't very interesting :P
+2016-01-11 21:39:31	chris2	i need to set mine up :P
+2016-01-11 21:39:33	dominikh	they're all hopeless toys for tinkerers
+2016-01-11 21:39:47	ℹ	irc: disconnected from server
+2016-01-12 20:42:20	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-12 20:42:20	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-12 20:42:20	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-12 20:42:20	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-12 20:42:21	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-12 20:42:24	▶	[[[archtard]]] (~bonehead@46.166.190.148) has joined #xbps
+2016-01-12 20:42:34	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-12 20:46:00	chris2	Vaelatern: ok, interesting
+2016-01-12 20:46:17	duncaen	maldridge: just skip this check it seems to pickup the right cc, ld etc
+2016-01-12 20:47:13	chris2	Vaelatern: i have an idea
+2016-01-12 20:48:02	chris2	read(0, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 157286400) = 157286400
+2016-01-12 20:48:04	chris2	write(1, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 157286400) = 157286400
+2016-01-12 20:48:08	chris2	perhaps zfs doesnt like so huge writes
+2016-01-12 20:48:47	chris2	Vaelatern: try replacing bs="$((ROOTFS_SIZE+ROOTFS_FREESIZE))M" count=1 with bs=1M count=$((ROOTFS_SIZE+ROOTFS_FREESIZE))
+2016-01-12 20:49:24	chris2	or lets just use truncate?
+2016-01-12 20:50:44	Vaelatern	I invite truncate. I'll try the truncate option first?
+2016-01-12 20:50:47	chris2	ok
+2016-01-12 20:50:53	Vaelatern	Creating 4.0 filesystem on /mnt/test/void-mklive/tmp.OofYzZWjil/image/LiveOS/squashfs.img, block size 131072.
+2016-01-12 20:51:02	Vaelatern	^ on a usb flash drive so slow :- )
+2016-01-12 20:51:04	chris2	truncate -s "$((ROOTFS_SIZE+ROOTFS_FREESIZE))M" $FILENAME
+2016-01-12 20:51:45	chris2	Vaelatern: i mean, test that on zfs
+2016-01-12 20:51:47	maldridge	duncaen: so just patch it out?  I'm not sure I follow the suggestion you made
+2016-01-12 20:52:05	duncaen	yea i would try it at least, the check seems useless
+2016-01-12 20:54:43	◀	[[[archtard]]] (~bonehead@46.166.190.148) has left #xbps
+2016-01-12 20:55:42	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-12 20:57:45	▶	ncopa (~test@103.63.200.37.customer.cdi.no) has joined #xbps
+2016-01-12 21:05:50	gattuso	lol found digitalocean.org, not what i expected
+2016-01-12 21:06:17	dominikh	can we learn to use nsfw tags please
+2016-01-12 21:06:54	gattuso	sorry
+2016-01-12 21:07:02	duncaen	oh with noscritp it was sfw
+2016-01-12 21:07:08	chris2	dominikh: :D
+2016-01-12 21:07:21	chris2	i cant read the descriptions
+2016-01-12 21:07:35	gattuso	i misstyped com for org
+2016-01-12 21:16:04	Vaelatern	chris2: Yeah, I'm testing it now
+2016-01-12 21:17:46	Vaelatern	i
+2016-01-12 21:20:32	nilsson	hahaha
+2016-01-12 21:23:32	▶	crusty (~unknown@194.1.144.211) has joined #xbps
+2016-01-12 21:23:32	◀	crusty (~unknown@194.1.144.211) has quit (Changing host)
+2016-01-12 21:23:32	▶	crusty (~unknown@unaffiliated/amt) has joined #xbps
+2016-01-12 21:41:23	◀	bra1nwave (~juslurkin@p579CDDC8.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-01-12 21:48:32	Vaelatern	chris2: The live medium works!
+2016-01-12 21:48:50	chris2	with the different dd?
+2016-01-12 21:48:55	Vaelatern	With the truncate
+2016-01-12 21:48:57	chris2	ok
+2016-01-12 21:48:58	chris2	xtraeme: ^
+2016-01-12 21:49:00	Vaelatern	I'll PR
+2016-01-12 21:50:08	Vaelatern	I think I should also change for mkimage.sh.in
+2016-01-12 21:50:28	chris2	yeah, dd with such large bs= is... bs ;)
+2016-01-12 21:51:46	Vaelatern	I changed both dds
+2016-01-12 21:54:09	maldridge	duncaen: did you actually patch out a check, or are you going on a hunch from past experience
+2016-01-12 21:58:21	duncaen	maldridge: set  9399   LIBS="$LIBS -L$CROSSCOMPPATH/gtk/lib"
+2016-01-12 21:58:24	duncaen	ups
+2016-01-12 21:58:49	maldridge	?
+2016-01-12 21:59:00	duncaen	CROSSCOMPPATH=${XBPS_CROSS_BASE}
+2016-01-12 21:59:28	duncaen	and cross_compiling=yes
+2016-01-12 21:59:36	maldridge	ah, I see
+2016-01-12 22:00:56	▶	logen_kain (~logen@174-126-130-14.cpe.cableone.net) has joined #xbps
+2016-01-12 22:03:42	◀	yopito (~yopito@101.243.133.77.rev.sfr.net) has quit (Read error: Connection timed out)
+2016-01-12 22:04:00	▶	Turingtoast (~Tino@p548C589C.dip0.t-ipconnect.de) has joined #xbps
+2016-01-12 22:04:20	▶	yopito (~yopito@101.243.133.77.rev.sfr.net) has joined #xbps
+2016-01-12 22:09:37	xtraeme	-        bs="$((ROOTFS_SIZE+ROOTFS_FREESIZE))M" count=1 >/dev/null 2>&1
+2016-01-12 22:09:37	xtraeme	+        bs=1M count=$((ROOTFS_SIZE+ROOTFS_FREESIZE)) >/dev/null 2>&1
+2016-01-12 22:10:14	xtraeme	Vaelatern: ^ please verify, at the end it was a zfs issue
+2016-01-12 22:11:24	xtraeme	night
+2016-01-12 22:18:55	maldridge	duncaen: somewhere you are seeing something I'm not
+2016-01-12 22:19:15	duncaen	what?
+2016-01-12 22:20:04	maldridge	setting the path shouldn't have any effect because the configure script is hard coded to look for i686-pc-cygwin-windres
+2016-01-12 22:21:15	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-12 22:21:52	duncaen	i would still use the patch you have but change cross_compiling to yes there if CROSSCOMPPATH is set or something
+2016-01-12 22:22:29	maldridge	yes, but the configure script doesn't look for any kind of path, it looks for the single executable I pasted above
+2016-01-12 22:23:34	duncaen	$CROSSCOMPPATH is a path where it looks for libs for libs and headers
+2016-01-12 22:23:44	duncaen	-I$CROSSCOMPPATH/gtk/include -I$CROSSCOMPPATH/gtk/include/glib -I$CROSSCOMPPATH/gtk/include/gdk
+2016-01-12 22:23:53	duncaen	but the paths seems strange too
+2016-01-12 22:24:48	maldridge	yes, if it was looking for the include headers I would agree that would be the fix.  However, it is looking for a single, hard-coded, executable for the cross compiler and failing to find it because for obvious reasons, I'm not using cygwin here
+2016-01-12 22:32:46	maldridge	by setting cross_compiling=no and passing "--host" to configure, it gets farther, but then freaks out that it cna't run the C code it spits out
+2016-01-12 22:34:01	chris2	xtraeme: i think using truncate is better still
+2016-01-12 22:35:26	◀	Turingtoast (~Tino@p548C589C.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-12 22:44:17	Vaelatern	Both solutions fix the issue
+2016-01-12 22:44:32	Vaelatern	I'll pr both as soon as I figure out how to un-messup my repo
+2016-01-12 22:44:33	chris2	Vaelatern: can you make an strace of a failing dd?
+2016-01-12 22:44:55	Vaelatern	I bet I could. Just put "strace" before the dd call?
+2016-01-12 22:44:58	chris2	yep
+2016-01-12 22:45:03	chris2	with the bs=611M or something
+2016-01-12 22:45:11	chris2	just run that dd command
+2016-01-12 22:46:04	Vaelatern	I'll do that as soon as I can. I suspect at 21:00 EST due to classes
+2016-01-12 22:46:11	chris2	no hurries
+2016-01-12 22:46:22	chris2	just ping me with the link then
+2016-01-12 22:47:47	duncaen	maldridge: https://gist.github.com/da5685a54818e82e2f13
+2016-01-12 22:50:02	duncaen	but now it doesnt find the headers :s
+2016-01-12 22:57:38	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-12 23:01:12	maldridge	ha, well I'll look into that in a bit
+2016-01-12 23:01:33	maldridge	currently sitting in an incredibly dull intro lecture for an Operating Systems
+2016-01-12 23:05:37	m_wynn	maldridge: but comic sans!
+2016-01-12 23:06:15	maldridge	^ is sitting to my left in the same intro lecture
+2016-01-12 23:10:04	maldridge	duncaen: I think this configure script is using the cross path for more things than it should
+2016-01-12 23:11:00	duncaen	nah the configure phase runs now without problems it uses it for some strange include dirs, you have to add them probably manually
+2016-01-12 23:11:53	maldridge	yeah, I ran your patches locally; dunno why its using a wierd include dir
+2016-01-12 23:12:06	dominikh	pay attention to the lecture.
+2016-01-12 23:12:12	maldridge	I can do ./configure && make && make install with no issues
+2016-01-12 23:12:25	duncaen	for arm?
+2016-01-12 23:12:34	duncaen	for me it was missing gtk and libxml headers
+2016-01-12 23:12:44	maldridge	no, only for x86; I don't have an arm platform handy
+2016-01-12 23:12:54	dominikh	xbps-src can cross compile…
+2016-01-12 23:13:02	maldridge	dominikh: once he gets to the other side of the 20 page syllabus I'll follow along
+2016-01-12 23:13:15	uriah	uh oh
+2016-01-12 23:13:24	maldridge	we have an unbelievable amount of boiler-plate that gets added to every syllabus here
+2016-01-12 23:13:33	duncaen	./xbps-src -a armv7hf pkg soundmodem
+2016-01-12 23:14:38	uriah	i just shut down / started up my pi0 and now i got a fail when starting up dhcpcd and gpsd :-/
+2016-01-12 23:14:42	uriah	corruption? :-/
+2016-01-12 23:14:50	maldridge	uriah: ownership on the device?
+2016-01-12 23:14:58	maldridge	duncaen: you'd need to bootstrap that first, right?
+2016-01-12 23:15:02	uriah	maldridge: nope
+2016-01-12 23:15:48	maldridge	hmm, did the GPS chip stay powered during the reboot?
+2016-01-12 23:15:48	duncaen	nope
+2016-01-12 23:15:58	maldridge	huh, TIL
+2016-01-12 23:16:00	uriah	maldridge: no it was a poweroff
+2016-01-12 23:16:13	uriah	maldridge: it's a no such file or directory error
+2016-01-12 23:16:37	uriah	let me get the error
+2016-01-12 23:16:39	uriah	one sec
+2016-01-12 23:16:44	uriah	trying to boot again
+2016-01-12 23:17:12	uriah	fail: dhcpcd: unable to change to service directory: file does not exist
+2016-01-12 23:17:13	uriah	:-/
+2016-01-12 23:17:15	uriah	wtf
+2016-01-12 23:17:45	uriah	same with gpsd
+2016-01-12 23:17:46	maldridge	this sounds like your system may be corrupt.  can you put the card in another machine and verify its integrity?
+2016-01-12 23:17:53	uriah	maybe
+2016-01-12 23:18:01	uriah	weird that it would be corrupt though
+2016-01-12 23:18:05	uriah	i shut down cleanly every time
+2016-01-12 23:18:05	dominikh	have you tried turning it off and on again?
+2016-01-12 23:18:06	uriah	:-/
+2016-01-12 23:18:10	uriah	lol i just did
+2016-01-12 23:18:25	uriah	reference to the it crowd i suppose
+2016-01-12 23:18:34	dominikh	yes.
+2016-01-12 23:18:43	dominikh	and please picture the automatic answering machine
+2016-01-12 23:18:46	dominikh	that asks the question
+2016-01-12 23:18:47	uriah	:>
+2016-01-12 23:19:30	uriah	the strange thing is
+2016-01-12 23:19:36	uriah	both services are running no problem now
+2016-01-12 23:20:01	dominikh	please do something useful, run strace and figure out what file it can't actually find :P
+2016-01-12 23:20:02	◀	srlang (srlang@nat/ibm/x-ddfyrpxvuoszcjrm) has quit (Ping timeout: 240 seconds)
+2016-01-12 23:20:38	uriah	i think i know what the problem is, strace unneeded
+2016-01-12 23:21:03	▶	arete74_ (~arete74@93-45-155-171.ip103.fastwebnet.it) has joined #xbps
+2016-01-12 23:21:09	maldridge	would this be an ID-10T error?
+2016-01-12 23:21:14	uriah	:P
+2016-01-12 23:21:16	uriah	perhaps
+2016-01-12 23:21:24	uriah	i start gpsd in rc.local
+2016-01-12 23:21:28	uriah	which probably causes problems
+2016-01-12 23:21:41	uriah	well, restart
+2016-01-12 23:21:43	uriah	we shall see...
+2016-01-12 23:22:04	maldridge	any particular reason you aren't running it under runit?
+2016-01-12 23:22:51	uriah	yes
+2016-01-12 23:23:07	uriah	i want to set the baud rate via command-line, then restart gpsd
+2016-01-12 23:23:17	uriah	but first i want gpsd to start in services
+2016-01-12 23:23:42	dominikh	use a config file and a gpsd service
+2016-01-12 23:23:42	◀	arete74 (~arete74@93-40-241-117.ip41.fastwebnet.it) has quit (Ping timeout: 264 seconds)
+2016-01-12 23:24:30	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-12 23:25:32	uriah	bah...
+2016-01-12 23:25:42	uriah	you need to send a command to the gps module
+2016-01-12 23:25:45	uriah	like
+2016-01-12 23:26:09	uriah	printf '$PMTK251,115200*1F\r\n'>/dev/ttyAMA0
+2016-01-12 23:26:23	chris2	so?
+2016-01-12 23:26:26	uriah	that's before it starts
+2016-01-12 23:26:28	chris2	put that into the service too
+2016-01-12 23:26:32	uriah	then there's another one after it starts
+2016-01-12 23:26:39	maldridge	uriah: what you're effectively doing is configuring a modem, this is a well troden path
+2016-01-12 23:26:43	dominikh	1) /etc/sv/gpsd/run 2) source config 3) send config to gps module 4) run gpsd
+2016-01-12 23:27:07	dominikh	after it starts? what is gpsd actually doing if not talking the protocols of the hw it talks to?
+2016-01-12 23:27:22	▶	arete74 (~arete74@93-41-16-84.ip79.fastwebnet.it) has joined #xbps
+2016-01-12 23:27:42	uriah	i'm not sure gpsd has the necessary code to speak all of the supported commands for this module
+2016-01-12 23:27:42	maldridge	probably a chip specific initialization command
+2016-01-12 23:27:48	uriah	yup
+2016-01-12 23:28:10	dominikh	if you need to send a command after gpsd started? that feels fishy
+2016-01-12 23:28:29	dominikh	how do you know gpsd is done sending what it needs to send before you send yours?
+2016-01-12 23:28:43	uriah	sleep
+2016-01-12 23:28:43	uriah	:>
+2016-01-12 23:28:52	uriah	sleep 10 (to be precise)
+2016-01-12 23:28:58	uriah	i know, dirty hack...
+2016-01-12 23:29:19	dominikh	so clearly gpsd should be the one doing the talking, not a mix of gpsd and "some other entity"
+2016-01-12 23:29:31	uriah	yep
+2016-01-12 23:29:34	dominikh	what's that other command you're sending?
+2016-01-12 23:29:37	uriah	but it doesn't seem possible
+2016-01-12 23:29:44	uriah	printf '$PMTK220,100*2F\r\n'>/dev/ttyAMA0
+2016-01-12 23:29:53	uriah	to set the device to 10hz updates
+2016-01-12 23:29:55	chris2	afaiu settinge th baudrate with stty should be good enough?
+2016-01-12 23:30:20	dominikh	a) can't you set the update rate before running gpsd? b) setting the accuracy really seems like something gpsd should do :>
+2016-01-12 23:30:51	uriah	a) nope it didn't work
+2016-01-12 23:30:58	uriah	b) agreed
+2016-01-12 23:30:59	uriah	-_-
+2016-01-12 23:31:05	◀	arete74_ (~arete74@93-45-155-171.ip103.fastwebnet.it) has quit (Ping timeout: 256 seconds)
+2016-01-12 23:31:11	maldridge	I think what you want is an expect script
+2016-01-12 23:31:20	uriah	expect script?
+2016-01-12 23:31:31	maldridge	google "expect script modem" my lecture just ended
+2016-01-12 23:31:53	dominikh	but your lecture just started…
+2016-01-12 23:32:59	▶	GangstaCat (~Soak@5.79.74.167) has joined #xbps
+2016-01-12 23:34:37	uriah	:P
+2016-01-12 23:52:43	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-12 23:52:56	ℹ	Notice(xbps-builder): 506cf41/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7610
+2016-01-12 23:52:58	ℹ	Notice(xbps-builder): 506cf41/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8257
+2016-01-12 23:53:00	ℹ	Notice(xbps-builder): 506cf41/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7594
+2016-01-12 23:53:04	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-12 23:53:04	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/506cf41998a9f00e97ad67e4f5a7fa1f0967a40b
+2016-01-12 23:53:04	ℹ	Notice(void-pkgs): void-packages/master 506cf41 Alessio Sergi: portablexdr-devel: remove stale symlink
+2016-01-12 23:53:04	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-12 23:53:22	◀	busterbcook (~busterbco@metasploit/busterbcook) has quit (Quit: Bye)
+2016-01-12 23:53:54	◀	GangstaCat (~Soak@5.79.74.167) has quit (Read error: Connection reset by peer)
+2016-01-12 23:54:15	ℹ	Notice(xbps-builder): 506cf41/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20072
+2016-01-12 23:54:15	ℹ	Notice(xbps-builder): 506cf41/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20992
+2016-01-12 23:54:17	ℹ	Notice(xbps-builder): 506cf41/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21018
+2016-01-12 23:54:19	ℹ	Notice(xbps-builder): 506cf41/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19895
+2016-01-12 23:56:22	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-12 23:56:22	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/712acc9583e7b585826565233662d366bef738ec
+2016-01-12 23:56:22	ℹ	Notice(void-pkgs): void-packages/master 712acc9 Alessio Sergi: perl-File-Remove: update to 1.55
+2016-01-12 23:56:22	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-12 23:56:22	ℹ	Notice(xbps-builder): 712acc9/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8258
+2016-01-12 23:56:26	ℹ	Notice(xbps-builder): 712acc9/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20073
+2016-01-12 23:56:28	ℹ	Notice(xbps-builder): 712acc9/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19896
+2016-01-12 23:56:29	ℹ	Notice(xbps-builder): 712acc9/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7595
+2016-01-12 23:56:29	ℹ	Notice(xbps-builder): 712acc9/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7611
+2016-01-12 23:56:29	ℹ	Notice(xbps-builder): 712acc9/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20993
+2016-01-12 23:56:30	ℹ	Notice(xbps-builder): 712acc9/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21019
+2016-01-12 23:56:41	uriah	yay i think i solved all my problems, let's see
+2016-01-12 23:57:07	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-12 23:57:07	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/e1bb013fd5ebc21510cc7a0ea29f1b49ae2c76f8
+2016-01-12 23:57:07	ℹ	Notice(void-pkgs): void-packages/master e1bb013 Alessio Sergi: python-Sphinx: update to 1.3.4
+2016-01-12 23:57:07	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-12 23:58:02	ℹ	Notice(xbps-builder): e1bb013/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20074
+2016-01-12 23:58:02	ℹ	Notice(xbps-builder): e1bb013/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19897
+2016-01-12 23:58:04	ℹ	Notice(xbps-builder): e1bb013/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/20994
+2016-01-12 23:58:04	ℹ	Notice(xbps-builder): e1bb013/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21020
+2016-01-12 23:58:18	ℹ	Notice(xbps-builder): e1bb013/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8259
+2016-01-12 23:58:25	ℹ	Notice(xbps-builder): e1bb013/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7612
+2016-01-12 23:58:25	ℹ	Notice(xbps-builder): e1bb013/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7596
+2016-01-13 00:05:58	◀	gregf (~gregf@bb-207-5-168-94.static.gwi.net) has quit (Quit: WeeChat 1.4)
+2016-01-13 00:06:21	uriah	yup... problems solved
+2016-01-13 00:08:07	▶	GangstaCat (~Soak@5.79.74.167) has joined #xbps
+2016-01-13 00:13:10	◀	xeirrr (~xeirrr@unaffiliated/xeirrr) has quit (Quit: qicr for android: faster and better)
+2016-01-13 00:16:10	▶	busterbcook (~busterbco@104.238.145.134) has joined #xbps
+2016-01-13 00:16:10	◀	busterbcook (~busterbco@104.238.145.134) has quit (Changing host)
+2016-01-13 00:16:10	▶	busterbcook (~busterbco@metasploit/busterbcook) has joined #xbps
+2016-01-13 00:19:44	ℹ	jaqent is now known as JahKent
+2016-01-13 00:22:37	ℹ	JahKent is now known as ChaKent
+2016-01-13 00:30:45	ℹ	irc: disconnected from server
+2016-01-13 20:41:04	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-13 20:41:04	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-13 20:41:04	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-13 20:41:04	ℹ	Channel #xbps: 99 nicks (0 ops, 0 voices, 99 normals)
+2016-01-13 20:41:05	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-13 20:41:20	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-13 20:44:11	◀	sdfr_ (~sdfr@unaffiliated/tumppu) has quit (Read error: Connection reset by peer)
+2016-01-13 20:48:20	▶	Turingtoast (~Tino@p548C5121.dip0.t-ipconnect.de) has joined #xbps
+2016-01-13 21:07:53	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-13 21:07:53	ℹ	Notice(void-pkgs): [void-packages] wyrex opened issue #3368: Package request: Libreoffice (musl) https://github.com/voidlinux/void-packages/issues/3368
+2016-01-13 21:07:53	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-13 21:12:25	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-13 21:12:25	ℹ	Notice(void-pkgs): [void-packages] enguerrand opened pull request #3369: gthumb: updated to 3.4.1 (master...gthumb) https://github.com/voidlinux/void-packages/pull/3369
+2016-01-13 21:12:25	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-13 21:25:31	◀	jsabeaudry (~jsabeaudr@132.203.171.89) has quit (Ping timeout: 264 seconds)
+2016-01-13 21:41:11	▶	sdfr (~sdfr@unaffiliated/tumppu) has joined #xbps
+2016-01-13 21:41:56	◀	Turingtoast (~Tino@p548C5121.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-13 21:43:08	dominikh	so… new security release for Go fixes a real but unlikely issue in TLS (more precisely its bignum code). do we rebuild all our Go programs, or chance it?
+2016-01-13 21:43:28	chris2	the joy of static linking
+2016-01-13 21:43:43	dominikh	chris2: yes, almost as bad as a soname bump :P
+2016-01-13 21:43:48	chris2	;)
+2016-01-13 21:44:06	chris2	can we verify which pkg use the code in question?
+2016-01-13 21:44:30	dominikh	it'd take more human resources figuring that out than just rebuilding all the packages :>
+2016-01-13 21:44:46	chris2	we have like 5 go packages no?
+2016-01-13 21:44:56	dominikh	22 using the go build style
+2016-01-13 21:45:02	chris2	ok
+2016-01-13 21:45:12	chris2	bump them, who cares
+2016-01-13 21:45:20	dominikh	it's the right thing to do I guess
+2016-01-13 21:45:23	chris2	builds fast enough anyway
+2016-01-13 21:45:30	chris2	xrevbump exists ;)
+2016-01-13 21:45:33	dominikh	is there an xtool that revbumps a package?
+2016-01-13 21:45:36	dominikh	whee
+2016-01-13 21:45:41	duncaen	xD
+2016-01-13 21:45:57	chris2	grep -l go */templates | xrevbump "go oops" -
+2016-01-13 21:46:12	duncaen	that seems to much xd
+2016-01-13 21:46:20	dominikh	I can figure out a better search pattern :P
+2016-01-13 21:46:26	chris2	yeah
+2016-01-13 21:47:13	dominikh	I don't like how some tools operate on package names and some on template files
+2016-01-13 21:47:53	chris2	README tells :>
+2016-01-13 21:49:07	chris2	xlint and xrevbump operate on files
+2016-01-13 21:49:17	chris2	and xgensum
+2016-01-13 21:49:24	chris2	because they change the files
+2016-01-13 21:49:31	chris2	and xbump operates on the whole directory
+2016-01-13 21:50:54	dominikh	then why isn't the xbump argument a directory ;)
+2016-01-13 21:51:00	chris2	it is
+2016-01-13 21:51:20	dominikh	relative to ., not to srcpkgs :P
+2016-01-13 21:51:30	chris2	no
+2016-01-13 21:51:39	chris2	ah
+2016-01-13 21:51:42	dominikh	will xrevbump append the name of all packages to the commit msg?
+2016-01-13 21:51:49	chris2	i use it from srcpkgs so completion works :D
+2016-01-13 21:51:52	dominikh	:D
+2016-01-13 21:51:53	chris2	dominikh: prepend, yes
+2016-01-13 21:51:57	dominikh	prepend, sorry
+2016-01-13 21:52:10	chris2	read the fine source ;)
+2016-01-13 21:52:17	chris2	xrevbump also works on directories
+2016-01-13 21:52:37	dominikh	heh
+2016-01-13 21:52:42	chris2	but then that grep trick doesnt work ;)
+2016-01-13 21:53:28	dominikh	also it really shouldn't require the "-" argument, it should just read from stdin if there's no 2nd arg :)
+2016-01-13 21:53:43	chris2	no
+2016-01-13 21:53:46	dominikh	why no
+2016-01-13 21:53:54	chris2	then xargs breaks
+2016-01-13 21:54:11	dominikh	fair enough
+2016-01-13 21:54:21	dominikh	wait, how so?
+2016-01-13 21:54:26	chris2	when you have no argumnts
+2016-01-13 21:54:38	dominikh	then why would xargs run xrevbump?
+2016-01-13 21:54:47	chris2	because you didnt use xargs -r ;)
+2016-01-13 21:54:59	dominikh	use -r then :P
+2016-01-13 21:55:07	chris2	we should just remove - and make people use xe ;)
+2016-01-13 21:55:17	dominikh	heh
+2016-01-13 21:55:24	dominikh	xe is still too pc for me
+2016-01-13 21:55:35	chris2	i cant find the go diff
+2016-01-13 21:55:39	chris2	pc?
+2016-01-13 21:55:43	dominikh	politically correct
+2016-01-13 21:55:47	chris2	...
+2016-01-13 21:56:36	duncaen	lol
+2016-01-13 21:56:53	▶	jsabeaudry (~jsabeaudr@107-179-241-116.cpe.teksavvy.com) has joined #xbps
+2016-01-13 21:56:55	dominikh	chris2: https://github.com/golang/go/commits/release-branch.go1.5
+2016-01-13 21:57:03	dominikh	everything since the go1.5.2 commit
+2016-01-13 21:57:06	chris2	ok
+2016-01-13 21:57:15	dominikh	(and yes, they don't tag each minor version. sigh.)
+2016-01-13 21:57:17	chris2	finally a coc :P
+2016-01-13 21:57:27	dominikh	you got plenty of coc
+2016-01-13 21:57:54	chris2	secret issues would be a nice gh feature
+2016-01-13 21:58:15	dominikh	heh, yeah
+2016-01-13 21:58:18	dominikh	google code had them
+2016-01-13 21:58:59	dominikh	also: we're packaging Go 1.5.3 even before they sent out the announcement. that's how good we are :P
+2016-01-13 22:00:09	chris2	;)
+2016-01-13 22:00:34	dominikh	well, running travis now.
+2016-01-13 22:00:39	chris2	all hail google oberon
+2016-01-13 22:00:43	dominikh	:>
+2016-01-13 22:00:53	dominikh	where'd you pick that up, anyway? is that in the book?
+2016-01-13 22:00:59	chris2	no
+2016-01-13 22:01:07	chris2	well, the similarities to oberon are easy to see
+2016-01-13 22:01:30	dominikh	well yeah, it's known that it's inspired by oberon
+2016-01-13 22:01:41	chris2	i think there is a language tree that mentions it
+2016-01-13 22:01:43	dominikh	but I never saw someone figure it's (g)oogle (o)beron :P
+2016-01-13 22:01:47	chris2	among many others
+2016-01-13 22:02:29	chris2	slackware now has pulseaudio
+2016-01-13 22:02:43	dominikh	heh
+2016-01-13 22:02:55	chris2	somehow our bluez doesnt need pa?!
+2016-01-13 22:03:05	dominikh	what do you mean by that?
+2016-01-13 22:03:10	chris2	http://www.slackware.com/changelog/current.php?cpu=x86_64
+2016-01-13 22:03:14	chris2	from the deps at least
+2016-01-13 22:03:14	dominikh	bluez 5 has no own audio stack
+2016-01-13 22:03:19	dominikh	but it doesn't *depend* on PA
+2016-01-13 22:03:26	dominikh	but if you want bluetooth audio you need PA
+2016-01-13 22:03:31	chris2	aha
+2016-01-13 22:03:40	dominikh	(or some other implementation of the audio stack. I don't know any)
+2016-01-13 22:04:33	chris2	funny how every distro makes the same mistakes
+2016-01-13 22:04:37	chris2	x/xorg-cf-files-1.0.6-x86_64-2.txz: Rebuilt.
+2016-01-13 22:04:39	chris2	       Don't use noarch. Thanks to DarkVision.
+2016-01-13 22:09:37	chris2	there should be something like nix but sane :>
+2016-01-13 22:10:15	dominikh	:>
+2016-01-13 22:10:48	▶	karu (~karasu@puffy.mat.univie.ac.at) has joined #xbps
+2016-01-13 22:17:38	dominikh	okay, screw travis, let's just push. Go built fine, the rest won't magically break :P
+2016-01-13 22:18:10	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-13 22:18:10	ℹ	Notice(void-pkgs): [void-packages] dominikh pushed 23 new commits to master: https://github.com/voidlinux/void-packages/compare/69b727b782f4...95f220e31c00
+2016-01-13 22:18:10	ℹ	Notice(void-pkgs): void-packages/master 77a2fb7 Dominik Honnef: go: update to 1.5.3
+2016-01-13 22:18:10	ℹ	Notice(void-pkgs): void-packages/master f3ed001 Dominik Honnef: packer: revbump to build with Go 1.5.3
+2016-01-13 22:18:10	ℹ	Notice(void-pkgs): void-packages/master 30b1f1f Dominik Honnef: codesearch: revbump to build with Go 1.5.3
+2016-01-13 22:18:10	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-13 22:20:38	dominikh	unless someone forgot a nocross or something and the build will fail midway thru because of one stupid package
+2016-01-13 22:27:59	chris2	heh
+2016-01-13 22:30:14	dominikh	so, does Arch have 1.5.3 yet? :P
+2016-01-13 22:35:54	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-13 22:35:54	ℹ	Notice(void-pkgs): [void-packages] 7185 opened pull request #3370: antimicro: update to 2.21. (master...antimicro) https://github.com/voidlinux/void-packages/pull/3370
+2016-01-13 22:35:54	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-13 22:36:33	ℹ	Notice(xbps-builder): 77a2fb7/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7613  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:36:48	ℹ	Notice(xbps-builder): 77a2fb7/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7630  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:36:52	dominikh	FUCK
+2016-01-13 22:37:04	dominikh	gcc: error: unrecognized command line option '-mfpu=vfpv3'
+2016-01-13 22:37:09	dominikh	wat
+2016-01-13 22:37:41	chris2	not using $CC for cross build
+2016-01-13 22:37:51	dominikh	but 1.5.2 built fine
+2016-01-13 22:38:47	dominikh	actually, that happens when building the linux/amd64 cross compiler of Go while cross-compiling Go for ARM
+2016-01-13 22:39:07	dominikh	or something.. brb, reading all of the bloody log
+2016-01-13 22:40:46	ℹ	Notice(xbps-builder): 77a2fb7/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20091  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:41:04	dominikh	I quit software
+2016-01-13 22:42:09	ℹ	Notice(xbps-builder): 77a2fb7/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21011  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:42:36	ℹ	Notice(xbps-builder): 77a2fb7/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8277  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:42:57	dominikh	so… only musl has the fpu issue; and the new failures are because of some API change in a Go package -_-
+2016-01-13 22:43:02	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20092  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:43:02	ℹ	Notice(xbps-builder): 77a2fb7/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19914  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:43:10	ℹ	Notice(xbps-builder): 77a2fb7/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21037  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:44:30	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21012  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:44:37	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8278  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:44:52	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19915  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:44:54	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7631  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:44:55	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7614  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:45:15	ℹ	Notice(xbps-builder): f3ed001, 30b1f1f, 253c859, 8e63079, 5070f95, b60e5e0, bf89e0f, 6d401a9, 31fef75, 7a54b50, 5a70653, 182e7a0, 4649ef6, ef95c08, 92b8ff5, 5d6a41d, 4fc0a0c, 153c1a2, 865e537, 9bb3aab, 1e3d43f, 95f220e/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21038  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 22:51:42	duncaen	dominikh: can i push a syncthing update?
+2016-01-13 22:51:54	dominikh	duncaen: please wait
+2016-01-13 22:51:56	duncaen	ok
+2016-01-13 22:52:26	dominikh	fixing multiple levels of stupid here :>
+2016-01-13 22:53:14	duncaen	yours or gos?
+2016-01-13 22:53:24	dominikh	right now that of the packer devs…
+2016-01-13 22:53:32	dominikh	after that possibly Go or musl or us
+2016-01-13 22:53:40	duncaen	hm syncthing too, i blame their build system
+2016-01-13 22:53:51	dominikh	I'll look into that, too :>
+2016-01-13 22:54:54	duncaen	no hurry they do like stupid release every time without any relevant change
+2016-01-13 22:55:12	dominikh	heh
+2016-01-13 22:56:07	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-13 22:56:07	ℹ	Notice(void-pkgs): [void-packages] 7185 opened pull request #3371: ibus-anthy: fix libexec path (master...ibus-anthy) https://github.com/voidlinux/void-packages/pull/3371
+2016-01-13 22:56:07	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-13 22:56:49	dominikh	I'd rather fix the actual Go failure right now than packer who are too stupid to vendor their deps
+2016-01-13 22:58:01	dominikh	can I unrevbump a package? :>
+2016-01-13 22:58:41	duncaen	xunfuckup
+2016-01-13 22:59:27	dominikh	packer can go play on a highway for all I care, I'll unrevbump – their "releases" cannot be built anymore, so will have to wait for a new release
+2016-01-13 23:04:19	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-13 23:04:21	dominikh	nice. locally when trying to build for musl I get ERROR: xbps-triggers-0.102_1: the RSA signature is not valid!
+2016-01-13 23:04:46	duncaen	yea noarch+musl+glibc
+2016-01-13 23:04:57	duncaen	i have a different hostdir for my musl builds
+2016-01-13 23:05:45	dominikh	./xbps-src -H hostdir-x86_64-musl -a x86_64-musl binary-bootstrap -- with an empty hostdir and a zapped masterdir, why does that install glibc?
+2016-01-13 23:06:14	dominikh	and where is the documentation for any of this?!
+2016-01-13 23:06:19	duncaen	that shouldn't install glibc except its using your glibc masterdir
+2016-01-13 23:06:39	duncaen	Readme.md has something about it
+2016-01-13 23:07:34	duncaen	ah
+2016-01-13 23:07:56	duncaen	not -a and use "binary-bootstrap x86_64-musl"
+2016-01-13 23:08:07	dominikh	...
+2016-01-13 23:08:09	dominikh	thanks
+2016-01-13 23:10:28	dominikh	this is fucking ridiculous. I have *no* masterdir, I have *no* hostdir, I run ./xbps-src binary-bootstrap && ./xbps-src -a x86_64-musl pkg base-chroot-musl which are the first two commands re musl in README.md and it fails with the bloody RSA signature
+2016-01-13 23:11:30	dominikh	.. why does the readme even suggest that that's the normal way of doing it? most people will skip the first two commands (which don't bloody work anyway)
+2016-01-13 23:11:39	dominikh	starting with the 3rd command now. *looks like* it's working
+2016-01-13 23:12:22	duncaen	yea little bit redundant
+2016-01-13 23:12:27	dominikh	*broken*
+2016-01-13 23:12:46	duncaen	and base-chroot-musl is already there thanks to the muslrepo right?
+2016-01-13 23:12:50	dominikh	right.
+2016-01-13 23:13:14	dominikh	the first two commands would make sense for a completely new architecture. if they worked.
+2016-01-13 23:13:55	teiresias	I often have to "solve" this by blowing away my repocache as well.
+2016-01-13 23:14:14	teiresias	Or at least rm *noarch* in repocache.
+2016-01-13 23:15:34	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-13 23:15:34	ℹ	Notice(void-pkgs): [void-packages] enguerrand opened pull request #3372: ClusterSSH: updated to 4.05 (master...ClusterSSH) https://github.com/voidlinux/void-packages/pull/3372
+2016-01-13 23:15:34	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-13 23:15:35	dominikh	chris2: ... "unset GCC CC CXX LD CFLAGS" as the first line in do_build of the Go package. why the hell is that there :>
+2016-01-13 23:16:10	duncaen	i just have a xbps-src-musl shell script with './xbps-src -m masterdir-musl -H hostdir-musl "$@"' to not mess with noarch packages
+2016-01-13 23:17:41	dominikh	ah, the unset is a left over from 2014 when xt still maintained the template and Go cross-compiling was… not so fun with C. kk. let's fix this (god knows why 1.5.2 built. it shouldn't have. did it, even?)
+2016-01-13 23:17:41	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-13 23:17:41	ℹ	Notice(void-pkgs): [void-packages] Gottox pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/29532a6135a6eaebab43644797ef285d763de8cf
+2016-01-13 23:17:41	ℹ	Notice(void-pkgs): void-packages/master 29532a6 Enno Boland (bot): chromium-pepper-flash: update to 20.0.0.267 (bot)
+2016-01-13 23:17:41	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-13 23:18:03	teiresias	It's really only a problem because glibc and musl don't use the same repo signing key.
+2016-01-13 23:18:08	dominikh	it did. eh.
+2016-01-13 23:18:25	dominikh	musl should've never been its own repo to begin with imo
+2016-01-13 23:18:39	ℹ	Notice(xbps-builder): 29532a6/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8279  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:45	ℹ	Notice(xbps-builder): 29532a6/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19916  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:46	ℹ	Notice(xbps-builder): 29532a6/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7632  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:54	ℹ	Notice(xbps-builder): 29532a6/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7615  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:55	ℹ	Notice(xbps-builder): 29532a6/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20093  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:58	ℹ	Notice(xbps-builder): 29532a6/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21039  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:18:59	ℹ	Notice(xbps-builder): 29532a6/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21013  blame: Enno Boland (bot) <g@s01.de>
+2016-01-13 23:19:07	duncaen	teiresias: the signing key shouldn't be the problem
+2016-01-13 23:19:08	dominikh	does anyone here run an actual ARM system with Void on it?
+2016-01-13 23:19:19	duncaen	rpi2 here
+2016-01-13 23:19:24	traeak	same here rip2
+2016-01-13 23:19:33	traeak	actually run tho...
+2016-01-13 23:19:40	dominikh	duncaen: when I'm done, can you test the Go package and see if code I give you compiled?
+2016-01-13 23:19:47	teiresias	Yeah, RPI with musl and Void.
+2016-01-13 23:19:47	dominikh	*compiles
+2016-01-13 23:19:49	maldridge	dominikh: pi, but its not booted at the moment
+2016-01-13 23:19:54	duncaen	can give you ssh access if you want
+2016-01-13 23:20:03	dominikh	that'd be great
+2016-01-13 23:20:08	traeak	hmm
+2016-01-13 23:20:21	traeak	is musl any faster or just slimmer?
+2016-01-13 23:20:23	dominikh	(of course you'd still need to install the pkg once its up)
+2016-01-13 23:22:18	teiresias	traeak: I don't notice any speed difference.  Then again, I just use my pi as a networked audio player.
+2016-01-13 23:24:58	teiresias	I'm a musl fan because musl does not flagrantly and willfully break static linking (thanks for ruining my day on multiple occasions, glibc).
+2016-01-13 23:31:35	◀	srlang (srlang@nat/ibm/x-fvomroghmmwkeihj) has quit (Ping timeout: 240 seconds)
+2016-01-13 23:34:19	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-13 23:35:31	dominikh	actually, that unset should be right..
+2016-01-13 23:37:07	dominikh	the hell is the deal with /etc/profile.d/xdg-user-dirs.sh being in base-files and shitting all over your home?
+2016-01-13 23:42:05	dominikh	and back to the lovely Go build failure on musl: wtf? Go builds fine, then it tries to build syncthing, cannot find Go, and tries to build Go again? the fuck happened to the first build of Go, and why does only the second one fail?
+2016-01-13 23:42:24	dominikh	http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7613/steps/shell_3/logs/stdio 99% of that log is Go building fine. near the bottom is syncthing triggering another, failing build of Go
+2016-01-13 23:45:55	dominikh	also it finds go-cross-linux but not go, even though both were registered? come on, I wanted to bump Go, not debug our build system...
+2016-01-13 23:46:31	◀	spew (~ben@38.98.151.67) has quit (Quit: leaving)
+2016-01-13 23:46:42	duncaen	thats very strange, had something like this on travis once but it didn't find any package of the previous build
+2016-01-13 23:46:47	duncaen	and most times it just works
+2016-01-13 23:47:01	dominikh	I'll restart the build and see what happens…
+2016-01-13 23:47:18	dominikh	assuming i can find my login details :D
+2016-01-13 23:48:08	duncaen	and once it installed hostdeps in the first build uninstalled them after it and only installed hostdeps for the second build that where not part of the first build
+2016-01-13 23:48:29	dominikh	oO
+2016-01-13 23:49:25	chris2	dominikh: rinded -c should fix the issue
+2016-01-13 23:49:37	duncaen	and locally it doesnt install the cross compiler each time oO
+2016-01-13 23:49:43	dominikh	chris2: a) I don't have access to the build server
+2016-01-13 23:49:52	chris2	on your repo
+2016-01-13 23:50:02	dominikh	I don't have any local issue right now
+2016-01-13 23:50:06	chris2	ok
+2016-01-13 23:51:07	dominikh	and wow the buildbot UI is shit. if you're on the "auth failed" page and log in, it will redirect you to the auth failed page on a succesful login.
+2016-01-13 23:51:12	dominikh	because how could that be confusing
+2016-01-13 23:51:35	duncaen	lol the /etc/profile.d/xdg-user-dirs.sh file is there since 3 years
+2016-01-13 23:52:00	⚡	chris2 goes off watching lesbo tv shows
+2016-01-13 23:52:31	ℹ	irc: disconnected from server
+2016-01-13 23:54:00	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-13 23:54:00	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-13 23:54:00	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-13 23:54:00	ℹ	Channel #xbps: 96 nicks (0 ops, 0 voices, 96 normals)
+2016-01-13 23:54:02	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-13 23:54:14	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-13 23:54:50	ℹ	Notice(xbps-builder): e96a5b1/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8280  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:54:56	ℹ	Notice(xbps-builder): e96a5b1/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7633  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:55:01	ℹ	Notice(xbps-builder): e96a5b1/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7616  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:55:35	dominikh	and otto just "fails". lovely.
+2016-01-13 23:55:41	duncaen	lol "tool for creating identical machine images for multiple platforms from a single source configuration" but identical builds of packer are not possible?
+2016-01-13 23:55:53	dominikh	pretty much
+2016-01-13 23:56:02	Gottox	dominikh: fix your stuff ;)
+2016-01-13 23:56:11	dominikh	packer has two closed and one open issue about this. first one "nah". second "maybe *close*". third one "eventually"
+2016-01-13 23:56:35	Gottox	I have a cross compiling patch for mongo in the queue.
+2016-01-13 23:56:50	dominikh	Gottox: yeye. I'm fixing the bs of everyone else today :)
+2016-01-13 23:57:24	Gottox	:D
+2016-01-13 23:57:33	dominikh	this was supposed to be a 5 minute job
+2016-01-13 23:58:50	ℹ	Notice(xbps-builder): e96a5b1/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20094  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:58:50	ℹ	Notice(xbps-builder): e96a5b1/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19917  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:59:22	ℹ	Notice(xbps-builder): e96a5b1/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21014  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-13 23:59:23	dominikh	also I'm pretty sure that github is rate-limiting us
+2016-01-13 23:59:32	dominikh	hm, or not. finally reproduced the otto issue
+2016-01-13 23:59:44	ℹ	Notice(xbps-builder): e96a5b1/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21040  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:05:56	dominikh	another two retards who don't specify deps or vendor
+2016-01-14 00:08:29	▶	[[[archtard]]] (~bonehead@46.166.190.140) has joined #xbps
+2016-01-14 00:12:29	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-14 00:12:29	ℹ	Notice(void-pkgs): [void-packages] dominikh pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/418ad97f8e23a3174189946af4e22fe37264c259
+2016-01-14 00:12:29	ℹ	Notice(void-pkgs): void-packages/master 418ad97 Dominik Honnef: otto: unrevbump...
+2016-01-14 00:12:29	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-14 00:12:43	ℹ	Notice(xbps-builder): 418ad97/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8281  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:06	ℹ	Notice(xbps-builder): 418ad97/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7617  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:06	ℹ	Notice(xbps-builder): 418ad97/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7634  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:18	dominikh	I swear to god I'll switch to Swift soon
+2016-01-14 00:13:39	ℹ	Notice(xbps-builder): 418ad97/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19918  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:42	dominikh	short_desc="Check your project for common sources of contributor friction"
+2016-01-14 00:13:45	ℹ	Notice(xbps-builder): 418ad97/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20095  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:48	dominikh	^^ a package with that description just failed
+2016-01-14 00:13:50	ℹ	Notice(xbps-builder): 418ad97/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21041  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:13:53	ℹ	Notice(xbps-builder): 418ad97/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21015  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:15:58	dominikh	also.. when we got rid of foo-git packages, did we agree to instead hiding them behind 0.0.<date> and pretending that's not the exact same thing?
+2016-01-14 00:16:26	duncaen	software is crazy
+2016-01-14 00:16:39	dominikh	so are our maintainers
+2016-01-14 00:16:46	duncaen	is it pulling head/master?
+2016-01-14 00:17:14	dominikh	no, a commit. but the last time they updated that was in july. and the only reason they pull a commit is because the last official release was over a year ago
+2016-01-14 00:17:18	dominikh	why not ask for a release instead
+2016-01-14 00:17:27	dominikh	instead of having more never-updated software in the repo
+2016-01-14 00:18:58	duncaen	litcave stuff like fbpdf is packaged as 0.0.$DATE too but that guy makes no releases for all of his stuff like >=10 nice projects without any release
+2016-01-14 00:19:45	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-14 00:19:45	ℹ	Notice(void-pkgs): [void-packages] dominikh pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/5815cdb9d228facc097562342b1d1b86d23fdf62
+2016-01-14 00:19:45	ℹ	Notice(void-pkgs): void-packages/master 5815cdb Dominik Honnef: flint: update to 0.0.4.20160114
+2016-01-14 00:19:45	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-14 00:20:28	dominikh	Gottox: we're almost there, only a few more retards to go :P
+2016-01-14 00:21:05	ℹ	Notice(xbps-builder): 5815cdb/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20096  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:21:15	ℹ	Notice(xbps-builder): 5815cdb/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19919  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:21:17	ℹ	Notice(xbps-builder): 5815cdb/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21016  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:21:17	ℹ	Notice(xbps-builder): 5815cdb/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21042  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:23:24	ℹ	Notice(xbps-builder): 5815cdb/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8282  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:23:48	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-14 00:24:13	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-14 00:24:13	ℹ	Notice(void-pkgs): [void-packages] dominikh pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/453bf42ca515c82fe218eab9f5c87e069227cdbf
+2016-01-14 00:24:13	ℹ	Notice(void-pkgs): void-packages/master 453bf42 Dominik Honnef: hugo: unrevbump...
+2016-01-14 00:24:13	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-14 00:24:53	ℹ	Notice(xbps-builder): 5815cdb/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7635  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:25:04	ℹ	Notice(xbps-builder): 5815cdb/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7618  blame: Dominik Honnef <dominik@honnef.co>
+2016-01-14 00:25:44	◀	xeirrr (~xeirrr@unaffiliated/xeirrr) has quit (Client Quit)
+2016-01-14 00:27:10	ℹ	Notice(xbps-builder): 453bf42/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8283
+2016-01-14 00:28:54	ℹ	Notice(xbps-builder): 453bf42/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7636
+2016-01-14 00:29:07	ℹ	Notice(xbps-builder): 453bf42/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7619
+2016-01-14 00:30:19	ℹ	Notice(xbps-builder): 453bf42/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20097
+2016-01-14 00:30:31	ℹ	Notice(xbps-builder): 453bf42/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19920
+2016-01-14 00:32:12	ℹ	Notice(xbps-builder): 453bf42/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21043
+2016-01-14 00:32:12	ℹ	Notice(xbps-builder): 453bf42/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21017
+2016-01-14 00:32:27	dominikh	duncaen, Gottox: I'm done. push whatever you want :P
+2016-01-14 00:32:37	duncaen	kkty
+2016-01-14 00:32:58	duncaen	test whatever you want, the pi should be up 24/7 if the dns is updated correctly xD
+2016-01-14 00:33:08	dominikh	oh, almost forgot about that, thanks
+2016-01-14 00:34:35	dominikh	I'll promise not to hack your network :P
+2016-01-14 00:34:59	duncaen	would be easy, there is only a cheap consumer router and everything is in this network xD
+2016-01-14 00:35:16	dominikh	time to print some penises on the network printer
+2016-01-14 00:35:34	duncaen	hehe dont have a printer
+2016-01-14 00:35:38	dominikh	:<
+2016-01-14 00:37:31	ℹ	irc: disconnected from server
+2016-01-14 20:00:09	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-14 20:00:09	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-14 20:00:09	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-14 20:00:09	ℹ	Channel #xbps: 99 nicks (0 ops, 0 voices, 99 normals)
+2016-01-14 20:00:10	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-14 20:00:23	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-14 20:01:53	Grauwolf	wow. if i would only be floating-wm compatible. this thing looks beautiful http://www.phoronix.com/scan.php?page=article&item=kde-2016-review&num=1
+2016-01-14 20:03:52	duncaen	sometime ago i started to implement a kde connect server without all those kde stuff in go, have to finish it
+2016-01-14 20:08:49	▶	bheesham (~bheesham@162.222.146.57) has joined #xbps
+2016-01-14 20:09:29	◀	bheesham (~bheesham@162.222.146.57) has quit (Client Quit)
+2016-01-14 20:09:47	▶	bheesham (~bheesham@162.222.146.57) has joined #xbps
+2016-01-14 20:09:52	Grauwolf	btw. the desire to have a linux tablet with a form factor of a nexus 7 has grown over the last couple of months. is anybody using a device like that with a "regular" linux on it? or have heard of such a device? i have a nexus 7 2013 but most of the time i don't know what to do with it.
+2016-01-14 20:10:47	Grauwolf	*"regular" linux distribution
+2016-01-14 20:11:01	◀	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has quit (Quit: "Success is not final, failure is not fatal: it is the courage to continue that counts." - Winston Churchill)
+2016-01-14 20:11:39	▶	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has joined #xbps
+2016-01-14 20:14:55	◀	knoc (~knoc@2a02:8108:9e40:3a78:709c:d89d:4:ad70) has quit (Ping timeout: 240 seconds)
+2016-01-14 20:15:22	▶	knoc (~knoc@ip5f5acc2f.dynamic.kabel-deutschland.de) has joined #xbps
+2016-01-14 20:15:49	traeak	would soemthing like this work better for linux?
+2016-01-14 20:16:10	traeak	http://www.newegg.com/Product/Product.aspx?Item=N82E16834232631
+2016-01-14 20:16:19	traeak	not sure how well it takes linux
+2016-01-14 20:18:15	traeak	http://www.jfwhome.com/2016/01/04/latest-steps-to-install-ubuntu-on-the-asus-t100ta/
+2016-01-14 20:18:54	traeak	someone gave me a ideapad 10 that i put void linux on
+2016-01-14 20:19:10	traeak	works okay, only problem is it doesn't come out of hibernation properly
+2016-01-14 20:19:34	◀	knoc (~knoc@ip5f5acc2f.dynamic.kabel-deutschland.de) has quit (Client Quit)
+2016-01-14 20:19:51	traeak	the same is true with neverware cloudready, although the touchscreen works properly with that
+2016-01-14 20:20:02	traeak	but crouton doesn't...
+2016-01-14 20:20:32	◀	logen_kain (~logen@174-126-130-14.cpe.cableone.net) has quit (Ping timeout: 250 seconds)
+2016-01-14 20:28:11	◀	eto (~eto@unaffiliated/eto) has quit (Read error: Connection reset by peer)
+2016-01-14 20:28:32	◀	maroni (~maroni@91.141.0.141.wireless.dyn.drei.com) has quit (Ping timeout: 246 seconds)
+2016-01-14 20:28:36	▶	eto1 (~eto@unaffiliated/eto) has joined #xbps
+2016-01-14 20:35:18	▶	logen_kain (~logen@174-126-130-14.cpe.cableone.net) has joined #xbps
+2016-01-14 20:38:55	◀	logen_kain (~logen@174-126-130-14.cpe.cableone.net) has quit (Remote host closed the connection)
+2016-01-14 20:48:48	Grauwolf	traeak: thanks. will add them to the list
+2016-01-14 21:11:29	◀	paddygarcia (~paddygarc@host141-16-dynamic.244-95-r.retail.telecomitalia.it) has quit (Quit: Bye)
+2016-01-14 21:24:03	dominikh	question: we have qrencode, libqrencode and qrencode-devel – shouldn't it have been libqrencode-devel instead?
+2016-01-14 21:32:50	duncaen	same with confuse aka libconfuse not sure whats better, packaged libconfuse once until i found confuse...
+2016-01-14 21:33:47	duncaen	ah ok but confuse doesnt have a lib package just confuse and confuse-devel
+2016-01-14 21:35:49	dominikh	personally I do foo, libfoo and libfoo-devel (e.g. ledger)
+2016-01-14 21:36:10	dominikh	well, confuse is different
+2016-01-14 21:36:29	dominikh	confuse is just a library, no binary. and we have a bunch of those without the lib prefix. that's actually documented in the manual
+2016-01-14 21:36:36	▶	JayVii (~JayVii@unaffiliated/jayvii) has joined #xbps
+2016-01-14 21:37:30	duncaen	homepage/repo is http://github.org/martinh/libconfuse/
+2016-01-14 21:37:48	duncaen	tag is confuse-${version}
+2016-01-14 21:37:52	duncaen	very confusing
+2016-01-14 21:38:16	dominikh	indeed
+2016-01-14 21:39:49	dominikh	I also hate when I package a program and it turns out to have libraries, with headers and pc files. sigh, I wanted a simple template :P
+2016-01-14 21:40:51	duncaen	oh yes, and something no one every would link against
+2016-01-14 21:40:55	dominikh	yep
+2016-01-14 21:41:07	dominikh	Description: GLabels Built-In Barcode Library
+2016-01-14 21:41:12	dominikh	who the fuck would link to that :P
+2016-01-14 21:41:43	duncaen	probably with .0 so name and breaking abi every release xD
+2016-01-14 21:42:30	dominikh	the barcode part is 0.0.0 – the other lib is 8.0.0 :>
+2016-01-14 21:42:52	dominikh	"libglabels-3.0.so.8.0.0" – oh god, do I need to add the -3.0 to the pkgname now? :>
+2016-01-14 21:43:16	dominikh	the binary is called glabels-3 as well. fine, let's add 3 to the pkg name
+2016-01-14 21:44:54	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-14 21:44:54	ℹ	Notice(void-pkgs): [void-packages] Duncaen pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/34fb6dacebd23cead6f8ae1f95466f745250ec4d
+2016-01-14 21:44:54	ℹ	Notice(void-pkgs): void-packages/master 34fb6da Duncaen: fwup: update to 0.5.0.
+2016-01-14 21:44:54	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-14 21:45:03	ℹ	Notice(xbps-builder): 34fb6da/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8313
+2016-01-14 21:45:06	ℹ	Notice(xbps-builder): 34fb6da/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7649
+2016-01-14 21:45:06	ℹ	Notice(xbps-builder): 34fb6da/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20125
+2016-01-14 21:45:07	ℹ	Notice(xbps-builder): 34fb6da/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7666
+2016-01-14 21:45:08	ℹ	Notice(xbps-builder): 34fb6da/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21070
+2016-01-14 21:45:10	ℹ	Notice(xbps-builder): 34fb6da/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21045
+2016-01-14 21:45:20	ℹ	Notice(xbps-builder): 34fb6da/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19948
+2016-01-14 21:47:49	ℹ	Notice(xbps-builder): d779f75/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8314
+2016-01-14 21:47:51	ℹ	Notice(xbps-builder): d779f75/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20126
+2016-01-14 21:47:51	ℹ	Notice(xbps-builder): d779f75/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19949
+2016-01-14 21:47:53	ℹ	Notice(xbps-builder): d779f75/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21046
+2016-01-14 21:47:53	ℹ	Notice(xbps-builder): d779f75/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21071
+2016-01-14 21:47:54	ℹ	Notice(xbps-builder): d779f75/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7667
+2016-01-14 21:47:54	ℹ	Notice(xbps-builder): d779f75/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7650
+2016-01-14 21:47:56	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-14 21:47:56	ℹ	Notice(void-pkgs): [void-packages] Duncaen pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/d779f7581af013cf7c8396fb9771a781ab2a7e1e
+2016-01-14 21:47:56	ℹ	Notice(void-pkgs): void-packages/master d779f75 Duncaen: minissdpd: update to 1.5.
+2016-01-14 21:47:56	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-14 21:51:01	▶	Turingtoast (~Tino@p548C56A3.dip0.t-ipconnect.de) has joined #xbps
+2016-01-14 21:59:35	qball	why did my git loose git submodule
+2016-01-14 21:59:39	qball	wth.
+2016-01-14 22:00:05	qball	can anybody check if git submodule works?
+2016-01-14 22:00:07	dominikh	install git-perl.
+2016-01-14 22:00:09	dominikh	or git-all.
+2016-01-14 22:00:21	qball	hmm
+2016-01-14 22:00:23	qball	thx
+2016-01-14 22:00:29	qball	confused it worked recently :D
+2016-01-14 22:00:39	dominikh	git-submodule was in the wrong package.
+2016-01-14 22:00:39	eater	had the same problem qball
+2016-01-14 22:00:40	Gottox	yea, it was broken recently :D
+2016-01-14 22:00:56	qball	hacking termite to have configurable keybindings
+2016-01-14 22:01:17	eater	oh sweet
+2016-01-14 22:01:37	eater	it took my like 5 hours to get termite even building ;-;
+2016-01-14 22:02:50	dominikh	hrm. so, there's a programm called "glabels". its version is 3.2.1. its library files (public) are called libglabels-3.0.so.8 – wth do I name the package? "glabels" seems wrong because of the -3.0 in the .so – glabels3 seems okayish, but the .so is 3.0, not 3, so what if there's a 3.1? glabels3.1 isn't possible, and glabels31 is awful (I know we have lua52, but glabels is an actual end-user program) – or
+2016-01-14 22:02:52	dominikh	do I make it glabels and libglabels30?
+2016-01-14 22:03:42	eater	glabels3?
+2016-01-14 22:04:02	qball	eater: planning to add autoconf too
+2016-01-14 22:04:10	dominikh	Gottox: input plox :>
+2016-01-14 22:04:35	eater	qball: https://log.eoc.io/logs/building-and-installing-termite-on-void-linux I'm using sed to fix the Makefile in void linux :D
+2016-01-14 22:04:44	eater	qball: do you have a git repo for it?
+2016-01-14 22:04:48	qball	why? it works out of box
+2016-01-14 22:05:10	eater	what do you mean?
+2016-01-14 22:05:28	◀	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has quit (Quit: "Success is not final, failure is not fatal: it is the courage to continue that counts." - Winston Churchill)
+2016-01-14 22:05:56	eater	oh, but it installs in /usr/local, which doesnt work in an out-of-the-box void install
+2016-01-14 22:06:08	▶	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has joined #xbps
+2016-01-14 22:07:03	◀	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has quit (Client Quit)
+2016-01-14 22:07:11	qball	aah
+2016-01-14 22:07:15	qball	I added a ?
+2016-01-14 22:07:22	qball	PREFIX ?= /usr/local
+2016-01-14 22:07:24	qball	so I can do
+2016-01-14 22:07:29	qball	make PREFIX=/usr
+2016-01-14 22:07:42	qball	anyway it needs autoconf
+2016-01-14 22:07:58	eater	yeah
+2016-01-14 22:08:05	eater	do you have a git repo you're gonna work in?
+2016-01-14 22:08:12	▶	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has joined #xbps
+2016-01-14 22:08:15	qball	yes
+2016-01-14 22:08:26	eater	can I have link? :D
+2016-01-14 22:08:36	qball	https://github.com/DaveDavenport/termite
+2016-01-14 22:08:48	eater	thx
+2016-01-14 22:09:40	◀	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has quit (Client Quit)
+2016-01-14 22:09:56	▶	ViktorFoedowski (~ViktorF@fedora/ViktorFoedowski) has joined #xbps
+2016-01-14 22:18:46	▶	nous (~nous@ip-2a02-2149-813a-2600-0225-22ff-fe02-3ffe.ip6.forthnet.gr) has joined #xbps
+2016-01-14 22:26:23	qball	Added autotools
+2016-01-14 22:26:46	qball	so not it build with configure and make
+2016-01-14 22:26:59	qball	its so easy.. don't know why people don't
+2016-01-14 22:27:29	duncaen	autohell?
+2016-01-14 22:27:46	dominikh	better than ccrap
+2016-01-14 22:28:44	duncaen	now i don't remeber the name of the python one
+2016-01-14 22:30:02	duncaen	scons
+2016-01-14 22:30:08	dominikh	scons :D
+2016-01-14 22:35:25	duncaen	dominikh: any idea why xbps-remove -Rn xorg-minimal wouldn't remove xorg-server
+2016-01-14 22:35:42	dominikh	why do you ask me :P
+2016-01-14 22:35:45	duncaen	xbps-query -x xorg-minimal shows xorg-server
+2016-01-14 22:35:52	duncaen	idk you are a void veteran
+2016-01-14 22:35:59	dominikh	also, why would it?
+2016-01-14 22:36:07	dominikh	which of those flags do you think uninstalls the deps?
+2016-01-14 22:36:10	duncaen	its a dependency
+2016-01-14 22:36:15	duncaen	R
+2016-01-14 22:36:19	dominikh	oh. right.
+2016-01-14 22:36:31	dominikh	then something else depends on xorg-server
+2016-01-14 22:36:32	duncaen	n just to not fuck up xD
+2016-01-14 22:36:36	duncaen	ah right
+2016-01-14 22:36:37	dominikh	xbps-query -X xorg-server
+2016-01-14 22:36:41	duncaen	that makes sense
+2016-01-14 22:36:46	duncaen	thank you
+2016-01-14 22:36:51	dominikh	pleasure.
+2016-01-14 22:37:28	dominikh	I'm still not sure what to call my packages :P
+2016-01-14 22:38:18	duncaen	me neither, would still go for less typing xD
+2016-01-14 22:38:32	◀	Turingtoast (~Tino@p548C56A3.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-14 22:39:01	dominikh	I'll go for glabels and libglabels30
+2016-01-14 22:39:10	dominikh	it's not like anybody cares, anyway :P
+2016-01-14 22:39:41	dominikh	duncaen: also stop relaying questions from #voidlinux, pretending that they're your own :P
+2016-01-14 22:39:51	dominikh	I don't engage in that channel for a reason
+2016-01-14 22:45:12	duncaen	haha was curious about it
+2016-01-14 22:52:04	uriah	thanks for updating openssh in a timely fashion guys
+2016-01-14 22:52:31	uriah	voidlinux ftw
+2016-01-14 22:52:33	uriah	:P
+2016-01-14 22:52:34	dominikh	always.
+2016-01-14 22:52:37	uriah	indeed
+2016-01-14 22:52:45	uriah	unless everyone's sleeping :D
+2016-01-14 22:52:57	dominikh	I can give you Gottox's pager number
+2016-01-14 22:52:57	uriah	but usually at least one of you is in nighthawk mode
+2016-01-14 22:53:01	uriah	haha
+2016-01-14 22:53:03	uriah	no it's ok thanks
+2016-01-14 22:53:26	duncaen	but the patch commit is wrongly named, it just deactivates roaming by default, the overflow is still there
+2016-01-14 22:53:31	duncaen	"fix"
+2016-01-14 22:53:40	dominikh	duncaen: by default, or enforced off?
+2016-01-14 22:53:45	uriah	i'm confident that the open{bsd,ssh} devs already have his pager number :P
+2016-01-14 22:53:49	dominikh	that is, can I enable roaming in my config still?
+2016-01-14 22:53:50	Gottox	dominikh and chris2 do the night shift, xtraeme and I are awake early ;)
+2016-01-14 22:54:04	duncaen	as far as i looked into the patch its only config parsing and set to 0
+2016-01-14 22:54:12	uriah	Gottox: :)
+2016-01-14 22:54:42	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-14 22:54:42	ℹ	Notice(void-pkgs): [void-packages] Gottox pushed 4 new commits to master: https://github.com/voidlinux/void-packages/compare/d779f7581af0...f033b010799b
+2016-01-14 22:54:42	ℹ	Notice(void-pkgs): void-packages/master bae7c50 Enno Boland: epiphany: update to 3.18.3.
+2016-01-14 22:54:42	ℹ	Notice(void-pkgs): void-packages/master 8982944 Enno Boland: evolution: update to 3.18.3.
+2016-01-14 22:54:42	ℹ	Notice(void-pkgs): void-packages/master 37ecc9f Enno Boland: evolution-data-server: update to 3.18.3.
+2016-01-14 22:54:42	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-14 22:54:50	duncaen	https://github.com/voidlinux/void-packages/commit/9f4f6ce8aa693fdde39ac03edbf7ce4a5f7322b3#diff-4af1132fee38b695e8429969d45e5319R41
+2016-01-14 22:54:59	duncaen	looks like forcing to deavtivate
+2016-01-14 22:55:02	ℹ	Notice(xbps-builder): bae7c50/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8315  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:55:04	ℹ	Notice(xbps-builder): bae7c50/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7668  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:55:04	ℹ	Notice(xbps-builder): bae7c50/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7651  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:55:08	dominikh	well then
+2016-01-14 22:55:28	dominikh	then the overflow is technically gone, as it's dead code :P
+2016-01-14 22:55:37	uriah	heh
+2016-01-14 22:55:40	duncaen	yop right
+2016-01-14 22:55:47	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/x86_64-musl_builder: Fail: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8316  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:55:48	uriah	until they fix the code and reanimate it
+2016-01-14 22:55:50	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/armv7l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7652  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:55:52	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/armv6l-musl_builder: Fail: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7669  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:56:52	duncaen	https://github.com/PowerShell/Win32-OpenSSH/blob/L1/roaming_client.c#L70
+2016-01-14 22:57:27	ℹ	Notice(xbps-builder): bae7c50/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20127  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:57:41	ℹ	Notice(xbps-builder): bae7c50/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21072  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:57:41	ℹ	Notice(xbps-builder): bae7c50/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21047  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:57:49	ℹ	Notice(xbps-builder): bae7c50/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19950  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:58:02	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20128  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:58:08	uriah	duncaen: nice find
+2016-01-14 22:58:13	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/armv7l_builder: Fail: http://build.voidlinux.eu/builders/armv7l_builder/builds/21073  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:58:15	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19951  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:58:17	ℹ	Notice(xbps-builder): 8982944, 37ecc9f, f033b01/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21048  blame: Enno Boland <gottox@voidlinux.eu>
+2016-01-14 22:59:32	⚡	uriah needs chamomile tea
+2016-01-14 22:59:40	uriah	crashing from sugar rush + coffee
+2016-01-14 23:00:10	uriah	had crepes for brunupper today (woke up late, breakfast+lunch+supper at once)
+2016-01-14 23:00:21	uriah	o well :(
+2016-01-14 23:01:25	duncaen	perfect time to drink a herb shot
+2016-01-14 23:01:30	uriah	heheh
+2016-01-14 23:01:49	uriah	maldridge: i solved my gps problems
+2016-01-14 23:02:26	uriah	maldridge: seems like setting it to 10hz refresh rate + 115200bps baud keeps the gps fix more stable.
+2016-01-14 23:02:51	maldridge	noted, wonder what the problem was
+2016-01-14 23:03:11	uriah	and if anything messes up i now know the device commands to hot/warm/cold/freezing restart the device. no mosfet required.
+2016-01-14 23:04:20	◀	srlang (srlang@nat/ibm/x-mxiaabzxdlvkjwqb) has quit (Ping timeout: 250 seconds)
+2016-01-14 23:04:41	uriah	maldridge: i think since it refreshes more often it gets quicker results from the gps satellites, as well as more accurate signal data from them, which allows the module to fall back onto other satellites more accurately when it loses signal from the ones it's using
+2016-01-14 23:05:38	uriah	makes sense, right? :-/
+2016-01-14 23:05:59	uriah	maldridge: what baud rate do you communicate with your device at? and, well, what're its refresh rate capabilities?
+2016-01-14 23:07:42	▶	edr (~edr@p4FE8F664.dip0.t-ipconnect.de) has joined #xbps
+2016-01-14 23:08:06	maldridge	uriah: I'm talking GPS at 9600, but that's only because I don't really care about anything that isn't pps.  the refresh rate its using currently is I think 10Hz
+2016-01-14 23:09:45	edr	Good evening
+2016-01-14 23:09:56	uriah	maldridge: cool
+2016-01-14 23:10:06	uriah	hi edr
+2016-01-14 23:10:13	edr	Hi uriah
+2016-01-14 23:10:26	edr	I have a quick question on the installation instructions at https://wiki.voidlinux.eu/Install_LVM_LUKS
+2016-01-14 23:10:29	uriah	maldridge: i guess you have most nmea sentences disabled?
+2016-01-14 23:10:51	uriah	edr: what's the question?
+2016-01-14 23:11:08	edr	After installing the base system there seem to be all sorts of symlinks missing in /usr/bin
+2016-01-14 23:11:19	edr	e.g /bin/sh -> /bin/bash is not there
+2016-01-14 23:11:28	edr	as a result I can't run passwd
+2016-01-14 23:11:49	edr	xargs and find are missing, so the glibc config fails
+2016-01-14 23:12:09	duncaen	hm did you run it with a different XBPS_TARGET_ARCH or did you use a very old image?
+2016-01-14 23:12:26	⚡	maldridge bets the installer image was old
+2016-01-14 23:12:30	edr	no, a pretty up to date iso I would say. All of this 64 bit
+2016-01-14 23:12:43	edr	let me check the installer image
+2016-01-14 23:12:44	uriah	edr: what's the iso's date?
+2016-01-14 23:13:23	duncaen	sounds like missing xbps-alternatives
+2016-01-14 23:13:31	uriah	yeah...
+2016-01-14 23:13:38	edr	hmm well ok july 15
+2016-01-14 23:13:45	uriah	yeah update
+2016-01-14 23:13:51	edr	but in fact why does it matter while bootstrapping?
+2016-01-14 23:14:01	uriah	not sure xbps-alternatives even existed back then... right?
+2016-01-14 23:14:08	uriah	and that's what sets up the symlinks now
+2016-01-14 23:14:22	duncaen	the image is from a time where xbps-alternatives wasn't there, new packages now use xbps-alternatives features
+2016-01-14 23:14:30	edr	well I did the chroot install procedure with that image and it worked ok
+2016-01-14 23:14:42	edr	back in september
+2016-01-14 23:14:56	uriah	yeah xbps-alternatives is new since like november
+2016-01-14 23:14:59	uriah	or october
+2016-01-14 23:15:26	edr	Is that why you don't have to download and unpack a tarball upon install anymore?
+2016-01-14 23:16:26	duncaen	http://www.voidlinux.eu/news/2015/11/xbps-0.50.html
+2016-01-14 23:16:33	duncaen	10.11
+2016-01-14 23:16:56	duncaen	edr: dont know what tarball you mean
+2016-01-14 23:17:45	duncaen	did you already try xbps-install -Su
+2016-01-14 23:17:46	edr	So when I did my install on this computer one step in the installation instructions was to download a tarball and unpack it to the target directory
+2016-01-14 23:18:10	duncaen	hm never heard about it
+2016-01-14 23:18:35	duncaen	only to install from a different distribution you can download the static xbps builds and use them from debian or arch as example
+2016-01-14 23:19:19	edr	it contained files from /usr/bin and /usr/share I believe and yes, it had files like xbps-install.static and all that in it. Still have these files on my system
+2016-01-14 23:19:43	edr	So I was suprised this step was removed from the instructins
+2016-01-14 23:20:27	duncaen	hm maybe that was to avoid these xbps-alternatives things on old images, but never noticed it in the instructions
+2016-01-14 23:21:03	edr	Ok. Nevermind. Just wanted to make sure this did not get lost unintentially in the transition to the new wiki or anything like that
+2016-01-14 23:21:17	edr	I'll go ahead and grab a new iso.
+2016-01-14 23:21:38	edr	And hey, thanks to you all for making void happen. This is really a great piece of work!
+2016-01-14 23:22:15	duncaen	i think your setup is fixable if you just chroot into your installation and update xbps and run xbps-pkgdb -a
+2016-01-14 23:23:25	edr	Oh no worries. I was just playing around with the installation procedure in a vm. My normal machine runs fine
+2016-01-14 23:24:18	edr	I am trying to put together a bootstrap script which reproduces my setup, so I was surprised to find that the steps that produced my current system did not seem to work anymore
+2016-01-14 23:24:22	edr	that's all.
+2016-01-14 23:24:54	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-14 23:24:54	ℹ	Notice(void-pkgs): [void-packages] Gottox pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/30d254983d7223f45f81d85ea41e45be3be971e9
+2016-01-14 23:24:54	ℹ	Notice(void-pkgs): void-packages/master 30d2549 Enno Boland: libetonyek: add missing dep.
+2016-01-14 23:24:54	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-14 23:26:02	edr	But actually I might try this just out of interest to see what happens
+2016-01-14 23:26:12	duncaen	xbps-query -m to get all manual installed packages and then you can pass the list to mklive.sh from https://github.com/voidlinux/void-mklive
+2016-01-14 23:28:59	maldridge	edr: the standalone binaries are only meant to be used if you aren't using void as your boot media.  The normall installer does not use them
+2016-01-14 23:29:55	edr	Aha!
+2016-01-14 23:30:14	edr	Thanks to you both. These are two pieces of interesting information
+2016-01-14 23:30:58	maldridge	np, its somewhat more advanced to install from static bins, that's mainly just if there's something that prevents you from booting the default hybridized iso
+2016-01-14 23:31:23	edr	Ok, I see.
+2016-01-14 23:31:46	edr	So for the record xbps-pkgdb -a does not fix the missing symlinks in bin
+2016-01-14 23:32:37	duncaen	hm then xbps-alternatives -l
+2016-01-14 23:32:38	maldridge	no, it doesn't; you need to actually install the alternatives system because those symlinks are managed by xbps-alternatives
+2016-01-14 23:32:54	duncaen	and then set all alternatives manually :s
+2016-01-14 23:33:31	edr	ok. I don't think I am going to try this. If the new iso gets this done the right way that's obviously the better way
+2016-01-14 23:34:04	◀	bheesham (~bheesham@162.222.146.57) has quit (Remote host closed the connection)
+2016-01-14 23:34:47	maldridge	it will certainly be faster
+2016-01-14 23:36:26	ℹ	Notice(xbps-builder): 30d2549/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21074
+2016-01-14 23:36:36	ℹ	Notice(xbps-builder): 30d2549/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21049
+2016-01-14 23:40:54	ℹ	Notice(xbps-builder): 30d2549/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7653
+2016-01-14 23:41:03	ℹ	Notice(xbps-builder): 30d2549/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7670
+2016-01-14 23:44:55	edr	the mklive stuff looks very promising. I will definitely play around with this
+2016-01-14 23:45:27	ℹ	Notice(xbps-builder): 30d2549/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20129
+2016-01-14 23:46:11	◀	spew (~ben@38.98.151.67) has quit (Quit: leaving)
+2016-01-14 23:46:37	ℹ	Notice(xbps-builder): 30d2549/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19952
+2016-01-14 23:48:35	edr	Ok so as expected the new iso solves the problem
+2016-01-14 23:49:26	maldridge	huzzah!
+2016-01-14 23:49:46	edr	:-)
+2016-01-14 23:50:09	edr	Hey thanks for your help...
+2016-01-14 23:50:13	edr	Good night to everyone
+2016-01-14 23:50:37	maldridge	np; 'later
+2016-01-14 23:50:47	◀	edr (~edr@p4FE8F664.dip0.t-ipconnect.de) has quit (Quit: leaving)
+2016-01-14 23:51:25	ℹ	Notice(xbps-builder): 30d2549/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8317
+2016-01-14 23:56:41	maldridge	between x86 and other platforms xbps can't find an include header.  Does the include path get changed for cross builds?
+2016-01-14 23:59:14	ℹ	Notice(xbps-builder): 544f267/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8318
+2016-01-14 23:59:17	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-14 23:59:17	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/544f2674ec60f0bdddffc01903f0b0ce2f5452bb
+2016-01-14 23:59:17	ℹ	Notice(void-pkgs): void-packages/master 544f267 Alessio Sergi: pep8: upate to 1.7.0
+2016-01-14 23:59:17	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-14 23:59:17	ℹ	Notice(xbps-builder): 544f267/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7671
+2016-01-14 23:59:20	ℹ	Notice(xbps-builder): 544f267/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7654
+2016-01-14 23:59:26	duncaen	maldridge: XBPS_CROSS_BASE?
+2016-01-14 23:59:32	ℹ	Notice(xbps-builder): 544f267/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20130
+2016-01-14 23:59:34	ℹ	Notice(xbps-builder): 544f267/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19953
+2016-01-14 23:59:34	ℹ	Notice(xbps-builder): 544f267/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21075
+2016-01-14 23:59:36	ℹ	Notice(xbps-builder): 544f267/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21050
+2016-01-15 00:00:45	◀	nous (~nous@ip-2a02-2149-813a-2600-0225-22ff-fe02-3ffe.ip6.forthnet.gr) has quit (Quit: void space(void);)
+2016-01-15 00:01:32	maldridge	hmm, I'll look into that
+2016-01-15 00:02:22	▶	void-pkgs (~void-pkgs@192.30.252.46) has joined #xbps
+2016-01-15 00:02:22	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/57a120b2b4b0c5b56696e78d80f05bc2c2161326
+2016-01-15 00:02:22	ℹ	Notice(void-pkgs): void-packages/master 57a120b Alessio Sergi: python-pyzmq: update to 15.2.0
+2016-01-15 00:02:22	◀	void-pkgs (~void-pkgs@192.30.252.46) has left #xbps
+2016-01-15 00:03:01	ℹ	Notice(xbps-builder): 57a120b/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20131
+2016-01-15 00:03:02	ℹ	Notice(xbps-builder): 57a120b/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19954
+2016-01-15 00:03:03	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-15 00:03:05	ℹ	Notice(xbps-builder): 57a120b/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21051
+2016-01-15 00:03:06	ℹ	Notice(xbps-builder): 57a120b/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21076
+2016-01-15 00:03:13	ℹ	Notice(xbps-builder): 57a120b/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8319
+2016-01-15 00:03:20	ℹ	Notice(xbps-builder): 57a120b/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7655
+2016-01-15 00:03:21	ℹ	Notice(xbps-builder): 57a120b/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7672
+2016-01-15 00:05:17	▶	void-pkgs (~void-pkgs@192.30.252.41) has joined #xbps
+2016-01-15 00:05:17	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/862ada37ce4e79ce328122fe0ae0b35bd0bec979
+2016-01-15 00:05:17	ℹ	Notice(void-pkgs): void-packages/master 862ada3 Alessio Sergi: python-jupyter_console: update to 4.1.0
+2016-01-15 00:05:17	◀	void-pkgs (~void-pkgs@192.30.252.41) has left #xbps
+2016-01-15 00:05:20	ℹ	Notice(xbps-builder): 862ada3/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20132
+2016-01-15 00:05:22	ℹ	Notice(xbps-builder): 862ada3/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8320
+2016-01-15 00:05:22	ℹ	Notice(xbps-builder): 862ada3/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19955
+2016-01-15 00:05:22	ℹ	Notice(xbps-builder): 862ada3/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21077
+2016-01-15 00:05:22	ℹ	Notice(xbps-builder): 862ada3/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21052
+2016-01-15 00:05:24	ℹ	Notice(xbps-builder): 862ada3/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7673
+2016-01-15 00:05:25	ℹ	Notice(xbps-builder): 862ada3/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7656
+2016-01-15 00:06:38	▶	void-pkgs (~void-pkgs@192.30.252.45) has joined #xbps
+2016-01-15 00:06:38	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/a0f2e6e7a4bf8b42790dc08d6ed5093932718511
+2016-01-15 00:06:38	ℹ	Notice(void-pkgs): void-packages/master a0f2e6e Alessio Sergi: python-ipython: update to 4.0.2
+2016-01-15 00:06:38	◀	void-pkgs (~void-pkgs@192.30.252.45) has left #xbps
+2016-01-15 00:06:44	ℹ	Notice(xbps-builder): a0f2e6e/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20133
+2016-01-15 00:06:44	ℹ	Notice(xbps-builder): a0f2e6e/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21078
+2016-01-15 00:06:45	ℹ	Notice(xbps-builder): a0f2e6e/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19956
+2016-01-15 00:06:45	ℹ	Notice(xbps-builder): a0f2e6e/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21053
+2016-01-15 00:06:47	ℹ	Notice(xbps-builder): a0f2e6e/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8321
+2016-01-15 00:06:48	ℹ	Notice(xbps-builder): a0f2e6e/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7657
+2016-01-15 00:06:48	ℹ	Notice(xbps-builder): a0f2e6e/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7674
+2016-01-15 00:10:23	▶	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has joined #xbps
+2016-01-15 00:22:16	◀	JayVii (~JayVii@unaffiliated/jayvii) has quit (Quit: My damn controlling terminal disappeared!)
+2016-01-15 00:38:19	uriah	time to update ffmpeg guys
+2016-01-15 00:38:21	uriah	:P
+2016-01-15 00:39:03	uriah	xtraeme, Gottox, dominikh, chris2, duncaen, etc. ^
+2016-01-15 00:39:19	uriah	maybe i should stop being lazy and version bump it myself
+2016-01-15 00:39:30	duncaen	cve?
+2016-01-15 00:39:42	uriah	zeroday
+2016-01-15 00:39:44	uriah	http://it.slashdot.org/story/16/01/14/2214244/zero-day-vulnerability-discovered-in-ffmpeg-lets-attackers-steal-files-remotely
+2016-01-15 00:40:46	uriah	if there is no current update, might be a good idea to patch it off of git... make an exception
+2016-01-15 00:41:10	uriah	or just disable the affected protocols/codecs for the timebeing
+2016-01-15 00:42:07	duncaen	--disable-network hmm
+2016-01-15 00:42:13	uriah	all of it?!
+2016-01-15 00:42:59	uriah	also... will that affect using it via chromium?
+2016-01-15 00:43:06	uriah	(probably not)
+2016-01-15 00:43:54	duncaen	deactivating concat and hsl seems to be ok
+2016-01-15 00:44:34	uriah	yeah
+2016-01-15 00:44:37	uriah	hopefully
+2016-01-15 00:44:49	duncaen	want to verify it from archs repo but its broken xd
+2016-01-15 00:44:55	duncaen	https://projects.archlinux.org/svntogit/packages.git/tree/trunk?h=packages/ffmpeg
+2016-01-15 00:45:09	uriah	:>
+2016-01-15 00:45:18	uriah	prolly slashdotted
+2016-01-15 00:49:20	uriah	sigh... time to test whether hot restart of gps module fixes problem and in how long
+2016-01-15 00:57:46	duncaen	disabling hls is somehow bad
+2016-01-15 01:01:02	duncaen	and those parameters from arch are wrong oO, need hls and concat are still enabled
+2016-01-15 01:05:19	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-15 01:05:19	ℹ	Notice(void-pkgs): [void-packages] Duncaen pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/6f3ec9885ec099103810e78d37c66d95fd27f2a6
+2016-01-15 01:05:19	ℹ	Notice(void-pkgs): void-packages/master 6f3ec98 Duncaen: ffmpeg: disable concat and hls CVE-2016-1897, CVE-2016-1898
+2016-01-15 01:05:19	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-15 01:05:32	duncaen	C
+2016-01-15 01:10:40	ℹ	irc: disconnected from server
+2016-01-15 21:11:42	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-15 21:11:42	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-15 21:11:42	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-15 21:11:42	ℹ	Channel #xbps: 103 nicks (0 ops, 0 voices, 103 normals)
+2016-01-15 21:11:43	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-15 21:11:54	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-15 21:24:56	jumblemuddle	It is indeed in the makefile... gnu-makefile is set as my build_style. :/
+2016-01-15 21:25:20	hbekel	jumblemuddle: usually one would use sed to edit the Makefile from the template prior to building
+2016-01-15 21:26:11	hbekel	jumblemuddle: see the lilo template for example
+2016-01-15 21:26:15	jumblemuddle	I did notice 'sed -i 's/^\(CFLAGS *+=\)/override \1/' Makefile' in there, but I can't make heads or tails of it.
+2016-01-15 21:26:21	jumblemuddle	Alright, will do. Thanks
+2016-01-15 21:27:12	Ypnose	or write a tiny patch in /patches if you are lazy
+2016-01-15 21:27:34	dominikh	or fix upstream
+2016-01-15 21:28:56	jumblemuddle	I don't think it's an upstream issue, as the flags are set in the makefile. Is that sed command I posted the issue? I have no experience with sed.
+2016-01-15 21:29:41	Ypnose	s|^I don't think|You should think|g'
+2016-01-15 21:30:20	jumblemuddle	Why should I think it is?
+2016-01-15 21:31:28	Ypnose	was a tiny joke
+2016-01-15 21:31:38	jumblemuddle	Oh, ok. :)
+2016-01-15 21:33:18	jumblemuddle	So, removing that sed command from pre_build() doesn't help. The makefile's CFLAGS are still used.
+2016-01-15 21:33:48	Ypnose	(just waiting for my smoked salmon to be ready, don't pay attention to my stupidity)
+2016-01-15 21:34:10	dominikh	Ypnose: it's difficult not to
+2016-01-15 21:34:33	Ypnose	what a sniper! :O
+2016-01-15 21:34:45	Ypnose	2016 is the no-troll year
+2016-01-15 21:34:46	dominikh	jumblemuddle: link to the thing you're trying to package?
+2016-01-15 21:35:25	jumblemuddle	https://github.com/krypt-n/bar frok of the lemonbar that is already in repo.
+2016-01-15 21:35:27	jumblemuddle	fork*
+2016-01-15 21:36:07	dominikh	and you're trying to build the v1.0 release from march 2014? or the master branch?
+2016-01-15 21:36:21	jumblemuddle	v1.0
+2016-01-15 21:36:32	Ypnose	oh dang, I edited that Makefile one day
+2016-01-15 21:36:51	dominikh	isn't v1.0 still the pre-fork state
+2016-01-15 21:37:30	dominikh	yep.
+2016-01-15 21:37:34	dominikh	v1.0 is the original lemonbar
+2016-01-15 21:37:39	jumblemuddle	Uh, that's possible. How would I go about using the master branch?
+2016-01-15 21:37:44	jumblemuddle	master forked branch*
+2016-01-15 21:38:12	dominikh	grep srcpkgs/ for _commit and look at the templates that pull specific revisions
+2016-01-15 21:38:24	jumblemuddle	Alright, will do.
+2016-01-15 21:38:31	dominikh	also, just to be clear upfront: this is something you're just packaging for yourself, right? not intended to be contributed to void-packages
+2016-01-15 21:38:45	jumblemuddle	Yeah, I'm just wanting to use it myself.
+2016-01-15 21:38:56	jumblemuddle	I'm not nearly experienced enough to contribute. :P
+2016-01-15 21:39:10	dominikh	(I'm asking/saying because we wouldn't accept that package for various reasons)
+2016-01-15 21:39:28	dominikh	I do not understand how you can get build failures though when you're trying to build the exact same thing that the original template already builds
+2016-01-15 21:40:12	jumblemuddle	Well, the fork adds xft support, and apparently there's a cflag that needs to be set? -lxcb, I'm not really sure.
+2016-01-15 21:40:22	dominikh	yes, but you weren't trying to build the fork.
+2016-01-15 21:40:24	dominikh	v1.0 isn't the fork
+2016-01-15 21:40:38	jumblemuddle	Oh, yeah... I'm stumped then.
+2016-01-15 21:40:56	dominikh	well okay, we build v1.1, not v1.0 – who knows what changed.
+2016-01-15 21:44:12	dominikh	https://github.com/LemonBoy/bar/issues/9#issuecomment-151045636 lol
+2016-01-15 21:44:46	dominikh	I'm tempted to post a +1 on it because he forgot to lock the issue :>
+2016-01-15 21:52:25	Ypnose	bb all
+2016-01-15 21:52:33	◀	Ypnose (~Ypnose@mirbsd/mksh-lover/Ypnose) has quit (Quit: See you in another life!)
+2016-01-15 21:57:33	◀	ncopa (~test@103.63.200.37.customer.cdi.no) has quit (Quit: Leaving)
+2016-01-15 22:06:46	gattuso	chris2: +1 for multiarch gdb
+2016-01-15 22:06:59	chris2	gattuso: separate pkg or option?
+2016-01-15 22:07:09	chris2	and which archs would you like?
+2016-01-15 22:08:44	gattuso	subpkg so is synced with main gdb. I think having a remote gdb for all the main arch we compile at least, so we could remote debug our builds.
+2016-01-15 22:09:03	gattuso	wow, much english, so awesome
+2016-01-15 22:09:05	gattuso	no sleep
+2016-01-15 22:09:08	chris2	subpkg requires a rebuild then
+2016-01-15 22:09:27	chris2	yeah
+2016-01-15 22:09:40	chris2	i'd do all arm and all mips i guess
+2016-01-15 22:10:51	chris2	and same for binutils probably
+2016-01-15 22:12:17	chris2	perhaps avr
+2016-01-15 22:13:04	chris2	on debian, single arch gdb is 7mb, multi arch is 12mb
+2016-01-15 22:22:42	◀	hbekel (~henning@p54B67B49.dip0.t-ipconnect.de) has quit (Quit: leaving)
+2016-01-15 22:27:16	◀	tuy360 (~tuy360@cpe-184-57-28-15.columbus.res.rr.com) has quit (Remote host closed the connection)
+2016-01-15 22:34:02	◀	nous (~nous@ip-2a02-2149-813a-2600-0225-22ff-fe02-3ffe.ip6.forthnet.gr) has quit (Quit: void space(void);)
+2016-01-15 22:43:54	◀	srlang (srlang@nat/ibm/x-jtizueppkkysxrun) has quit (Ping timeout: 260 seconds)
+2016-01-15 22:57:37	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-15 22:57:37	ℹ	Notice(void-pkgs): [void-packages] chneukirchen opened issue #3380: Proposal: multiarch binutils and gdb https://github.com/voidlinux/void-packages/issues/3380
+2016-01-15 22:57:37	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-15 23:07:58	◀	jumblemuddle (~garrett@cpe-72-128-47-106.kc.res.rr.com) has quit (Quit: Lost terminal)
+2016-01-15 23:35:28	▶	Pessimist (Pessimist@gateway/shell/bnc4free/x-nlgmgohswopkffnb) has joined #xbps
+2016-01-15 23:39:47	◀	spew (~ben@38.98.151.67) has quit (Quit: leaving)
+2016-01-15 23:41:31	▶	void-pkgs (~void-pkgs@192.30.252.42) has joined #xbps
+2016-01-15 23:41:31	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/40841127ffb97d735245a3abaf9a6155e936e583
+2016-01-15 23:41:31	ℹ	Notice(void-pkgs): void-packages/master 4084112 Alessio Sergi: python-traitlets: update to 4.1.0
+2016-01-15 23:41:31	◀	void-pkgs (~void-pkgs@192.30.252.42) has left #xbps
+2016-01-15 23:41:37	ℹ	Notice(xbps-builder): 4084112/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8346
+2016-01-15 23:41:45	ℹ	Notice(xbps-builder): 4084112/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7699
+2016-01-15 23:41:48	ℹ	Notice(xbps-builder): 4084112/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7682
+2016-01-15 23:42:44	ℹ	Notice(xbps-builder): 4084112/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20161
+2016-01-15 23:42:45	ℹ	Notice(xbps-builder): 4084112/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19981
+2016-01-15 23:43:07	ℹ	Notice(xbps-builder): 4084112/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21103
+2016-01-15 23:43:08	ℹ	Notice(xbps-builder): 4084112/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21078
+2016-01-15 23:45:04	▶	void-pkgs (~void-pkgs@192.30.252.40) has joined #xbps
+2016-01-15 23:45:05	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/6f16f89423b01b6fed3dcf00ad3b9c25de1ee610
+2016-01-15 23:45:05	ℹ	Notice(void-pkgs): void-packages/master 6f16f89 Alessio Sergi: python-astroid: update to 1.4.4
+2016-01-15 23:45:05	◀	void-pkgs (~void-pkgs@192.30.252.40) has left #xbps
+2016-01-15 23:45:12	ℹ	Notice(xbps-builder): 6f16f89/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8347
+2016-01-15 23:45:13	ℹ	Notice(xbps-builder): 6f16f89/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20162
+2016-01-15 23:45:14	ℹ	Notice(xbps-builder): 6f16f89/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19982
+2016-01-15 23:45:20	ℹ	Notice(xbps-builder): 6f16f89/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7700
+2016-01-15 23:45:20	ℹ	Notice(xbps-builder): 6f16f89/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21079
+2016-01-15 23:45:21	ℹ	Notice(xbps-builder): 6f16f89/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7683
+2016-01-15 23:45:24	ℹ	Notice(xbps-builder): 6f16f89/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21104
+2016-01-15 23:46:07	▶	void-pkgs (~void-pkgs@192.30.252.45) has joined #xbps
+2016-01-15 23:46:07	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/cec218cae291016f6ff398c02b37f8e967c07dea
+2016-01-15 23:46:07	ℹ	Notice(void-pkgs): void-packages/master cec218c Alessio Sergi: pylint: update to 1.5.4
+2016-01-15 23:46:07	◀	void-pkgs (~void-pkgs@192.30.252.45) has left #xbps
+2016-01-15 23:46:10	ℹ	Notice(xbps-builder): cec218c/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20163
+2016-01-15 23:46:16	ℹ	Notice(xbps-builder): cec218c/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8348
+2016-01-15 23:46:17	ℹ	Notice(xbps-builder): cec218c/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21105
+2016-01-15 23:46:22	ℹ	Notice(xbps-builder): cec218c/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7701
+2016-01-15 23:46:24	ℹ	Notice(xbps-builder): cec218c/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7684
+2016-01-15 23:47:07	▶	void-pkgs (~void-pkgs@192.30.252.34) has joined #xbps
+2016-01-15 23:47:07	ℹ	Notice(void-pkgs): [void-packages] asergi pushed 1 new commit to master: https://github.com/voidlinux/void-packages/commit/b49f37ef61c9ead70df30ab89c2e9372dbb1ddbb
+2016-01-15 23:47:07	ℹ	Notice(void-pkgs): void-packages/master b49f37e Alessio Sergi: python-psutil: update to 3.4.1
+2016-01-15 23:47:07	◀	void-pkgs (~void-pkgs@192.30.252.34) has left #xbps
+2016-01-15 23:47:10	▶	psyq_ (~psyq@178.62.210.183) has joined #xbps
+2016-01-15 23:47:13	◀	Pessimist (Pessimist@gateway/shell/bnc4free/x-nlgmgohswopkffnb) has quit (Changing host)
+2016-01-15 23:47:13	▶	Pessimist (Pessimist@unaffiliated/pessimist) has joined #xbps
+2016-01-15 23:47:13	◀	Pessimist (Pessimist@unaffiliated/pessimist) has quit (Changing host)
+2016-01-15 23:47:13	▶	Pessimist (Pessimist@gateway/shell/bnc4free/x-nlgmgohswopkffnb) has joined #xbps
+2016-01-15 23:47:13	ℹ	Notice(xbps-builder): b49f37e/x86_64_builder: OK: http://build.voidlinux.eu/builders/x86_64_builder/builds/20164
+2016-01-15 23:47:15	ℹ	Notice(xbps-builder): b49f37e/x86_64-musl_builder: OK: http://build.voidlinux.eu/builders/x86_64-musl_builder/builds/8349
+2016-01-15 23:47:22	ℹ	Notice(xbps-builder): b49f37e/armv7l_builder: OK: http://build.voidlinux.eu/builders/armv7l_builder/builds/21106
+2016-01-15 23:47:26	ℹ	Notice(xbps-builder): b49f37e/armv6l-musl_builder: OK: http://build.voidlinux.eu/builders/armv6l-musl_builder/builds/7702
+2016-01-15 23:47:27	ℹ	Notice(xbps-builder): b49f37e/armv7l-musl_builder: OK: http://build.voidlinux.eu/builders/armv7l-musl_builder/builds/7685
+2016-01-15 23:48:43	◀	Pessimist (Pessimist@gateway/shell/bnc4free/x-nlgmgohswopkffnb) has left #xbps ("Leaving")
+2016-01-16 00:03:39	▶	Turingtoast (~Tino@p548C588E.dip0.t-ipconnect.de) has joined #xbps
+2016-01-16 00:05:27	◀	oblo (~oblo@host154-27-dynamic.51-79-r.retail.telecomitalia.it) has quit (Quit: Sto andando via)
+2016-01-16 00:05:54	ℹ	Notice(xbps-builder): cec218c/armv6l_builder: Fail: http://build.voidlinux.eu/builders/armv6l_builder/builds/21080  blame: Alessio Sergi <al3hex@gmail.com>
+2016-01-16 00:05:55	ℹ	Notice(xbps-builder): cec218c/i686_builder: Fail: http://build.voidlinux.eu/builders/i686_builder/builds/19983  blame: Alessio Sergi <al3hex@gmail.com>
+2016-01-16 00:06:36	ℹ	Notice(xbps-builder): b49f37e/i686_builder: OK: http://build.voidlinux.eu/builders/i686_builder/builds/19984
+2016-01-16 00:06:45	ℹ	Notice(xbps-builder): b49f37e/armv6l_builder: OK: http://build.voidlinux.eu/builders/armv6l_builder/builds/21081
+2016-01-16 00:16:22	◀	Turingtoast (~Tino@p548C588E.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 00:31:01	▶	xeirrr (~xeirrr@unaffiliated/xeirrr) has joined #xbps
+2016-01-16 01:00:40	▶	uriahheep (~uriah@unaffiliated/uriahheep) has joined #xbps
+2016-01-16 01:24:11	◀	[[[archtard]]] (~bonehead@46.166.190.148) has left #xbps
+2016-01-16 01:24:11	ℹ	irc: disconnected from server
+2016-01-16 14:28:55	▶	psyq (~Psyq@unaffiliated/psyq) has joined #xbps
+2016-01-16 14:28:55	ℹ	Topic for #xbps is "http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || daily pkg update-check: http://repo.voidlinux.eu/void-updates/void-updates.txt"
+2016-01-16 14:28:55	ℹ	Topic set by xtraeme on Tue, 10 Nov 2015 19:32:09
+2016-01-16 14:28:55	ℹ	Channel #xbps: 97 nicks (0 ops, 0 voices, 97 normals)
+2016-01-16 14:28:56	ℹ	URL for #xbps: http://www.voidlinux.eu
+2016-01-16 14:29:09	ℹ	Channel created on Sat, 18 Jun 2011 13:32:20
+2016-01-16 14:35:41	◀	Turingtoast (~Tino@p548C57AF.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 14:36:45	ℹ	Notice(xbps-builder): 6e6e98b/x86_64_builder: Fail: http://build.voidlinux.eu/builders/x86_64_builder/builds/20173  blame: Andrea Brancaleoni <miwaxe@gmail.com>
+2016-01-16 14:46:18	gattuso	wtf is going on?
+2016-01-16 15:17:23	ℹ	irc: disconnected from server

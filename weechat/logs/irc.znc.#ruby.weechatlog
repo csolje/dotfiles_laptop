@@ -1,0 +1,538 @@
+2016-01-16 15:16:47	▶	psyq_ (~psyq@178.62.210.183) has joined #ruby
+2016-01-16 15:16:47	ℹ	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.8; 2.0.0-p648: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || log @ http://irclog.whitequark.org/ruby/"
+2016-01-16 15:16:47	ℹ	Topic set by havenwood (~Havenn@unaffiliated/havenn) on Tue, 29 Dec 2015 03:57:59
+2016-01-16 15:16:47	ℹ	Channel #ruby: 952 nicks (1 op, 0 voices, 951 normals)
+2016-01-16 15:16:47	***	Buffer Playback...
+2016-01-16 15:16:47	apeiros	[11:48:07] the factoids are even live
+2016-01-16 15:16:47	norc	[11:48:09] What is the deal with ruby[bot] anyway?
+2016-01-16 15:16:47	apeiros	[11:48:21] it's the new implementation of ruboto
+2016-01-16 15:16:47	apeiros	[11:49:05] cinch had issues with getting the account of all registered users, which is a requirement for some of the things I want to do.
+2016-01-16 15:16:47	apeiros	[11:49:14] s/had/has/
+2016-01-16 15:16:47	norc	[11:49:36] Is the implementation that bot made available on some git repo?
+2016-01-16 15:16:47	apeiros	[11:49:49] f.ex. a couple of commands are now no longer available to people who aren't registered
+2016-01-16 15:16:47	norc	[11:50:11] Was ruboto abused?
+2016-01-16 15:16:47	apeiros	[11:50:18] sadly not yet, no. I took some shortcuts when reviving butler. but I'll make the framework available again.
+2016-01-16 15:16:47	apeiros	[11:50:24] yes
+2016-01-16 15:16:47	norc	[13:09:27] apeiros: I think it makes sense to include lex/sexp too.
+2016-01-16 15:16:47	norc	[13:09:46] Not sure if that is pushing it though.
+2016-01-16 15:16:47	apeiros	[13:11:12] norc: can you make the required amendments? https://gist.github.com/apeiros/8faff2aded4e9fa1d4d0
+2016-01-16 15:16:47	apeiros	[13:11:27] I can add them to the testbot and you can test immediately in #ruboto_test
+2016-01-16 15:16:47	apeiros	[13:11:51] I think you'd have to add another :format: entry in the .yaml
+2016-01-16 15:16:47	apeiros	[13:12:03] and add the code there
+2016-01-16 15:16:47	norc	[13:12:07] Let me take a look.
+2016-01-16 15:16:47	dbugger	[13:25:43] Hello everyone
+2016-01-16 15:16:47	norc	[13:25:56] Hello dbugger
+2016-01-16 15:16:47	apeiros	[13:28:28] d, the bugger?
+2016-01-16 15:16:47	dbugger	[13:47:53] I was wondering if someone could give me a hand. I was following this dead easy tutorial (http://guides.rubygems.org/make-your-own-gem/#introduction) to make my own gem, but when I do "gem push ..." I get this error: "ERROR:  While executing gem ... (Psych::SyntaxError)    (<unknown>): mapping values are not allowed in this context at line 9 column 26"
+2016-01-16 15:16:47	dbugger	[13:48:01] Can someone tell me what Im doing wrong?
+2016-01-16 15:16:47	shevy	[13:48:29] dbugger sounds like an error in some yaml file
+2016-01-16 15:16:47	dbugger	[13:50:41] The only YML file I have is the gemspec. This is it: http://laravel.io/bin/RExke
+2016-01-16 15:16:47	shevy	[13:52:11] that is ruby code
+2016-01-16 15:16:47	dbugger	[13:53:36] mmm, true
+2016-01-16 15:16:47	dbugger	[13:53:40] I have no YML file
+2016-01-16 15:16:47	shevy	[13:54:03] but something invokes psych
+2016-01-16 15:16:47	dbugger	[13:55:14] The code is that one on the page...
+2016-01-16 15:16:47	dbugger	[13:55:18] there is a simple "puts"
+2016-01-16 15:16:47	shevy	[13:56:08] no I do not believe you
+2016-01-16 15:16:47	norc	[14:01:30] dbugger: Take your actual code and the full stacktrace from the error message, and paste it to gisthub please.
+2016-01-16 15:16:47	dbugger	[14:02:45] norc, That is the only output I got. how do I get a full stacktrace?
+2016-01-16 15:16:47	norc	[14:03:13] dbugger: Oh wait a second.
+2016-01-16 15:16:47	dbugger	[14:03:26] That, and the actual code (http://laravel.io/bin/Yyx2V) is the only code I got
+2016-01-16 15:16:47	norc	[14:03:37] dbugger: My first instinct is that the https://rubygems.org/api/v1/api_key.yaml that you tried to get is somehow borked.
+2016-01-16 15:16:47	norc	[14:04:08] So look at your credentials file
+2016-01-16 15:16:47	dbugger	[14:04:37] you mean that yaml file?
+2016-01-16 15:16:47	norc	[14:04:43] Yes.
+2016-01-16 15:16:47	dbugger	[14:05:25] Oh!
+2016-01-16 15:16:47	dbugger	[14:05:32] Its a "not found" page o.O
+2016-01-16 15:16:47	norc	[14:05:35] :-)
+2016-01-16 15:16:47	dbugger	[14:06:07] So "https://rubygems.org/api/v1/api_key.yml" is not the right URL? It is the one in that tutorial...
+2016-01-16 15:16:47	norc	[14:06:29] I cannot help you any further, perhaps someone else here knows more. :)
+2016-01-16 15:16:47	dbugger	[14:07:01] aha!
+2016-01-16 15:16:47	dbugger	[14:07:07] it is not "https://rubygems.org/api/v1/api_key.yml", it is "https://rubygems.org/api/v1/api_key.yaml"
+2016-01-16 15:16:48	dbugger	[14:07:20] silly error. probably a typewriting error in the article
+2016-01-16 15:16:48	norc	[14:07:33] Glad you figured it out. :)
+2016-01-16 15:16:48	dbugger	[14:08:37] It was pure luck :)
+2016-01-16 15:16:48	norc	[14:09:05] dbugger: The tutorial states https://rubygems.org/api/v1/api_key.yaml though..
+2016-01-16 15:16:48	dbugger	[14:09:52] In that case it was ME who made the error :)
+2016-01-16 15:16:48	norc	[14:10:22] dbugger: Im willing to bet that there are RSpec tests verifying that the code snippets work even.
+2016-01-16 15:16:48	norc	[14:10:39] (The ones on the page)
+2016-01-16 15:16:48	dbugger	[14:10:43] Really? Wow that is something else :)
+2016-01-16 15:16:48	dbugger	[14:11:05] I have seen so many more .yml files, than .yaml files, that I get confused with them often
+2016-01-16 15:16:48	norc	[14:11:11] I would certainly try spec such things on a large popular website
+2016-01-16 15:16:48	norc	[14:11:19] To ensure my users don't get non-functional snippets.
+2016-01-16 15:16:48	dbugger	[14:12:32] I didnt even though such thing existed. i thought it was plain text inside a <code> and that what it :)
+2016-01-16 15:16:48	norc	[14:13:03] dbugger: Read carefully, this is just an assumption.
+2016-01-16 15:16:48	norc	[14:13:12] But it is certainly possible to do it.
+2016-01-16 15:16:48	norc	[14:13:28] dbugger: If you dont know about automated tests, it probably would be a good idea to look into them.
+2016-01-16 15:16:48	norc	[14:13:32] Especially when you start writing gems.
+2016-01-16 15:16:48	norc	[14:14:12] Minitest / RSpec (whichever you use) improve code reliability and usually even speed up development.
+2016-01-16 15:16:48	dbugger	[14:18:32] norc, I know about them, but I didnt thought about doing them on "posted content" on the website. Just on the website itself :)
+2016-01-16 15:16:48	norc	[14:19:27] dbugger: Most websites are not static, they are usually built on MVC stacks (such as Ruby on Rails). So content like snippets can easily be wrapped and tested.
+2016-01-16 15:16:48	norc	[14:24:35] dbugger: But sure, even on "posted" content on a running website this could be doable.
+2016-01-16 15:16:48	norc	[14:24:55] (I was thinking rather along the way of such guides being hard wired into the code)
+2016-01-16 15:16:48	dbugger	[14:26:36] Of course, everything is doable :)
+2016-01-16 15:16:48	dbugger	[14:26:43] I just never thought anyone out there was doing it :)
+2016-01-16 15:16:48	norc	[14:28:37] dbugger, when I go around to discover new libraries, I will not use them if even the basic install instructions contain errors.
+2016-01-16 15:16:48	norc	[14:28:57] But that is just me,
+2016-01-16 15:16:48	shevy	[14:32:03] norc sounds reasonable
+2016-01-16 15:16:48	lucasb	[14:34:06] irclog.whitequark.org is down?
+2016-01-16 15:16:48	apeiros	[14:34:23] seems like
+2016-01-16 15:16:48	apeiros	[14:34:40] more reason to get up to speed with ruby-community.com/irc/log
+2016-01-16 15:16:48	dbugger	[14:35:42] What is that?
+2016-01-16 15:16:48	apeiros	[14:36:05] ruby-community.com is this channel's official companion website.
+2016-01-16 15:16:48	apeiros	[14:36:44] development of it is public and coordinated in #ruby-community
+2016-01-16 15:16:48	bvbrandon	[15:05:58] how does one replace text in backets with a valie?
+2016-01-16 15:16:48	Papierkorb	[15:06:32] bvbrandon: What do you mean?
+2016-01-16 15:16:48	bvbrandon	[15:08:41] lol sorry for the typos. I have this string. “I {want to} go to the park” and I have a hash with a value key “want to” => “never did” and I am trying to replace the want to in the string, with the never did from the hash
+2016-01-16 15:16:48	lucasb	[15:09:59] str.gsub(/{(.*)}/, a_hash)
+2016-01-16 15:16:48	lucasb	[15:10:36] maybe. I didn't test.
+2016-01-16 15:16:48	lucasb	[15:11:47] use a non-greedy quantifier: /{(.+?)}/
+2016-01-16 15:16:48	Papierkorb	[15:12:45] >> the_hash = { 'foo' => 'bar' }; "This {foo} works".gsub(/\{(.*)\}/){ the_hash[$1] }
+2016-01-16 15:16:48	@ruby[bot]	[15:12:46] Papierkorb: # => "This bar works" (https://eval.in/503034)
+2016-01-16 15:16:48	Papierkorb	[15:12:49] bvbrandon: ^
+2016-01-16 15:16:48	Papierkorb	[15:13:01] lucasb: {} in regex have special meaning, you need to escape them
+2016-01-16 15:16:48	Papierkorb	[15:13:28] >> "This {foo} is much better".gsub(/\{(.*)\}/, { '{foo}' => 'bar' })
+2016-01-16 15:16:48	Papierkorb	[15:13:30] bvbrandon:
+2016-01-16 15:16:48	@ruby[bot]	[15:13:30] Papierkorb: # => "This bar is much better" (https://eval.in/503035)
+2016-01-16 15:16:48	bvbrandon	[15:13:44] thank you!
+2016-01-16 15:16:48	nickjj_	[15:13:46] bvbrandon, it's worth mentioning that if you plan to do this a lot it might be worth looking into a templating language
+2016-01-16 15:16:48	Papierkorb	[15:13:57] Oh, sorry, now you'd have to add the {} to the hash ..
+2016-01-16 15:16:48	norc	[15:14:49] bvbrandon, ruby comes with erb out of the box in case you are interested in nickjj_'s suggestion.
+2016-01-16 15:16:48	lucasb	[15:14:57] Papierkorb: no need to escape {} if they are not in a quantifier position
+2016-01-16 15:16:48	lucasb	[15:15:31] >> 'a{ }b'.sub(/{.*}/, 'x')
+2016-01-16 15:16:48	norc	[15:15:33] bvbrandon, In all likelihood it will solve your problem more easily.
+2016-01-16 15:16:48	@ruby[bot]	[15:15:33] lucasb: # => "axb" (https://eval.in/503036)
+2016-01-16 15:16:48	jhass	[15:16:33] or if there's influence on the source format, String#%/Kernel#sprintf can do it too
+2016-01-16 15:16:48	***	Playback Complete.
+2016-01-16 15:17:02	ℹ	Channel created on Sun, 26 Nov 2006 07:42:45
+2016-01-16 15:17:03	▶	sankaber (~textual@216-164-48-140.c3-0.slvr-ubr1.lnh-slvr.md.cable.rcn.com) has joined #ruby
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:47	▶	psyq_ (~psyq@178.62.210.183) has joined #ruby
+2016-01-16 15:17:47	ℹ	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.8; 2.0.0-p648: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || log @ http://irclog.whitequark.org/ruby/"
+2016-01-16 15:17:47	ℹ	Topic set by havenwood (~Havenn@unaffiliated/havenn) on Tue, 29 Dec 2015 03:57:59
+2016-01-16 15:17:47	ℹ	Channel #ruby: 951 nicks (1 op, 0 voices, 950 normals)
+2016-01-16 15:18:02	ℹ	Channel created on Sun, 26 Nov 2006 07:42:45
+2016-01-16 15:18:11	◀	jgpawletko (~jgpawletk@cpe-45-47-104-106.twcny.res.rr.com) has quit (Quit: jgpawletko)
+2016-01-16 15:18:12	▶	edwinvdgraaf (~edwinvdgr@095-096-024-193.static.chello.nl) has joined #ruby
+2016-01-16 15:18:23	◀	cornerman (~cornerman@xdsl-78-34-104-216.netcologne.de) has quit (Ping timeout: 276 seconds)
+2016-01-16 15:19:11	▶	cornerman (~cornerman@xdsl-78-34-104-216.netcologne.de) has joined #ruby
+2016-01-16 15:19:38	lucasb	>> 'My lucky number is %d.' % (40..45).to_a.sample
+2016-01-16 15:19:40	@ruby[bot]	lucasb: # => "My lucky number is 42." (https://eval.in/503037)
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:20:03	◀	skade (~skade@ip-90-186-0-19.web.vodafone.de) has quit (Quit: Computer has gone to sleep.)
+2016-01-16 15:21:58	▶	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #ruby
+2016-01-16 15:22:36	▶	jottr (~jottr@unaffiliated/jottr) has joined #ruby
+2016-01-16 15:23:44	◀	cornerman (~cornerman@xdsl-78-34-104-216.netcologne.de) has quit (Client Quit)
+2016-01-16 15:23:46	▶	ympeg (~ympeg@aug13.neoplus.adsl.tpnet.pl) has joined #ruby
+2016-01-16 15:24:10	▶	cornerman (~cornerman@xdsl-78-34-104-216.netcologne.de) has joined #ruby
+2016-01-16 15:24:21	apeiros	lucasb: is there any position besides "right at the start of the regexp" where {} isn't in quantifier position?
+2016-01-16 15:24:45	▶	arup_r (~arup_r@116.202.132.109) has joined #ruby
+2016-01-16 15:26:38	lucasb	apeiros, Papierkorb: yes you are right, {} is special and I should always escape it to avoid problems.
+2016-01-16 15:26:54	apeiros	hm?
+2016-01-16 15:27:01	apeiros	that was a genuine question
+2016-01-16 15:27:04	lucasb	apeiros: but did you saw my eval? it was 'a{ }b' and it didn't matter
+2016-01-16 15:27:14	apeiros	yes, I've seen it
+2016-01-16 15:27:36	apeiros	ah, I mean any position in the regex, not the string
+2016-01-16 15:27:50	apeiros	that it doesn't matter in the string is obvious :)
+2016-01-16 15:28:07	lucasb	ah, sorry, my misundertand. let me test something then :)
+2016-01-16 15:29:04	bvbrandon	papierkorb: that didn’t solve all of my test cases :/
+2016-01-16 15:29:05	bvbrandon	https://eval.in/503041
+2016-01-16 15:29:12	bvbrandon	it’s very close!
+2016-01-16 15:29:21	apeiros	I just can't come up with any other situation than at the start of a regex where {} wouldn't be treated as a quantifier. iirc even after a quantifier it's one. i.e. iirc (expr){a,b}{c,d} is treated as ((expr){a,b}){c,d}
+2016-01-16 15:29:34	apeiros	well, (?:) instead of ()
+2016-01-16 15:29:43	apeiros	maybe I'm wrong. I didn't try :D
+2016-01-16 15:30:28	apeiros	yepp, works that way
+2016-01-16 15:30:50	apeiros	>> ["aaaaaaaaaa"[/a{1,2}{2,4}/], "aaa"[/a{1,2}{2,4}/]]
+2016-01-16 15:30:51	@ruby[bot]	apeiros: # => ["aaaaaaaa", "aaa"] (https://eval.in/503042)
+2016-01-16 15:31:11	norc	apeiros, okay just started this. What is your preferred method of escaping the input string? Im thinking of simply using %%q`%s` in the format string, since Im not sure whether there is a trivial way to properly escape any input string.
+2016-01-16 15:31:25	ponga	every website has to turn into "black background, white font"
+2016-01-16 15:31:34	▶	hannelita (~hannelita@2804:14c:a8:27a5:1cc9:57e4:5926:16ce) has joined #ruby
+2016-01-16 15:31:48	▶	Limix (~Limix@cpe-172-249-174-95.socal.res.rr.com) has joined #ruby
+2016-01-16 15:32:06	apeiros	?ot ponga
+2016-01-16 15:32:06	@ruby[bot]	ponga: this seems to be off-topic. Please move your discussion to #ruby-offtopic, to keep this channel free for Ruby related topics. Thanks!
+2016-01-16 15:32:20	jhass	apeiros: inside a character class?
+2016-01-16 15:32:22	ponga	oh sorry this irccloud thing
+2016-01-16 15:32:26	◀	ht__ (~huub@31.223.170.91) has quit (Quit: Konversation terminated!)
+2016-01-16 15:32:37	apeiros	jhass: ah, didn't consider that since you don't have to escape anything there
+2016-01-16 15:32:45	apeiros	well, except ]
+2016-01-16 15:32:47	▶	dlitvak (~dlitvak@190.19.25.204) has joined #ruby
+2016-01-16 15:32:49	apeiros	and potentially :
+2016-01-16 15:33:03	apeiros	or wait, no, posix use [[?
+2016-01-16 15:33:09	apeiros	so except [ and ] then :)
+2016-01-16 15:34:25	apeiros	norc: purely stylistic wise?
+2016-01-16 15:34:39	▶	dlitvak_ (~dlitvak@190.19.25.204) has joined #ruby
+2016-01-16 15:34:41	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 15:34:56	apeiros	I do strings in this order: "" > %{} > %q{} > <<-HERE
+2016-01-16 15:35:12	apeiros	btw. norc - join #ruboto_test? better to talk there :)
+2016-01-16 15:35:21	▶	PedramT (~pedramt@5.114.56.80) has joined #ruby
+2016-01-16 15:35:33	lucasb	apeiros: regexs are tricky, I should study them more. I didn't know {1,2} could nest like that. thanks for the example :)
+2016-01-16 15:35:36	▶	usershell (~usershell@41.136.106.244) has joined #ruby
+2016-01-16 15:35:57	apeiros	lucasb: I only know because of IRC either :D
+2016-01-16 15:36:11	◀	hannelita (~hannelita@2804:14c:a8:27a5:1cc9:57e4:5926:16ce) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:36:35	◀	allcentury (~anthonyro@162.242.26.254) has quit (Ping timeout: 276 seconds)
+2016-01-16 15:37:56	◀	PedramT (~pedramt@5.114.56.80) has quit (Read error: Connection reset by peer)
+2016-01-16 15:38:27	◀	dlitvak (~dlitvak@190.19.25.204) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:40:26	◀	ht__ (~huub@31.223.170.91) has quit (Quit: Konversation terminated!)
+2016-01-16 15:40:41	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 15:41:16	▶	Ishido (~Ishido@37.242.153.77.rev.sfr.net) has joined #ruby
+2016-01-16 15:41:53	▶	PedramT (~pedramt@5.114.56.80) has joined #ruby
+2016-01-16 15:41:58	◀	PedramT (~pedramt@5.114.56.80) has quit (Remote host closed the connection)
+2016-01-16 15:42:33	▶	dfinninger (~dfinninge@2600:100c:b003:d451:a066:3d11:55f5:f1e2) has joined #ruby
+2016-01-16 15:42:34	▶	agit0 (~textual@37.157.138.43) has joined #ruby
+2016-01-16 15:42:35	▶	PedramT (~pedramt@5.114.56.80) has joined #ruby
+2016-01-16 15:43:34	▶	BSaboia (~BSaboia@80.66.232.74) has joined #ruby
+2016-01-16 15:44:24	◀	BaroMeter (~BaroMeter@92.254.172.87) has quit (Remote host closed the connection)
+2016-01-16 15:45:04	▶	houhoulis (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has joined #ruby
+2016-01-16 15:45:56	pontiki	is %{} equivalent to %q or %Q ?
+2016-01-16 15:46:42	pontiki	%Q
+2016-01-16 15:46:52	norc	pontiki, %{} is the general form, and the Q modified is applied by default.
+2016-01-16 15:46:55	norc	*modifier
+2016-01-16 15:47:34	al2o3-cr	one allows interpolation
+2016-01-16 15:47:44	pontiki	would there be a situation where the non-interpolating for would be applied instead?
+2016-01-16 15:47:56	pontiki	form*
+2016-01-16 15:48:33	norc	pontiki, it is the same as '' vs ""
+2016-01-16 15:48:41	norc	pontiki, use "" when you intend for interpolation and '' if you do not.
+2016-01-16 15:48:42	pontiki	no, it's not, norc
+2016-01-16 15:48:49	al2o3-cr	same with %w %W
+2016-01-16 15:48:51	pontiki	i *know* how to interpolate
+2016-01-16 15:48:57	◀	usershell (~usershell@41.136.106.244) has quit (Remote host closed the connection)
+2016-01-16 15:49:03	norc	pontiki, you misunderstood
+2016-01-16 15:49:12	pontiki	i'm asking, because you said "default", if %{} can become %q instead of %Q
+2016-01-16 15:49:27	norc	pontiki, yes, by using %q{}
+2016-01-16 15:49:33	pontiki	then it's not %{}
+2016-01-16 15:49:41	norc	pontiki, %{} is just short for %Q{}
+2016-01-16 15:49:57	pontiki	see, that's what i was originally asking. then you said "by default"
+2016-01-16 15:49:57	▶	Melpaws1 (~Adium@162.216.46.161) has joined #ruby
+2016-01-16 15:50:07	pontiki	which implies %{} can assume a different form
+2016-01-16 15:50:16	norc	pontiki, ah. Okay that was badly phrased then sorry.
+2016-01-16 15:50:35	◀	Melpaws (~Adium@2605:6000:62c9:3600:3402:c793:1b6f:b54a) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:50:51	oo7cat	i want learn ruby but i don’t know ruby?
+2016-01-16 15:50:58	norc	.guides
+2016-01-16 15:51:26	norc	.books
+2016-01-16 15:51:28	norc	?books
+2016-01-16 15:51:29	@ruby[bot]	You can find a list of recommended books at http://ruby-community.com/pages/links
+2016-01-16 15:51:33	norc	oo7cat, ^-
+2016-01-16 15:52:17	oo7cat	heh norc thanks
+2016-01-16 15:52:22	SaturnMir	007cat it is simple to learn (I started a week ago). I just generally google things and look at examples on github :D if you are interested, I have a little cheatsheet I wrote here; https://github.com/SpriteMidr/Experiments/blob/master/Ruby%2C%20Rails/rubyCheatSheet.md :P
+2016-01-16 15:52:33	▶	kalopsian (~yourname@cpe-72-224-184-59.maine.res.rr.com) has joined #ruby
+2016-01-16 15:52:58	apeiros	hm, never seen .rbw as a ruby extension
+2016-01-16 15:53:31	▶	ta0 (~ta0@198.85.192.201) has joined #ruby
+2016-01-16 15:53:31	apeiros	and I think you want "#!/usr/bin/ruby" as shebang, not "#!\usr\bin\ruby -w"
+2016-01-16 15:53:35	norc	apeiros, I think its a windows related thing.
+2016-01-16 15:53:37	shevy	for windows system, I believe the w is for windows, in that one can probably avoid a command prompted window appearing
+2016-01-16 15:53:51	◀	jottr (~jottr@unaffiliated/jottr) has quit (Quit: WeeChat 1.4)
+2016-01-16 15:53:51	◀	ponga (uid46070@gateway/web/irccloud.com/x-frznhnrcgpofcxol) has quit
+2016-01-16 15:54:00	norc	But then again, considering what a major PITA it is - who does Ruby development on windows anyway. :-)
+2016-01-16 15:54:03	▶	ponga (uid46070@gateway/web/irccloud.com/x-hkxtqetvaamcakat) has joined #ruby
+2016-01-16 15:54:25	◀	ht__ (~huub@31.223.170.91) has quit (Quit: Konversation terminated!)
+2016-01-16 15:54:38	pontiki	beginners
+2016-01-16 15:54:40	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 15:54:44	shevy	I used to test my ruby scripts on windows! but that was many years ago by now...
+2016-01-16 15:55:18	▶	cholq (~corey@pool-96-242-148-39.nwrknj.fios.verizon.net) has joined #ruby
+2016-01-16 15:55:36	norc	apeiros, oh I can only imagine the run trying to get ruby-oci8 running on Windows. :-))
+2016-01-16 15:55:42	norc	the fun I mean.
+2016-01-16 15:56:02	ta0	so after I run 'gem rdoc --all' where can I find the html documentation for the gems I've installed?
+2016-01-16 15:56:25	ta0	there's no .rdoc in my home directory or anything so where else should I look?
+2016-01-16 15:56:47	◀	kalopsian (~yourname@cpe-72-224-184-59.maine.res.rr.com) has quit (Read error: Connection reset by peer)
+2016-01-16 15:57:19	▶	allcentury (~anthonyro@162.242.26.254) has joined #ruby
+2016-01-16 15:57:34	▶	kalopsian (~yourname@cpe-72-224-184-59.maine.res.rr.com) has joined #ruby
+2016-01-16 15:57:46	▶	phoo1234567 (~phoo12345@c-76-24-143-254.hsd1.nh.comcast.net) has joined #ruby
+2016-01-16 15:58:00	▶	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has joined #ruby
+2016-01-16 15:58:02	pontiki	ta0: the command for reading ruby documentation is `ri`
+2016-01-16 15:58:21	ta0	so there's no way to browse the html output with my browser?
+2016-01-16 15:58:26	◀	ht__ (~huub@31.223.170.91) has quit (Client Quit)
+2016-01-16 15:58:37	pontiki	sure. you run `gem serve` i think
+2016-01-16 15:58:56	◀	dlitvak_ (~dlitvak@190.19.25.204) has quit (Ping timeout: 256 seconds)
+2016-01-16 15:59:25	ta0	!! just what I needed, that's perfect
+2016-01-16 15:59:28	ta0	thanks mate
+2016-01-16 15:59:33	pontiki	no worries, love
+2016-01-16 15:59:35	◀	cholq (~corey@pool-96-242-148-39.nwrknj.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:59:35	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:59:42	▶	casadei (~casadei@200-141-147-212.user.veloxzone.com.br) has joined #ruby
+2016-01-16 15:59:43	ta0	it even shows all the different gems on the homepage, insane
+2016-01-16 15:59:46	oo7cat	perl vs ruby, which is good for learning easily?
+2016-01-16 15:59:51	apeiros	norc: on windows you don't have \usr, no? I mean all paths start with either \\ or \<drive letter>?
+2016-01-16 16:00:00	ta0	oo7cat: ruby is more natural
+2016-01-16 16:00:15	shevy	oo7cat both languages require quite a lot of effort
+2016-01-16 16:00:15	◀	dfinninger (~dfinninge@2600:100c:b003:d451:a066:3d11:55f5:f1e2) has quit (Remote host closed the connection)
+2016-01-16 16:00:20	pontiki	oo7cat: it sort of depends on where you're coming from, and what you want to do with it
+2016-01-16 16:01:01	taq	apeiros, can you insert my free Ruby ebook on the Ruby books listing? it is free and kind of popular on Brazil: https://leanpub.com/conhecendo-ruby
+2016-01-16 16:01:02	shevy	oo7cat I'd still love to have a lean, mean mini-ruby with lots of stuff removed :)
+2016-01-16 16:01:23	apeiros	taq: make PR ;-)
+2016-01-16 16:01:45	taq	apeiros, just saw the community link over there :-)
+2016-01-16 16:02:15	◀	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:02:50	pontiki	shevy: i thought that *was* perl
+2016-01-16 16:03:11	pontiki	or is that the wrong set of stuff removed? :D
+2016-01-16 16:03:23	norc	apeiros, you would still only use /
+2016-01-16 16:03:48	▶	tmtwd (~tmtwd@CPE0c473da71813-CM0c473da71810.cpe.net.cable.rogers.com) has joined #ruby
+2016-01-16 16:03:54	◀	PedramT (~pedramt@5.114.56.80) has quit (Ping timeout: 245 seconds)
+2016-01-16 16:04:02	▶	dlitvak (~dlitvak@190.19.25.204) has joined #ruby
+2016-01-16 16:04:09	shevy	pontiki well perl has that weird perl syntax
+2016-01-16 16:04:32	◀	casadei (~casadei@200-141-147-212.user.veloxzone.com.br) has quit (Ping timeout: 276 seconds)
+2016-01-16 16:04:32	shevy	things like oh my $god and strangeness
+2016-01-16 16:04:42	norc	apeiros, might not be well known but Windows has been accepting / as a path separator for a heck of a long time
+2016-01-16 16:04:45	shevy	and $_ $% $)()=&()§=&(&/§=/()"§"!°°°"!"
+2016-01-16 16:04:49	pontiki	meh, those are just different sygils
+2016-01-16 16:05:08	apeiros	norc: I actually do know
+2016-01-16 16:05:17	apeiros	norc: in programming it depends on the API you use, though
+2016-01-16 16:05:31	apeiros	afaik windows actually translates the /, and not all of the API does
+2016-01-16 16:05:32	norc	apeiros, indeed, Win32 API supports it throughout tho afaik
+2016-01-16 16:05:42	apeiros	but I'm not a windows programmer, so take it with a bit of salt :)
+2016-01-16 16:06:04	▶	awad (~awad-1@41.218.30.210) has joined #ruby
+2016-01-16 16:06:09	shevy	nobody would admit to this anyway!
+2016-01-16 16:06:20	norc	apeiros, on all my Windows projects we used Qt anyway, which allowed us to not worry about such things.
+2016-01-16 16:06:41	▶	emilford (~Eric@190.167.183.114) has joined #ruby
+2016-01-16 16:06:58	apeiros	shevy: some admit it, some even proudly so
+2016-01-16 16:07:19	norc	I find the Win32 API to be extremely enjoyable to work with honestly.
+2016-01-16 16:07:20	apeiros	sadly our new CIO is a microsoft fan :(
+2016-01-16 16:07:28	apeiros	but OT…
+2016-01-16 16:07:30	shevy	hehe
+2016-01-16 16:07:48	norc	And Visual Studio is by far the most powerful IDE for C/C++ development without any real competition honestly.
+2016-01-16 16:07:51	norc	Or C#
+2016-01-16 16:08:09	▶	dfinninger (~dfinninge@2600:100c:b003:d451:9830:ed7:79d8:2670) has joined #ruby
+2016-01-16 16:08:41	Papierkorb	Tried VS in Uni with C#. Was not impressed.
+2016-01-16 16:08:49	norc	apeiros, funny thing though - we made sure our applications were completely wine portable, and the reason is we used valgrind for memory debugging - since it is unmatched in that area.
+2016-01-16 16:08:59	▶	PedramT (~pedramt@respiratio.net) has joined #ruby
+2016-01-16 16:09:04	shevy	this is cool because both norc and Papierkorb are qt users
+2016-01-16 16:09:15	Papierkorb	QtCreator ftw
+2016-01-16 16:09:30	norc	Papierkorb, meh, IntelliSence is just priceless. :P
+2016-01-16 16:09:36	norc	*Intellisense
+2016-01-16 16:10:32	Papierkorb	norc: it didn't work at all really for my stuff. It was barely helpful, nothing more than a list displayed as overlay. Nothing 'clever' about it. Adding imports was way too much of a hassle too
+2016-01-16 16:11:15	◀	dlitvak (~dlitvak@190.19.25.204) has quit (Remote host closed the connection)
+2016-01-16 16:11:42	Papierkorb	Either it's really that bad, or the out of the box settings are awful. Or both.
+2016-01-16 16:11:49	norc	Papierkorb, the thing that annoyed me most was that MSVC really abided by the C++ standard and not enforced a bit of ABI stability between any version.
+2016-01-16 16:11:59	norc	For c++
+2016-01-16 16:12:22	oo7cat	i made this code before 2 years ago. but i can’t remember how i made it. http://ideone.com/DklSaM
+2016-01-16 16:12:30	norc	So for larger projects you ended up writing C wrappers to be able to work with the modules by other groups.
+2016-01-16 16:12:39	oo7cat	so i want to learn new language like ruby.
+2016-01-16 16:12:44	Papierkorb	norc: I never had to deal with that idiosyncrasy, GCC for everything, and the windows port seemed to work with MinGW :)
+2016-01-16 16:13:08	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 16:13:14	norc	Papierkorb, well I suppose it was just political problems. One dept. working with VS2003 at the time, another with VS2008, etc.
+2016-01-16 16:13:46	▶	sepp2k (~Sepp2k@x5ce77c92.dyn.telefonica.de) has joined #ruby
+2016-01-16 16:13:55	norc	And GCC has the same ABI instability. It is just more likely to expect everybody to use the same version.
+2016-01-16 16:14:06	▶	Yzguy (~Yzguy@c-98-235-63-240.hsd1.pa.comcast.net) has joined #ruby
+2016-01-16 16:14:28	Papierkorb	norc: Yeah, though it is a mess. People mistake this as issue of C++, where their unstable runtime environment is at fault. And it makes it nigh impossible to "just use some library" from the internet too.
+2016-01-16 16:14:35	◀	dfinninger (~dfinninge@2600:100c:b003:d451:9830:ed7:79d8:2670) has quit (Remote host closed the connection)
+2016-01-16 16:15:17	◀	allcentury (~anthonyro@162.242.26.254) has quit (Quit: WeeChat 1.2)
+2016-01-16 16:15:18	Papierkorb	norc: Mh? GCC is pretty stable, they just changed it after the last change (Which was with .. 4.2?) in 5.0 iirc. Isn't there even a switch to tell it to use the old bindings?
+2016-01-16 16:15:30	norc	Papierkorb, you misunderstand "ABI instability" for unstable.
+2016-01-16 16:15:31	◀	arthurix_ (~arthurix@191.252.8.20) has quit (Read error: Connection reset by peer)
+2016-01-16 16:16:05	oo7cat	can i come here tomorrow?
+2016-01-16 16:16:10	norc	oo7cat, sure thing. :)
+2016-01-16 16:16:27	▶	Melpaws (~Adium@2605:6000:62c9:3600:5945:e0b2:9b1d:12d6) has joined #ruby
+2016-01-16 16:16:35	▶	arthurix (~arthurix@191.252.8.60) has joined #ruby
+2016-01-16 16:16:37	pontiki	you have to pay a new entrance fee, and there's a $5 cover for the band
+2016-01-16 16:16:38	oo7cat	thanks norc
+2016-01-16 16:16:41	▶	emilford_ (~Eric@190.167.159.226) has joined #ruby
+2016-01-16 16:17:14	◀	Melpaws1 (~Adium@162.216.46.161) has quit (Ping timeout: 245 seconds)
+2016-01-16 16:17:19	▶	dlitvak (~dlitvak@190.19.25.204) has joined #ruby
+2016-01-16 16:17:32	norc	Papierkorb, ohh - I think my information has been greatly outdated... I take it back.
+2016-01-16 16:17:37	▶	dorei (~n_i_l@ppp089210126039.access.hol.gr) has joined #ruby
+2016-01-16 16:17:38	norc	You are right. GCC has been trying to adhere to an ABI standard.
+2016-01-16 16:17:52	▶	mfb2 (~mfb2@50-5-131-74.dynamic.fuse.net) has joined #ruby
+2016-01-16 16:18:14	oo7cat	bye :)
+2016-01-16 16:18:17	Papierkorb	norc: I also haven't done any C++ in a year now, things could've changed. Things have been hectic since C++11 :)
+2016-01-16 16:18:35	◀	emilford (~Eric@190.167.183.114) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:19:29	◀	oo7cat (~oo7cat@unaffiliated/oo7cat) has left #ruby
+2016-01-16 16:19:32	norc	Papierkorb, Im really sad I had to quit my job right when C++11 came out since it brought some pretty exciting features (not concepts though, was really sad)
+2016-01-16 16:19:36	◀	ta0 (~ta0@198.85.192.201) has quit (Remote host closed the connection)
+2016-01-16 16:19:58	◀	duckson (~duckson@vps.duckson.nl) has left #ruby ("Textual IRC Client: www.textualapp.com")
+2016-01-16 16:20:05	◀	dasher00 (~dasher00@static.88-198-41-86.clients.your-server.de) has quit (Quit: Leaving)
+2016-01-16 16:20:59	◀	kalopsian (~yourname@cpe-72-224-184-59.maine.res.rr.com) has quit (Ping timeout: 246 seconds)
+2016-01-16 16:21:39	▶	kalopsian (~yourname@cpe-72-224-184-59.maine.res.rr.com) has joined #ruby
+2016-01-16 16:21:59	◀	karapetyan (~karapetya@81.177.59.116) has quit (Remote host closed the connection)
+2016-01-16 16:22:14	◀	emilford_ (~Eric@190.167.159.226) has quit (Read error: Connection reset by peer)
+2016-01-16 16:22:18	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Quit: Bye)
+2016-01-16 16:22:20	◀	mfb2 (~mfb2@50-5-131-74.dynamic.fuse.net) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:22:21	▶	bottiger (026ccd9c@gateway/web/freenode/ip.2.108.205.156) has joined #ruby
+2016-01-16 16:22:38	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 16:22:54	◀	tk__ (~tk@i58-89-77-251.s41.a022.ap.plala.or.jp) has quit (Quit: ばいばい)
+2016-01-16 16:22:59	▶	karapetyan (~karapetya@81.177.59.116) has joined #ruby
+2016-01-16 16:23:04	Papierkorb	norc: Ton of things came with it. The most important feature for me were variadic templates, as I did use Qt stuff for everything I could, so I didn't really use the stdlib at all. I know what the std::*_ptr classes do, but besides other beginner stuff, not a whole lot more in that regard. (Also plucking #ruby-offtopic)
+2016-01-16 16:23:25	bottiger	Can I have a UTF-32 string in Ruby? like a = "æ" but where "æ" is encoded in UTF-32 and not UTF-8 ? I'm not looking for something like a = "\xf3"
+2016-01-16 16:24:05	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #ruby
+2016-01-16 16:24:14	▶	emilford (~Eric@190.80.249.220) has joined #ruby
+2016-01-16 16:24:24	bottiger	the thing is, I want a compact method to store 32 bits in a variable
+2016-01-16 16:24:49	bottiger	and if UTF-32 is not possible, then maybe UTF-16
+2016-01-16 16:26:18	norc	bottiger, sure. Ruby allows for a wide variety of encodings, including UTF-32
+2016-01-16 16:26:36	norc	&ri Encoding
+2016-01-16 16:26:36	`derpy	http://ruby-doc.org/core-2.3.0/Encoding.html
+2016-01-16 16:27:34	norc	>> "æ".encode "utf-32"
+2016-01-16 16:27:35	@ruby[bot]	norc: # => "\uFEFF\u00E6" (https://eval.in/503045)
+2016-01-16 16:28:25	◀	ht__ (~huub@31.223.170.91) has quit (Quit: Konversation terminated!)
+2016-01-16 16:30:10	◀	taq (~taq@187.23.39.46) has quit (Quit: "Lunch time")
+2016-01-16 16:30:12	▶	nerium (~linus@ip-213-127-200-154.ip.prioritytelecom.net) has joined #ruby
+2016-01-16 16:30:46	◀	CloCkWeRX (~clockwerx@173.245.209.131) has quit (Quit: Leaving.)
+2016-01-16 16:31:44	◀	PedramT (~pedramt@respiratio.net) has quit (Remote host closed the connection)
+2016-01-16 16:31:50	◀	Bloomer (~Bloomer@1.34.151.124) has quit (Remote host closed the connection)
+2016-01-16 16:31:59	◀	emilford (~Eric@190.80.249.220) has quit (Ping timeout: 264 seconds)
+2016-01-16 16:32:19	▶	hannelita (~hannelita@2804:14c:a8:27a5:3cdf:f514:5ca4:8a06) has joined #ruby
+2016-01-16 16:32:58	bottiger	norc, I see
+2016-01-16 16:33:04	bottiger	norc, Thanks
+2016-01-16 16:33:17	▶	mfb2 (~mfb2@192.69.65.11) has joined #ruby
+2016-01-16 16:33:18	bottiger	I honestly a bit unsure what my problem was
+2016-01-16 16:33:37	▶	emilford (~Eric@190.167.159.226) has joined #ruby
+2016-01-16 16:33:42	◀	dlitvak (~dlitvak@190.19.25.204) has quit (Remote host closed the connection)
+2016-01-16 16:33:48	▶	futilegames (~futilegam@82.152.44.224) has joined #ruby
+2016-01-16 16:33:52	lucasb	in addition, you can also put a magic comment at the beginning of your file: # encoding: utf-32
+2016-01-16 16:35:39	al2o3-cr	>> Encoding.name_list
+2016-01-16 16:35:40	@ruby[bot]	al2o3-cr: # => ["ASCII-8BIT", "UTF-8", "US-ASCII", "UTF-16BE", "UTF-16LE", "UTF-32BE", "UTF-32LE", "UTF-16", "UTF-3 ...check link for more (https://eval.in/503046)
+2016-01-16 16:36:16	▶	TheHodge (uid4647@gateway/web/irccloud.com/x-cgwtdpvbcljuroun) has joined #ruby
+2016-01-16 16:37:15	bottiger	lucasb: can I? then I get an argumentError that UTF-32 is not ascii compatible (which is correct) when I run the script
+2016-01-16 16:37:23	◀	hannelita (~hannelita@2804:14c:a8:27a5:3cdf:f514:5ca4:8a06) has quit (Ping timeout: 264 seconds)
+2016-01-16 16:38:38	▶	emilford_ (~Eric@190.166.36.20) has joined #ruby
+2016-01-16 16:38:39	◀	futilegames (~futilegam@82.152.44.224) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:38:39	◀	emilford (~Eric@190.167.159.226) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:38:51	▶	Bloomer (~Bloomer@1.34.151.124) has joined #ruby
+2016-01-16 16:39:36	◀	nerium (~linus@ip-213-127-200-154.ip.prioritytelecom.net) has quit (Quit: nerium)
+2016-01-16 16:40:30	norc	bottiger, the magic comment is not for transcoding, but telling the interpreter which encoding to assume.
+2016-01-16 16:40:31	lucasb	bottiger: I was expecting that to work, but apparently I'm mistaken
+2016-01-16 16:40:32	▶	futilegames (~futilegam@146.185.20.172) has joined #ruby
+2016-01-16 16:41:05	norc	bottiger, so it is the equivalent of String#force_encoding
+2016-01-16 16:41:32	◀	agit0 (~textual@37.157.138.43) has quit (Quit: zzzZZZ….)
+2016-01-16 16:42:20	norc	bottiger, so the question is, which encoding does your text editor use? If it is set to UTF-8 you should not specify a different encoding in a magic comment.
+2016-01-16 16:42:25	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #ruby
+2016-01-16 16:42:59	bottiger	norc: I think it's UTF-8, but I'm working over SSH on a windows machine. So I guess I 1000 things can go wrong in the process
+2016-01-16 16:43:18	◀	futilegames (~futilegam@146.185.20.172) has quit (Client Quit)
+2016-01-16 16:44:02	norc	bottiger, by default Ruby assumes script files to be UTF-8 since 2.0
+2016-01-16 16:44:34	norc	(Before that it was US-ASCII)
+2016-01-16 16:45:19	bottiger	I remember that from a long time ago
+2016-01-16 16:46:53	▶	bhalash (~bhalash@37.228.245.81) has joined #ruby
+2016-01-16 16:47:14	▶	radgeRayden_ (~radgeRayd@177.7.101.218) has joined #ruby
+2016-01-16 16:48:43	▶	PedramT (~pedramt@5.114.56.80) has joined #ruby
+2016-01-16 16:49:00	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 16:50:01	▶	usershell (~usershell@41.136.106.244) has joined #ruby
+2016-01-16 16:50:34	◀	karapetyan (~karapetya@81.177.59.116) has quit (Remote host closed the connection)
+2016-01-16 16:51:57	◀	psyq (~psyq@178.62.210.183) has left #ruby
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #ruby
+2016-01-16 16:52:27	ℹ	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.8; 2.0.0-p648: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || log @ http://irclog.whitequark.org/ruby/"
+2016-01-16 16:52:27	ℹ	Topic set by havenwood (~Havenn@unaffiliated/havenn) on Tue, 29 Dec 2015 03:57:59
+2016-01-16 16:52:27	ℹ	Channel #ruby: 959 nicks (1 op, 0 voices, 958 normals)
+2016-01-16 16:52:27	ℹ	PvNotice(ChanServ): Welcome to the ruby channel. Please be nice. http://ruby-community.com || https://ruby-lang.org || Paste >3 lines: https://gist.github.com || Ask good questions: http://www.mikeash.com/getting_answers.html || log @ http://irclog.whitequark.org/ruby/
+2016-01-16 16:52:39	ℹ	Channel created on Sun, 26 Nov 2006 07:42:45
+2016-01-16 16:53:15	◀	Melpaws (~Adium@2605:6000:62c9:3600:5945:e0b2:9b1d:12d6) has quit (Quit: Leaving.)
+2016-01-16 16:53:16	▶	karapetyan (~karapetya@81.177.59.116) has joined #ruby
+2016-01-16 16:53:20	◀	PedramT (~pedramt@5.114.56.80) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:53:26	◀	Bloomer (~Bloomer@1.34.151.124) has quit (Remote host closed the connection)
+2016-01-16 16:54:09	▶	al2o3-cr (~al2o3-cr@unaffiliated/gr33n7007h) has joined #ruby
+2016-01-16 16:54:14	▶	nanoz (~nanoz@117.221.125.195) has joined #ruby
+2016-01-16 16:54:25	lucasb	strange, if put the comment "encoding: utf-16" or utf-32 and save the file with the right encoding, it silences the error 'UTF-16 is not ASCII compatible (ArgumentError)', but then it doesn't run or output anything
+2016-01-16 16:54:32	lucasb	*if I put...
+2016-01-16 16:54:44	◀	arup_r (~arup_r@116.202.132.109) has quit
+2016-01-16 16:54:46	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #ruby
+2016-01-16 16:56:23	◀	usershell (~usershell@41.136.106.244) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:56:45	◀	emilford_ (~Eric@190.166.36.20) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:56:56	▶	Bloomer (~Bloomer@1.34.151.124) has joined #ruby
+2016-01-16 16:58:49	▶	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has joined #ruby
+2016-01-16 16:58:57	▶	agit0 (~textual@37.157.138.43) has joined #ruby
+2016-01-16 16:59:11	▶	emilford (~Eric@190.166.36.20) has joined #ruby
+2016-01-16 16:59:55	▶	JohnT (~textual@ip-37-24-240-20.hsi14.unitymediagroup.de) has joined #ruby
+2016-01-16 17:00:57	▶	newbie22 (~newbie22@2602:306:3728:31e0:8968:6184:7b65:661f) has joined #ruby
+2016-01-16 17:01:18	jhass	maybe your terminal fails to render UTF-16?
+2016-01-16 17:01:23	newbie22	*:hello,,, is anyone there ???
+2016-01-16 17:01:26	jhass	wouldn't surprise me that much
+2016-01-16 17:01:32	jhass	newbie22: you are for starters
+2016-01-16 17:01:48	▶	tubuliferous_ (~tubulifer@24.42.205.62) has joined #ruby
+2016-01-16 17:01:55	lucasb	jhass: yes, probably. My terminal is not configured
+2016-01-16 17:02:16	jhass	lucasb: try piping the output to hexdump
+2016-01-16 17:02:37	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 17:03:04	◀	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has quit (Ping timeout: 245 seconds)
+2016-01-16 17:03:38	lucasb	still nothing. tried outputing to a file too, nothing.
+2016-01-16 17:03:44	jhass	but then the  output encoding should remain UTF-8 and Ruby should convert, hmm
+2016-01-16 17:04:06	◀	emilford (~Eric@190.166.36.20) has quit (Ping timeout: 256 seconds)
+2016-01-16 17:04:10	jhass	can you upload your testfile somewhere that preserves the bytes?
+2016-01-16 17:04:25	◀	ht__ (~huub@31.223.170.91) has quit (Client Quit)
+2016-01-16 17:04:52	lucasb	I just wrote "# encoding: utf-16\nputs 'hi'"
+2016-01-16 17:05:08	lucasb	and made sure to save with the right encoding with vim
+2016-01-16 17:05:15	lucasb	I may have done something wrong
+2016-01-16 17:05:18	▶	bluOxigen (~a@unaffiliated/bluOxigen) has joined #ruby
+2016-01-16 17:05:28	◀	bkxd (~bkxd@8f.48.caa1.ip4.static.sl-reverse.com) has quit (Ping timeout: 250 seconds)
+2016-01-16 17:05:30	◀	govg (~govg@unaffiliated/govg) has quit (Quit: leaving)
+2016-01-16 17:05:37	jhass	I don't remember, does utf-16 default to LE or BE?
+2016-01-16 17:05:47	◀	awad (~awad-1@41.218.30.210) has quit (Ping timeout: 246 seconds)
+2016-01-16 17:05:49	▶	govg (~govg@unaffiliated/govg) has joined #ruby
+2016-01-16 17:06:07	ℹ	Guest68186 is now known as C0deMaver1ck
+2016-01-16 17:06:08	▶	bluOxigen_ (~a@103.255.4.66) has joined #ruby
+2016-01-16 17:06:26	lucasb	I have no idea :)
+2016-01-16 17:06:41	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 17:07:07	▶	awad (~awad-1@41.218.23.238) has joined #ruby
+2016-01-16 17:07:12	◀	tubuliferous_ (~tubulifer@24.42.205.62) has quit (Ping timeout: 272 seconds)
+2016-01-16 17:07:25	jhass	I can actually reproduce, interesting
+2016-01-16 17:07:34	▶	kuon (~kuon@46.140.38.66) has joined #ruby
+2016-01-16 17:07:41	lucasb	but I see ruby has this internal/external encoding. I should probably try to understand that before saying anything
+2016-01-16 17:07:45	▶	tubuliferous_ (~tubulifer@24.42.205.62) has joined #ruby
+2016-01-16 17:08:16	kuon	Hi. Is there a way to map values in a hash? {foo: 'bar'}.map_values_something{|v| v.upcase} -> {foo: 'BAR'}
+2016-01-16 17:08:26	kuon	I mean a built in function, I can implement something myself.
+2016-01-16 17:08:38	kuon	Something I might have missed.
+2016-01-16 17:08:44	◀	iateadonut (~dan@175.193.166.56) has quit (Quit: Leaving.)
+2016-01-16 17:09:39	jhass	newbie22: do you have a question?
+2016-01-16 17:09:47	▶	chipotle (~chipotle@cpe-67-240-1-162.nycap.res.rr.com) has joined #ruby
+2016-01-16 17:09:58	lucasb	kuon: {a: 'foo'}.each_value {|v| v.upcase! }
+2016-01-16 17:09:58	▶	fsapo (~fsapo@152.250.187.146) has joined #ruby
+2016-01-16 17:10:01	jhass	kuon: .each_value.map
+2016-01-16 17:10:10	◀	bluOxigen (~a@unaffiliated/bluOxigen) has quit (Ping timeout: 260 seconds)
+2016-01-16 17:10:15	◀	SaturnMir (~saturnmir@147.92.208.46.dyn.plus.net) has quit (Remote host closed the connection)
+2016-01-16 17:10:15	◀	psyq (~psyq@unaffiliated/psyq) has left #ruby
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:34	▶	psyq (~psyq@178.62.210.183) has joined #ruby
+2016-01-16 17:54:34	ℹ	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.8; 2.0.0-p648: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || log @ http://irclog.whitequark.org/ruby/"
+2016-01-16 17:54:34	ℹ	Topic set by havenwood (~Havenn@unaffiliated/havenn) on Tue, 29 Dec 2015 03:57:59
+2016-01-16 17:54:34	ℹ	Channel #ruby: 960 nicks (1 op, 0 voices, 959 normals)
+2016-01-16 17:54:34	***	Buffer Playback...
+2016-01-16 17:54:34	myntcake_	[17:47:30] jhass: yes
+2016-01-16 17:54:34	myntcake_	[17:47:42] i nickserv released it and now when i try to change my name i get : myntcake :Nick/channel is temporarily unavailable
+2016-01-16 17:54:34	jhass	[17:47:46] then what apeiros said, /msg NickServ ghost myntcake
+2016-01-16 17:54:34	myntcake_	[17:48:33] but i get myntcake is not onliine if i ghost XD this is really messing with me hahah
+2016-01-16 17:54:34	jhass	[17:48:52] myntcake_: try regain
+2016-01-16 17:54:34	myntcake_	[17:48:54] i used to be able to /server irc.freenode.net and now it won't even let me do that, i have to /server chat.freenode.net for me to get in
+2016-01-16 17:54:34	jhass	[17:49:01] /msg nickserv regain myntcake
+2016-01-16 17:54:34	myntcake	[17:49:11] woah!!!
+2016-01-16 17:54:34	myntcake	[17:49:17] dude u're awesome
+2016-01-16 17:54:34	myntcake	[17:49:18] hahaha
+2016-01-16 17:54:34	jhass	[17:49:26] you're welcome girl
+2016-01-16 17:54:34	myntcake	[17:50:41] jhass: *boy
+2016-01-16 17:54:34	myntcake	[17:50:49] haha, anyways that wasn't the reason that i came here
+2016-01-16 17:54:34	myntcake	[17:51:21] i just started running an aws ec2 machine and installed ruby on rails. my question is, do i need apache installed too?
+2016-01-16 17:54:34	myntcake	[17:51:38] i can't seem to see the rails page on ip_address:3000
+2016-01-16 17:54:34	jhass	[17:52:05] you want a reverse proxy if you want to use port 80, yes. Apache and Nginx are common choices
+2016-01-16 17:54:34	myntcake	[17:53:39] jhass: so i still need to install apache even if i have rails server, right?
+2016-01-16 17:54:34	***	Playback Complete.
+2016-01-16 17:54:41	▶	ht__ (~huub@31.223.170.91) has joined #ruby
+2016-01-16 17:54:43	jhass	that's what I said
+2016-01-16 17:54:53	jhass	you don't need apache in particular
+2016-01-16 17:54:54	ℹ	Channel created on Sun, 26 Nov 2006 07:42:45
+2016-01-16 17:55:02	◀	C0deMaver1ck (~C0deMaver@host-173-247-5-143.FAROLT1.epbfi.com) has quit (Ping timeout: 276 seconds)
+2016-01-16 17:55:59	◀	tubuliferous_ (~tubulifer@24.42.205.62) has quit (Ping timeout: 264 seconds)
+2016-01-16 17:56:15	◀	yardenbar (~yarden@ec2-52-33-238-6.us-west-2.compute.amazonaws.com) has quit (Ping timeout: 240 seconds)
+2016-01-16 17:56:44	myntcake	so even if i want to connect to port 3000 only, i would still need it, right?
+2016-01-16 17:57:13	▶	ledestin (~textual@222-155-98-89.jetstream.xtra.co.nz) has joined #ruby
+2016-01-16 17:58:15	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #ruby
+2016-01-16 17:58:46	◀	emilford_ (~Eric@190.167.3.125) has quit (Ping timeout: 250 seconds)
+2016-01-16 17:59:00	◀	ht__ (~huub@31.223.170.91) has quit (Client Quit)
+2016-01-16 17:59:01	jhass	no
+2016-01-16 17:59:23	◀	dlitvak (~dlitvak@190.19.25.204) has quit (Ping timeout: 255 seconds)
+2016-01-16 17:59:33	▶	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has joined #ruby
+2016-01-16 18:01:44	◀	tvw (~tv@84-46-63-57.lsn8.wtnet.de) has quit
+2016-01-16 18:02:56	▶	emilford (~Eric@190.167.10.101) has joined #ruby
+2016-01-16 18:03:46	◀	tuelz1 (~tewls@c-68-35-90-153.hsd1.al.comcast.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:04:01	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Remote host closed the connection)
+2016-01-16 18:04:10	▶	C0deMaver1ck (~C0deMaver@host-184-174-175-108.FAROLT1.epbfi.com) has joined #ruby
+2016-01-16 18:04:34	ℹ	C0deMaver1ck is now known as Guest25647
+2016-01-16 18:06:33	dbugger	Hey guys. I was looking at this code (http://pastie.org/10692021), and wandering... where is :test defined?
+2016-01-16 18:06:54	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #ruby
+2016-01-16 18:07:11	apeiros	dbugger: Rake::TestTask.new defines the :test task
+2016-01-16 18:07:14	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 18:07:14	◀	chipotle (~chipotle@cpe-67-240-1-162.nycap.res.rr.com) has quit (Read error: Connection reset by peer)
+2016-01-16 18:07:16	▶	chipotle_ (~chipotle@cpe-67-240-1-162.nycap.res.rr.com) has joined #ruby
+2016-01-16 18:07:27	▶	Limix (~Limix@cpe-172-249-174-95.socal.res.rr.com) has joined #ruby
+2016-01-16 18:08:15	▶	dpg_ (~sosuniver@149.20.56.4) has joined #ruby
+2016-01-16 18:08:15	◀	tmtwd (~tmtwd@CPE0c473da71813-CM0c473da71810.cpe.net.cable.rogers.com) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:08:30	dbugger	apeiros,  implicitely?
+2016-01-16 18:08:44	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #ruby
+2016-01-16 18:09:00	apeiros	not sure how you define something implicitly
+2016-01-16 18:09:04	havenwood	dbugger: https://github.com/ruby/rake/blob/master/lib/rake/testtask.rb
+2016-01-16 18:09:16	◀	emilford (~Eric@190.167.10.101) has quit (Ping timeout: 272 seconds)
+2016-01-16 18:09:45	◀	m8 (~m8@unaffiliated/m8) has quit (Quit: Sto andando via)
+2016-01-16 18:09:57	▶	emilford (~Eric@190.167.132.247) has joined #ruby
+2016-01-16 18:11:01	dbugger	apeiros, I mean, I see nowhere being ":test" written... << "test" is the name of a folder, not the symbol. So does TestTask build always a task called :test? or does it build always a task with the same symbol as the folder name?

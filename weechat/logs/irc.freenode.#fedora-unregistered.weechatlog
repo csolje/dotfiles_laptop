@@ -1,0 +1,420 @@
+2015-11-04 01:15:07	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-04 01:15:07	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-04 01:15:07	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-04 01:15:07	--	Channel #fedora-unregistered: 106 nicks (2 ops, 0 voices, 104 normals)
+2015-11-04 01:15:07	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-04 01:15:07	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:15:12	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-04 01:20:51	◀▬▬	Daredel (~Daredel@dynamic-186-154-176-88.dynamic.etb.net.co) has quit (Quit: bye~~)
+2015-11-04 01:22:53	▬▬▶	fingerses (~fingers@124-170-168-61.dyn.iinet.net.au) has joined #fedora-unregistered
+2015-11-04 01:22:54	@fedbot	fingerses: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:24:01	▬▬▶	deadrat (~chatzilla@122.248.163.1) has joined #fedora-unregistered
+2015-11-04 01:24:01	@fedbot	deadrat: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:26:40	▬▬▶	stereoit (~stereoit@103.146.broadband4.iol.cz) has joined #fedora-unregistered
+2015-11-04 01:26:40	@fedbot	stereoit: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:26:48	--	stereoit is now known as stereoit_
+2015-11-04 01:27:02	◀▬▬	raven-au (~raven-au@106-69-188-169.dyn.iinet.net.au) has quit (Remote host closed the connection)
+2015-11-04 01:27:18	▬▬▶	mydog2 (~mydog2@adsl-184-45-71-130.sdf.bellsouth.net) has joined #fedora-unregistered
+2015-11-04 01:27:18	@fedbot	mydog2: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:30:03	▬▬▶	raven-au (~raven-au@106-69-188-169.dyn.iinet.net.au) has joined #fedora-unregistered
+2015-11-04 01:30:03	@fedbot	raven-au: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:31:59	◀▬▬	mydog2 (~mydog2@adsl-184-45-71-130.sdf.bellsouth.net) has left #fedora-unregistered
+2015-11-04 01:32:34	◀▬▬	stereoit_ (~stereoit@103.146.broadband4.iol.cz) has quit (Remote host closed the connection)
+2015-11-04 01:32:44	◀▬▬	deadrat (~chatzilla@122.248.163.1) has quit (Quit: ChatZilla 0.9.92 [Firefox 38.3.0/20150917054100])
+2015-11-04 01:33:27	▬▬▶	crazyraven (~do@112.220.232.86) has joined #fedora-unregistered
+2015-11-04 01:33:29	@fedbot	crazyraven: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 01:34:21	◀▬▬	weshay_afk (~whayutin@2602:306:c53c:9330:2ad2:44ff:feb4:ce31) has quit (Ping timeout: 246 seconds)
+2015-11-04 20:09:34	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-04 20:09:34	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-04 20:09:34	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-04 20:09:34	--	Channel #fedora-unregistered: 113 nicks (2 ops, 0 voices, 111 normals)
+2015-11-04 20:09:34	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-04 20:09:34	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:09:40	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-04 20:16:28	◀▬▬	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has quit (Ping timeout: 244 seconds)
+2015-11-04 20:16:36	◀▬▬	Chaser (~Chaser@192.241.229.182) has left #fedora-unregistered ("WeeChat 0.4.2")
+2015-11-04 20:17:58	▬▬▶	opensource_ninja (~Thunderbi@202.49.99.192) has joined #fedora-unregistered
+2015-11-04 20:17:58	@fedbot	opensource_ninja: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:18:59	◀▬▬	_Tsk_ (~Ludovic@2a01:e34:ed45:8a70:eab1:fcff:fede:413) has quit (Remote host closed the connection)
+2015-11-04 20:19:03	▬▬▶	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has joined #fedora-unregistered
+2015-11-04 20:19:05	@fedbot	RobertAdesam: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:20:40	◀▬▬	ross_ (~ross@206.19.214.224) has quit (Ping timeout: 268 seconds)
+2015-11-04 20:24:14	◀▬▬	opensource_ninja (~Thunderbi@202.49.99.192) has left #fedora-unregistered
+2015-11-04 20:34:23	▬▬▶	ross_ (~ross@206.19.214.224) has joined #fedora-unregistered
+2015-11-04 20:34:24	@fedbot	ross_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:34:36	◀▬▬	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has quit (Ping timeout: 255 seconds)
+2015-11-04 20:45:09	▬▬▶	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has joined #fedora-unregistered
+2015-11-04 20:45:10	@fedbot	RobertAdesam: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:45:26	◀▬▬	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has quit (Client Quit)
+2015-11-04 20:50:43	▬▬▶	tnbt_ (~tscherf@p4FC572DB.dip0.t-ipconnect.de) has joined #fedora-unregistered
+2015-11-04 20:50:43	@fedbot	tnbt_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:51:02	◀▬▬	tnbt_ (~tscherf@p4FC572DB.dip0.t-ipconnect.de) has left #fedora-unregistered
+2015-11-04 20:54:30	▬▬▶	Psyq_ (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-04 20:54:31	@fedbot	Psyq_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:55:10	◀▬▬	cross` (~cross@sonic.net.pl) has quit (Ping timeout: 240 seconds)
+2015-11-04 20:56:35	▬▬▶	joyrida08 (~androirc@2607:fb90:2004:ec5a:f1d6:3978:1967:d0e4) has joined #fedora-unregistered
+2015-11-04 20:56:43	▬▬▶	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-04 20:56:44	@fedbot	pkennedy_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 20:59:31	◀▬▬	Psyq_ (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has quit (Ping timeout: 268 seconds)
+2015-11-04 21:00:15	◀▬▬	pkennedy (~pkennedy@chippewa-nat.cray.com) has quit (Ping timeout: 255 seconds)
+2015-11-04 21:02:10	▬▬▶	pgustafs (~pgustafs@h74n4-jak-a12.ias.bredband.telia.com) has joined #fedora-unregistered
+2015-11-04 21:02:11	@fedbot	pgustafs: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:02:15	▬▬▶	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has joined #fedora-unregistered
+2015-11-04 21:02:15	@fedbot	RobertAdesam: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:07:42	▬▬▶	dwalsh (~dwalsh@195.202.49.186) has joined #fedora-unregistered
+2015-11-04 21:07:44	@fedbot	dwalsh: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:08:16	◀▬▬	joyrida08 (~androirc@2607:fb90:2004:ec5a:f1d6:3978:1967:d0e4) has left #fedora-unregistered ("Quit")
+2015-11-04 21:11:50	▬▬▶	Timslin (~Speedy624@575184b2.skybroadband.com) has joined #fedora-unregistered
+2015-11-04 21:11:50	◀▬▬	Timslin (~Speedy624@575184b2.skybroadband.com) has quit (Changing host)
+2015-11-04 21:11:50	▬▬▶	Timslin (~Speedy624@unaffiliated/timslin) has joined #fedora-unregistered
+2015-11-04 21:11:50	@fedbot	Timslin: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:12:30	◀▬▬	Timslin (~Speedy624@unaffiliated/timslin) has left #fedora-unregistered
+2015-11-04 21:19:38	▬▬▶	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has joined #fedora-unregistered
+2015-11-04 21:19:38	@fedbot	yami: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:19:46	◀▬▬	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has left #fedora-unregistered
+2015-11-04 21:19:50	▬▬▶	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has joined #fedora-unregistered
+2015-11-04 21:19:50	@fedbot	yami: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:19:51	◀▬▬	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has left #fedora-unregistered
+2015-11-04 21:19:53	▬▬▶	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has joined #fedora-unregistered
+2015-11-04 21:19:53	@fedbot	yami: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:19:55	◀▬▬	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has left #fedora-unregistered
+2015-11-04 21:19:57	▬▬▶	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has joined #fedora-unregistered
+2015-11-04 21:19:57	@fedbot	yami: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:20:01	◀▬▬	yami (~yami@93-140-187-20.adsl.net.t-com.hr) has left #fedora-unregistered
+2015-11-04 21:36:49	◀▬▬	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has left #fedora-unregistered ("ERC (IRC client for Emacs 24.5.1)")
+2015-11-04 21:37:36	◀▬▬	Amita (~Amita@114.143.174.195) has quit (Ping timeout: 272 seconds)
+2015-11-04 21:45:31	▬▬▶	djx (c189a820@gateway/web/freenode/ip.193.137.168.32) has joined #fedora-unregistered
+2015-11-04 21:45:31	@fedbot	djx: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:45:55	◀▬▬	djx (c189a820@gateway/web/freenode/ip.193.137.168.32) has quit (Client Quit)
+2015-11-04 21:46:55	▬▬▶	bpl46 (445081af@gateway/web/freenode/ip.68.80.129.175) has joined #fedora-unregistered
+2015-11-04 21:46:55	@fedbot	bpl46: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:47:04	▬▬▶	djx (c189a820@gateway/web/freenode/ip.193.137.168.32) has joined #fedora-unregistered
+2015-11-04 21:47:05	@fedbot	djx: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:49:03	--	dabbill_ is now known as dabbill
+2015-11-04 21:49:16	◀▬▬	dabbill (~quassel@71-93-11-195.dhcp.knwc.wa.charter.com) has left #fedora-unregistered ("http://quassel-irc.org - Chat comfortably. Anywhere.")
+2015-11-04 21:49:42	bpl46	help
+2015-11-04 21:49:57	bpl46	exit
+2015-11-04 21:50:14	◀▬▬	bpl46 (445081af@gateway/web/freenode/ip.68.80.129.175) has quit (Client Quit)
+2015-11-04 21:51:28	▬▬▶	pkennedy (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-04 21:51:28	@fedbot	pkennedy: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:52:02	◀▬▬	Unobtainium (~Unobtaini@a89-182-80-229.net-htp.de) has quit (Quit: Konversation terminated!)
+2015-11-04 21:54:24	◀▬▬	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has quit (Ping timeout: 268 seconds)
+2015-11-04 21:54:49	▬▬▶	sgtpepper (~sgtpepper@092-111-215-196.static.chello.nl) has joined #fedora-unregistered
+2015-11-04 21:54:49	@fedbot	sgtpepper: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:55:16	▬▬▶	Psyq_ (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-04 21:55:17	@fedbot	Psyq_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:57:23	▬▬▶	nullbyte_ (~nullbyte@130.204.191.235) has joined #fedora-unregistered
+2015-11-04 21:57:24	@fedbot	nullbyte_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 21:57:44	◀▬▬	nullbyte_ (~nullbyte@130.204.191.235) has quit (Client Quit)
+2015-11-04 21:58:45	◀▬▬	mhall119 (~mhall@ubuntu/member/mhall119) has quit (Ping timeout: 255 seconds)
+2015-11-04 21:59:39	◀▬▬	Psyq_ (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has quit (Ping timeout: 255 seconds)
+2015-11-04 22:00:53	▬▬▶	mhall119 (~mhall@pool-71-122-173-113.tampfl.fios.verizon.net) has joined #fedora-unregistered
+2015-11-04 22:00:54	@fedbot	mhall119: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 22:01:35	◀▬▬	dwalsh (~dwalsh@195.202.49.186) has quit (Ping timeout: 252 seconds)
+2015-11-04 22:04:02	◀▬▬	djx (c189a820@gateway/web/freenode/ip.193.137.168.32) has left #fedora-unregistered
+2015-11-04 22:04:51	◀▬▬	sgtpepper (~sgtpepper@092-111-215-196.static.chello.nl) has quit (Remote host closed the connection)
+2015-11-04 22:07:42	▬▬▶	dwalsh (~dwalsh@195.202.49.186) has joined #fedora-unregistered
+2015-11-04 22:07:44	@fedbot	dwalsh: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 22:10:45	▬▬▶	Amita (~Amita@49.248.194.152) has joined #fedora-unregistered
+2015-11-04 22:10:48	@fedbot	Amita: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 22:25:34	◀▬▬	gv (~gv@87.119.64.83.client.entry.bg) has quit (Read error: Connection reset by peer)
+2015-11-04 22:30:16	▬▬▶	gv (~gv@87.119.64.83.client.entry.bg) has joined #fedora-unregistered
+2015-11-04 22:30:18	@fedbot	gv: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 22:32:03	--	bildz_ is now known as bildz
+2015-11-04 22:32:30	▬▬▶	RobertAdesam (~user@c83-254-27-45.bredband.comhem.se) has joined #fedora-unregistered
+2015-11-04 22:32:32	@fedbot	RobertAdesam: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-04 22:35:14	◀▬▬	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has left #fedora-unregistered ("Conversation terminated")
+2015-11-05 22:08:26	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-05 22:08:26	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-05 22:08:26	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-05 22:08:26	--	Channel #fedora-unregistered: 120 nicks (2 ops, 0 voices, 118 normals)
+2015-11-05 22:08:26	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-05 22:08:26	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:08:32	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-05 22:09:08	◀▬▬	villadal1ine (~villadalm@190.18.132.217) has quit (Remote host closed the connection)
+2015-11-05 22:11:06	▬▬▶	gnuworldorder (~gnu@12.25.224.162) has joined #fedora-unregistered
+2015-11-05 22:11:07	@fedbot	gnuworldorder: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:11:43	◀▬▬	gnuworldorder (~gnu@12.25.224.162) has left #fedora-unregistered
+2015-11-05 22:25:57	▬▬▶	mac102 (~mac105@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has joined #fedora-unregistered
+2015-11-05 22:25:58	@fedbot	mac102: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:25:59	mac102	hi
+2015-11-05 22:26:32	mac102	join #fedora
+2015-11-05 22:27:18	--	mac102 is now known as mac101
+2015-11-05 22:27:36	▬▬▶	Mac102 (~Mac@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has joined #fedora-unregistered
+2015-11-05 22:27:37	@fedbot	Mac102: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:30:09	▬▬▶	salah (~salah@41.106.84.10) has joined #fedora-unregistered
+2015-11-05 22:30:09	@fedbot	salah: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:30:27	◀▬▬	salah (~salah@41.106.84.10) has left #fedora-unregistered
+2015-11-05 22:32:00	▬▬▶	RealLinuX (~arming@cable-77-77-226-70.dynamic.telemach.ba) has joined #fedora-unregistered
+2015-11-05 22:32:00	@fedbot	RealLinuX: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:32:38	◀▬▬	Mac102 (~Mac@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has quit (Quit: Leaving)
+2015-11-05 22:34:39	▬▬▶	jrobie (~jonathan@2606:a000:47ac:7a00:a11:96ff:fee0:7c10) has joined #fedora-unregistered
+2015-11-05 22:34:39	@fedbot	jrobie: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:36:08	◀▬▬	kilted1 (~scotts@cpe-172-74-106-133.nc.res.rr.com) has quit (Ping timeout: 265 seconds)
+2015-11-05 22:36:19	◀▬▬	cleong (~corey@97-100-220-44.res.bhn.net) has quit (Quit: Konversation terminated!)
+2015-11-05 22:40:46	▬▬▶	EtMalleus (~heath@host-186-5-111-24-static.midco.net) has joined #fedora-unregistered
+2015-11-05 22:40:46	@fedbot	EtMalleus: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:41:23	◀▬▬	MaCkX (~paxtian@201.164.152.177) has quit (Quit: Leaving.)
+2015-11-05 22:46:21	▬▬▶	jsgrant_ (~jsgrant@71-81-84-194.dhcp.stls.mo.charter.com) has joined #fedora-unregistered
+2015-11-05 22:46:21	@fedbot	jsgrant_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:47:35	--	jsgrant_ is now known as jsgrant
+2015-11-05 22:47:43	▬▬▶	ali_akcza (~ali@ip-217-50.ap-media.pl) has joined #fedora-unregistered
+2015-11-05 22:47:43	@fedbot	ali_akcza: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:48:13	▬▬▶	zz_pendo324 (~pendo324_@2604:a880:800:10::3cd:f001) has joined #fedora-unregistered
+2015-11-05 22:48:14	@fedbot	zz_pendo324: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:48:17	--	zz_pendo324 is now known as pendo324
+2015-11-05 22:50:19	◀▬▬	skweek (~skweek@2607:fe50:0:810f:f0c8:6ced:bae8:111a) has quit (Ping timeout: 240 seconds)
+2015-11-05 22:55:21	▬▬▶	ob_ (~ob@60-240-60-98.tpgi.com.au) has joined #fedora-unregistered
+2015-11-05 22:55:22	@fedbot	ob_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:55:40	◀▬▬	ob_ (~ob@60-240-60-98.tpgi.com.au) has left #fedora-unregistered
+2015-11-05 22:55:43	▬▬▶	queretaro (~atom@50.Red-217-127-120.staticIP.rima-tde.net) has joined #fedora-unregistered
+2015-11-05 22:55:44	@fedbot	queretaro: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:56:24	▬▬▶	opensource_ninja (~Thunderbi@202.49.99.192) has joined #fedora-unregistered
+2015-11-05 22:56:24	◀▬▬	queretaro (~atom@50.Red-217-127-120.staticIP.rima-tde.net) has quit (Client Quit)
+2015-11-05 22:56:25	@fedbot	opensource_ninja: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:56:50	◀▬▬	opensource_ninja (~Thunderbi@202.49.99.192) has quit (Client Quit)
+2015-11-05 22:58:25	▬▬▶	cyjimmy264 (~quassel@5.140.176.140) has joined #fedora-unregistered
+2015-11-05 22:58:25	@fedbot	cyjimmy264: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 22:59:51	▬▬▶	ross_ (~ross@206.19.214.224) has joined #fedora-unregistered
+2015-11-05 22:59:52	@fedbot	ross_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:03:29	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-05 23:03:29	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-05 23:03:29	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-05 23:03:29	--	Channel #fedora-unregistered: 125 nicks (2 ops, 0 voices, 123 normals)
+2015-11-05 23:03:29	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:03:34	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-05 23:03:34	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-05 23:03:59	◀▬▬	mac101 (~mac105@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has quit (Quit: Leaving)
+2015-11-05 23:04:24	Psyq	I hate .Xresources
+2015-11-05 23:06:09	▬▬▶	mac102 (~mac105@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has joined #fedora-unregistered
+2015-11-05 23:06:09	@fedbot	mac102: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:06:31	--	mac102 is now known as mac101
+2015-11-05 23:06:35	◀▬▬	bugs_ (~bugs@cpe-70-121-53-231.tx.res.rr.com) has left #fedora-unregistered
+2015-11-05 23:07:16	▬▬▶	j0hn1 (~j0hn@2605:6000:e905:e800:fcc0:6bf8:10d8:61ce) has joined #fedora-unregistered
+2015-11-05 23:07:17	@fedbot	j0hn1: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:07:33	◀▬▬	j0hn1 (~j0hn@2605:6000:e905:e800:fcc0:6bf8:10d8:61ce) has left #fedora-unregistered
+2015-11-05 23:08:11	◀▬▬	mac101 (~mac105@cpc81439-lanc8-2-0-cust74.3-3.cable.virginm.net) has left #fedora-unregistered
+2015-11-05 23:08:59	◀▬▬	weshay_xchat (~whayutin@2602:306:c53c:9330:2ab2:bdff:fe71:5250) has quit (Ping timeout: 240 seconds)
+2015-11-05 23:09:19	◀▬▬	jrobie (~jonathan@2606:a000:47ac:7a00:a11:96ff:fee0:7c10) has quit (Ping timeout: 240 seconds)
+2015-11-05 23:09:20	◀▬▬	Casper_v3 (~Casper@2a01:e35:2f76:7750::4) has quit (Ping timeout: 240 seconds)
+2015-11-05 23:11:15	▬▬▶	Casper_v2 (~Casper@fedora/fantom) has joined #fedora-unregistered
+2015-11-05 23:11:20	@fedbot	Casper_v2: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:14:01	◀▬▬	Renault (~Renault@AMarseille-656-1-644-20.w92-150.abo.wanadoo.fr) has quit (Quit: Renault)
+2015-11-05 23:15:00	▬▬▶	arseny (arseny@gateway/shell/panicbnc/x-zdvoyyuvxouqfeyy) has joined #fedora-unregistered
+2015-11-05 23:15:01	@fedbot	arseny: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:16:16	▬▬▶	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-05 23:16:17	@fedbot	pkennedy_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:23:03	▬▬▶	weshay_xchat (~whayutin@108-83-201-51.lightspeed.rlghnc.sbcglobal.net) has joined #fedora-unregistered
+2015-11-05 23:23:04	@fedbot	weshay_xchat: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:23:57	◀▬▬	Mia (~Mia@unaffiliated/mia) has quit (Ping timeout: 246 seconds)
+2015-11-05 23:24:39	▬▬▶	Mia (~Mia@unaffiliated/mia) has joined #fedora-unregistered
+2015-11-05 23:24:39	@fedbot	Mia: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:26:51	◀▬▬	_stiven (~stiven@wsip-174-76-158-2.sb.sd.cox.net) has quit (Quit: WeeChat 1.1)
+2015-11-05 23:35:33	◀▬▬	asasmita (~asasmita@2a02:810d:8ac0:31c4:d63d:7eff:feeb:497f) has quit (Quit: Konversation terminated!)
+2015-11-05 23:37:24	◀▬▬	cliles_ (~cliles@ip70-189-165-7.lv.lv.cox.net) has quit (Ping timeout: 244 seconds)
+2015-11-05 23:47:02	▬▬▶	hme (hme@charm.unobtanium.de) has joined #fedora-unregistered
+2015-11-05 23:47:02	@fedbot	hme: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:47:34	◀▬▬	hme (hme@charm.unobtanium.de) has left #fedora-unregistered
+2015-11-05 23:50:33	◀▬▬	Jonathan_Z (jonathan@gateway/shell/panicbnc/x-cgxqgbtpaphzrycd) has quit (Ping timeout: 246 seconds)
+2015-11-05 23:54:12	▬▬▶	A124 (~Username@ag-255-58.sta.ji.cz) has joined #fedora-unregistered
+2015-11-05 23:54:12	◀▬▬	A124 (~Username@ag-255-58.sta.ji.cz) has quit (Changing host)
+2015-11-05 23:54:12	▬▬▶	A124 (~Username@unaffiliated/a124) has joined #fedora-unregistered
+2015-11-05 23:54:15	@fedbot	A124: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:54:35	◀▬▬	A124 (~Username@unaffiliated/a124) has left #fedora-unregistered
+2015-11-05 23:54:43	◀▬▬	EtMalleus (~heath@host-186-5-111-24-static.midco.net) has quit (Quit: Leaving)
+2015-11-05 23:56:16	▬▬▶	jrobie (~jonathan@cpe-107-15-234-255.nc.res.rr.com) has joined #fedora-unregistered
+2015-11-05 23:56:17	@fedbot	jrobie: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-05 23:57:36	▬▬▶	Jonathan_Z (jonathan@gateway/shell/panicbnc/x-pktkniojhplncfbb) has joined #fedora-unregistered
+2015-11-05 23:57:37	@fedbot	Jonathan_Z: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 00:00:42	◀▬▬	Mia (~Mia@unaffiliated/mia) has quit (Ping timeout: 255 seconds)
+2015-11-06 00:02:16	▬▬▶	Daredel (~Daredel@dynamic-186-154-176-88.dynamic.etb.net.co) has joined #fedora-unregistered
+2015-11-06 00:02:17	@fedbot	Daredel: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 00:02:53	▬▬▶	harish (~harish@103.252.200.120) has joined #fedora-unregistered
+2015-11-06 00:02:54	@fedbot	harish: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 00:03:02	▬▬▶	Mia (~Mia@unaffiliated/mia) has joined #fedora-unregistered
+2015-11-06 00:03:03	@fedbot	Mia: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 00:07:11	◀▬▬	Daredel (~Daredel@dynamic-186-154-176-88.dynamic.etb.net.co) has quit (Quit: bye~~)
+2015-11-06 18:09:46	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-06 18:09:46	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-06 18:09:46	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-06 18:09:46	--	Channel #fedora-unregistered: 120 nicks (2 ops, 0 voices, 118 normals)
+2015-11-06 18:09:46	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-06 18:09:46	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:09:51	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-06 18:18:33	▬▬▶	ParadoxGuitarist (~zion@cpe-104-175-108-150.socal.res.rr.com) has joined #fedora-unregistered
+2015-11-06 18:18:33	@fedbot	ParadoxGuitarist: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:19:22	▬▬▶	daanbos (~dent@dhcp-077-248-021-016.chello.nl) has joined #fedora-unregistered
+2015-11-06 18:19:23	@fedbot	daanbos: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:19:28	◀▬▬	ParadoxGuitarist (~zion@cpe-104-175-108-150.socal.res.rr.com) has left #fedora-unregistered
+2015-11-06 18:21:36	◀▬▬	daanbos (~dent@dhcp-077-248-021-016.chello.nl) has left #fedora-unregistered
+2015-11-06 18:29:30	◀▬▬	UmbraMalison (~andy@dsl-static-81-140-95-86.in-addr.broadbandscope.com) has quit (Ping timeout: 240 seconds)
+2015-11-06 18:32:03	▬▬▶	nathwill (~nathwill@2601:1c0:6000:89f3::d6df) has joined #fedora-unregistered
+2015-11-06 18:32:04	@fedbot	nathwill: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:32:22	◀▬▬	nathwill (~nathwill@2601:1c0:6000:89f3::d6df) has quit (Client Quit)
+2015-11-06 18:36:12	◀▬▬	jsgrant_ (~jsgrant@71-81-84-194.dhcp.stls.mo.charter.com) has quit (Quit: jsgrant_)
+2015-11-06 18:40:27	◀▬▬	brensig (~brensig@fl-71-54-171-128.dhcp.embarqhsd.net) has quit (Ping timeout: 252 seconds)
+2015-11-06 18:42:49	◀▬▬	virchete (~virchete@176.Red-2-136-168.dynamicIP.rima-tde.net) has quit (Quit: Konversation terminated!)
+2015-11-06 18:43:26	▬▬▶	fedor23 (~mb@78.63.253.158) has joined #fedora-unregistered
+2015-11-06 18:43:27	@fedbot	fedor23: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:47:00	▬▬▶	gingerling (~gingerlin@host-92-19-83-140.as13285.net) has joined #fedora-unregistered
+2015-11-06 18:47:00	@fedbot	gingerling: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:47:21	◀▬▬	gingerling (~gingerlin@host-92-19-83-140.as13285.net) has quit (Client Quit)
+2015-11-06 18:49:06	◀▬▬	_Tsk_ (~Ludovic@2a01:e34:ed45:8a70:eab1:fcff:fede:413) has quit (Ping timeout: 240 seconds)
+2015-11-06 18:51:17	▬▬▶	fidel (~fidel@zulu1552.server4you.de) has joined #fedora-unregistered
+2015-11-06 18:51:17	@fedbot	fidel: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:53:59	▬▬▶	tattoli (~wat@pool-173-63-100-21.nwrknj.fios.verizon.net) has joined #fedora-unregistered
+2015-11-06 18:54:00	@fedbot	tattoli: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 18:54:00	◀▬▬	skweek (~skweek@2607:fe50:0:820c:c8af:3d62:aff5:879a) has quit (Ping timeout: 246 seconds)
+2015-11-06 18:55:36	◀▬▬	skoduri (~skoduri@122.162.183.44) has quit (Quit: Leaving)
+2015-11-06 18:56:21	▬▬▶	_Tsk_ (~Ludovic@2a01:e34:ed45:8a70:eab1:fcff:fede:413) has joined #fedora-unregistered
+2015-11-06 18:56:22	@fedbot	_Tsk_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:00:51	◀▬▬	fedor23 (~mb@78.63.253.158) has quit (Quit: Išeinu)
+2015-11-06 19:02:59	◀▬▬	_Tsk_ (~Ludovic@2a01:e34:ed45:8a70:eab1:fcff:fede:413) has quit (Remote host closed the connection)
+2015-11-06 19:03:02	▬▬▶	brensig (~brensig@fl-71-54-171-128.dhcp.embarqhsd.net) has joined #fedora-unregistered
+2015-11-06 19:03:04	@fedbot	brensig: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:05:47	◀▬▬	brensig (~brensig@fl-71-54-171-128.dhcp.embarqhsd.net) has left #fedora-unregistered
+2015-11-06 19:13:32	◀▬▬	amatas (~zuru@srv.alfredomatas.es) has quit (Quit: leaving)
+2015-11-06 19:20:24	▬▬▶	niki (~niki@0x3e2c8789.mobile.telia.dk) has joined #fedora-unregistered
+2015-11-06 19:20:25	@fedbot	niki: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:23:35	▬▬▶	Milliways (~aircpp@78-82-158-139.tn.glocalnet.net) has joined #fedora-unregistered
+2015-11-06 19:23:35	@fedbot	Milliways: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:23:58	--	Milliways is now known as MIlliway
+2015-11-06 19:23:58	--	MIlliway is now known as Milliways
+2015-11-06 19:28:55	▬▬▶	skweek (~skweek@2607:fe50:0:8524:c8af:3d62:aff5:879a) has joined #fedora-unregistered
+2015-11-06 19:28:56	@fedbot	skweek: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:30:45	▬▬▶	pgustafs (~pgustafs@h74n4-jak-a12.ias.bredband.telia.com) has joined #fedora-unregistered
+2015-11-06 19:30:46	@fedbot	pgustafs: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:36:16	▬▬▶	Solitary (~Solitary@ip-62-245-69-81.net.upcbroadband.cz) has joined #fedora-unregistered
+2015-11-06 19:36:16	@fedbot	Solitary: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:36:38	◀▬▬	Solitary (~Solitary@ip-62-245-69-81.net.upcbroadband.cz) has left #fedora-unregistered
+2015-11-06 19:36:39	◀▬▬	skweek (~skweek@2607:fe50:0:8524:c8af:3d62:aff5:879a) has quit (Ping timeout: 240 seconds)
+2015-11-06 19:37:49	▬▬▶	dhritishikhar (~Dhriti@103.53.61.55) has joined #fedora-unregistered
+2015-11-06 19:37:51	@fedbot	dhritishikhar: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 19:38:34	◀▬▬	dhritishikhar (~Dhriti@103.53.61.55) has left #fedora-unregistered
+2015-11-06 19:40:39	▬▬▶	Hornet_C (~quassel@2a02:d40:9:7d::594a) has joined #fedora-unregistered
+2015-11-06 19:40:40	@fedbot	Hornet_C: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 20:57:31	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-06 20:57:31	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-06 20:57:31	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-06 20:57:31	--	Channel #fedora-unregistered: 117 nicks (2 ops, 0 voices, 115 normals)
+2015-11-06 20:57:31	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-06 20:57:31	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 20:57:36	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-06 20:57:48	▬▬▶	anisha (~anisha@122.161.191.172) has joined #fedora-unregistered
+2015-11-06 20:57:48	@fedbot	anisha: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 21:57:28	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-06 21:57:28	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-06 21:57:28	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-06 21:57:28	--	Channel #fedora-unregistered: 119 nicks (2 ops, 0 voices, 117 normals)
+2015-11-06 21:57:28	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 21:57:29	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-06 21:57:34	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-06 21:58:49	◀▬▬	anisha (~anisha@122.161.191.172) has quit (Quit: Leaving)
+2015-11-06 22:02:14	▬▬▶	kdas_ (~kdas@106.79.161.106) has joined #fedora-unregistered
+2015-11-06 22:02:14	@fedbot	kdas_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:05:35	◀▬▬	kdas_ (~kdas@106.79.161.106) has quit (Read error: Connection reset by peer)
+2015-11-06 22:11:49	◀▬▬	niki (~niki@0x3e2c8789.mobile.telia.dk) has quit (Ping timeout: 265 seconds)
+2015-11-06 22:13:03	▬▬▶	niki (~niki@0x3e2c862c.mobile.telia.dk) has joined #fedora-unregistered
+2015-11-06 22:13:03	@fedbot	niki: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:13:07	◀▬▬	Milliways (~aircpp@78-82-158-139.tn.glocalnet.net) has left #fedora-unregistered
+2015-11-06 22:13:35	▬▬▶	Timslin (~Speedy624@unaffiliated/timslin) has joined #fedora-unregistered
+2015-11-06 22:13:35	@fedbot	Timslin: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:14:41	◀▬▬	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has quit (Ping timeout: 244 seconds)
+2015-11-06 22:19:30	▬▬▶	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-06 22:19:30	@fedbot	pkennedy_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:20:31	▬▬▶	ridgemat (~matt@95.149.107.168) has joined #fedora-unregistered
+2015-11-06 22:20:32	@fedbot	ridgemat: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:20:56	◀▬▬	ridgemat (~matt@95.149.107.168) has left #fedora-unregistered
+2015-11-06 22:22:28	◀▬▬	cliles (~cliles@ip70-189-165-7.lv.lv.cox.net) has quit (Ping timeout: 265 seconds)
+2015-11-06 22:24:56	◀▬▬	TMM_ (~hp@178-84-46-106.dynamic.upc.nl) has quit (Quit: Ex-Chat)
+2015-11-06 22:28:52	▬▬▶	grakhul (~grakhul@c-73-184-88-2.hsd1.ga.comcast.net) has joined #fedora-unregistered
+2015-11-06 22:28:53	@fedbot	grakhul: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:31:05	▬▬▶	pkennedy (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-06 22:31:05	@fedbot	pkennedy: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:33:44	◀▬▬	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has quit (Ping timeout: 272 seconds)
+2015-11-06 22:34:59	▬▬▶	Speedy624 (~Speedy624@575184b2.skybroadband.com) has joined #fedora-unregistered
+2015-11-06 22:35:00	@fedbot	Speedy624: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:56:01	▬▬▶	poops (~poops4@bzq-219-181-50.dsl.bezeqint.net) has joined #fedora-unregistered
+2015-11-06 22:56:02	@fedbot	poops: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:57:17	◀▬▬	Timslin (~Speedy624@unaffiliated/timslin) has quit (Quit: Leaving)
+2015-11-06 22:57:24	◀▬▬	Speedy624 (~Speedy624@575184b2.skybroadband.com) has quit (Quit: Leaving)
+2015-11-06 22:57:44	▬▬▶	Timslin (~Speedy624@575184b2.skybroadband.com) has joined #fedora-unregistered
+2015-11-06 22:57:44	◀▬▬	Timslin (~Speedy624@575184b2.skybroadband.com) has quit (Changing host)
+2015-11-06 22:57:44	▬▬▶	Timslin (~Speedy624@unaffiliated/timslin) has joined #fedora-unregistered
+2015-11-06 22:58:14	▬▬▶	skweek (~skweek@pool-71-99-181-142.tampfl.dsl-w.verizon.net) has joined #fedora-unregistered
+2015-11-06 22:58:14	@fedbot	skweek: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 22:59:48	▬▬▶	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has joined #fedora-unregistered
+2015-11-06 22:59:48	@fedbot	pkennedy_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 23:00:04	▬▬▶	dabbill (~quassel@71-93-11-195.dhcp.knwc.wa.charter.com) has joined #fedora-unregistered
+2015-11-06 23:00:04	@fedbot	dabbill: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 23:03:33	◀▬▬	pkennedy (~pkennedy@chippewa-nat.cray.com) has quit (Ping timeout: 255 seconds)
+2015-11-06 23:07:52	▬▬▶	Quanttek (~quassel@ip1f11db5b.dynamic.kabel-deutschland.de) has joined #fedora-unregistered
+2015-11-06 23:07:53	@fedbot	Quanttek: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 23:08:11	◀▬▬	Quanttek (~quassel@ip1f11db5b.dynamic.kabel-deutschland.de) has quit (Client Quit)
+2015-11-06 23:08:26	▬▬▶	Quanttek (~quassel@ip1f11db5b.dynamic.kabel-deutschland.de) has joined #fedora-unregistered
+2015-11-06 23:09:11	◀▬▬	Quanttek (~quassel@ip1f11db5b.dynamic.kabel-deutschland.de) has left #fedora-unregistered
+2015-11-06 23:14:16	◀▬▬	dabbill (~quassel@71-93-11-195.dhcp.knwc.wa.charter.com) has left #fedora-unregistered ("http://quassel-irc.org - Chat comfortably. Anywhere.")
+2015-11-06 23:16:04	◀▬▬	inate (~t1gz@50.248.81.66) has quit (Quit: Leaving)
+2015-11-06 23:54:22	▬▬▶	havill (~havill@s145.HtokyoFL38.vectant.ne.jp) has joined #fedora-unregistered
+2015-11-06 23:54:22	@fedbot	havill: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-06 23:54:41	◀▬▬	havill (~havill@s145.HtokyoFL38.vectant.ne.jp) has left #fedora-unregistered
+2015-11-07 00:15:06	◀▬▬	dano5 (~dano5@208.79-160-124.customer.lyse.net) has left #fedora-unregistered ("Leaving")
+2015-11-07 00:16:43	▬▬▶	NaStYdoG (~GonGaZ@2001:8a0:fbc5:2701:f534:cf70:953f:2596) has joined #fedora-unregistered
+2015-11-07 00:16:44	@fedbot	NaStYdoG: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 00:22:42	◀▬▬	pkennedy_ (~pkennedy@chippewa-nat.cray.com) has quit (Read error: Connection reset by peer)
+2015-11-07 00:26:59	◀▬▬	luboucek__ (~lubos@ip-37-221-254-246.cust.tlapnet.cz) has quit (Ping timeout: 240 seconds)
+2015-11-07 00:33:25	▬▬▶	c00kiej4r (~madsmax@62.61.145.89.generic-hostname.arrownet.dk) has joined #fedora-unregistered
+2015-11-07 00:33:29	◀▬▬	c00kiej4r (~madsmax@62.61.145.89.generic-hostname.arrownet.dk) has left #fedora-unregistered
+2015-11-07 00:36:30	◀▬▬	grakhul (~grakhul@c-73-184-88-2.hsd1.ga.comcast.net) has quit (Ping timeout: 260 seconds)
+2015-11-07 00:36:53	▬▬▶	luboucek__ (~lubos@ip-37-221-254-246.cust.tlapnet.cz) has joined #fedora-unregistered
+2015-11-07 00:36:56	@fedbot	luboucek__: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 00:49:54	▬▬▶	pbokoc (~pbokoc@ip-89-103-231-124.net.upcbroadband.cz) has joined #fedora-unregistered
+2015-11-07 00:49:56	@fedbot	pbokoc: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 00:50:13	◀▬▬	pbokoc (~pbokoc@ip-89-103-231-124.net.upcbroadband.cz) has left #fedora-unregistered
+2015-11-07 00:56:28	▬▬▶	cyjimmy264 (~quassel@178.47.84.102) has joined #fedora-unregistered
+2015-11-07 00:56:28	@fedbot	cyjimmy264: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 01:01:38	▬▬▶	orion_ (~orion@p20030072CF6ABF01020C29FFFE60701B.dip0.t-ipconnect.de) has joined #fedora-unregistered
+2015-11-07 01:01:39	@fedbot	orion_: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 01:02:34	◀▬▬	orion_ (~orion@p20030072CF6ABF01020C29FFFE60701B.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2015-11-07 01:11:54	◀▬▬	mydog2 (~mydog2@adsl-184-45-71-42.sdf.bellsouth.net) has quit (Ping timeout: 244 seconds)
+2015-11-07 01:13:07	▬▬▶	grakhul (~grakhul@c-73-184-88-2.hsd1.ga.comcast.net) has joined #fedora-unregistered
+2015-11-07 01:13:09	@fedbot	grakhul: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 01:19:31	▬▬▶	pylbrecht (~pylbrecht@2a02:8109:8e00:7884:1544:99be:61d2:25fa) has joined #fedora-unregistered
+2015-11-07 01:19:32	@fedbot	pylbrecht: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 01:19:43	◀▬▬	pylbrecht (~pylbrecht@2a02:8109:8e00:7884:1544:99be:61d2:25fa) has left #fedora-unregistered
+2015-11-07 01:25:03	▬▬▶	mydog2 (~mydog2@adsl-184-45-71-211.sdf.bellsouth.net) has joined #fedora-unregistered
+2015-11-07 01:25:03	@fedbot	mydog2: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 01:59:37	◀▬▬	mydog2 (~mydog2@adsl-184-45-71-211.sdf.bellsouth.net) has left #fedora-unregistered ("Leaving")
+2015-11-07 02:08:59	▬▬▶	Sicnus (~Sick@ip174-79-208-24.mc.at.cox.net) has joined #fedora-unregistered
+2015-11-07 02:09:00	@fedbot	Sicnus: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 02:09:36	◀▬▬	Sicnus (~Sick@ip174-79-208-24.mc.at.cox.net) has left #fedora-unregistered
+2015-11-07 02:17:23	◀▬▬	ross_ (~ross@206.19.214.224) has quit (Ping timeout: 250 seconds)
+2015-11-07 02:18:29	▬▬▶	vicious (vicious@c-50-148-68-55.hsd1.il.comcast.net) has joined #fedora-unregistered
+2015-11-07 02:18:30	@fedbot	vicious: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 02:18:34	◀▬▬	severion (~bjozsa@cpe-172-72-12-150.carolina.res.rr.com) has quit (Remote host closed the connection)
+2015-11-07 02:18:34	◀▬▬	danrik (~danrik@unaffiliated/ddsss) has quit (Quit: Leaving)
+2015-11-07 02:21:02	◀▬▬	luboucek__ (~lubos@ip-37-221-254-246.cust.tlapnet.cz) has quit (Ping timeout: 260 seconds)
+2015-11-07 19:10:43	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-07 19:10:43	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-07 19:10:43	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-07 19:10:43	--	Channel #fedora-unregistered: 114 nicks (2 ops, 0 voices, 112 normals)
+2015-11-07 19:10:44	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-07 19:10:44	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 19:10:51	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-07 19:10:54	◀▬▬	shorne (~shorne@z205.220-213-39.ppp.wakwak.ne.jp) has quit (Ping timeout: 265 seconds)
+2015-11-07 19:12:01	▬▬▶	pgustafs (~pgustafs@h74n4-jak-a12.ias.bredband.telia.com) has joined #fedora-unregistered
+2015-11-07 19:12:02	@fedbot	pgustafs: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 19:13:28	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-07 19:13:28	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-07 19:13:28	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-07 19:13:28	--	Channel #fedora-unregistered: 114 nicks (2 ops, 0 voices, 112 normals)
+2015-11-07 19:13:29	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-07 19:13:29	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-07 19:13:36	--	Channel created on Fri, 15 Jan 2010 07:06:01
+2015-11-08 15:20:55	▬▬▶	Psyq (~Psyq@131-164-213-2-static.dk.customer.tdc.net) has joined #fedora-unregistered
+2015-11-08 15:20:55	--	Topic for #fedora-unregistered is "This is not a support Channel | You must register to join #fedora. See http://freenode.net/faq.shtml#nicksetup after you register and receive your confirmation e-mail you need to /msg NickServ identify <password> and then /join #fedora | DO NOT click on spammed links | Depending on your client "/set irc_join_delay 10" to delay joining 10 seconds."
+2015-11-08 15:20:55	--	Topic set by EvilBob (~EvilBob@fedora/bobjensen) on Sun, 29 Dec 2013 01:09:09
+2015-11-08 15:20:55	--	Channel #fedora-unregistered: 115 nicks (2 ops, 0 voices, 113 normals)
+2015-11-08 15:20:55	--	PvNotice(ChanServ): You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2015-11-08 15:20:55	@fedbot	Psyq: You are here in #fedora-unregistered because you are not identified with freenode. Please: a) register - http://freenode.net/faq.shtml#nicksetup (including email step) b) configure your client to identify - http://freenode.net/faq.shtml#identify and/or /msg nickserv identify then c) /join #fedora for support.
+2015-11-08 15:21:04	--	Channel created on Fri, 15 Jan 2010 07:06:01

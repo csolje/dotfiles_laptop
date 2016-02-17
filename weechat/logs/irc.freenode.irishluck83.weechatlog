@@ -1,0 +1,92 @@
+2015-12-13 22:49:37	Irishluck83	not right now...but i'm thinking about going back to it
+2015-12-13 22:50:06	psyq	how is it to use
+2015-12-13 22:50:26	psyq	I saw ur vids about it and I liked it
+2015-12-13 22:51:00	Irishluck83	it is fine but cutting it into multible things on a screen is a bit awkward
+2015-12-13 22:51:24	psyq	okie
+2015-12-13 22:51:34	Irishluck83	wehre in i3 you do mod+v or mod+h you can do it where in bspwm you have to do mod+ctrl and vim controls
+2015-12-13 22:51:54	psyq	oohh
+2015-12-13 22:52:10	psyq	okie so i3 is better for newbies
+2015-12-13 22:52:18	Irishluck83	i think so
+2015-12-13 22:52:32	Irishluck83	i have a vid series on i3 on the youtube channel
+2015-12-13 22:52:48	psyq	I am using i3
+2015-12-13 22:52:58	Irishluck83	u like it
+2015-12-13 22:53:06	psyq	but I want something more customizable
+2015-12-13 22:53:39	psyq	I like it a lot for the lightweight and the way it makes everything simple
+2015-12-13 22:53:49	Irishluck83	go to awesome or xmonad but if you want a easy config then go with bspwm
+2015-12-13 22:54:15	psyq	okie
+2015-12-13 22:54:42	psyq	so bspwm is customizable 
+2015-12-13 22:54:50	Irishluck83	let me know what you choose and you can show me a screenshot
+2015-12-13 22:56:43	psyq	hhmmm xmonad i haven't heard about that
+2015-12-13 22:58:17	Irishluck83	well it is written in haskell. it is an "advanced" wm
+2015-12-13 22:58:29	psyq	okie
+2015-12-13 22:58:46	psyq	and awesome is written in lua
+2015-12-13 22:58:50	Irishluck83	i did a review on it
+2015-12-13 22:58:52	Irishluck83	yea
+2015-12-13 23:00:19	psyq	okie I will check out ur youtube channel
+2015-12-13 23:01:59	psyq	just found it as the first one
+2015-12-13 23:04:44	psyq	Irishluck83 which wm do you like the most
+2015-12-13 23:19:50	psyq	I think I am going with AwesomeWM
+2015-12-14 00:05:38	Irishluck83	i don't know anymore. I'm on i3 but awesome is good too
+2015-12-14 00:11:38	psyq	you have tried a lot
+2015-12-14 00:17:56	Irishluck83	yea
+2015-12-14 00:17:58	Irishluck83	brb
+2015-12-14 00:29:53	psyq	okie
+2015-12-14 00:54:23	Irishluck83	back
+2015-12-14 01:05:31	psyq	wb
+2015-12-14 01:06:13	psyq	Irish you still have to xmonad installed on your system?
+2015-12-14 01:14:39	Irishluck83	yes
+2015-12-14 01:35:01	psyq	how is it other then a bit hardcore to get working
+2015-12-14 01:37:13	Irishluck83	it took me awhile to get to work
+2015-12-14 01:38:47	psyq	okie
+2015-12-14 01:48:24	--	irc: disconnected from server
+2015-12-16 00:54:21	Irishluck83	hey
+2015-12-16 00:54:24	Irishluck83	did you need something
+2015-12-16 00:56:39	psyq	do you run all your wm's from a login manager like slim or just the xinitrc with startx
+2015-12-16 00:57:32	Irishluck83	well if you use slim you have to add the wm with xinitrc but i just do a startx in my zshrc file
+2015-12-16 01:07:26	psyq	okie that sounds like it is a better way to do it so it works
+2015-12-16 01:07:55	Irishluck83	do you want my github everything for the most part is there
+2015-12-16 01:08:23	Irishluck83	https://github.com/boylemic/configs
+2015-12-16 01:15:34	psyq	thank Irish
+2015-12-16 01:16:23	Irishluck83	yep. let me know if you have any questions
+2015-12-16 01:44:41	--	irc: disconnected from server
+2015-12-17 23:39:02	Irishluck83	yea
+2015-12-17 23:41:06	psyq	hi Irishluck83 
+2015-12-17 23:41:11	psyq	how is your son?
+2015-12-17 23:41:28	Irishluck83	hes fine i have to go pick him up
+2015-12-17 23:41:40	psyq	okie that is good
+2015-12-17 23:41:52	psyq	I am trying out xmonad now
+2015-12-17 23:41:57	Irishluck83	and
+2015-12-17 23:42:58	psyq	and I can't seem to make it work the way i want it to work so I am looking through your xmonad.hs file where is it you are setting the keybinds?
+2015-12-17 23:45:00	Irishluck83	line 64 to 139
+2015-12-17 23:45:20	psyq	sweet thanks 
+2015-12-17 23:45:46	psyq	this there anything I should look out for that you have incountered?
+2015-12-17 23:46:24	Irishluck83	no
+2015-12-17 23:46:36	Irishluck83	I have to pick up my son...i'll be on around 8 again
+2015-12-17 23:46:56	psyq	okie no worries
+2015-12-18 00:55:51	--	irc: disconnected from server
+2016-01-09 23:22:25	Irishluck83	that is fine
+2016-01-09 23:22:30	Irishluck83	u better with xmonad
+2016-01-09 23:23:13	psyq	well I like it but it is a bit hard to learn then AWESOME WM and I3
+2016-01-09 23:23:26	psyq	bspwm I didn't like
+2016-01-09 23:23:36	Irishluck83	same here
+2016-01-09 23:23:45	Irishluck83	that is why i wanted to learn xmonad
+2016-01-09 23:23:48	Irishluck83	it is a hardcore wm
+2016-01-09 23:24:28	psyq	yeah and you can use the haskell to something usefull after that
+2016-01-09 23:24:54	Irishluck83	yea
+2016-01-09 23:25:47	psyq	how did you fix the tabs issues I heard that you can get vim setup so that when it is haskell files it will edit your settings to what is prefered by Haskell
+2016-01-09 23:27:10	Irishluck83	i couldn't get that to go....i think there is a vim-haskell program
+2016-01-09 23:28:42	psyq	okie
+2016-01-09 23:47:25	Irishluck83	did the new config do anything
+2016-01-09 23:48:12	psyq	not really
+2016-01-09 23:48:48	Irishluck83	have u made any changes
+2016-01-09 23:49:12	psyq	copy paste only
+2016-01-09 23:50:12	Irishluck83	try copy pasting in an editor like gedit
+2016-01-09 23:50:32	psyq	I just pasted it into sublime text 2
+2016-01-09 23:50:45	Irishluck83	hmm
+2016-01-09 23:50:50	psyq	and I still get the xmobar error
+2016-01-09 23:51:45	Irishluck83	what does that say
+2016-01-09 23:52:40	psyq	Could not parse string: [action=xdotool key alt+1]1:web</action>
+2016-01-09 23:53:03	Irishluck83	try to restart and see if that works
+2016-01-09 23:53:13	psyq	okie 
+2016-01-09 23:53:19	psyq	be right back
+2016-01-09 23:53:23	ℹ	irc: disconnected from server

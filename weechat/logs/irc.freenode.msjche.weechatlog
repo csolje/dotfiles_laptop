@@ -1,0 +1,380 @@
+2015-11-08 23:10:02	msjche	i'm actually using architect linux these days to install arch.  it's super easy and installs straight arch
+2015-11-08 23:10:11	msjche	it's like the old ncurses instal framework for arch
+2015-11-08 23:10:32	msjche	linux action show spotlighted it this week
+2015-11-08 23:10:59	Psyq	okie so no more pacstrap 
+2015-11-08 23:11:42	msjche	i may consider doing an install again.  if i did it would be to explain how to not to use yaourt or pacaur and compile packages manually
+2015-11-08 23:12:00	msjche	would need to create a local database, etc.  i might do that
+2015-11-08 23:12:40	Psyq	okie why are you leaving yaourt and pacaur out?
+2015-11-08 23:12:49	msjche	i suspect you can make it so the downloaded packages are upgraded as they are released
+2015-11-08 23:13:24	msjche	well, i think the original premise of arch is to make && make install packages for stuff not in official repos.
+2015-11-08 23:13:46	msjche	or pacman -U ... those packages
+2015-11-08 23:14:10	Psyq	so you would keep it pure arch with pacman and that is it
+2015-11-08 23:14:23	msjche	yeah that would be the premise
+2015-11-08 23:14:25	Psyq	no yaourt or pacaur
+2015-11-08 23:14:37	Psyq	I can see that
+2015-11-08 23:15:08	msjche	right, if you notice, you need to enable archlinux.fr/... to get yaourt before getting access to the AUR
+2015-11-08 23:15:40	Psyq	but wouldn't it good a good thing for me to follow one of your old Arch install videos to get to know how Arch works
+2015-11-08 23:15:43	msjche	i'm just not sure how to ensure packages get upgraded that way...need to do some research
+2015-11-08 23:16:06	msjche	yeah, look at my systemd install vid.  it's pretty current
+2015-11-08 23:16:57	Psyq	cool I will do that and I will be watching your channel to see if you upload any new Arch videos
+2015-11-08 23:17:48	Psyq	I want to try Gentoo but I don't feel like I know too much about linux to take that challange now
+2015-11-08 23:18:31	msjche	just take your time.  gentoo will probably take a few tries to complete, but once you get through it you'll know a lot more
+2015-11-08 23:20:00	Psyq	yeah I followed your Gentoo install video before and learned a lot but I just didn't really now how to get some configurations to work 
+2015-11-08 23:20:25	Psyq	and the fact that I needed to compile a lot of things from source
+2015-11-08 23:21:29	msjche	haha, yeah, the compilations can take quite a while.  just stay away from libreoffice and chromium until everything is up-to-date haha
+2015-11-08 23:21:45	Psyq	hehehe
+2015-11-08 23:22:19	Psyq	atleast I can use i3 or Awesome then luakit as a webbrowser hehehe
+2015-11-08 23:22:31	msjche	yup
+2015-11-08 23:23:44	Psyq	by the way msjche you are using awesome did you ever try out i3
+2015-11-08 23:24:31	msjche	no, i've never really got into i3.  i like the tiling paradigm, but it just doesn't seem to be as customizable as awesome.  i think i'd get tired of it very quickly
+2015-11-08 23:25:05	Psyq	that is always good to know that
+2015-11-08 23:25:06	msjche	oh yeah, i did try it on a debian install a year ago or so
+2015-11-08 23:25:52	Psyq	because I am stock between choosing awesome or i3
+2015-11-08 23:28:06	msjche	i3 is definitely very popular.  more than awesome i'd say
+2015-11-08 23:29:24	Psyq	well yeah but which one is the most customizable of them
+2015-11-08 23:29:45	msjche	definitely awesome from what i've seen
+2015-11-08 23:30:03	Psyq	:)
+2015-11-08 23:35:07	Psyq	wow they changed cfdisk
+2015-11-08 23:48:57	Psyq	why is it that all the new iso's I download and try to configure my ethernet then it is not called eth0 anymore hehe instead it is enp0s3
+2015-11-08 23:49:32	msjche	good question, they changed that a year ago or so.  proly with the 4.0 kernel
+2015-11-08 23:50:56	Psyq	arrhh that would explain it
+2015-11-08 23:51:23	Psyq	msjche: do you know how I change the keymaps under the installation?
+2015-11-08 23:51:48	msjche	on the terminal only version?  no afraid not.
+2015-11-08 23:52:26	Psyq	you are still using grub-bios?
+2015-11-08 23:53:05	msjche	yeah.  i've gotten UEFI to work, but it always seems to be very sketchy.  don't trust it
+2015-11-08 23:53:34	Psyq	that is good to know 
+2015-11-08 23:54:17	Psyq	I am hoping that my work will approve that I will buy the 15" XPS soon
+2015-11-08 23:55:22	Psyq	you been on the XPS for some time now how is it working for you?
+2015-11-09 00:06:42	msjche	i actually just failed to get gentoo installed on it...for the second time :(
+2015-11-09 00:07:15	msjche	the nvidia optimus intel + nvidia using bumblebee is a serious pain on gentoo.  super easy on arch tho
+2015-11-09 00:07:17	Psyq	so it is back to arch on that one
+2015-11-09 00:44:13	Psyq	msjche: 
+2015-11-09 00:44:29	msjche	ya whats up?
+2015-11-09 00:44:54	Psyq	I think that I am doing something wrong with the installation of Arch
+2015-11-09 00:45:05	msjche	what step?
+2015-11-09 00:45:48	Psyq	I made the two partitions sda1 and sda2 mounted /mnt/ to sda2 and I mount /mnt/home to sda2
+2015-11-09 00:46:03	Psyq	then I build the system with pacstrap
+2015-11-09 00:46:40	msjche	you have both mounted to sda2 from what you've said here
+2015-11-09 00:47:06	Psyq	when I then ls the /mnt/ I see the root, but when I ls the /mnt/home I see then same as if i ls /mnt
+2015-11-09 00:47:31	msjche	mount /dev/sda1 /mnt/boot
+2015-11-09 00:47:36	msjche	mount /dev/sda2 /mnt/
+2015-11-09 00:47:57	msjche	you're going to have to start over probably
+2015-11-09 00:48:13	Psyq	okie so I shouldn't mount sda2 to home then
+2015-11-09 00:48:31	msjche	oh, here's what you need
+2015-11-09 00:48:39	msjche	mount /dev/sda1 /mnt/
+2015-11-09 00:48:44	msjche	mount /dev/sda2 /mnt/home
+2015-11-09 00:49:09	Psyq	are u sure what about boot
+2015-11-09 00:49:27	msjche	boot would just be on sda1 with /
+2015-11-09 00:49:47	msjche	if you want that separate you need 3 partitions
+2015-11-09 00:49:54	msjche	mount /dev/sda1 /mnt/boot
+2015-11-09 00:50:01	msjche	mount /dev/sda2 /mnt/
+2015-11-09 00:50:07	msjche	mount /dev/sda3 /mnt/home
+2015-11-09 00:50:37	Psyq	okie because in your video your are saying 
+2015-11-09 00:50:54	Psyq	mount /dev/sda2 /mnt/
+2015-11-09 00:51:04	Psyq	mkdir -p /mnt/boot
+2015-11-09 00:51:07	Psyq	mkdir -p /mnt/home
+2015-11-09 00:51:28	Psyq	mount /dev/sda2 /mnt/home
+2015-11-09 00:51:35	Psyq	mount /dev/sda1 /mnt/boot
+2015-11-09 00:52:19	msjche	if i did it was an error.  if you declare /home as a separate part it should have been on /dev/sda3
+2015-11-09 00:52:20	Psyq	if I do that then I get the base in both /mnt/ and /mnt/home
+2015-11-09 00:52:57	Psyq	okie so I should just mount /dev/sda2 /mnt/
+2015-11-09 00:53:10	Psyq	and mount /dev/sda1 /mnt/boot
+2015-11-09 00:53:16	msjche	yup
+2015-11-09 00:53:20	Psyq	okie
+2015-11-09 00:53:23	Psyq	thanks
+2015-11-09 00:53:33	msjche	no prob, good luck :)
+2015-11-09 00:57:41	Psyq	FYI the adduser does not work in arch anymore
+2015-11-09 00:57:43	Psyq	:)
+2015-11-09 02:45:26	Psyq	still here msjche 
+2015-11-09 02:59:32	msjche	ya what's up?
+2015-11-09 02:59:47	msjche	actually recording a new arch install vid :)
+2015-11-09 03:03:31	Psyq	:)
+2015-11-09 03:03:33	Psyq	cool
+2015-11-09 03:03:49	Psyq	I got the yaourt to work
+2015-11-09 03:12:39	Psyq	msjche: what are you running on your Gentoo box?
+2015-11-09 03:16:03	◀▬▬	msjche (~msjche@gateway/vpn/privateinternetaccess/msjche) has quit (Ping timeout: 246 seconds)
+2015-12-06 19:37:58	msjche	psyq: there are a few things you need to make sure
+2015-12-06 19:38:13	psyq	okie
+2015-12-06 19:38:47	msjche	check your /etc/locale.conf - should have LANG=en_US.UTF-8 or equivalent
+2015-12-06 19:39:06	psyq	msjche: i am following your video
+2015-12-06 19:39:11	msjche	then make sure you have poweline fonts installed.  I have a few in my config files 
+2015-12-06 19:39:33	msjche	the last thing is you may need to mess with font sizes.  some sizes don't have all the characters
+2015-12-06 19:39:58	psyq	okie I think I didn't install the powerline fonts
+2015-12-06 19:40:11	psyq	they should be in AUR right?
+2015-12-06 19:40:28	msjche	yeah should find them with yaourt powerline fonts
+2015-12-06 19:40:37	psyq	sweet
+2015-12-06 19:40:52	psyq	and can I do it in gentoo
+2015-12-06 19:41:50	msjche	yeah, media-fonts/powerline-symbols
+2015-12-06 19:42:00	psyq	really msjche I don't know what distro that I want to stick too I am moving between Arch, Gentoo and Void hehehe
+2015-12-06 19:42:15	msjche	hmm, never used Void...
+2015-12-06 19:42:38	msjche	i'm running both. with my laptop here i'm using Arch.  my desktop is Gentoo
+2015-12-06 19:42:47	msjche	really like them both
+2015-12-06 19:44:34	msjche	which terminal are you using?
+2015-12-06 19:46:06	psyq	me too I love Arch and Gentoo now I tried void and I love that one too it is really hard
+2015-12-06 19:46:16	psyq	I am using rxvt-unicode
+2015-12-06 19:47:18	psyq	and with your .xresources hehehehe
+2015-12-06 19:47:26	msjche	:)
+2015-12-06 19:47:41	msjche	yeah, urxvt can be ... difficult ... sometimes
+2015-12-06 19:47:50	psyq	your setups I have always like everything that you have made
+2015-12-06 19:48:10	msjche	thanks! yeah i agonize over design
+2015-12-06 19:48:17	msjche	too much probably haha
+2015-12-06 19:49:19	psyq	hehehehe well msjche I have to say I am always looking forward to see how your layout will look
+2015-12-06 19:50:25	msjche	i'm actually thinking about going back to a minimal awesome layout.  and have a switching system using buttons or somthing 
+2015-12-06 19:50:34	psyq	like when you made the arch updated install hehehe i was fascinated by the Gentoo design
+2015-12-06 19:50:41	msjche	to go between pimped out and minimalistic
+2015-12-06 19:50:54	psyq	really
+2015-12-06 19:51:13	psyq	so you can just switch between the two?
+2015-12-06 19:52:12	msjche	yeah, i'd have a "PROFILES" folder in .config/awesome, then use symlinks to one or the other configs, using a simple bash script, which could then be tied to buttons...or keybindings.  still developing the idea
+2015-12-06 19:53:23	psyq	how do you come up with all of this?
+2015-12-06 19:53:54	msjche	haha, i don't know, just get bored and want more options :)
+2015-12-06 19:54:06	psyq	:)
+2015-12-06 19:54:49	msjche	the issue i have with my pimped out config is batter life.  awesome uses like 4-6% cpu with all the graphical widgets and all.  i'd go to minimal on battery for instance
+2015-12-06 19:55:12	psyq	okie
+2015-12-06 19:55:37	psyq	how did you setup the conky that you are using on your gentoo box?
+2015-12-06 19:56:20	msjche	i actually copied it from someone online
+2015-12-06 19:56:32	msjche	then tweeked it a little
+2015-12-06 19:56:35	psyq	nice
+2015-12-06 19:58:46	psyq	I have never got around to figure out the way to play with it
+2015-12-06 19:59:06	msjche	you mean awesome?
+2015-12-06 19:59:15	psyq	conky and awesome 
+2015-12-06 19:59:32	psyq	honestly I hate lua and awesome uses lua :(
+2015-12-06 19:59:47	msjche	oh yeah, conky is a bit strange, but pretty straight forward.  the only weird part are the offsets.
+2015-12-06 19:59:55	msjche	haha
+2015-12-06 20:00:15	msjche	so psyq where do you live?
+2015-12-06 20:09:25	psyq	I am living in Denmark
+2015-12-06 20:09:35	msjche	cool
+2015-12-06 20:09:48	psyq	:)
+2015-12-06 20:10:06	psyq	you got a fan half way across the world :)
+2015-12-06 20:10:21	msjche	haha, you're too nice :)
+2015-12-06 20:33:19	psyq	:)
+2015-12-06 20:37:05	psyq	msjche I tried ubuntu as the first linux distro but didn't like it then mint linux which I liked stayed there for a long time then I heard about Arch tryed it as a newbie went back to mint, after I got a little bit more know how on mint I tried debian stayed there to a couple of mounths
+2015-12-06 20:39:46	psyq	Then I thought about trying out a really hardcore linux distro that is when I tryed Gentoo which really scared me hehehe, then I talked to someone in school and he told me that i really should try Arch so I did and found your channel after that day I have been a fan of what you have do and what you are doing
+2015-12-06 20:54:46	msjche	that actually sounds quit a bit like my story too.  i had apple hardware and played around with dual booting, then tripple booting with ubuntu.
+2015-12-06 20:55:31	msjche	from ubuntu i went straight to arch and stayed there for quite a while.  i've only done the gentoo thing for a year or so.  i'll probably stay arch and gentoo indefinitely
+2015-12-06 21:03:07	psyq	but why is it that Gentoo is so popular
+2015-12-06 21:04:19	msjche	idk, but i think it's mark of pride if you can install it and keep it running
+2015-12-06 21:04:32	msjche	and, portage is just awesome
+2015-12-06 21:05:34	psyq	what is it with that portage?
+2015-12-06 21:12:42	msjche	just allows for a fully custom system. and tbh, it's just really cool watching it work :)
+2015-12-06 21:13:32	psyq	that is why everyone that is using Gentoo love it so much
+2015-12-06 21:32:38	psyq	msjche it is the dejavu of the powerline fonts that I need to download right?
+2015-12-06 21:33:06	msjche	yeah, if that's what you're using in .Xresources
+2015-12-06 21:34:05	psyq	how come the urxvt is looking for the .Xdefaults and not the .Xresources
+2015-12-06 21:34:58	msjche	you may need to do xrdb -merge ~/.Xresources
+2015-12-06 21:35:57	psyq	okie
+2015-12-06 21:36:03	msjche	then close out all urxvt and relaunch
+2015-12-06 21:37:00	psyq	okie
+2015-12-06 21:46:03	psyq	msjche do I need to install the powerline theme?
+2015-12-06 21:46:27	msjche	you need to have it in .oh-my-zsh/themes/ can find it on github
+2015-12-06 21:47:04	psyq	I just found it ;)
+2015-12-06 21:48:12	psyq	are you still using the powerline theme?
+2015-12-06 21:48:21	msjche	yeah
+2015-12-06 21:48:43	msjche	made a slight tweak so the green is now grey
+2015-12-06 21:49:13	psyq	how does that look
+2015-12-06 21:51:40	msjche	http://imgur.com/Q0W4uOS
+2015-12-06 21:52:23	psyq	nice
+2015-12-06 21:59:03	psyq	damn it looks nice
+2015-12-06 22:01:55	msjche	thx :)
+2015-12-06 22:02:40	psyq	and thank you I got mine to work also
+2015-12-06 22:02:54	msjche	cool good to hear
+2015-12-06 22:04:30	psyq	this is so awesome now
+2015-12-06 22:04:31	psyq	hehehe
+2015-12-06 22:04:54	psyq	I am using openbox and now for the first time it is just the way I want it
+2015-12-06 22:05:13	msjche	right on :)
+2015-12-06 22:05:14	psyq	and the cool part is I wrote all the commands down
+2015-12-06 22:05:27	msjche	good way to learn
+2015-12-06 22:06:26	psyq	yeah besides now I am better at Arch then before so it is so nice
+2015-12-06 22:08:20	psyq	I am going to reinstall this laptop with Arch then I have a other laptop I might try running gentoo on but i am not sure I am running VoidLinux on my desktop so i think that it would be good to run Gentoo on the second laptop
+2015-12-06 22:08:30	psyq	then I should be covered heheheh
+2015-12-07 00:23:24	psyq	msjche: busy?
+2015-12-07 00:24:04	msjche	not really, watching the warriors game
+2015-12-07 00:25:04	msjche	what's up?
+2015-12-07 00:25:21	psyq	warriora
+2015-12-07 00:25:46	psyq	I was thinking what do I need to run multiple screen in Arch?
+2015-12-07 00:26:05	msjche	hmmm, i've never messed with it...
+2015-12-07 00:27:03	psyq	oohh damn hehehe
+2015-12-07 00:27:19	msjche	what card to you have?
+2015-12-07 00:27:21	psyq	because I just got the best idea never
+2015-12-07 00:27:37	psyq	well i will need to look at it tomorrow
+2015-12-07 00:28:44	psyq	but my workstation at work I will reinstall it with Arch or Gentoo but it has 3 monitors connected to it and I think it is an intel grafics card to be honest
+2015-12-07 00:29:07	msjche	what WM/DE?
+2015-12-07 00:29:52	psyq	that is really what I am thinking about if I should use awesome or something els
+2015-12-07 00:30:28	msjche	a full DE like gnome or plasma probably could do it out the box.  for awesome or openbox you may need to mess with some configs
+2015-12-07 00:32:35	psyq	that is what makes it so much fun heheh
+2015-12-07 00:32:53	msjche	yep
+2015-12-07 00:33:21	psyq	but I might have to install gnome or plasma for a failsafe heheh
+2015-12-07 00:33:45	msjche	that's what i would do
+2015-12-07 00:34:47	psyq	good it is settled then
+2015-12-07 00:34:49	psyq	hehehehe
+2015-12-07 00:34:59	psyq	I got my project now
+2015-12-07 00:35:08	msjche	have fun bud :)
+2015-12-07 00:36:12	psyq	thanks I update you all
+2015-12-15 22:34:30	msjche	yeah, what's up?
+2015-12-15 22:35:16	psyq	I was looking at your new vid and I just wanted to be sure about it 
+2015-12-15 22:35:35	msjche	sure what part?
+2015-12-15 22:35:35	psyq	you have two scripts that you run to change the themes right
+2015-12-15 22:35:52	msjche	yes, they're in my Scripts/Theming/ folder
+2015-12-15 22:36:26	psyq	I was trying to clone it but i don't think that I got it all down
+2015-12-15 22:37:14	msjche	did you clone my dotfiles too?
+2015-12-15 22:37:28	psyq	oohh
+2015-12-15 22:37:37	psyq	I knew I forgot somehting
+2015-12-15 22:38:05	msjche	you don't need clone them all. you could just copy the scripts themselves.  they're really pretty simple
+2015-12-15 22:38:31	psyq	by the way are you still on your XPS laptop?
+2015-12-15 22:38:38	msjche	yeah
+2015-12-15 22:39:05	psyq	sweet I was thinking about getting myself one
+2015-12-15 22:40:00	msjche	its a great laptop.  but is a bit of a pain since it has 3200x1800 native resolution.  have to run xrandr scrpts on startup to get to more managable 2560x1440
+2015-12-15 22:40:22	msjche	and i just can't get gentoo to work on it :(
+2015-12-15 22:40:37	psyq	dang it
+2015-12-15 22:41:09	msjche	yeah, but i like arch a lot too.  i'm ok with running that too
+2015-12-15 22:41:34	psyq	so it is compatiable with arch
+2015-12-15 22:41:43	msjche	definitely
+2015-12-15 22:42:36	psyq	nice
+2015-12-15 22:43:38	psyq	msjche just so I am sure that I understand it completly all your theming things are going into the PROFILES folder/container
+2015-12-15 22:44:07	psyq	then I make links to the files and folders there right?
+2015-12-15 22:44:18	msjche	yeah, all the awesome configs and folders live in PROFILES, then you make symlinks from there to ~/.config/awesome
+2015-12-15 22:45:32	psyq	sweet
+2015-12-15 22:45:57	psyq	how do I make a layout default?
+2015-12-15 22:46:36	msjche	not sure i know what you mean?
+2015-12-15 22:48:15	psyq	if I go to workspace 5 then it starts with a layout how it is tailing the windows in a way that I don't lie
+2015-12-15 22:48:17	psyq	like
+2015-12-15 22:48:44	msjche	oh, which config are you using? Default or msjche
+2015-12-15 22:49:30	psyq	the default the one from /usr/share/awesome I think it is 
+2015-12-15 22:50:53	msjche	the tag numbers are on lines 30-39 in rc.lua.  layouts are defined on lines 76-87
+2015-12-15 22:51:48	msjche	you'd want to change layout to another number
+2015-12-15 22:53:48	psyq	i want the spiral and not floating for example
+2015-12-15 22:54:32	msjche	try layout 8
+2015-12-15 22:56:31	psyq	okie thank you msjche
+2015-12-15 22:56:44	msjche	youre welcome
+2015-12-15 22:57:11	psyq	:)
+2015-12-15 22:57:28	psyq	I think I am getting a hang of things now
+2015-12-15 22:57:38	msjche	cool :)
+2015-12-15 23:03:55	psyq	where did you put your scripts folder?
+2015-12-15 23:04:22	msjche	in my repo theyre in dotfiles_laptop/Scripts
+2015-12-15 23:05:03	psyq	I mean on your system
+2015-12-15 23:05:41	msjche	oh. i have all the files in dotfiles_laptop in ~/Git/dotfiles/ and symlink everything to ~/
+2015-12-15 23:06:59	psyq	that is really a nice way to have it on your system
+2015-12-15 23:07:41	msjche	best way i could think of to have a clean git folder and backups
+2015-12-15 23:08:27	psyq	I like it
+2015-12-15 23:13:22	psyq	I most say msjche you are the man
+2015-12-15 23:14:08	msjche	thanks! you're too kind
+2015-12-15 23:14:47	psyq	no no thank you for doing this I am learning a lot
+2015-12-15 23:21:19	psyq	I how to ask you this you have a lot of scripts in your scripts folder do you use them?
+2015-12-15 23:26:38	msjche	haha not really.  a lot of them are different terminal headers to run when using my zsh alias "Z" which is source ~/.zshrc
+2015-12-15 23:27:07	msjche	at the bottom of my .zshrc i call one of these.  i switch between them pretty frequently
+2015-12-15 23:28:50	psyq	oohh yeah thank you by the way I found out how you got your vim to look so freaking cool
+2015-12-15 23:29:35	msjche	;)
+2015-12-15 23:31:15	psyq	pathagen is awesome too
+2015-12-15 23:32:24	psyq	but you should check out this guys vim configs https://github.com/amix/vimrc
+2015-12-15 23:37:05	msjche	wow, that's pretty amazing.  i'm only starting to get into vim so i may check it out
+2015-12-15 23:40:00	psyq	just one thing though if you want it to look like yours then you need to edit two files the basic.vim and the extend.vim there it has coloring
+2015-12-16 00:18:10	psyq	msjche I am getting an error
+2015-12-16 00:22:57	msjche	oh yeah, what does it say?
+2015-12-16 00:28:29	psyq	line 42 in wi.lua
+2015-12-16 00:28:45	msjche	still using default config?
+2015-12-16 00:30:06	psyq	it is yours default config
+2015-12-16 00:31:38	msjche	awww, those are pianobar errors.  go to ~/.config/pianobar/ and echo "1" > isplaying
+2015-12-16 00:31:59	msjche	continue for artist title and nowplaying
+2015-12-16 00:32:50	msjche	that is echo "1" into each (which creates the file and writes 1 to it).  it's looking for those files and if they're not there it errors
+2015-12-16 00:33:37	msjche	or just comment out pianobarwidget in rc.lua
+2015-12-16 00:34:07	psyq	okie
+2015-12-16 00:41:54	psyq	it worked ehehe
+2015-12-16 00:43:23	msjche	great
+2015-12-16 01:44:41	--	irc: disconnected from server
+2015-12-29 23:06:59	msjche	yep.  you need to download the adblock .lua files from here: https://github.com/mason-larobina/luakit/wiki/AdBlock-Lua-module
+2015-12-29 23:07:37	psyq	sweet thanks man
+2015-12-29 23:07:48	msjche	then add the stuff to your ~/.config/luakit/rc.lua to call the adlbock lua files
+2015-12-29 23:08:19	msjche	no prob
+2015-12-29 23:08:22	msjche	:)
+2015-12-29 23:08:49	msjche	btw, i'm using a browser called qutebrowser now.  i think it's better than luakit, with more scripting options.  
+2015-12-29 23:09:02	msjche	may do a vid on it soon
+2015-12-29 23:09:37	msjche	you can call mpv, mplayer or youtube-viewer really easily :)
+2015-12-29 23:11:16	psyq	oohh
+2015-12-29 23:14:14	psyq	you will be the first one making a video about qutebrowser
+2015-12-29 23:14:37	msjche	someone mentioned it in a response to one of my vids.  it's pretty cool
+2015-12-29 23:14:51	psyq	sweet
+2015-12-29 23:36:19	psyq	it looks sweet
+2015-12-29 23:36:45	psyq	it looks just like luakit
+2015-12-29 23:36:53	msjche	it is.  make sure to check out the faq to see how to add keybindings
+2015-12-29 23:37:15	msjche	yeah, but check out the menu of commands when you hit ":"  pretty sweet
+2015-12-29 23:39:28	psyq	it seems like it is the same as luakit
+2015-12-29 23:40:21	msjche	very similar.  i think they stopped development of luakit a while ago, and qutebrowser is new and actively developed
+2015-12-29 23:40:35	psyq	I love that it uses letters instead of numbers (like luakit did)
+2015-12-29 23:40:59	psyq	okie that I didn't know I thought that luakit is the mean vim like browser
+2015-12-29 23:41:13	msjche	even better that you can change the hint fonts, size, color, etc.  was one of the main issues i had with luakit
+2015-12-29 23:42:57	psyq	I like that he tells about the inspiration that he got from dwb
+2015-12-29 23:44:27	msjche	yeah pretty cool
+2015-12-29 23:44:57	psyq	well I never used dwb before just heard about it
+2015-12-29 23:48:22	psyq	I really like this browser a lot more then luakit ^^
+2015-12-29 23:48:40	msjche	yep me too
+2015-12-29 23:55:13	psyq	there is so many things that you can do with this
+2015-12-29 23:55:44	msjche	yep
+2015-12-29 23:55:54	psyq	but I didn't really get the thing that he is talking about with mpv
+2015-12-29 23:56:54	msjche	just hit ":" and paste in the command.  i had to change it to youtube-viewer in gentoo.  for some reason mpv streaming didn't work, but it should on arch
+2015-12-29 23:57:35	psyq	hehehe
+2015-12-29 23:57:38	psyq	cool
+2015-12-29 23:58:24	psyq	so I shouldn't repleace the {url} with anything?
+2015-12-29 23:59:03	msjche	right.  hover over a link in youtube and hit the key.  for the hinting version just type the hint
+2015-12-29 23:59:16	msjche	pretty slick
+2015-12-30 00:00:37	psyq	you don't say hahah
+2015-12-30 01:46:37	--	irc: disconnected from server
+2016-01-01 21:44:26	msjche	yeah whats up?
+2016-01-01 21:44:57	psyq	how did you comment out multiple lines in vim?
+2016-01-01 21:47:24	msjche	take a look at my .vimrc.  you'll see "insert ... commenting" sections.  you need a leader (space in my case) and the comment.  for bash its space+#, for .Xresources it's space+! etc
+2016-01-01 21:48:51	msjche	check out this guy's channel.  you'll learn a lot https://www.youtube.com/user/StaringUpward/videos
+2016-01-01 21:54:47	psyq	thanks man
+2016-01-01 21:54:55	msjche	:)
+2016-01-01 22:24:52	psyq	I just love qutebrowser
+2016-01-02 03:02:24	--	irc: disconnected from server
+2016-01-03 20:30:11	msjche	sure whats up?
+2016-01-03 20:30:55	psyq	Question 1: what is it you are using in your terminal that tells you your systeminfo
+2016-01-03 20:31:11	msjche	in my last video it was screenfetch
+2016-01-03 20:31:27	psyq	sweet I like it
+2016-01-03 20:31:50	psyq	Question 2: how did you change your vim colorscheme?
+2016-01-03 20:32:43	msjche	you need a ~/.vim/colors/ folder with different XXXX.vim colorscheme files.  you can find a bunch online
+2016-01-03 20:33:09	msjche	once in vim hit :colorscheme and <tab> through the options
+2016-01-03 20:33:43	psyq	msjche: I don't know what I should do without your help ^
+2016-01-03 20:33:45	msjche	i really like ir_black
+2016-01-03 20:33:47	psyq	^^
+2016-01-03 20:33:59	msjche	hahahah, happy to help buddy
+2016-01-03 20:34:19	psyq	yeah I saw it in your last three videos
+2016-01-03 20:34:41	psyq	and thank you about giving me the channel on that Thomas guys
+2016-01-03 20:34:44	psyq	guy*
+2016-01-03 20:35:17	msjche	yeah, short videos but you learn a lot
+2016-01-03 20:36:34	psyq	yeah I like that he is a little bit crazy hehehe
+2016-01-03 20:37:56	msjche	haha yep
+2016-01-03 20:39:36	psyq	I am using the powerline theme in the oh-my-zsh, where was it I could change the color where it is green around my username?
+2016-01-03 20:43:49	msjche	that's a little tricky.  if you go to ~/.oh-my-zsh/themes/powerline.theme-zsh the colors are defined around line 90.  you need to change "green" to black.  after doing this you may need to change black in your .Xresources....
+2016-01-03 20:44:27	msjche	or else you may not be able to see the outline (it will be so black you can't see the border)
+2016-01-03 20:46:24	psyq	okie I will try it out
+2016-01-03 20:46:50	psyq	did you change anything else?
+2016-01-03 20:47:11	msjche	yeah i think i changed the background color for root, from black to white
+2016-01-03 20:47:25	msjche	i meant the text color, not the background
+2016-01-03 20:55:49	psyq	okie you did that also for your username right?
+2016-01-03 20:56:25	msjche	yeah, for normal user i changed background to black.  for root i changed foreground to white
+2016-01-03 21:07:06	psyq	so where it says if [ $(id -u) -eq 0 ]; then that is where I should change
+2016-01-03 21:08:44	msjche	yep colors should be red, red, white for root, and black, black white for normal
+2016-01-03 21:24:16	psyq	msjche: where is it that I change the black in my .Xresources (it is the same as yours)
+2016-01-03 21:25:47	msjche	yeah, at the bottom of .Xresources.  color0 and color8
+2016-01-03 21:27:02	psyq	and I should change it to black right
+2016-01-03 21:27:52	msjche	i have Urxvt.color0: #5c5c5c and Urxvt.color8: #4c4c4c
+2016-01-03 21:28:40	psyq	Sweet thanks
+2016-01-03 21:28:46	msjche	:)
+2016-01-03 21:28:51	psyq	now it looks AWESOME!!
+2016-01-03 21:28:53	psyq	:)
+2016-01-03 21:29:15	msjche	\,,/ (-_-) \,,/
+2016-01-03 21:32:18	psyq	msjche: I tried to make a alias for xrdb -merge ~/.Xresources but I still need to exit out of the terminal do you know if there is a way around it
+2016-01-03 21:32:58	msjche	nope, the only way i've seen that works.  sometimes you have to log out or reboot, say, if you change colors
+2016-01-03 21:34:13	psyq	okie nothing to about it
+2016-01-03 21:58:20	psyq	msjche in your vimrc file how does your <leader>j work in insert mode
+2016-01-03 21:58:29	psyq	I can't seem to get it to work
+2016-01-03 21:59:32	msjche	that's the one thing i can't seem to get to work.  urxvt messes with some of the signals for vim.
+2016-01-03 22:00:11	msjche	for instance, a lot of the <control>-xxxx don't work because they're hijacked by urxvt
+2016-01-03 22:00:34	msjche	so you can't do something like c-v to paste
+2016-01-03 22:15:16	psyq	yeah I have noticed
+2016-01-03 22:43:47	psyq	it is really nice the way it looks now
+2016-01-03 22:44:20	psyq	I only thing now I need to find out how to do on my MAC as well
+2016-01-03 23:15:04	msjche	the vim stuff should be similar.  but i'm not sure about oh-my-zsh...
+2016-01-03 23:17:42	psyq	that is not the same hehe
+2016-01-03 23:17:46	psyq	I just found out heheh
+2016-01-04 02:09:25	◀	msjche (~msjche@unaffiliated/msjche) has quit (Quit: WeeChat 1.3)
+2016-01-04 02:46:48	ℹ	irc: disconnected from server

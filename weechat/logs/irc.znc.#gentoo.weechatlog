@@ -1,0 +1,571 @@
+2016-01-16 15:16:47	▶	psyq_ (~psyq@178.62.210.183) has joined #gentoo
+2016-01-16 15:16:47	ℹ	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: dpaste.org | masked by license? http://x.vu/WgxYLs | | Unworking hibernate and suspend? emerge -1 upower-pm-utils | firmware not loading? http://goo.gl/MzVLBN | perl conflicts? http://goo.gl/n1FMk8 | Be nice! http://xrl.us/kftd"
+2016-01-16 15:16:47	ℹ	Topic set by iamben (~iamben@gentoo/contributor/iamben) on Fri, 16 Oct 2015 21:02:09
+2016-01-16 15:16:47	ℹ	Channel #gentoo: 1093 nicks (7 ops, 64 voices, 1022 normals)
+2016-01-16 15:16:47	***	Buffer Playback...
+2016-01-16 15:16:47	rx80	[13:40:15] andering: that's why i test and try other distros in a VM
+2016-01-16 15:16:47	rx80	[13:40:25] mingdao: H is for hard links
+2016-01-16 15:16:47	ss_	[13:40:26] t
+2016-01-16 15:16:47	mingdao	[13:40:42] rx80: that too, which is why I'm not trying to guide dragonreborn out of this mess ;)
+2016-01-16 15:16:47	rx80	[13:41:03] ye.... better use a proper backup tool
+2016-01-16 15:16:47	dragonreborn	[13:41:20] mingdao: i have followed gentoo and arch wiki
+2016-01-16 15:16:47	dragonreborn	[13:41:30] used -av or -aAv
+2016-01-16 15:16:47	Dreg_Master	[13:41:31] Andering - thanks for that. that why i wanted to learn gentoo
+2016-01-16 15:16:47	mingdao	[13:41:34] rx80: for me, and maybe just for me, rsync is great for daily backup of ~/ and such, but not for OS
+2016-01-16 15:16:47	andering	[13:41:36] rx80: i think when i was switching, reason was to save time by having system not as much customizable, but i don't think it made any change. Better is keep things simple.
+2016-01-16 15:16:47	rx80	[13:41:50] mingdao: i agree :) rsync for home
+2016-01-16 15:16:47	dragonreborn	[13:42:06] interesting
+2016-01-16 15:16:47	dragonreborn	[13:42:24] since i could boot in to the restored system at least to bash,
+2016-01-16 15:16:47	mingdao	[13:42:28] dragonreborn: what distro is this?
+2016-01-16 15:16:47	dragonreborn	[13:42:40] i have over-rsync-ed the restored file from the live system
+2016-01-16 15:16:47	dragonreborn	[13:42:47] and permission errors are gone
+2016-01-16 15:16:47	rx80	[13:42:48] andering: it takes a while to get used to gentoo, but i find it's quite easy to stay up to date, if you are into linux... if you don't want to bother with details, gentoo is not for you
+2016-01-16 15:16:47	dragonreborn	[13:42:52] gentoo naturally
+2016-01-16 15:16:47	Dreg_Master	[13:43:07] Im gonna need continue this tomorrow. Thank for the help dudes :P (Tomorrow goal is to install Gentoo onto HDD)
+2016-01-16 15:16:47	rx80	[13:43:23] Dreg_Master: see you tomorrow then
+2016-01-16 15:16:47	dragonreborn	[13:44:36] it would be ncie to be able to recover from a live usb
+2016-01-16 15:16:47	mingdao	[13:45:09] dragonreborn: did you follow this guide explicitly? https://wiki.gentoo.org/wiki/A_simple_backup_scheme_using_rsnapshot
+2016-01-16 15:16:47	dragonreborn	[13:45:20] yep
+2016-01-16 15:16:47	dragonreborn	[13:45:51] cant rly get it why
+2016-01-16 15:16:47	thereh	[13:46:07] gen2
+2016-01-16 15:16:47	thereh	[13:46:27] I mean you can read gentoo as gen2
+2016-01-16 15:16:47	thereh	[13:46:45] or gentwo
+2016-01-16 15:16:47	mingdao	[13:47:15] dragonreborn: you wrote "i have followed gentoo and arch wiki" ... maybe mixed instructions?
+2016-01-16 15:16:47	mingdao	[13:47:40] dragonreborn: you should check /root/.bash_history and see if your commands were correct
+2016-01-16 15:16:47	dragonreborn	[13:48:25] after i failed with the -a flag what gentoo suggested
+2016-01-16 15:16:47	dragonreborn	[13:48:38] i tried the -aAv what arch suggested, still..
+2016-01-16 15:16:47	mingdao	[13:50:58] dragonreborn: that -a switch only in the Gentoo wiki makes me uncomfortable
+2016-01-16 15:16:47	mingdao	[13:51:08] archive mode; equals -rlptgoD (no -H,-A,-X)
+2016-01-16 15:16:47	dragonreborn	[13:51:34] it looked somewhat few to me as well
+2016-01-16 15:16:47	mingdao	[13:51:35] dragonreborn: is the OS and backup mounted on the exact same filesystem type?
+2016-01-16 15:16:47	dragonreborn	[13:51:41] yes
+2016-01-16 15:16:47	dragonreborn	[13:52:24] should i need extended attributes as well?
+2016-01-16 15:16:47	dragonreborn	[13:52:35] iamben: are you there?
+2016-01-16 15:16:47	mingdao	[13:52:38] dragonreborn: -a has no perms, no attributes, no hard links followed
+2016-01-16 15:16:47	dragonreborn	[13:52:48] humm
+2016-01-16 15:16:47	mingdao	[13:52:48] just smells like a recipe for failure to me
+2016-01-16 15:16:47	dragonreborn	[13:52:56] you r prolly right
+2016-01-16 15:16:47	mingdao	[13:53:04] again, I shouldn't even comment; never used rsnapshot
+2016-01-16 15:16:47	guest1235	[13:53:46] Hello, does someone know if I can install a version of a package that's not on the server anymore?
+2016-01-16 15:16:47	guest1235	[13:53:57] in my case, I need 12.5 of https://packages.gentoo.org/packages/games-board/pioneers
+2016-01-16 15:16:47	guest1235	[13:54:16] and I'd like to avoid installing it manually
+2016-01-16 15:16:47	dragonreborn	[13:55:22] mingdao: almost every places on the net they suggest only -av
+2016-01-16 15:16:47	mingdao	[13:55:23] dragonreborn: first thing you mentioned as your problem was "have weird permission problems" ... and that article only says use -a, without -A (acls, perms)
+2016-01-16 15:16:47	dragonreborn	[13:55:29] thats not muc
+2016-01-16 15:16:47	dragonreborn	[13:55:42] i know iamben uses rsnapshot for backup, maybe he`ll know whats up
+2016-01-16 15:16:47	mingdao	[13:55:48] dragonreborn: yay ... sorry, I can't help you
+2016-01-16 15:16:47	dragonreborn	[13:56:04] mingdao: thanks a lot still!
+2016-01-16 15:16:47	mingdao	[13:56:06] when he comes around today he probably can
+2016-01-16 15:16:47	+Fieldy	[13:56:32] for backups of all types i use an rsync server set up with modules per-backup (generally per system or content type), then every few hours a script is run on each source to sync things up on the server
+2016-01-16 15:16:47	+Fieldy	[13:56:45] if i want incrimentals, rdiff-backup is where it's at, though that can be quite slow
+2016-01-16 15:16:47	+Fieldy	[13:57:07] "server" is best on a NAS or something else with highly redundant storage
+2016-01-16 15:16:47	+Fieldy	[13:57:27] then you can back up that one "system" and back up everything to somewhere off site / offline disks whate er
+2016-01-16 15:16:47	dragonreborn	[13:57:34] well probelm isnt with the made backups, than with the restoration
+2016-01-16 15:16:47	dragonreborn	[13:57:50] i recall i had same problem with rsync made backups earlier
+2016-01-16 15:16:47	dragonreborn	[13:58:06] prolly i mess up something but i seem to be unable to restore the files with right permissions
+2016-01-16 15:16:47	+Fieldy	[13:59:05] never had issues with that here
+2016-01-16 15:16:47	+Fieldy	[13:59:24] clearly it's important to practice once in a while, verify that it'll all work (outside of a real need) so you can figure out what's wrong
+2016-01-16 15:16:47	rx80	[14:00:52] guest1235: have you tried looking at overlays?
+2016-01-16 15:16:47	rx80	[14:01:02] guest1235: or creating your own ebuild?
+2016-01-16 15:16:47	rx80	[14:01:22] guest1235: 1st option is very easy, 2nd easy, but a bit more involved
+2016-01-16 15:16:47	Guest65428	[14:01:32] I use rsnapshot too, but I never tried restoring it. Maybe I have reason to be worried too, although all the permissions are perfectly intact in my backups.
+2016-01-16 15:16:47	guest1235	[14:02:09] rx80: thanks, I'll try looking at overlays
+2016-01-16 15:16:47	rx80	[14:02:30] guest1235: http://gpo.zugaina.org/
+2016-01-16 15:16:47	dragonreborn	[14:02:36] that seems to be yet another thing which works to others but not for me :D
+2016-01-16 15:16:47	dragonreborn	[14:02:47] no idea what i screw up
+2016-01-16 15:16:47	dragonreborn	[14:03:21] but then again booting up the restored system to bash and doing another restore from there seem to fixed the permissons
+2016-01-16 15:16:47	rx80	[14:03:22] guest1235: seems there are no old ebuilds.... next easiest thing: make a local overlay, copy over the ebuild, change the version.... emerge
+2016-01-16 15:16:47	andering	[14:09:34] guest1235: https://wiki.gentoo.org/wiki/Overlay/Local_overlay
+2016-01-16 15:16:47	andering	[14:12:42] guest1235: lol i know that board game, We call it Osadníci z Katanu :), i didn't know someone made app :),why do you want older version ?
+2016-01-16 15:16:47	guest1235	[14:13:47] andering: compatibility to someone who has only the older version...
+2016-01-16 15:16:47	Guest65428	[14:17:57] guest1235: Can't you just install it manually in some directory and then launch it from there?
+2016-01-16 15:16:47	guest1235	[14:18:19] Guest65428: No, impossible.
+2016-01-16 15:16:47	Guest65428	[14:18:28] Why?
+2016-01-16 15:16:47	guest1235	[14:18:29] But the problem is solved, thanks anyways ;)
+2016-01-16 15:16:47	andering	[14:18:36] guest1235: make it as rx80 said.
+2016-01-16 15:16:47	guest1235	[14:18:39] wants to load stuff from usr local
+2016-01-16 15:16:47	andering	[14:19:01] guest1235: :)
+2016-01-16 15:16:47	Guest65428	[14:20:15] Okay.
+2016-01-16 15:16:47	rx80	[14:21:15] andering: settlers of catan
+2016-01-16 15:16:47	Josef__K	[14:27:31] Gahh, I'm getting this "Check that kernel supports aes-xts-plain cipher (check syslog for more info)." error from cryptsetup, but I cannot figure out why.  All the relevant kernel options appear enabled.  Help??
+2016-01-16 15:16:47	Josef__K	[14:28:12] This is only the second time I've used cryptsetup, so I'm not that experienced with it.
+2016-01-16 15:16:47	rx80	[14:30:32] guest1235: why can't your friend download the newest version? :D
+2016-01-16 15:16:47	guest1235	[14:30:47] rx80: stupid openSuSE :P
+2016-01-16 15:16:47	guest1235	[14:31:02] the reason why I switched... only old packages
+2016-01-16 15:16:47	Guest65428	[14:31:22] Josef__K: What does the log have to say?
+2016-01-16 15:16:47	Josef__K	[14:31:47] > device-mapper: 254:0: crypt: Device lookup failed
+2016-01-16 15:16:47	Josef__K	[14:32:07] > device-mapper: ioctl: error adding target to table
+2016-01-16 15:16:47	Josef__K	[14:35:54] I have already formatted the partition as ext4 -- do I need to change the partition type or wipe it or something?
+2016-01-16 15:16:47	andering	[14:43:24] Josef__K: can you show your kernel .config please ? :)
+2016-01-16 15:16:47	Josef__K	[14:43:57] It's a little tricky since it's on another machine.
+2016-01-16 15:16:47	Josef__K	[14:47:41] But the relevant config options are enabled when I browse them via 'less /proc/config.gz', such as BLK_DEV_DM, DM_CRYPT, CRYPTO_XTS and CRYPTO_AES.
+2016-01-16 15:16:47	Josef__K	[14:55:12] Oh god, the embarrassment. The partition was mounted. Not very helpful error messages.
+2016-01-16 15:16:47	andering	[14:59:44] Josef__K: ?
+2016-01-16 15:16:47	Josef__K	[15:00:49] The partition I was trying to encrypt was already mounted as its regular filesystem, so I couldn't do anything to it until I unmounted it.
+2016-01-16 15:16:47	andering	[15:00:59] i see. :)
+2016-01-16 15:16:47	***	Playback Complete.
+2016-01-16 15:16:54	ℹ	Channel created on Sat, 15 Sep 2001 05:15:36
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:46	▶	psyq_ (~psyq@178.62.210.183) has joined #gentoo
+2016-01-16 15:17:46	ℹ	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: dpaste.org | masked by license? http://x.vu/WgxYLs | | Unworking hibernate and suspend? emerge -1 upower-pm-utils | firmware not loading? http://goo.gl/MzVLBN | perl conflicts? http://goo.gl/n1FMk8 | Be nice! http://xrl.us/kftd"
+2016-01-16 15:17:46	ℹ	Topic set by iamben (~iamben@gentoo/contributor/iamben) on Fri, 16 Oct 2015 21:02:09
+2016-01-16 15:17:46	ℹ	Channel #gentoo: 1092 nicks (7 ops, 64 voices, 1021 normals)
+2016-01-16 15:17:54	ℹ	Channel created on Sat, 15 Sep 2001 05:15:36
+2016-01-16 15:18:24	◀	spylinux (~spylinux@unaffiliated/spylinux) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 15:18:52	▶	elxa (~elxa@pD9F995A0.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:19:15	▶	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #gentoo
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:22:20	petan	I installed kde including kde-apps/kdenetwork-meta but I see no network manager interface in tray :/ some idea?
+2016-01-16 15:22:41	petan	I don't usually need it, but for wifi it's useful
+2016-01-16 15:22:58	▶	pereira_alex (~alexandre@210.207.114.89.rev.vodafone.pt) has joined #gentoo
+2016-01-16 15:23:14	petan	oh nvm
+2016-01-16 15:23:15	petan	foun dit
+2016-01-16 15:23:23	mingdao	eix net-misc/networkmanager
+2016-01-16 15:23:26	mingdao	otay
+2016-01-16 15:23:33	◀	sebk (58470933@gateway/web/freenode/ip.88.71.9.51) has quit (Ping timeout: 252 seconds)
+2016-01-16 15:23:36	petan	I already have that
+2016-01-16 15:23:42	petan	I just forgot to add icon to tray in kde settings
+2016-01-16 15:23:47	mingdao	and you pasted before I looked again
+2016-01-16 15:24:02	mingdao	yeah, with Gnome you don't have to do that
+2016-01-16 15:24:17	petan	I really don't like gnome very much :/
+2016-01-16 15:24:21	petan	it's slow and ugly
+2016-01-16 15:24:55	Tear	that's the least of its issues
+2016-01-16 15:25:04	mingdao	funny, that's two of the reasons I dislike KDE ;)
+2016-01-16 15:25:16	petan	heh
+2016-01-16 15:25:20	▶	thunderrd (~thunderrd@110.77.238.204) has joined #gentoo
+2016-01-16 15:25:22	mingdao	but anyway, no time for such as that ... glad you got what you needed
+2016-01-16 15:25:29	petan	what is gnome written in? JS?
+2016-01-16 15:25:39	petan	I mean, the latest one
+2016-01-16 15:26:25	petan	this is such a beatifull interface name... wwp0s29u1u4i6
+2016-01-16 15:26:32	petan	old good eth0 <3
+2016-01-16 15:26:38	Tear	wow that's gotta be a record
+2016-01-16 15:28:06	▶	guidol (~guidol@i214109.upc-i.chello.nl) has joined #gentoo
+2016-01-16 15:28:44	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:29:08	▶	rui (~rui@bl17-187-167.dsl.telepac.pt) has joined #gentoo
+2016-01-16 15:29:15	◀	Bennux (~Bennux@190.110.97.176) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:29:16	rx80	petan: you can always rename it :D
+2016-01-16 15:30:05	▶	thunderrd (~thunderrd@110.77.238.204) has joined #gentoo
+2016-01-16 15:30:21	▶	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has joined #gentoo
+2016-01-16 15:30:24	◀	NineX (ninex@gentoo.linux.org.pl) has quit (Quit: leaving)
+2016-01-16 15:31:18	▶	NineX (ninex@gentoo.linux.org.pl) has joined #gentoo
+2016-01-16 15:31:32	▶	enki (~enki@dynamic-78-30-156-27.adsl.eunet.rs) has joined #gentoo
+2016-01-16 15:31:57	ℹ	enki is now known as Guest98554
+2016-01-16 15:32:56	◀	rui (~rui@bl17-187-167.dsl.telepac.pt) has quit (Quit: leaving)
+2016-01-16 15:33:05	◀	Guest98554 (~enki@dynamic-78-30-156-27.adsl.eunet.rs) has left #gentoo
+2016-01-16 15:33:24	◀	thunderrd (~thunderrd@110.77.238.204) has quit (Remote host closed the connection)
+2016-01-16 15:33:40	c0nd0rr	hi, i have a laptop with nvidia optimus using nvidia-drivers and it seems to be using a framebuffer at startup, but can can't seem to get the logos to load, e.g. the cpu penguins. heres my dmesg; https://bpaste.net/show/0f079e4053e5. any suggestions?
+2016-01-16 15:34:09	c0nd0rr	*but i can't
+2016-01-16 15:34:16	▶	khj1 (~Thunderbi@dslb-178-011-233-208.178.011.pools.vodafone-ip.de) has joined #gentoo
+2016-01-16 15:35:36	torindel	c0nd0rr: for penguins only: CONFIG_LOGO in kernel config
+2016-01-16 15:35:42	◀	khj (~Thunderbi@dslb-088-071-185-214.088.071.pools.vodafone-ip.de) has quit (Ping timeout: 256 seconds)
+2016-01-16 15:35:42	ℹ	khj1 is now known as khj
+2016-01-16 15:35:50	torindel	c0nd0rr: plus something like LOGO_LINUX_CLUT224
+2016-01-16 15:35:57	◀	NineX (ninex@gentoo.linux.org.pl) has quit (Client Quit)
+2016-01-16 15:36:01	torindel	along with framebuffer compiled into kernel
+2016-01-16 15:36:08	rx80	i think nvidia-drivers doesn't like framebuffer
+2016-01-16 15:36:17	▶	NineX (ninex@gentoo.linux.org.pl) has joined #gentoo
+2016-01-16 15:36:19	◀	NineX (ninex@gentoo.linux.org.pl) has quit (Client Quit)
+2016-01-16 15:36:23	torindel	c0nd0rr: for splashscreens: CONFIG_FB_CON_DECOR
+2016-01-16 15:36:36	torindel	rx80: he's using optimus setup so that doesnt matter
+2016-01-16 15:36:43	rx80	ah
+2016-01-16 15:36:43	c0nd0rr	torindel, i already have those
+2016-01-16 15:36:45	▶	NineX (ninex@gentoo.linux.org.pl) has joined #gentoo
+2016-01-16 15:37:15	torindel	rx80: i.e. he have lcd connected to intel, nvidia have no outputs other than "to ram"
+2016-01-16 15:37:42	▶	Phlyniii1 (~alex@chello080109197116.2.graz.surfer.at) has joined #gentoo
+2016-01-16 15:37:46	◀	Phlyniii (~alex@chello080109197116.2.graz.surfer.at) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:37:47	rx80	i c
+2016-01-16 15:37:53	▶	kanteran_ (~kanteran@p200300061124520869435E2D502E3E36.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:37:56	torindel	c0nd0rr: your framebuffer device is compiled in?
+2016-01-16 15:38:04	c0nd0rr	my kernel is; https://bpaste.net/show/6814581a0a78
+2016-01-16 15:38:06	◀	`VL (~vl@broadband-46-188-31-14.2com.net) has quit (Remote host closed the connection)
+2016-01-16 15:38:55	◀	Guest58571 (~abraxas@190.195.233.88) has quit (Quit: This computer has gone to sleep)
+2016-01-16 15:39:09	◀	paleX (~marko@89-201-195-230.dsl.optinet.hr) has quit (Remote host closed the connection)
+2016-01-16 15:39:13	torindel	c0nd0rr: side note: you dont need CONFIG_FB_VESA
+2016-01-16 15:39:14	◀	kanteran (~kanteran@p20030006172DDB4209AE917369064DF2.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:39:28	torindel	and it doesnt work at all on efi enabled setups
+2016-01-16 15:39:40	◀	wej (~j@2a00:1768:2001:7:1::3e) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:40:22	torindel	c0nd0rr: do you have fb specified at kernel boot line?
+2016-01-16 15:40:24	c0nd0rr	torindel, yea, i am using bios, i only compiled that as i was trying to get it to use another framebuffer to see if that would fix it
+2016-01-16 15:41:06	c0nd0rr	torindel, no, i did try it when i was trying uvesa
+2016-01-16 15:41:24	torindel	c0nd0rr: note: you're using CONFIG_DRM_I915_FBDEV not vesa
+2016-01-16 15:41:33	torindel	and you should use it on both efi and bios
+2016-01-16 15:41:37	▶	Judge_Dredd (~Judge_Dre@nat-5-158.uws.ualberta.ca) has joined #gentoo
+2016-01-16 15:41:50	c0nd0rr	torindel, right ok
+2016-01-16 15:41:59	▶	Oxit (~oxit@ti0014a400-2600.bb.online.no) has joined #gentoo
+2016-01-16 15:42:53	torindel	c0nd0rr: try setting correct framebuffer on kernel command line
+2016-01-16 15:43:01	c0nd0rr	torindel, so if its loading that fb ok, then why dosn't the logo appear, something with grub?
+2016-01-16 15:43:12	▶	I (~abraxas@190.195.233.88) has joined #gentoo
+2016-01-16 15:43:15	c0nd0rr	c0nd0rr, what do i need to put for that fb?
+2016-01-16 15:43:36	ℹ	I is now known as Guest89718
+2016-01-16 15:43:41	◀	Guest89718 (~abraxas@190.195.233.88) has quit (Remote host closed the connection)
+2016-01-16 15:44:02	torindel	c0nd0rr: you got vga=0x367 that assumes vesa, and probably have penguins for first couple miliseconds, then CONFIG_DRM_I915_FBDEV kicks in and deregisters vesafb
+2016-01-16 15:45:47	torindel	note: dont have intel here so i cant test but try something like: "video=inteldrmfb:1920x1200-32" i think that was correct name
+2016-01-16 15:46:08	torindel	(change resolution to match your lcd)
+2016-01-16 15:46:24	c0nd0rr	torindel, thank you, i'll give that a go and report back :)
+2016-01-16 15:47:29	◀	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has quit (Quit: leaving)
+2016-01-16 15:47:39	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 15:47:47	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 15:47:50	◀	guidol (~guidol@i214109.upc-i.chello.nl) has quit (Quit: Konversation terminated!)
+2016-01-16 15:48:09	▶	kanteran (~kanteran@p200300061124520801F235CC344B8A40.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:49:03	▶	zappa (~abraxas@190.195.233.88) has joined #gentoo
+2016-01-16 15:49:10	mingdao	Doesn't KMS take care of this?
+2016-01-16 15:49:16	mingdao	does on my Intel laptop
+2016-01-16 15:49:22	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 15:49:28	▶	wej (~j@2a00:1768:2001:7:1::3e) has joined #gentoo
+2016-01-16 15:49:30	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 15:49:36	mingdao	using UEFI rather than BIOS, but don't see what that matters
+2016-01-16 15:49:55	▶	kantera__ (~kanteran@p20030006112452088C9E5490A218DB47.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:50:00	torindel	mingdao: do you know what kms does when it deregisters previous framebuffer with penguin logo? ^^
+2016-01-16 15:50:09	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 15:50:16	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 15:50:50	▶	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has joined #gentoo
+2016-01-16 15:50:51	torindel	mingdao: and he had uvesa as boot framebuffer till inteldrmfb kicked in and replaced it
+2016-01-16 15:50:55	◀	kanteran_ (~kanteran@p200300061124520869435E2D502E3E36.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:51:10	torindel	vesa*
+2016-01-16 15:51:15	▶	kanteran_ (~kanteran@p57860C1E.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:51:54	c0nd0rr	torindel, hey back, still nothing
+2016-01-16 15:51:57	torindel	i think that setting correct fb for him will solve that without recompiling kernel with only one fb device
+2016-01-16 15:51:58	mingdao	torindel: why are you putting ^^ at the end of your sentences so much? sorry, just curious
+2016-01-16 15:52:23	mingdao	KMS does the framebuffer great for me on all Linux boxen
+2016-01-16 15:52:28	torindel	mingdao: the same reason some people put ":)" so much i think
+2016-01-16 15:52:47	c0nd0rr	torindel, i also removed vesa from my kernel just in case
+2016-01-16 15:52:48	mingdao	^^ to me means "look up there"
+2016-01-16 15:52:51	Tear	i believe it's ^_^ without the underscore
+2016-01-16 15:53:04	torindel	Tear: yep it is
+2016-01-16 15:53:21	▶	kanter___ (~kanteran@p2003000611245208C0C8CCEC8EE7C78E.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:53:32	◀	kanteran (~kanteran@p200300061124520801F235CC344B8A40.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:54:19	Tear	can interface names actually change in practice when you don't plug anything in/out and they're not usb?
+2016-01-16 15:54:22	torindel	mingdao: anyway his problem is not in framebuffer but that he wants penguins on it at start
+2016-01-16 15:54:24	◀	kantera__ (~kanteran@p20030006112452088C9E5490A218DB47.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:54:43	torindel	Tear: on reboot on some bioses
+2016-01-16 15:54:53	▶	kantera__ (~kanteran@p200300061124520801C168A971EC0E63.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:55:17	torindel	Tear: if its sensitive for you make udev rule that renames interfaces to some custom name by mac address
+2016-01-16 15:55:18	mingdao	torindel: that's a kernel option
+2016-01-16 15:55:34	◀	kanteran_ (~kanteran@p57860C1E.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2016-01-16 15:55:55	mingdao	CONFIG_LOGO
+2016-01-16 15:56:08	◀	wej (~j@2a00:1768:2001:7:1::3e) has quit (Ping timeout: 250 seconds)
+2016-01-16 15:56:10	torindel	mingdao: he got that in and doesnt have penguins
+2016-01-16 15:56:49	torindel	and according to his dmesg inteldrmfb started/replaced previous framebuffer fine
+2016-01-16 15:56:53	mingdao	c0nd0rr: same as this?  https://bpaste.net/show/c19a34b4a586  or did you pastebin your running .config?
+2016-01-16 15:57:09	▶	andrewammerlaan (~Thunderbi@2001:983:84e2:1:2ed0:5aff:fe12:11bd) has joined #gentoo
+2016-01-16 15:57:19	▶	kanteran_ (~kanteran@p200300061124520874597C90C4B7693B.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:57:32	Tear	it just seems more like an edge case than something that happens regularly
+2016-01-16 15:57:34	mingdao	c0nd0rr: is that pastebin the *running* kernel, for sure?
+2016-01-16 15:57:49	Tear	which means long interface names shouldn't be the default
+2016-01-16 15:57:50	◀	kanter___ (~kanteran@p2003000611245208C0C8CCEC8EE7C78E.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:58:00	torindel	Tear: yea, but on servers you might want to be sure
+2016-01-16 15:58:34	torindel	Tear: as for "new long interface names" they can change on reboot too >_<
+2016-01-16 15:58:38	▶	kanteran (~kanteran@p2003000611245208587F11E191E737B1.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 15:58:46	torindel	(althroo thats highly unlikely too)
+2016-01-16 15:58:56	◀	pereira_alex (~alexandre@210.207.114.89.rev.vodafone.pt) has quit (Quit: Konversation terminated!)
+2016-01-16 15:59:35	◀	kantera__ (~kanteran@p200300061124520801C168A971EC0E63.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:59:44	c0nd0rr	mingdao, the only change to the one i pasted before was removing vesa, but here is the new one just in case; https://bpaste.net/show/4938f179e398
+2016-01-16 16:00:09	▶	kantera__ (~kanteran@p20030006112452081DB70C2F2EDEA434.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 16:00:23	◀	zappa (~abraxas@190.195.233.88) has quit (Quit: This computer has gone to sleep)
+2016-01-16 16:00:57	▶	Turingtoast (~Tino@p548C57AF.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 16:01:05	torindel	c0nd0rr: to me that kernel config looks fine, check that you're booting correct kernel build from that config
+2016-01-16 16:01:22	torindel	c0nd0rr: i.e. uname -a or date in dmesg
+2016-01-16 16:01:46	◀	kanteran_ (~kanteran@p200300061124520874597C90C4B7693B.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:02:04	▶	pereira_alex (~alexandre@210.207.114.89.rev.vodafone.pt) has joined #gentoo
+2016-01-16 16:03:04	◀	kanteran (~kanteran@p2003000611245208587F11E191E737B1.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:03:29	c0nd0rr	torindel, 14:48 today was when it was build, which in my timezone was about 15mins ago
+2016-01-16 16:03:41	◀	Colti (Miramar-FL@unaffiliated/miramar-fl) has quit (Excess Flood)
+2016-01-16 16:03:46	torindel	c0nd0rr: that matches date from uname -a?
+2016-01-16 16:03:52	▶	Colti (Miramar-FL@unaffiliated/miramar-fl) has joined #gentoo
+2016-01-16 16:04:04	c0nd0rr	torindel, yea
+2016-01-16 16:05:11	torindel	c0nd0rr: you dont have any splashutils or simmilar package installed?
+2016-01-16 16:05:15	◀	lythandrel (~tangent@unaffiliated/lythandrel) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:05:17	◀	Guest65428 (root@gateway/vpn/mullvad/x-vbibksvmnxhdyurk) has quit (Quit: leaving)
+2016-01-16 16:05:24	torindel	(even if its without config it can remove the penguins)
+2016-01-16 16:05:37	mingdao	c0nd0rr: to make certain you have the running kernel use the .config at "/lib/modules/`uname -r`/source/.config"
+2016-01-16 16:05:42	mingdao	c0nd0rr: wgetpaste /lib/modules/`uname -r`/source/.config
+2016-01-16 16:06:00	◀	epoch0 (~epoch0@h75-100-14-253.abdlwi.dsl.dynamic.tds.net) has quit (Quit: Lost terminal)
+2016-01-16 16:06:42	▶	khj1 (~Thunderbi@dslb-088-070-143-058.088.070.pools.vodafone-ip.de) has joined #gentoo
+2016-01-16 16:08:05	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 16:08:05	mingdao	c0nd0rr: any reason you have vga=0x367 in your kernel line?
+2016-01-16 16:08:10	c0nd0rr	mingdao, https://bpaste.net/show/fe74135e8598
+2016-01-16 16:08:13	mingdao	what are you trying to accomplish here?
+2016-01-16 16:08:16	◀	metres (~metres@unaffiliated/metres) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:08:23	▶	Bennux (~Bennux@190.110.97.180) has joined #gentoo
+2016-01-16 16:08:43	▶	epoch0 (~epoch0@h75-100-14-253.abdlwi.dsl.dynamic.tds.net) has joined #gentoo
+2016-01-16 16:08:45	c0nd0rr	mingdao, trying to get the logo to appear
+2016-01-16 16:08:54	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:08:54	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 16:09:01	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:09:02	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 16:09:05	◀	khj (~Thunderbi@dslb-178-011-233-208.178.011.pools.vodafone-ip.de) has quit (Ping timeout: 276 seconds)
+2016-01-16 16:09:05	ℹ	khj1 is now known as khj
+2016-01-16 16:09:45	mingdao	c0nd0rr: vga=0x367 won't help the logo appear
+2016-01-16 16:09:58	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:10:00	mingdao	otoh it might prevent the same
+2016-01-16 16:10:18	torindel	c0nd0rr: check if you have splashutils or plymouth installed
+2016-01-16 16:10:24	▶	DigitalReaper (~DigitalRe@cpc78919-bele10-2-0-cust28.2-1.cable.virginm.net) has joined #gentoo
+2016-01-16 16:10:43	c0nd0rr	mingdao, i have the line torindel gave me there now, not vga
+2016-01-16 16:10:50	torindel	(or any other splash tool from overlay)
+2016-01-16 16:11:03	▶	jstein (~quassel@gentoo/developer/jstein) has joined #gentoo
+2016-01-16 16:11:03	ℹ	Mode #gentoo [+v jstein] by ChanServ
+2016-01-16 16:11:42	c0nd0rr	torindel, no, there not installed
+2016-01-16 16:11:58	▶	wej (~j@2a00:1768:2001:7:1::3e) has joined #gentoo
+2016-01-16 16:12:34	◀	guest1235 (~johannes@port-92-203-176-208.dynamic.qsc.de) has quit (Quit: leaving)
+2016-01-16 16:12:57	c0nd0rr	torindel, do i have to use the intel fb, or could i switch do a different one?
+2016-01-16 16:13:04	▶	ihr (~ihr@p1612142-ipngn200303osakachuo.osaka.ocn.ne.jp) has joined #gentoo
+2016-01-16 16:13:16	▶	twnqx (~cb@ip4d149e9c.dynamic.kabel-deutschland.de) has joined #gentoo
+2016-01-16 16:13:38	◀	khj (~Thunderbi@dslb-088-070-143-058.088.070.pools.vodafone-ip.de) has quit (Ping timeout: 255 seconds)
+2016-01-16 16:14:10	torindel	c0nd0rr: use inteldrmfb
+2016-01-16 16:14:20	▶	zappa (~abraxas@190.195.233.88) has joined #gentoo
+2016-01-16 16:14:22	torindel	or you'll have problems with xorg
+2016-01-16 16:14:27	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 16:14:36	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:16:02	c0nd0rr	torindel, right ok
+2016-01-16 16:16:09	▶	khj (~Thunderbi@dslb-088-071-179-083.088.071.pools.vodafone-ip.de) has joined #gentoo
+2016-01-16 16:18:25	mingdao	let me reboot to see if I have these penguins still ... haven't paid attention in a long time
+2016-01-16 16:18:35	◀	jfmcarreira (~Joao@unaffiliated/jfmcarreira) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:18:39	▶	gerhard7 (~gerhard7@77-172-82-111.ip.telfort.nl) has joined #gentoo
+2016-01-16 16:18:40	c0nd0rr	mingdao, thanks
+2016-01-16 16:18:45	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 16:18:55	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:19:12	mingdao	well, not the entire time, no
+2016-01-16 16:19:13	⚡	torindel always have them turned off
+2016-01-16 16:19:30	mingdao	I have 8 penguins when it first starts, but when KMS kicks in, they're gone
+2016-01-16 16:19:49	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 16:19:56	torindel	c0nd0rr: note: you could always use splash utils
+2016-01-16 16:19:58	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:20:05	◀	dasher00 (~dasher00@static.88-198-41-86.clients.your-server.de) has quit (Quit: Leaving)
+2016-01-16 16:20:12	mingdao	yeah, you could put a picture of your wife there instead of a penguin
+2016-01-16 16:20:27	torindel	and add penguins/whatever as splash screen, leaving most of the screen to console as CONFIG_LOGO does
+2016-01-16 16:20:49	torindel	(or use fullscreen splash)
+2016-01-16 16:21:06	◀	ihr (~ihr@p1612142-ipngn200303osakachuo.osaka.ocn.ne.jp) has quit (Quit: Leaving)
+2016-01-16 16:21:18	▶	silverhom (~silverhom@c83-252-224-164.bredband.comhem.se) has joined #gentoo
+2016-01-16 16:21:45	◀	mikaelh (mikaelh@cable-hvk-50dd89-166.dhcp.inet.fi) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:21:49	Tear	mingdao: what if he did
+2016-01-16 16:21:59	c0nd0rr	lol, right i will try that then, as it seems as if its not a config problem :)
+2016-01-16 16:22:06	mingdao	Tear: define: did
+2016-01-16 16:22:18	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Quit: Bye)
+2016-01-16 16:22:21	Tear	put a picture of his wife
+2016-01-16 16:22:29	mingdao	Tear: what if he doesn't?
+2016-01-16 16:22:35	▶	mikaelh (mikaelh@cable-hvk-50dd89-166.dhcp.inet.fi) has joined #gentoo
+2016-01-16 16:22:46	torindel	c0nd0rr: emerge splashutils and maybe splash-themes-gentoo to get examples howto if you want custom theme
+2016-01-16 16:23:31	mingdao	c0nd0rr: guess this doesn't matter to me since the framebuffer is gone after 6s
+2016-01-16 16:23:32	▶	enki (~enki@dynamic-78-30-156-27.adsl.eunet.rs) has joined #gentoo
+2016-01-16 16:23:54	◀	zappa (~abraxas@190.195.233.88) has quit (Quit: This computer has gone to sleep)
+2016-01-16 16:23:54	mingdao	then it's that youglee login manager; then a couple seconds more and it's in X
+2016-01-16 16:24:03	mingdao	and then urxvt, and all's purdy
+2016-01-16 16:24:05	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #gentoo
+2016-01-16 16:24:09	◀	andering (~andering@185.133.197.164) has left #gentoo
+2016-01-16 16:24:16	▶	toriso (~toriso@unaffiliated/toriso) has joined #gentoo
+2016-01-16 16:24:53	c0nd0rr	thanks guys for all your help, i'll go the splashutils route :)
+2016-01-16 16:25:33	mingdao	c0nd0rr: just curious ... do you have the penguins when you first boot, then when KMS switches you to inteldrmfb they're gone?
+2016-01-16 16:26:09	c0nd0rr	mingdao, i never see them at all
+2016-01-16 16:26:53	silverhom	hm is it wa way to keep them mingdao ?:D i got the penguins
+2016-01-16 16:27:04	silverhom	but they disapears after 1 sec
+2016-01-16 16:27:16	◀	khj (~Thunderbi@dslb-088-071-179-083.088.071.pools.vodafone-ip.de) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:27:19	mingdao	silverhom: same here ... doesn't bother me so I haven't checked
+2016-01-16 16:27:28	▶	ribx (~ribx@x5f71d610.dyn.telefonica.de) has joined #gentoo
+2016-01-16 16:27:33	torindel	silverhom: with splashscreen you can have pics on screen as background even after boot if you want to
+2016-01-16 16:28:36	torindel	silverhom: think of something like this: https://wiki.gentoo.org/images/thumb/7/7c/Bootsplash.png/1024px-Bootsplash.png <= fullscreen background + reposition of text console
+2016-01-16 16:28:40	mingdao	I can give you a penguin
+2016-01-16 16:28:43	mingdao	>')
+2016-01-16 16:28:45	mingdao	( \
+2016-01-16 16:28:46	mingdao	 ^^
+2016-01-16 16:28:47	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:28:50	▶	khj (~Thunderbi@dslb-188-108-240-113.188.108.pools.vodafone-ip.de) has joined #gentoo
+2016-01-16 16:29:15	silverhom	penguin!:3
+2016-01-16 16:29:23	torindel	mingdao: http://orig07.deviantart.net/9408/f/2012/306/0/0/sexy_penguin_by_kondunn-d5jsb6z.jpg :P
+2016-01-16 16:29:35	silverhom	lol
+2016-01-16 16:29:45	◀	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has quit (Quit: leaving)
+2016-01-16 16:30:01	▶	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has joined #gentoo
+2016-01-16 16:30:01	▶	ckindley (~Carter@c-67-171-246-16.hsd1.or.comcast.net) has joined #gentoo
+2016-01-16 16:30:04	mingdao	well, you guys make me look like a rank amateur
+2016-01-16 16:30:06	prob016y7	a shop owner's daughter found out I got a bycicle for Christmas (a few days after), and phoned in homosexual black male and lesbian black female to physically take it away (two paid actors)
+2016-01-16 16:30:33	mingdao	prob016y7: you need psychiatric help ... please /join #gentoo-chat
+2016-01-16 16:30:49	c0nd0rr	lol
+2016-01-16 16:31:18	◀	fefelix (~fefe@p4FE2A1A2.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-01-16 16:31:33	prob016y7	thanks :)
+2016-01-16 16:31:38	mingdao	shaun, you don't stop this childishness, I'm going to report you to the FreeNode Police
+2016-01-16 16:33:48	silverhom	D;! not the police
+2016-01-16 16:33:59	⚡	silverhom runs 
+2016-01-16 16:34:42	◀	wej (~j@2a00:1768:2001:7:1::3e) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:35:34	◀	KolK (~kacper@goldnet.4web.pl) has quit (Quit: Konversation terminated!)
+2016-01-16 16:36:35	▶	wadadli (Elite15872@gateway/shell/elitebnc/x-sxmzkysoplcwtnfc) has joined #gentoo
+2016-01-16 16:37:32	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 16:37:41	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 16:38:32	▶	parabool (~parabool@62-197-114-74.teledisnet.be) has joined #gentoo
+2016-01-16 16:39:00	▶	shader (~user@unaffiliated/shader) has joined #gentoo
+2016-01-16 16:39:15	▶	hawkandbaby (~hawkandba@104-222-115-64.cpe.teksavvy.com) has joined #gentoo
+2016-01-16 16:39:57	shader	any suggestions on fixing eix when it says "Reading category 163|163 (100) EMPTY!"? It seems to be building an empty database...
+2016-01-16 16:40:16	mingdao	eix-update ?
+2016-01-16 16:40:46	shader	yes
+2016-01-16 16:41:01	shader	eix-update is producing an empty db for some reason
+2016-01-16 16:42:27	mingdao	no /var/cache/eix/portage.eix ?
+2016-01-16 16:42:38	mingdao	shader: I've never eXPerienced this issue before
+2016-01-16 16:42:48	shader	the file is there, but it looks like it only has top level category names in it
+2016-01-16 16:43:58	▶	wej (~j@2a00:1768:2001:7:1::3e) has joined #gentoo
+2016-01-16 16:44:09	mingdao	shader: have you tried "emerge --sync" ?
+2016-01-16 16:44:16	mingdao	just grasping at straws here
+2016-01-16 16:44:20	mingdao	mgonna shutup
+2016-01-16 16:44:27	rx80	eix-sync
+2016-01-16 16:44:29	▶	turlando (~turlando@151.64.32.177) has joined #gentoo
+2016-01-16 16:44:29	rx80	if using eix
+2016-01-16 16:44:35	◀	D-ion (~D-ion@pppoe.178-66-199-137.dynamic.avangarddsl.ru) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:44:35	◀	kantera__ (~kanteran@p20030006112452081DB70C2F2EDEA434.dip0.t-ipconnect.de) has quit
+2016-01-16 16:45:14	◀	SylvieLorxu (~TheLastPr@dhcp-077-251-165-191.chello.nl) has quit (Remote host closed the connection)
+2016-01-16 16:45:33	▶	kanteran (~kanteran@p20030006112452081DB70C2F2EDEA434.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 16:45:39	mingdao	rx80: thought eix-update took care of that
+2016-01-16 16:45:56	mingdao	maybe it's the other way around
+2016-01-16 16:45:57	rx80	eix-update just updates the db
+2016-01-16 16:46:05	rx80	eix-sync does sync + update
+2016-01-16 16:46:05	mingdao	eix-sync also calls eix-update
+2016-01-16 16:46:27	rx80	yup
+2016-01-16 16:46:35	◀	blueness (~blueness@gentoo/developer/blueness) has quit (Quit: blueness)
+2016-01-16 16:47:00	▶	Bookman900 (~bookman90@ip-46-73-221-186.bb.netbynet.ru) has joined #gentoo
+2016-01-16 16:47:30	▶	SylvieLorxu (~TheLastPr@dhcp-077-251-165-191.chello.nl) has joined #gentoo
+2016-01-16 16:48:53	◀	c0nd0rr (~c0nd0rr@cpc75176-duns6-2-0-cust115.9-3.cable.virginm.net) has quit (Quit: leaving)
+2016-01-16 16:49:35	▶	KolK (~kacper@goldnet.4web.pl) has joined #gentoo
+2016-01-16 16:49:55	KolK	How can I add to java-config manually installed java?
+2016-01-16 16:49:58	Doctor_Y	anyone know how to sort out -su: fork: retry: No child processes?
+2016-01-16 16:50:09	▶	csanyipal (~Paul@171-141-85-95.dynamic.stcable.net) has joined #gentoo
+2016-01-16 16:50:16	▶	fabrox (~fabrox@x5ce0a153.dyn.telefonica.de) has joined #gentoo
+2016-01-16 16:50:23	csanyipal	Hi,
+2016-01-16 16:50:41	◀	geetar (~kurt@97-82-201-188.dhcp.hckr.nc.charter.com) has quit (Quit: Leaving.)
+2016-01-16 16:50:44	◀	kanteran (~kanteran@p20030006112452081DB70C2F2EDEA434.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2016-01-16 16:51:31	▶	I (~abraxas@190.195.233.88) has joined #gentoo
+2016-01-16 16:51:55	ℹ	I is now known as Guest481
+2016-01-16 16:51:56	◀	psyq (~psyq@178.62.210.183) has left #gentoo
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #gentoo
+2016-01-16 16:52:27	ℹ	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: dpaste.org | masked by license? http://x.vu/WgxYLs | | Unworking hibernate and suspend? emerge -1 upower-pm-utils | firmware not loading? http://goo.gl/MzVLBN | perl conflicts? http://goo.gl/n1FMk8 | Be nice! http://xrl.us/kftd"
+2016-01-16 16:52:27	ℹ	Topic set by iamben (~iamben@gentoo/contributor/iamben) on Fri, 16 Oct 2015 21:02:09
+2016-01-16 16:52:27	ℹ	Channel #gentoo: 1101 nicks (7 ops, 64 voices, 1030 normals)
+2016-01-16 16:52:27	ℹ	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2016-01-16 16:52:27	ℹ	URL for #gentoo: http://www.gentoo.org
+2016-01-16 16:52:29	ℹ	Channel created on Sat, 15 Sep 2001 05:15:36
+2016-01-16 16:52:55	shader	eix-sync didn't change anything on the eix-update side
+2016-01-16 16:53:06	shader	does it matter if I use git to sync the portage tree?
+2016-01-16 16:53:20	rx80	shader: doesn't matter
+2016-01-16 16:53:36	rx80	shader: maybe your eix database files/dir is broken?
+2016-01-16 16:53:41	rx80	shader: try and delete everything
+2016-01-16 16:55:34	▶	BenLand100 (~blandtop@wlcguestnat01.snolab.ca) has joined #gentoo
+2016-01-16 16:55:46	csanyipal	I'm following https://wiki.gentoo.org/wiki/Radeon . When start 'startx' I get: https://bpaste.net/show/1265fbd7b0b3 .
+2016-01-16 16:56:12	◀	pereira_alex (~alexandre@210.207.114.89.rev.vodafone.pt) has quit (Quit: Konversation terminated!)
+2016-01-16 16:56:35	shader	deleting everything in /var/cache/eix doesn't change anything
+2016-01-16 16:57:15	◀	GurliGebis (~GurliGebi@gentoo/developer/gurligebis) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:57:32	csanyipal	In make.conf I have: VIDEO_CARDS="amdgpu radeonsi". What am I doing wrong?
+2016-01-16 16:57:48	▶	D-ion (~D-ion@92-100-188-126.dynamic.avangarddsl.ru) has joined #gentoo
+2016-01-16 16:58:13	csanyipal	'lspci | grep -i VGA' gives: 01:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Tobago PRO [Radeon R7 360 / R9 360 OEM] (rev 81).
+2016-01-16 16:58:22	◀	pm001 (~pm0001@5.147.128.79) has quit
+2016-01-16 16:58:43	rx80	csanyipal: is your user in the 'video' group? does it need to be?
+2016-01-16 16:59:33	◀	Phr33d0m (~x@gentoo/contributor/phr33d0m) has quit (Read error: Connection reset by peer)
+2016-01-16 16:59:39	csanyipal	rx80: yes, mine user is in video group.
+2016-01-16 17:00:32	shader	neither deleting everything in /var/cache/eix nor updating eix itself seem to have changed anything
+2016-01-16 17:00:35	csanyipal	maybe it is needed to put in make.conf 'VIDEO_CARDS="radeon"' instead?
+2016-01-16 17:01:08	◀	Guest481 (~abraxas@190.195.233.88) has quit (Quit: This computer has gone to sleep)
+2016-01-16 17:01:19	▶	thunderrd (~thunderrd@110.77.238.204) has joined #gentoo
+2016-01-16 17:01:31	◀	enki (~enki@dynamic-78-30-156-27.adsl.eunet.rs) has quit (Read error: Connection reset by peer)
+2016-01-16 17:02:21	◀	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has quit (Quit: WeeChat 1.3)
+2016-01-16 17:02:25	csanyipal	There is no /dev/dri/card0 out there. Maybe the driver is not set correctly?
+2016-01-16 17:03:23	◀	__20h__ (~some_one@r-36.net) has quit (Ping timeout: 260 seconds)
+2016-01-16 17:03:54	◀	parabool (~parabool@62-197-114-74.teledisnet.be) has quit (Ping timeout: 245 seconds)
+2016-01-16 17:04:21	▶	parabool (~parabool@62-197-114-74.teledisnet.be) has joined #gentoo
+2016-01-16 17:04:28	▶	blueness (~blueness@gentoo/developer/blueness) has joined #gentoo
+2016-01-16 17:04:28	ℹ	Mode #gentoo [+v blueness] by ChanServ
+2016-01-16 17:04:44	csanyipal	In make.conf I have USE flag -consolekit, I don't remember, why.
+2016-01-16 17:05:21	csanyipal	I don't have the acl USE flag enabled globally too.
+2016-01-16 17:06:27	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 17:06:36	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 17:07:08	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 17:07:18	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 17:07:45	◀	Turingtoast (~Tino@p548C57AF.dip0.t-ipconnect.de) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-01-16 17:08:50	▶	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has joined #gentoo
+2016-01-16 17:09:14	◀	psyq (~psyq@unaffiliated/psyq) has left #gentoo
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:33	▶	psyq (~psyq@178.62.210.183) has joined #gentoo
+2016-01-16 17:54:33	ℹ	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: dpaste.org | masked by license? http://x.vu/WgxYLs | | Unworking hibernate and suspend? emerge -1 upower-pm-utils | firmware not loading? http://goo.gl/MzVLBN | perl conflicts? http://goo.gl/n1FMk8 | Be nice! http://xrl.us/kftd"
+2016-01-16 17:54:33	ℹ	Topic set by iamben (~iamben@gentoo/contributor/iamben) on Fri, 16 Oct 2015 21:02:09
+2016-01-16 17:54:33	ℹ	Channel #gentoo: 1096 nicks (7 ops, 64 voices, 1025 normals)
+2016-01-16 17:54:33	***	Buffer Playback...
+2016-01-16 17:54:33	wonko7	[17:45:26] you can usually specify the path as a env variable
+2016-01-16 17:54:33	username234	[17:45:31] m_ben: in any case the only way to know what the real problem is would be to look at the config.log
+2016-01-16 17:54:33	petan	[17:46:03] username234: what is difference between world and  @world
+2016-01-16 17:54:33	m_ben	[17:46:04] username234, wonko7: I emerged from portage, the problem is that portage provides only the binary valigen-0.28, so I added a symlink called valigen, but that doesn't seem to work
+2016-01-16 17:54:33	username234	[17:46:40] petan: 'world' is the older (possibly deprecated) syntax.
+2016-01-16 17:54:33	wonko7	[17:46:59] m_ben: what did you symlink? a binary in /usr/bin?
+2016-01-16 17:54:33	m_ben	[17:47:22] wonko7: in /usr/bin I did: ln valigen-0.28 valigen
+2016-01-16 17:54:33	wonko7	[17:47:37] and username234 is right, you'll get more answers from a config.log
+2016-01-16 17:54:33	m_ben	[17:47:40] wonko7: why isn't that provided by the package in the first place?
+2016-01-16 17:54:33	m_ben	[17:48:35] I meant vapigen and not valigen
+2016-01-16 17:54:33	m_ben	[17:49:14] username234, wonko7: yes, vapigen is not found in the pkg-config search path
+2016-01-16 17:54:33	username234	[17:50:02] m_ben "...but when I configure a project" what project?
+2016-01-16 17:54:33	username234	[17:50:36] m_ben: and is that project coming from portage or are you trying to build that project from source?
+2016-01-16 17:54:33	bezerker	[17:50:54] wonko7: no errors that i see.. bout to grab a boot cd and fsck etc
+2016-01-16 17:54:33	m_ben	[17:51:22] username234: this terminal here: https://github.com/thestinger/termite or actually not even that, yet, because it depends on another lib: https://github.com/thestinger/vte-ng and that one gives me the error
+2016-01-16 17:54:33	m_ben	[17:51:37] username234: yes from source because not available in portage yet
+2016-01-16 17:54:33	wonko7	[17:51:41] m_ben: it's got the version number because it is slotted, so you can install multible versions
+2016-01-16 17:54:33	username234	[17:52:04] which suggests there's probably an eselect package for vala.
+2016-01-16 17:54:33	bezerker	[17:52:19] oh, it is interesting that openrc was one of the updated packages
+2016-01-16 17:54:33	bezerker	[17:52:21] hrm
+2016-01-16 17:54:33	username234	[17:52:34] or not :)
+2016-01-16 17:54:33	m_ben	[17:52:41] username234: :(
+2016-01-16 17:54:33	username234	[17:53:04] m_ben: which mean that creating the symlink was the wrong approach.  Lets' see the config log for vte-ng
+2016-01-16 17:54:33	wonko7	[17:53:04] and it does install pkg config files in both /usr/share/pkgconfig & /usr/lib64/pkgconfig
+2016-01-16 17:54:33	bezerker	[17:53:38] there also appears to be a newer openrc package avail
+2016-01-16 17:54:33	wonko7	[17:53:40] bezerker: you could always downgrade to try
+2016-01-16 17:54:33	bezerker	[17:54:04] wonko7: can't run emerge because of missing dev, so have to see if i can chroot in to try to fix that
+2016-01-16 17:54:33	wonko7	[17:54:09] or upgrade if you're feeling lucky :)
+2016-01-16 17:54:33	wonko7	[17:54:15] oh that sucks
+2016-01-16 17:54:33	***	Playback Complete.
+2016-01-16 17:54:34	▶	gattler (~gattler@f055221151.adsl.alicedsl.de) has joined #gentoo
+2016-01-16 17:54:38	ℹ	Channel created on Sat, 15 Sep 2001 05:15:36
+2016-01-16 17:54:38	wonko7	yeah, chroot
+2016-01-16 17:54:45	bezerker	yep
+2016-01-16 17:54:48	⚡	bezerker finds his usb stick
+2016-01-16 17:55:10	wonko7	bezerker: if you use btrfs, it has beautiful snapshot management
+2016-01-16 17:55:19	bezerker	sadly, ext4 on this disk P
+2016-01-16 17:55:21	bezerker	:P
+2016-01-16 17:55:51	m_ben	username234: https://bpaste.net/show/12e74a3351bd vapigen error is at line 1896
+2016-01-16 17:55:52	hotaronohanako	is anyone getting this error message ? https://paste.kde.org/p9ig08yvp
+2016-01-16 17:55:59	wonko7	I snapshot a few times a week, if something breaks at least I've got a usable snapshot so I can still get some work done
+2016-01-16 17:56:31	bezerker	yea, a very good idea
+2016-01-16 17:56:48	▶	psychedup74 (~chris@174-21-168-203.tukw.qwest.net) has joined #gentoo
+2016-01-16 17:57:18	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 17:57:19	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 17:57:21	username234	m_ben: wgetpaste -c 'configure --help=recursive'
+2016-01-16 17:57:29	bezerker	only package i see thatm akes any sense that it could cause issues
+2016-01-16 17:57:37	▶	monah1744 (~monah1744@77.122.103.85) has joined #gentoo
+2016-01-16 17:57:50	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 17:58:11	wonko7	m_ben: you could try "PKG_CONFIG_PATH=/usr/share/pkgconfig ./configure"
+2016-01-16 17:58:27	◀	mikaelh (mikaelh@cable-hvk-50dd89-166.dhcp.inet.fi) has quit (Ping timeout: 260 seconds)
+2016-01-16 17:58:53	▶	mikaelh (mikaelh@cable-hvk-50dd89-166.dhcp.inet.fi) has joined #gentoo
+2016-01-16 17:59:06	◀	andering (~andering@185.133.197.164) has quit (Client Quit)
+2016-01-16 17:59:29	m_ben	username234: https://bpaste.net/show/8e8794aaee38
+2016-01-16 18:00:25	username234	m_ben: does vte-ng need vala support for termite?
+2016-01-16 18:00:54	m_ben	username234: honestly, I don't know
+2016-01-16 18:01:05	▶	andering (~andering@185.133.197.164) has joined #gentoo
+2016-01-16 18:01:32	username234	m_ben: you could try configure --enable-vala=no and see if termite builds.
+2016-01-16 18:01:59	▶	khj1 (~Thunderbi@dslb-188-096-066-004.188.096.pools.vodafone-ip.de) has joined #gentoo
+2016-01-16 18:02:15	◀	khj (~Thunderbi@dslb-092-076-235-067.092.076.pools.vodafone-ip.de) has quit (Ping timeout: 240 seconds)
+2016-01-16 18:02:15	ℹ	khj1 is now known as khj
+2016-01-16 18:04:01	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Remote host closed the connection)
+2016-01-16 18:04:31	m_ben	wonko7: that didn't work with the PKG_CONFIG_PATH=..
+2016-01-16 18:04:32	kash	what was the browser that was recommended to compile on an ARM SoC?
+2016-01-16 18:04:49	dragonreborn_	iamben: hi, r u there?
+2016-01-16 18:05:00	m_ben	username234: vte-ng compiles w/o vala, I will try to compile termite
+2016-01-16 18:05:18	bezerker	if you are trying to use termite, there's an overlay which has an ebuild for it
+2016-01-16 18:05:55	◀	Josef__K (~jeremy@203-213-49-144.static.tpgi.com.au) has quit (Ping timeout: 260 seconds)
+2016-01-16 18:06:54	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #gentoo
+2016-01-16 18:07:21	m_ben	bezerker: which one?
+2016-01-16 18:07:31	dragonreborn_	m_ben=iamben ?
+2016-01-16 18:07:43	m_ben	dragonreborn_: no, I'm not iamben
+2016-01-16 18:07:52	dragonreborn_	m_ben ^^
+2016-01-16 18:09:10	▶	pm001 (~pm0001@5.147.128.79) has joined #gentoo
+2016-01-16 18:09:17	bezerker	m_ben: both nightmare and eroen support -9999 ebuilds of termite
+2016-01-16 18:09:29	bezerker	im using one of the two... cant recall which, i think nightmare
+2016-01-16 18:09:44	bezerker	i unfortunately have a non functional gentoo box now so i cant check :P
+2016-01-16 18:09:55	◀	pm001 (~pm0001@5.147.128.79) has quit (Read error: Connection reset by peer)
+2016-01-16 18:10:09	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 18:10:58	m_ben	bezerker: hopefully not because of termite
+2016-01-16 18:11:07	bezerker	haha no
+2016-01-16 18:11:21	bezerker	seems to be openrc related at best guess
+2016-01-16 18:11:27	bezerker	still troubleshooting
+2016-01-16 18:12:07	m_ben	bezerker: there was already someone complaining about the new openrc version a few days ago, do you also have ~amd64 installed?
+2016-01-16 18:12:14	▶	Turingtoast (~Tino@p548C57AF.dip0.t-ipconnect.de) has joined #gentoo
+2016-01-16 18:12:15	bezerker	i indeed do.

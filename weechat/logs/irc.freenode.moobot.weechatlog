@@ -1,0 +1,52 @@
+2016-01-10 19:23:01	moobot	Hey, don't tell c_smith, but the Yellow wire? Yeah, that's the one.But shh! Don't say anything!
+2016-01-15 00:31:00	moobot	You can see more info about any of these commands by doing .help <command> (e.g. .help time)
+2016-01-15 00:31:01	moobot	ADMIN         save  quit  msg  part  me  join  set  mode
+2016-01-15 00:31:02	moobot	ADMINCHANNEL  unquiet  topic  devoice  kickban  deop  kick  tmask
+2016-01-15 00:31:03	moobot	              showmask  quiet  unban  ban  voice  op
+2016-01-15 00:31:04	moobot	ANNOUNCE      announce
+2016-01-15 00:31:04	moobot	BOMB          bomb  cutwire
+2016-01-15 00:31:05	moobot	CALC          py  wa  c
+2016-01-15 00:31:06	moobot	CLOCK         settz  settimeformat  getchanneltz  t  gettz
+2016-01-15 00:31:07	moobot	              setchanneltimeformat  gettimeformat  setchanneltz
+2016-01-15 00:31:07	moobot	              getchanneltimeformat
+2016-01-15 00:31:08	moobot	CORETASKS     blocks
+2016-01-15 00:31:09	moobot	COUNTDOWN     countdown
+2016-01-15 00:31:09	moobot	CURRENCY      btc  cur
+2016-01-15 00:31:10	moobot	DICE          choose  d
+2016-01-15 00:31:11	moobot	ETYMOLOGY     ety
+2016-01-15 00:31:12	moobot	HELP          help
+2016-01-15 00:31:12	moobot	IP            iplookup
+2016-01-15 00:31:13	moobot	IPYTHON       console
+2016-01-15 00:31:14	moobot	ISUP          isup
+2016-01-15 00:31:15	moobot	KARMA         karma  instant  khelp  random  good  bad  delete
+2016-01-15 00:31:15	moobot	              setkarma  stats
+2016-01-15 00:31:16	moobot	LMGTFY        lmgtfy
+2016-01-15 00:31:17	moobot	MEETBOT       agreed  info  comment  action  subject  listactions
+2016-01-15 00:31:18	moobot	              link  chairs  comments  endmeeting  startmeeting
+2016-01-15 00:31:18	moobot	MOO           moo
+2016-01-15 00:31:19	moobot	MOVIE         movie
+2016-01-15 00:31:20	moobot	QUOTE         qhelp  quote
+2016-01-15 00:31:21	moobot	RAND          rand
+2016-01-15 00:31:21	moobot	REDDIT        redditor  setsafeforwork  getsafeforwork
+2016-01-15 00:31:22	moobot	RELOAD        update  load  reload
+2016-01-15 00:31:23	moobot	REMIND        in  at
+2016-01-15 00:31:23	moobot	RPSLS         spock  scissors  paper  lizard  rock
+2016-01-15 00:31:24	moobot	SAFETY        safety
+2016-01-15 00:31:25	moobot	SEARCH        duck  suggest  search
+2016-01-15 00:31:26	moobot	SEEN          seen
+2016-01-15 00:31:26	moobot	SERVANT       menu  pizza  8  order  coffee  beer
+2016-01-15 00:31:27	moobot	SPELLCHECK    spellcheck
+2016-01-15 00:31:28	moobot	TELL          tell
+2016-01-15 00:31:28	moobot	TLD           tld
+2016-01-15 00:31:29	moobot	TRANSLATE     translate  mangle
+2016-01-15 00:31:30	moobot	TWITCH        hb  tv  twitchtv  streams
+2016-01-15 00:31:31	moobot	UNICODE_INFO  u
+2016-01-15 00:31:31	moobot	UNITS         temp  length  weight
+2016-01-15 00:31:32	moobot	UPTIME        uptime
+2016-01-15 00:31:33	moobot	URL           title
+2016-01-15 00:31:33	moobot	VERSION       version
+2016-01-15 00:31:34	moobot	WEATHER       setlocation  weather
+2016-01-15 00:31:35	moobot	WIKIPEDIA     w
+2016-01-15 00:31:35	moobot	WIKTIONARY    wt
+2016-01-15 00:31:36	moobot	XKCD          xkcd
+2016-01-15 00:31:37	moobot	YOUTUBE       yt

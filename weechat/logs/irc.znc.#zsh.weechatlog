@@ -1,0 +1,129 @@
+2016-01-16 15:16:48	▶	psyq_ (~psyq@178.62.210.183) has joined #zsh
+2016-01-16 15:16:48	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-16 15:16:48	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-16 15:16:48	ℹ	Channel #zsh: 407 nicks (0 ops, 0 voices, 407 normals)
+2016-01-16 15:16:48	***	Buffer Playback...
+2016-01-16 15:16:48	a_p3rson|D1	[09:04:21] Hey y'all, having problems with zsh+tmux over SSH on a Debian server. I'm able to use partial history completion on the command line, but I'm unable to use the up/down arrow keys in man/top/everything else (have to push shift). My up/down keys are both bound in ~/.zshrc to history-substring-search-up/down - any way to fix this?
+2016-01-16 15:16:48	a_p3rson|D1	[09:06:03] Just tried turning those bindings off, and I'm still unable to get arrow keys to work properly, actually.
+2016-01-16 15:16:48	hyper_void	[09:16:17] is there a way for autocomplete to chose the file I use the most in a dir?
+2016-01-16 15:16:48	izabera	[09:17:49] no
+2016-01-16 15:16:48	heoyea	[09:18:44] whats that autocomplete called? if i type /ho/u/Do and it autocompletes /home/user/Downloads
+2016-01-16 15:16:48	xaxes	[09:39:30] hey all.. I remembering to had a zsh history which was related to a given command. Let's say I enter "cp " and want to go through last cp commands I was able to simply use the up-key. Now it scrolls up the complete history. Can anybody tell me how the option is named?
+2016-01-16 15:16:48	heoyea	[10:04:52] xaxes: this? http://ix.io/nsP
+2016-01-16 15:16:48	xaxes	[10:08:04] heoyea: perfect! Thats exactly what I searched for. Thank you very much! :)
+2016-01-16 15:16:48	xaxes	[10:08:07] have a nice day
+2016-01-16 15:16:48	hyper_void	[12:58:26] trying: tar zcvf $filename T list_to_backup ; but getting cannon't stat file
+2016-01-16 15:16:48	OxFEEDBACC	[14:23:57] > rsync --version
+2016-01-16 15:16:48	machabot	[14:23:58] OxFEEDBACC: zsh: command not found: rsync
+2016-01-16 15:16:48	OxFEEDBACC	[14:24:03] thx
+2016-01-16 15:16:48	ungali	[14:36:07] > ls
+2016-01-16 15:16:48	machabot	[14:36:08] ungali: No output, exitstatus: 0
+2016-01-16 15:16:48	ungali	[14:36:13] > pwd
+2016-01-16 15:16:48	machabot	[14:36:14] ungali: /root
+2016-01-16 15:16:48	ungali	[14:36:27] > curl
+2016-01-16 15:16:48	machabot	[14:36:28] ungali: zsh: command not found: curl
+2016-01-16 15:16:48	ungali	[14:36:32] > wget
+2016-01-16 15:16:48	machabot	[14:36:32] ungali: zsh: command not found: wget
+2016-01-16 15:16:48	ungali	[14:36:42] > ls /bin
+2016-01-16 15:16:48	machabot	[14:36:43] ungali: [   dash    getent    ls      pax       sleep  true      zsh-3.0.8
+2016-01-16 15:16:48	machabot	[14:36:43] ungali: awk   date    getopt    lsblk   pgrep     snice  truncate    zsh-3.1.9
+2016-01-16 15:16:48	machabot	[14:36:43] ungali: basename  dd    grep      mawk    pkill     sort  tty      zsh-4.0.9
+2016-01-16 15:16:48	machabot	[14:36:44] ungali: 16 more lines ( http://sprunge.us/ZgGS )
+2016-01-16 15:16:48	ungali	[14:37:23] > chsh -s /bin/bash # ;)
+2016-01-16 15:16:48	machabot	[14:37:23] ungali: zsh: command not found: chsh
+2016-01-16 15:16:48	OxFEEDBACC	[14:37:32] :-)
+2016-01-16 15:16:48	OxFEEDBACC	[14:39:30] i was just trying to figure out why my(?) rsync swallows *.*.sample files... #rsync isn't that responsive and a quick grep over my $(rpm -qlf =rsync) files didn't reveal a system issue)
+2016-01-16 15:16:48	psprint	[14:47:00] to remove empty elements from array, one should do array=( $array[@] ) ?
+2016-01-16 15:16:48	osse	[14:48:52] psprint: that works, but then if $array[2] is removed then $array[3] will become $array[2] etc
+2016-01-16 15:16:48	psprint	[14:50:39] that's fine
+2016-01-16 15:16:48	osse	[14:51:49] it usually is
+2016-01-16 15:16:48	osse	[14:52:07] maybe there's a more proper way to do it with fancy parameter expansion
+2016-01-16 15:16:48	osse	[14:52:27] hmm, i think you want array=( "$array[@]" ). can't remember
+2016-01-16 15:16:48	psprint	[14:54:23] this will preserve empty elements
+2016-01-16 15:16:48	osse	[14:55:19] oh right
+2016-01-16 15:16:48	***	Playback Complete.
+2016-01-16 15:17:14	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:47	▶	psyq_ (~psyq@178.62.210.183) has joined #zsh
+2016-01-16 15:17:47	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-16 15:17:47	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-16 15:17:47	ℹ	Channel #zsh: 405 nicks (0 ops, 0 voices, 405 normals)
+2016-01-16 15:18:14	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-16 15:19:04	psprint	compadd, to decide whether to insert a text into cmd line, checks if cursor is at end of a word – and then adds only right part of the word. However, it doesn't understand shell words, and when $((<Tab> is done, it decides to insert whole word. Any thoughts on this?
+2016-01-16 15:19:15	▶	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #zsh
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:22:36	▶	jottr (~jottr@unaffiliated/jottr) has joined #zsh
+2016-01-16 15:34:35	▶	cdown (~cdown@dab-far1-h-24-1.dab.02.net) has joined #zsh
+2016-01-16 15:35:30	▶	minde (~minde@unaffiliated/minde) has joined #zsh
+2016-01-16 15:40:07	◀	cdown (~cdown@dab-far1-h-24-1.dab.02.net) has quit (Remote host closed the connection)
+2016-01-16 15:41:53	▶	asyncsrc (~asyncsrc@162.221.207.229) has joined #zsh
+2016-01-16 15:43:35	◀	asyncsrc (~asyncsrc@162.221.207.229) has quit (Max SendQ exceeded)
+2016-01-16 15:44:12	▶	asyncsrc (~asyncsrc@162.221.207.229) has joined #zsh
+2016-01-16 15:45:55	◀	asyncsrc (~asyncsrc@162.221.207.229) has quit (Max SendQ exceeded)
+2016-01-16 15:47:35	◀	toogley (~toogley@2.165.248.167) has quit (Quit: toogley)
+2016-01-16 15:53:15	▶	cdown (~cdown@dab-far1-h-1-5.dab.02.net) has joined #zsh
+2016-01-16 15:53:51	◀	jottr (~jottr@unaffiliated/jottr) has quit (Quit: WeeChat 1.4)
+2016-01-16 15:59:35	◀	emilford (~Eric@179.53.153.253) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:59:56	▶	gaboesquivel (~gaboesqui@ip106-142-159-186.ct.co.cr) has joined #zsh
+2016-01-16 16:03:39	◀	Gabri2 (~ahmedelga@ip4da074e6.direct-adsl.nl) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:05:10	◀	chandan (~chandan@122.172.209.112) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:06:30	◀	cdown (~cdown@dab-far1-h-1-5.dab.02.net) has quit (Remote host closed the connection)
+2016-01-16 16:06:41	▶	emilford (~Eric@190.167.183.114) has joined #zsh
+2016-01-16 16:11:38	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #zsh
+2016-01-16 16:13:08	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 16:14:12	◀	subopt (~eholbroo@inet-hqmc04-o.oracle.com) has quit (Remote host closed the connection)
+2016-01-16 16:15:11	▶	subopt (~eholbroo@inet-hqmc04-o.oracle.com) has joined #zsh
+2016-01-16 16:16:41	▶	emilford_ (~Eric@190.167.159.226) has joined #zsh
+2016-01-16 16:18:35	◀	emilford (~Eric@190.167.183.114) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:22:14	◀	emilford_ (~Eric@190.167.159.226) has quit (Read error: Connection reset by peer)
+2016-01-16 16:22:18	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Quit: Bye)
+2016-01-16 16:24:05	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #zsh
+2016-01-16 16:24:14	▶	emilford (~Eric@190.80.249.220) has joined #zsh
+2016-01-16 16:30:39	◀	txtsd (~txtsd@103.39.31.193) has quit (Read error: Connection reset by peer)
+2016-01-16 16:31:29	▶	txtsd (~txtsd@103.39.31.193) has joined #zsh
+2016-01-16 16:31:59	◀	emilford (~Eric@190.80.249.220) has quit (Ping timeout: 264 seconds)
+2016-01-16 16:33:37	▶	emilford (~Eric@190.167.159.226) has joined #zsh
+2016-01-16 16:38:38	▶	emilford_ (~Eric@190.166.36.20) has joined #zsh
+2016-01-16 16:38:39	◀	emilford (~Eric@190.167.159.226) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:38:45	▶	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has joined #zsh
+2016-01-16 16:42:25	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 16:43:04	◀	zpe (~zpe@c83-248-161-71.bredband.comhem.se) has quit (Ping timeout: 245 seconds)
+2016-01-16 16:49:00	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 16:51:57	◀	psyq (~psyq@178.62.210.183) has left #zsh
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #zsh
+2016-01-16 16:52:27	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-16 16:52:27	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-16 16:52:27	ℹ	Channel #zsh: 405 nicks (0 ops, 0 voices, 405 normals)
+2016-01-16 16:52:27	ℹ	PvNotice(ChanServ): Welcome to #zsh! Discussion of the Z Shell and sharing of configs highly encouraged. Enjoy your stay and come back soon!
+2016-01-16 16:52:27	ℹ	URL for #zsh: http://www.zsh.org/
+2016-01-16 16:52:51	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-16 16:53:41	▶	cdown (~cdown@dab-far1-h-70-1.dab.02.net) has joined #zsh
+2016-01-16 16:54:46	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 16:56:45	◀	emilford_ (~Eric@190.166.36.20) has quit (Ping timeout: 260 seconds)
+2016-01-16 16:57:31	◀	cdown (~cdown@dab-far1-h-70-1.dab.02.net) has quit (Remote host closed the connection)
+2016-01-16 16:58:00	▶	BadCoderFinger (~BadCoderF@216.160.187.37) has joined #zsh
+2016-01-16 16:59:11	▶	emilford (~Eric@190.166.36.20) has joined #zsh
+2016-01-16 17:00:44	▶	cdown (~cdown@dab-far1-h-70-1.dab.02.net) has joined #zsh
+2016-01-16 17:04:06	◀	emilford (~Eric@190.166.36.20) has quit (Ping timeout: 256 seconds)
+2016-01-16 17:05:30	◀	govg (~govg@unaffiliated/govg) has quit (Quit: leaving)
+2016-01-16 17:05:45	◀	cdown (~cdown@dab-far1-h-70-1.dab.02.net) has quit (Remote host closed the connection)
+2016-01-16 17:05:49	▶	govg (~govg@unaffiliated/govg) has joined #zsh
+2016-01-16 17:08:53	▶	cdown (~cdown@dab-far1-h-70-6.dab.02.net) has joined #zsh
+2016-01-16 17:10:37	◀	psyq (~psyq@unaffiliated/psyq) has left #zsh
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:33	▶	psyq (~psyq@178.62.210.183) has joined #zsh
+2016-01-16 17:54:33	ℹ	Topic for #zsh is "v5.2 | http://zsh.sf.net/ | http://zshwiki.org/ | http://zsh.sf.net/FAQ/ | http://zshwiki.org/home/docs/wikifaq | http://tinyurl.com/zsh-refcard-pdf | Just ask. | Nobody here or everybody clueless? try the zsh-users mailinglist: http://www.zsh.org/mla"
+2016-01-16 17:54:33	ℹ	Topic set by Mikachu (~Mikachu@gimp/developer/Mikachu) on Wed, 02 Dec 2015 22:54:14
+2016-01-16 17:54:33	ℹ	Channel #zsh: 407 nicks (0 ops, 0 voices, 407 normals)
+2016-01-16 17:54:46	ℹ	Channel created on Tue, 02 Sep 2003 17:34:53
+2016-01-16 17:58:15	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 17:58:46	◀	emilford_ (~Eric@190.167.3.125) has quit (Ping timeout: 250 seconds)
+2016-01-16 18:00:04	▶	Gabri (~ahmedelga@ip4da074e6.direct-adsl.nl) has joined #zsh
+2016-01-16 18:02:56	▶	emilford (~Eric@190.167.10.101) has joined #zsh
+2016-01-16 18:04:01	◀	DarthGandalf (somebody@znc/developer/DarthGandalf) has quit (Remote host closed the connection)
+2016-01-16 18:06:54	▶	DarthGandalf (somebody@znc/developer/DarthGandalf) has joined #zsh
+2016-01-16 18:07:14	◀	northfurr (~manhari@unaffiliated/northfurr) has quit (Quit: northfurr)
+2016-01-16 18:08:44	▶	northfurr (~manhari@unaffiliated/northfurr) has joined #zsh
+2016-01-16 18:09:16	◀	emilford (~Eric@190.167.10.101) has quit (Ping timeout: 272 seconds)
+2016-01-16 18:09:57	▶	emilford (~Eric@190.167.132.247) has joined #zsh

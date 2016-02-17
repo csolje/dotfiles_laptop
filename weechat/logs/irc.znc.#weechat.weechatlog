@@ -1,0 +1,252 @@
+2016-01-16 15:16:48	▶	psyq_ (~psyq@178.62.210.183) has joined #weechat
+2016-01-16 15:16:48	ℹ	Topic for #weechat is "https://weechat.org/ | Latest stable version: 1.4 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2016-01-16 15:16:48	ℹ	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 10 Jan 2016 10:09:02
+2016-01-16 15:16:48	ℹ	Channel #weechat: 718 nicks (4 ops, 1 voice, 713 normals)
+2016-01-16 15:16:48	***	Buffer Playback...
+2016-01-16 15:16:48	vegardx	[04:58:32] And current documentation with using self-signed certificates doesn't really add any security. It would make sense to make the documentation reflect that.
+2016-01-16 15:16:48	anhtuann	[05:38:44] I'm fiddling with weechat settings. Is there a way to just revert a setting to default using /set ?
+2016-01-16 15:16:48	strayPuppy	[05:39:25] anhtuann: use  /unset
+2016-01-16 15:16:48	anhtuann	[05:40:37] thanks strayPuppy !
+2016-01-16 15:16:48	strayPuppy	[05:40:42] no problem :)
+2016-01-16 15:16:48	anhtuann	[05:51:25] I must say, I'm really impressed with weechat. Pretty new to the IRC scene though. The doc is really well done
+2016-01-16 15:16:48	Alissa	[05:51:49] !quickstart anhtuann - you might find this useful
+2016-01-16 15:16:48	+weebot	[05:51:49] https://weechat.org/doc/quickstart
+2016-01-16 15:16:48	anhtuann	[05:53:17] Yes, Alissa, I followed this doc already. Trying to understand smart filter at the moment
+2016-01-16 15:16:48	gb	[06:26:37] !faq anhtuann: when you are done with that
+2016-01-16 15:16:48	+weebot	[06:26:38] FAQ WeeChat: https://weechat.org/doc/faq
+2016-01-16 15:16:48	gb	[06:27:28] but iset and /help addresses lots of things as well
+2016-01-16 15:16:48	stoned	[07:16:05] Hey
+2016-01-16 15:16:48	stoned	[07:16:11] I was gonna ask something, then I forgot.
+2016-01-16 15:16:48	stoned	[07:16:14] :(
+2016-01-16 15:16:48	stoned	[07:16:43] Oh yeah, how do I select text inside only the buffer of text but not timstamp and | and nicklistg and all that
+2016-01-16 15:16:48	stoned	[07:16:45] urxvt
+2016-01-16 15:16:48	stoned	[07:17:04] and also, how can I select/copy/paste text w/o having to use shift key in weedchat
+2016-01-16 15:16:48	stoned	[07:17:15] I can use not shift key in eveyrwhere else
+2016-01-16 15:16:48	gb	[07:17:24] !triggers for timestamp trigger then /key bind meta-t /toggle_time %l:%M:%S
+2016-01-16 15:16:48	+weebot	[07:17:25] Triggers examples: https://github.com/weechat/weechat/wiki/Triggers
+2016-01-16 15:16:48	stoned	[07:17:39] who me?
+2016-01-16 15:16:48	stoned	[07:17:43] this for me?
+2016-01-16 15:16:48	gb	[07:17:46] or you could /iset bare and use bare mode to set timestamp off
+2016-01-16 15:16:48	stoned	[07:18:01] I want timstamps but I don't want to copy it w/ mouse
+2016-01-16 15:16:48	stoned	[07:18:27] also nicklist and | and just you know, multi line copy like urxvt does, but I dunno
+2016-01-16 15:16:48	stoned	[07:18:32] you know what I  mean?
+2016-01-16 15:16:48	stoned	[07:18:43] I know what I mean, but I can't explain it
+2016-01-16 15:16:48	stoned	[07:18:45] sorry
+2016-01-16 15:16:48	gb	[07:19:08] you want to selectthe text with timestamp and magically remove them from the third party paste buffer
+2016-01-16 15:16:48	stoned	[07:19:16] no
+2016-01-16 15:16:48	stoned	[07:19:18] not magically
+2016-01-16 15:16:48	stoned	[07:19:26] but with technology
+2016-01-16 15:16:48	stoned	[07:19:41] 21:58:30        vegardx │ And current documentation with using self-signed certificates doesn't really add any security. It would    │
+2016-01-16 15:16:48	stoned	[07:19:43]                         │ make sense to make the documentation reflect that.
+2016-01-16 15:16:48	singalaut	[07:19:46] stoned: Disable weechat’s mouse support (alt+m) if you hate having to press shift. Urxvt has rectangular selection with alt+drag (or alt+shift+drag if your weechat mouse is enabled)
+2016-01-16 15:16:48	stoned	[07:19:52] how can i copy this w/ proper formatting
+2016-01-16 15:16:48	stoned	[07:20:02] like no | and no line returns in odd places
+2016-01-16 15:16:48	stoned	[07:20:08] Do you know what I mean?
+2016-01-16 15:16:48	stoned	[07:20:21] singalaut: oh awesome, ty
+2016-01-16 15:16:48	gb	[07:20:27] i guess you could make a script top sed remove all the numbers from the selected text but no clue how
+2016-01-16 15:16:48	stoned	[07:20:39] oh
+2016-01-16 15:16:48	stoned	[07:20:41] hmm
+2016-01-16 15:16:48	gb	[07:21:38] the box works with most terms but i forgot bout it
+2016-01-16 15:16:48	stoned	[07:21:47] This also causes problems in copying urls or multi lines anything
+2016-01-16 15:16:48	stoned	[07:21:49] :(
+2016-01-16 15:16:48	gb	[07:22:39] yup but baremode can be setup to switch the ncurses, etc off
+2016-01-16 15:16:48	gb	[07:23:03] so scroll to bit you want bare mode vut with mouse
+2016-01-16 15:16:48	gb	[07:26:51] the box select will also break in certain macish stuff due to insane alt key configurations
+2016-01-16 15:16:48	gb	[07:28:00] not much you can do about the wrapping/line feeds though using it
+2016-01-16 15:16:48	@FlashCode	[07:50:07] stoned: alt-l (L) for bare display
+2016-01-16 15:16:48	@FlashCode	[07:51:52] there you can click on long URLs and copy text
+2016-01-16 15:16:48	+weebot	[08:20:53] -git(core)- Luis Colorado: Add extern keyword several places to link in osx
+2016-01-16 15:16:48	+weebot	[08:20:55] -git(core)- FlashCode: Merge pull request #656 from mojadita/some-externs-missing-for-osx-compiling
+2016-01-16 15:16:48	+weebot	[08:20:57] -git(qweechat)- FlashCode: Fix PEP8 errors
+2016-01-16 15:16:48	anhtuann	[08:29:35] What do you guys use for notifications ? I have dunst installed and would like to have notif for highlights and private messages
+2016-01-16 15:16:48	Alissa	[08:31:31] Hook up phone to WeeChat relay and wait for it to ding :v
+2016-01-16 15:16:48	Alissa	[08:31:41] that's what I use.
+2016-01-16 15:16:48	@FlashCode	[08:32:23] anhtuann: there's a default "beep" trigger, that makes a terminal alert by default, but you can run any external command if needed
+2016-01-16 15:16:48	@FlashCode	[08:32:30] using /exec
+2016-01-16 15:16:48	@FlashCode	[08:32:39] or you can install a script, at your choice
+2016-01-16 15:16:48	nyuszika7h	[10:34:14] how do I check for a highlight in a modifier (weechat_print, but if there's another I can use (for privmsgs), that's ok too)
+2016-01-16 15:16:48	nyuszika7h	[10:34:49] ${tg_highlight} doesn't work with the modifier
+2016-01-16 15:16:48	@FlashCode	[10:43:13] nyuszika7h: you can not detect a highlight in a modifier because the modifier is executed before looking for highlight
+2016-01-16 15:16:48	@FlashCode	[10:43:27] the changed string can become or not be a highlight any more
+2016-01-16 15:16:48	@FlashCode	[10:43:45] you know if it's a highlight only when the message is displayed
+2016-01-16 15:16:48	nyuszika7h	[10:44:05] well, a friend wants to color the message in red for highlights
+2016-01-16 15:16:48	nyuszika7h	[10:44:11] how could I do that?
+2016-01-16 15:16:48	@FlashCode	[10:45:19] good question, colorize_lines.pl does not do that?
+2016-01-16 15:16:48	nyuszika7h	[10:46:02] that just uses the nick color for all messages
+2016-01-16 15:16:48	andi_	[11:07:37] hello i have a question, if i get long urls in weechat it seems like i get a glitch and the chat lines overlap each other, how can i fix this? i already set weechat.look glitch to off
+2016-01-16 15:16:48	@nils_2	[11:19:16] try /window bare
+2016-01-16 15:16:48	@nils_2	[11:21:57] nyuszika7h, he can improve script (with new option) to display highlight message with a given color instead of nick color
+2016-01-16 15:16:48	nyuszika7h	[11:22:27] she, and I would be the one to do it, as she doesn't know much programming :P but either way I can try
+2016-01-16 15:16:48	@nils_2	[11:28:58] but for highlights colorize_lines is using the weechat.color.chat_highlight* option. isn't it a solution for her to simply use red in this option?
+2016-01-16 15:16:48	Petzku	[11:32:43] FlashCode: is it possible to color the word/words that caused a highlight in a message?
+2016-01-16 15:16:48	@nils_2	[11:33:53] should be possible with a script or a trigger
+2016-01-16 15:16:48	iotre	[11:40:41] /filter add slack irc.slack.* irc_mode (\+|\-)v
+2016-01-16 15:16:48	iotre	[11:40:53] Doesn't do anything..
+2016-01-16 15:16:48	iotre	[12:16:13] actually filters don't work at all it seems
+2016-01-16 15:16:48	iotre	[12:16:19] /filter add delmee *#weechat irc_join *
+2016-01-16 15:16:48	iotre	[12:16:37] I shouldn't see a joins here now, right? But I do
+2016-01-16 15:16:48	@FlashCode	[12:18:39] iotre: try to enable filters: alt+'='
+2016-01-16 15:16:48	iotre	[12:21:16] FlashCode: ..oh, thanks. I did do /filter toggle a bunch of times before but somehow that did it just now
+2016-01-16 15:16:48	iotre	[12:21:20] :)
+2016-01-16 15:16:48	synthmeat	[13:01:03] there aren't any docs around for bitlbee-facebook. anyone using this?
+2016-01-16 15:16:48	Desu	[13:01:20] try the bitlebee channel?
+2016-01-16 15:16:48	synthmeat	[13:02:08] good point
+2016-01-16 15:16:48	+weebot	[13:20:54] -git(qweechat)- FlashCode: Move build status to the beginning of README
+2016-01-16 15:16:48	Ashley_	[13:42:36] Hi
+2016-01-16 15:16:48	Ashley_	[13:43:00] Can i hide all joins and parts on a specific irc server?
+2016-01-16 15:16:48	wlhlm	[13:44:49] Ashley_: https://weechat.org/files/doc/weechat_faq.en.html#filter_irc_join_part_quit
+2016-01-16 15:16:48	bithon	[13:52:58] hey. does anyone know if /go script has an autocompletion or alternative script with autocompleteion when I for instance type /go archli and hit tab and it autocomplets to /go archlinux?
+2016-01-16 15:16:48	@nils_2	[13:59:00] why not using /buffer #archli[tab] then instead of /go?
+2016-01-16 15:16:48	bithon	[13:59:16] oh, didn't know that i could do that with /buffer
+2016-01-16 15:16:48	bithon	[13:59:19] thanks.
+2016-01-16 15:16:48	bithon	[13:59:41] i can essentially
+2016-01-16 15:16:48	bithon	[13:59:45] uninstall /go now :p
+2016-01-16 15:16:48	wlhlm	[14:00:46] Ashley_: oops, I just noticed you were asking for a specific server, I missed that.
+2016-01-16 15:16:48	Ashley_	[14:21:49] It's okay, i managed to modify that command to match only that server's buffers
+2016-01-16 15:16:48	***	Playback Complete.
+2016-01-16 15:17:08	ℹ	Channel created on Sun, 26 Nov 2006 07:42:51
+2016-01-16 15:17:23	ℹ	irc: disconnected from server
+2016-01-16 15:17:47	▶	psyq_ (~psyq@178.62.210.183) has joined #weechat
+2016-01-16 15:17:47	ℹ	Topic for #weechat is "https://weechat.org/ | Latest stable version: 1.4 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2016-01-16 15:17:47	ℹ	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 10 Jan 2016 10:09:02
+2016-01-16 15:17:47	ℹ	Channel #weechat: 716 nicks (4 ops, 1 voice, 711 normals)
+2016-01-16 15:18:08	ℹ	Channel created on Sun, 26 Nov 2006 07:42:51
+2016-01-16 15:19:15	▶	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #weechat
+2016-01-16 15:19:52	ℹ	You are now known as psyq
+2016-01-16 15:24:59	◀	silverd (~alex@broadband-77-37-212-151.nationalcablenetworks.ru) has quit (Read error: Connection reset by peer)
+2016-01-16 15:26:55	◀	sjl (~sjl@89.17.129.112) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:32:04	▶	choki (~choki@unaffiliated/choki) has joined #weechat
+2016-01-16 15:36:09	▶	sjl (~sjl@89.17.129.112) has joined #weechat
+2016-01-16 15:36:37	◀	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has quit (Read error: Connection reset by peer)
+2016-01-16 15:37:27	▶	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has joined #weechat
+2016-01-16 15:38:31	◀	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has quit (Read error: Connection reset by peer)
+2016-01-16 15:39:29	▶	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has joined #weechat
+2016-01-16 15:42:11	◀	diniwed (~gavron@ool-18be4109.dyn.optonline.net) has quit (Ping timeout: 260 seconds)
+2016-01-16 15:44:48	▶	diniwed (~gavron@ool-18be4109.dyn.optonline.net) has joined #weechat
+2016-01-16 15:47:35	◀	toogley (~toogley@2.165.248.167) has quit (Quit: toogley)
+2016-01-16 15:47:55	◀	zer0ph (~zer0ph@154.76.91.201) has quit (Ping timeout: 240 seconds)
+2016-01-16 15:48:50	◀	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has quit (Read error: Connection reset by peer)
+2016-01-16 15:49:31	▶	frediz (~Fred@jor31-1-78-225-230-73.fbx.proxad.net) has joined #weechat
+2016-01-16 15:50:36	◀	l4m8d4 (~daniel@p20030062476150000280C8FFFE959290.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2016-01-16 15:51:48	choki	hello ma lovely wee... wee... cry chat users :D
+2016-01-16 15:52:15	choki	did u pie in ur pants yet? :D
+2016-01-16 15:52:20	choki	gb: o/
+2016-01-16 15:52:50	▶	Zucca (~zucca@85-76-10-7-nat.elisa-mobile.fi) has joined #weechat
+2016-01-16 15:56:40	vegardx	There's pie in my pants and you're just telling me now?
+2016-01-16 15:57:16	▶	silverd (~alex@broadband-77-37-212-151.nationalcablenetworks.ru) has joined #weechat
+2016-01-16 15:57:48	◀	dc` (dc@skytra.in) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:02:42	choki	pee
+2016-01-16 16:05:10	◀	chandan (~chandan@122.172.209.112) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:05:19	▶	dc` (dc@skytra.in) has joined #weechat
+2016-01-16 16:07:40	▶	squinteye (~lazyeye@unaffiliated/squinteye) has joined #weechat
+2016-01-16 16:08:00	◀	BenderRodriguez (~BenderRod@unaffiliated/foxhoundz) has quit (Ping timeout: 256 seconds)
+2016-01-16 16:11:38	▶	ralpheeee (~ralpheeee@cable-78-34-50-177.netcologne.de) has joined #weechat
+2016-01-16 16:14:21	▶	toomin (~HomoSapie@unaffiliated/toomin) has joined #weechat
+2016-01-16 16:17:31	◀	blaze (~blaze@unaffiliated/blaze) has quit (Quit: WeeChat 1.3)
+2016-01-16 16:18:51	vegardx	See, the joke doesn't work if you can't spell.
+2016-01-16 16:19:05	▶	wvdhaute (~wvdhaute@109.130.240.47) has joined #weechat
+2016-01-16 16:19:52	choki	im newb
+2016-01-16 16:20:04	⚡	KellerFuchs points choki to spell_correction.py
+2016-01-16 16:20:17	choki	i can spell in my native lang!
+2016-01-16 16:20:56	choki	and i dont liek those ^^^^^^^^ ratatatatataaaattaa signs
+2016-01-16 16:20:56	KellerFuchs	vegardx: To be fair, I don't think the joke would have been any better spelt correctly
+2016-01-16 16:21:16	vegardx	KellerFuchs: Not really. :p
+2016-01-16 16:22:42	choki	yes complain bout me :P
+2016-01-16 16:24:17	▶	l4m8d4 (~daniel@p20030062476150000280C8FFFE959290.dip0.t-ipconnect.de) has joined #weechat
+2016-01-16 16:24:56	▶	linukiss (~barscka@186.244.96.134) has joined #weechat
+2016-01-16 16:26:19	◀	tristero (~al.f.zero@unaffiliated/transfinite) has quit (Quit: tristero)
+2016-01-16 16:28:10	◀	xvx (~xvx@83.137.254.128) has quit (Remote host closed the connection)
+2016-01-16 16:28:59	◀	synthmeat (~synthmeat@unaffiliated/synthmeat) has quit (Quit: The way to get started is to quit talking and begin doing.)
+2016-01-16 16:29:10	▶	synthmeat (~synthmeat@unaffiliated/synthmeat) has joined #weechat
+2016-01-16 16:30:15	◀	diniwed (~gavron@ool-18be4109.dyn.optonline.net) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:30:28	◀	synthmeat (~synthmeat@unaffiliated/synthmeat) has quit (Client Quit)
+2016-01-16 16:30:39	◀	txtsd (~txtsd@103.39.31.193) has quit (Read error: Connection reset by peer)
+2016-01-16 16:31:09	▶	txtsd (~txtsd@103.39.31.193) has joined #weechat
+2016-01-16 16:32:53	▶	synthmeat (~synthmeat@unaffiliated/synthmeat) has joined #weechat
+2016-01-16 16:33:15	◀	l4m8d4 (~daniel@p20030062476150000280C8FFFE959290.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-01-16 16:34:12	▶	diniwed (~gavron@ool-18be4109.dyn.optonline.net) has joined #weechat
+2016-01-16 16:41:57	▶	raja3 (~raja@108.162.172.88) has joined #weechat
+2016-01-16 16:42:18	▶	tristero (~al.f.zero@unaffiliated/transfinite) has joined #weechat
+2016-01-16 16:42:48	▶	l4m8d4 (~daniel@p20030062476150000280C8FFFE959290.dip0.t-ipconnect.de) has joined #weechat
+2016-01-16 16:43:11	▶	andering (~andering@185.133.197.164) has joined #weechat
+2016-01-16 16:43:38	andering	Hello, i got quick question is there way to set default user mode in weechat ? thank you
+2016-01-16 16:44:26	andering	only whats came on my mind is irc.server.<server>.command "" ?
+2016-01-16 16:44:53	wadadli	uh so my chans in buffer.pl can't be seen as I alt+dwn
+2016-01-16 16:44:58	wadadli	anyway to fix this?
+2016-01-16 16:46:04	@nils_2	andering, define "default user mode in weechat"
+2016-01-16 16:46:26	◀	gerforce (~gerforce@120.210.162.150) has quit (Quit: WeeChat 1.0.1)
+2016-01-16 16:46:28	@nils_2	wadadli, alt-up?
+2016-01-16 16:46:56	▶	Lukas_ (~root@modemcable050.43-177-173.mc.videotron.ca) has joined #weechat
+2016-01-16 16:47:11	wadadli	http://i.imgur.com/8MqOxmH.png -- this is what I mean at the bottom you see #go-nuts well I have more channels that I cannot see after I alt+dwn beyond this channel
+2016-01-16 16:47:29	Lukas_	is there any way to auto-join chanel at freenode conection ?
+2016-01-16 16:47:57	@nils_2	Lukas_, /iset freenode.autojoin
+2016-01-16 16:47:59	▶	xvx (~xvx@83.137.254.128) has joined #weechat
+2016-01-16 16:48:30	Lukas_	autrement dit ./iset freenode.autojoin #weechat,#archlinux ??
+2016-01-16 16:48:37	Lukas_	par exemple
+2016-01-16 16:48:44	◀	wvdhaute (~wvdhaute@109.130.240.47) has quit (Ping timeout: 276 seconds)
+2016-01-16 16:49:05	wadadli	Also how can I group channels by their servers?
+2016-01-16 16:49:27	@nils_2	wadadli, you have to bind a key to page up/down the buffers-bar. command is /bar scroll buffers * y-100%
+2016-01-16 16:49:37	Lukas_	oups wrong language sorry ... for exemple .iset freenode.autojoin #weechat,#archlinux ?
+2016-01-16 16:49:46	@nils_2	and y+100% for other direction of course
+2016-01-16 16:50:30	@nils_2	wadadli, /buffer move and then /layout store
+2016-01-16 16:50:46	@nils_2	for new opened channels use /iset irc.look.new_channel_position
+2016-01-16 16:51:44	wlhlm	Lukas_: there is an official #weechar-fr channel, if you're more comfortable with French :)
+2016-01-16 16:51:50	wadadli	I'm meant to move the buffer where?
+2016-01-16 16:51:57	◀	psyq (~psyq@178.62.210.183) has left #weechat
+2016-01-16 16:51:57	ℹ	irc: disconnected from server
+2016-01-16 16:52:27	▶	psyq (~psyq@unaffiliated/psyq) has joined #weechat
+2016-01-16 16:52:27	ℹ	Topic for #weechat is "https://weechat.org/ | Latest stable version: 1.4 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2016-01-16 16:52:27	ℹ	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 10 Jan 2016 10:09:02
+2016-01-16 16:52:27	ℹ	Channel #weechat: 719 nicks (4 ops, 1 voice, 714 normals)
+2016-01-16 16:52:27	ℹ	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2016-01-16 16:52:27	ℹ	URL for #weechat: https://weechat.org/
+2016-01-16 16:52:44	@nils_2	wadadli, where you want
+2016-01-16 16:52:45	ℹ	Channel created on Sun, 26 Nov 2006 07:42:51
+2016-01-16 16:52:53	andering	nils_2: now when i connect im connected with mode invisible [i] so i would like to connect without it. thanks
+2016-01-16 16:54:32	wadadli	I honestly don't remember which channels belong to which server at this point man...
+2016-01-16 16:54:34	wadadli	lol
+2016-01-16 16:56:46	@nils_2	andering, you can use command "/mode -i" to make you "visible" but also nickserv should have this flag server side (can someone confirm?)
+2016-01-16 16:56:50	wadadli	Could you send me that cmd to move the buffer.pl down and up by the way
+2016-01-16 16:57:11	@nils_2	see above wadadli, i always sent it
+2016-01-16 16:57:26	@nils_2	*already
+2016-01-16 16:58:58	▶	Daimaah (~Ville@82-181-132-237.bb.dnainternet.fi) has joined #weechat
+2016-01-16 16:59:57	Alissa	http://sprunge.us/OLbE I managed to break weechat-plugins :D
+2016-01-16 16:59:58	Daimaah	Hi there. I tried to find information on how to add multiple hostnames for a server (in case one of them stops responding) but I came up short. Is there a way to do that?
+2016-01-16 17:00:17	Alissa	a comma.
+2016-01-16 17:00:53	Daimaah	in the /server add?
+2016-01-16 17:00:59	Alissa	Yes.
+2016-01-16 17:01:18	Daimaah	ah, i'll just have to remove the server first apparently, can't add new ones to an existing one
+2016-01-16 17:01:27	andering	nils_2: yes, i was just trying find way to make that /mode -i step automatic.
+2016-01-16 17:02:06	@nils_2	/iset irc.server.<servername>.command
+2016-01-16 17:02:21	◀	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has quit (Quit: WeeChat 1.3)
+2016-01-16 17:02:48	andering	nils_2: ok, thanks.
+2016-01-16 17:02:58	Alissa	Daimaah: /set irc.server.<servername>.addresses
+2016-01-16 17:03:29	Daimaah	Alissa: that's perfect, thanks
+2016-01-16 17:04:03	@nils_2	Alissa, system?
+2016-01-16 17:04:05	andering	nils_2++
+2016-01-16 17:05:31	Alissa	nils_2: Debian; recently moved to stretch from Jessie.
+2016-01-16 17:05:56	Alissa	wait
+2016-01-16 17:05:58	Alissa	i forgot something
+2016-01-16 17:06:27	◀	andering (~andering@185.133.197.164) has quit (Quit: WeeChat 1.1.1)
+2016-01-16 17:08:04	◀	nkaretnikov (~nikita@unaffiliated/nkar) has quit (Ping timeout: 256 seconds)
+2016-01-16 17:08:50	▶	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has joined #weechat
+2016-01-16 17:10:03	▶	nkaretnikov (~nikita@unaffiliated/nkar) has joined #weechat
+2016-01-16 17:10:20	◀	sjl (~sjl@89.17.129.112) has quit (Ping timeout: 255 seconds)
+2016-01-16 17:10:26	◀	psyq (~psyq@unaffiliated/psyq) has left #weechat
+2016-01-16 17:10:48	ℹ	irc: disconnected from server
+2016-01-16 17:54:34	▶	psyq (~psyq@178.62.210.183) has joined #weechat
+2016-01-16 17:54:34	ℹ	Topic for #weechat is "https://weechat.org/ | Latest stable version: 1.4 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2016-01-16 17:54:34	ℹ	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 10 Jan 2016 10:09:02
+2016-01-16 17:54:34	ℹ	Channel #weechat: 719 nicks (4 ops, 1 voice, 714 normals)
+2016-01-16 17:54:34	***	Buffer Playback...
+2016-01-16 17:54:34	KellerFuchs	[17:53:43] Alissa: I love how you described it as “I forgot something”  :>
+2016-01-16 17:54:34	Alissa	[17:54:04] KellerFuchs: Well, I did.
+2016-01-16 17:54:34	KellerFuchs	[17:54:22] Yes, you did  =^.^=
+2016-01-16 17:54:34	***	Playback Complete.
+2016-01-16 17:54:58	ℹ	Channel created on Sun, 26 Nov 2006 07:42:51
+2016-01-16 17:56:48	◀	singalaut (~mami@unaffiliated/tomoe-mami/x-1769741) has quit (Killed (kornbluth.freenode.net (Nickname regained by services)))
+2016-01-16 17:56:55	▶	singalaut (~mami@unaffiliated/tomoe-mami/x-1769741) has joined #weechat
+2016-01-16 18:00:39	▶	sjl (~sjl@89.17.129.112) has joined #weechat
+2016-01-16 18:07:57	▶	sud0x3 (~john@79-67-20-28.dynamic.dsl.as9105.com) has joined #weechat
+2016-01-16 18:11:03	◀	sjl (~sjl@89.17.129.112) has quit (Ping timeout: 260 seconds)
+2016-01-16 18:11:23	ℹ	loveyababy is now known as kish

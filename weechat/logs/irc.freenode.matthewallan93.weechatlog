@@ -1,0 +1,662 @@
+2015-11-28 19:49:33	MatthewAllan93	Void Linux :)
+2015-11-28 19:50:30	psyq	how is it?
+2015-11-28 19:50:40	psyq	I have never tried
+2015-11-28 19:51:20	MatthewAllan93	its good :), i really like runit
+2015-11-28 19:51:23	MatthewAllan93	http://www.voidlinux.eu/
+2015-11-28 19:51:57	psyq	okie I will give it a shoot
+2015-11-28 19:52:06	MatthewAllan93	oh good :)
+2015-11-28 19:52:29	psyq	how are you using the github like one you are using?
+2015-11-28 19:52:48	MatthewAllan93	notabug?
+2015-11-28 19:55:25	psyq	yes
+2015-11-28 19:57:16	MatthewAllan93	i really like it :), a modified gogs instance
+2015-11-28 19:58:00	psyq	but how do u use it
+2015-11-28 19:58:32	MatthewAllan93	just like github 
+2015-11-28 19:59:08	psyq	okie do u use the git tool?
+2015-11-28 20:00:35	MatthewAllan93	yes the usual "git add example.md"
+2015-11-28 20:05:37	psyq	but how it goes to notabug
+2015-11-28 20:20:11	MatthewAllan93	sorry i don't get what you mean
+2015-11-28 20:22:39	psyq	when you do a git add xx.xx how does git know that you are using notabug
+2015-11-28 20:24:27	MatthewAllan93	you put the repository address in it when creating the git repository on your local machine by "git remote add origin https://notabug.org/user/repo"
+2015-11-28 20:25:19	psyq	aarrrhhh so it is basically the same as github hehehe
+2015-11-28 20:25:46	MatthewAllan93	haha yes because its uses git :)
+2015-11-28 20:26:16	psyq	hehehe
+2015-11-28 20:26:35	psyq	nice coz I want to put all my configfiles on notabug
+2015-11-28 20:27:06	MatthewAllan93	oh thats good :)
+2015-11-28 20:28:24	psyq	yes
+2015-11-28 20:29:36	MatthewAllan93	there is a irc channel from the community that created notabug, it is #freepost
+2015-11-28 20:31:28	MatthewAllan93	just thought i would let you know :)
+2015-11-28 20:32:34	psyq	thank you
+2015-11-28 20:32:49	MatthewAllan93	no problem :)
+2015-11-28 20:35:25	psyq	what package manager is voidlinux using?
+2015-11-28 20:36:15	MatthewAllan93	xbps written by xtraeme
+2015-11-28 20:36:53	psyq	is it as good as pacaur?
+2015-11-28 20:37:10	MatthewAllan93	yes i really like it
+2015-11-28 20:37:38	psyq	okie I will install it as a vm 
+2015-11-28 20:41:41	psyq	what kernal is it using
+2015-11-28 20:42:02	psyq	the 3 or 2.6?
+2015-11-28 20:42:26	MatthewAllan93	4.2
+2015-11-28 20:46:48	psyq	I really am starting to hate VMWare WorkStation hahahaha
+2015-11-28 20:47:14	MatthewAllan93	haha
+2015-11-28 20:48:18	psyq	I am going to install virtualbox
+2015-11-28 20:48:29	MatthewAllan93	oh good :)
+2015-11-28 21:09:09	psyq	MatthewAllan93: can I ask u something?
+2015-11-28 21:11:09	psyq	how are you installing the VoidLinux?
+2015-11-28 21:47:47	MatthewAllan93	using the base minimal iso and logining in and running void-installer
+2015-11-28 21:52:25	psyq	do you use gpt or dos?
+2015-11-28 21:52:52	psyq	when creating ur partitions?
+2015-11-28 21:59:22	MatthewAllan93	i use gpt
+2015-11-28 21:59:30	MatthewAllan93	*dos i meant haha
+2015-11-28 22:01:53	psyq	okie
+2015-11-28 22:02:18	psyq	it's just because I am having problems installing it
+2015-11-28 22:11:18	psyq	MatthewAllan93: it worked hehehe
+2015-11-28 22:11:33	psyq	hehehe
+2015-11-28 22:14:55	MatthewAllan93	haha oh good :)
+2015-11-28 22:15:12	MatthewAllan93	going to sleep now, speak to you tomorrow :)
+2015-11-28 22:15:23	psyq	okie night night
+2015-11-29 18:04:36	MatthewAllan93	yes i have :), did you need help with something?
+2015-11-29 18:58:28	psyq	sorry I just finished eating
+2015-11-29 18:59:25	psyq	well I installed VoidLinux and installed i3 but when I switch to i3 it is giving me an error on the i3statusbar
+2015-11-29 19:12:15	MatthewAllan93	ah ok, could you paste it somewhere or give me a link to it?
+2015-11-29 19:13:13	psyq	I will fire it up now 
+2015-11-29 19:16:17	MatthewAllan93	ok :)
+2015-11-29 19:17:04	psyq	it is saying "Error: status_command not found or is missing a library dependency (exit 127)"
+2015-11-29 19:19:04	psyq	MatthewAllan93: is there a reason that xbps doesn't make your .i3 folder?
+2015-11-29 19:27:36	MatthewAllan93	psyq: for some reason, i am getting that in i3
+2015-11-29 19:27:43	MatthewAllan93	not sure 
+2015-11-29 19:30:20	psyq	I found out that I only used the xbps-install i3 and forgot all the other once that I needed like devel and status all of it
+2015-11-29 19:30:21	psyq	hehe
+2015-11-29 19:30:47	psyq	now everything is working like a clarm
+2015-11-29 19:30:53	psyq	charm
+2015-11-29 19:31:08	MatthewAllan93	oh good :)
+2015-11-29 20:14:01	psyq	hehehe
+2015-11-29 20:16:20	psyq	now the only thing that I need is to get my danish keyboard to run on it
+2015-11-29 20:16:35	psyq	also in i3
+2015-11-29 20:44:33	MatthewAllan93	i use setxbmap in my config to load the keyboard layout :)
+2015-11-29 20:47:24	psyq	nice 
+2015-11-29 20:47:34	psyq	what loginmanager are you using
+2015-11-29 20:48:40	MatthewAllan93	i don't use a login manager just login and run startx and have exec WindowManager
+2015-11-29 20:49:25	psyq	oo
+2015-11-29 20:49:37	MatthewAllan93	in my .xiitrc file
+2015-11-29 20:49:41	psyq	okie you are using WindowManager
+2015-11-29 20:49:49	MatthewAllan93	*.xinitrc
+2015-11-29 20:50:00	MatthewAllan93	no i have exec i3
+2015-11-29 20:50:14	MatthewAllan93	or awesome, whichever one i want to use at that time :)
+2015-11-29 20:50:59	psyq	okie I think I will reinstall the VoidLinux and then I will just install i3 as the only one that I will use
+2015-11-29 20:52:13	psyq	Matt did you heard about lemonbar?
+2015-11-29 21:06:38	psyq	MatthewAllan93: I will tell you now I am going to use VoidLinux from this moment on I am arch/VoidLinux user
+2015-11-29 21:18:30	MatthewAllan93	oh good :), i have heard of lemonbar but haven't used it before
+2015-11-29 21:19:14	psyq	well it looks really nice
+2015-11-29 21:19:33	MatthewAllan93	yes it does 
+2015-11-29 21:21:10	psyq	but the guys in the voidlinux forum are they using i3 or some other WM?
+2015-11-29 21:35:21	MatthewAllan93	not sure sorry
+2015-11-29 21:35:46	MatthewAllan93	i know a few people use i3 on the ldc irc channel but not sure about void linux users
+2015-11-29 21:56:48	psyq	okie
+2015-11-29 22:19:38	psyq	MatthewAllan93: you install the base system and then only i3 right?
+2015-11-29 22:19:53	psyq	oohh and xorg-server
+2015-11-29 22:31:23	MatthewAllan93	yes i install the base system, xorg-minimal, i3 and also dejavu-fonts-ttf 
+2015-11-29 22:39:19	psyq	oohh
+2015-11-29 22:39:33	psyq	I will reinstall
+2015-11-29 22:39:34	psyq	hehehe
+2015-11-29 22:43:04	MatthewAllan93	haha oh ok
+2015-11-29 22:43:15	MatthewAllan93	going to sleep now, speak to you tomorrow :)
+2015-11-29 22:43:34	psyq	so it is xbps-install -S xorg-minimal u use?
+2015-11-29 22:45:27	MatthewAllan93	yes it is :)
+2015-11-29 23:04:00	psyq	okie I will give it a shoot
+2015-11-29 23:37:41	psyq	MatthewAllan93: 
+2015-11-29 23:38:09	psyq	do you install xterm together with xorg-mininal?
+2015-11-30 00:08:20	psyq	MatthewAllan93 dunst what is that?
+2015-11-30 01:19:27	psyq	Matt?
+2015-11-30 11:15:31	MatthewAllan93	hey :), dunst is a notification daemon
+2015-11-30 11:15:40	psyq	nice
+2015-11-30 11:16:02	psyq	so you use that instead of i3bar?
+2015-11-30 11:16:47	MatthewAllan93	no i use conky as my status bar with font awesome and dunst as a notification e.g. when someone says your name on irc etc
+2015-11-30 11:19:50	psyq	I sweet how do I get that to work?
+2015-11-30 11:21:17	MatthewAllan93	firstly put this as conky.sh file https://notabug.org/MatthewAllan93/Configurations/src/master/.i3/conky.sh
+2015-11-30 11:21:27	MatthewAllan93	in your .i3 folder
+2015-11-30 11:22:14	psyq	okie and i need to install conky right
+2015-11-30 11:22:50	MatthewAllan93	then put this as conkyrc in your .i3 folder also https://notabug.org/MatthewAllan93/Configurations/src/master/.i3/conkyrc
+2015-11-30 11:22:50	MatthewAllan93	yes you do :)
+2015-11-30 11:23:02	psyq	by the way I got the keymap to work I forgot to install setxkbmap on the my system
+2015-11-30 11:24:09	MatthewAllan93	then after add the status_command /home/USER/.i3/conky.sh to your config in the i3bar part
+2015-11-30 11:24:09	MatthewAllan93	oh ok thats good :)
+2015-11-30 11:24:44	MatthewAllan93	change USER to your username
+2015-11-30 11:25:05	psyq	okie
+2015-11-30 11:25:10	psyq	thanks
+2015-11-30 11:27:08	MatthewAllan93	no problem :), i hope i have helped you :)
+2015-11-30 11:28:26	psyq	I want to see how it works :)
+2015-11-30 11:29:46	MatthewAllan93	also the font awesome icons can be changed by copying and pasting them from their website and the hex colour codes can also be changed to colours that you like :)
+2015-11-30 11:30:46	psyq	where the fonts from awesome wm?
+2015-11-30 11:31:51	MatthewAllan93	no they are from font awesome on github https://fortawesome.github.io/Font-Awesome/cheatsheet/
+2015-11-30 11:32:05	MatthewAllan93	make sure that font awesome is installed though
+2015-11-30 11:45:16	psyq	well i guess it is just git clone the repo right
+2015-11-30 12:06:08	MatthewAllan93	if you are on void still, you can do xbps-install font-awesome
+2015-11-30 12:06:17	psyq	nice
+2015-11-30 12:06:55	psyq	well matt I have to tell you something and that is I really am starting to like void a lot
+2015-11-30 12:19:45	MatthewAllan93	oh good :)
+2015-11-30 12:19:51	MatthewAllan93	what do you like most about it?
+2015-11-30 12:23:09	psyq	xbps and that it is easy to install and it is simple
+2015-11-30 12:48:21	psyq	Matt how do I set the resolution in Void?
+2015-11-30 12:49:22	MatthewAllan93	oh good :), i get what you mean. do you have a graphics card?
+2015-11-30 12:51:11	psyq	I am using virtualbox atn
+2015-11-30 12:51:12	psyq	atm
+2015-11-30 12:54:28	MatthewAllan93	oh ok, you could probably use xrandr with arandr (GUI)
+2015-11-30 12:56:35	psyq	cool
+2015-11-30 15:38:40	◀▬▬	MatthewAllan93 (~weechat@unaffiliated/matthewallan93) has quit (Quit: WeeChat 1.3)
+2015-11-30 15:39:26	▬▬▶	MatthewAllan93 (~weechat@unaffiliated/matthewallan93) is back on server
+2015-11-30 17:06:04	MatthewAllan93	yes i am :), just playing a game
+2015-11-30 17:07:11	psyq	what was the things that I needed to installing
+2015-11-30 17:07:56	psyq	for the conky
+2015-11-30 17:10:50	MatthewAllan93	font-awesome
+2015-11-30 17:14:47	psyq	that is right I got cought up with something from work heheh
+2015-11-30 17:14:59	MatthewAllan93	its ok :)
+2015-11-30 17:31:33	psyq	matt do I need to edit anything in the conkyrc?
+2015-11-30 17:32:13	MatthewAllan93	you change the icons with icons on the font-awesome cheatsheet and also the hex colours codes for the icons
+2015-11-30 17:34:33	psyq	sweet I am editing or setting the last things up now
+2015-11-30 17:34:42	MatthewAllan93	ok good :)
+2015-11-30 17:35:02	psyq	and I am writing down what I did
+2015-11-30 17:35:26	MatthewAllan93	thats a good idea
+2015-11-30 17:48:56	psyq	matt what browser are you using?
+2015-11-30 17:49:16	MatthewAllan93	icecat (gnu's version of mozilla firefox)
+2015-11-30 17:49:38	psyq	is it any good
+2015-11-30 17:52:13	MatthewAllan93	yes i really like it and also it has hello, pocket and any other non-free stuff taken out of it
+2015-11-30 17:53:01	psyq	sweet I just what it to have vim/luakit like keybind 
+2015-11-30 17:54:50	MatthewAllan93	you could install Pentadactyl in icecat
+2015-11-30 19:31:32	psyq	i will give it a try
+2015-11-30 19:50:00	psyq	matt it wouldn't install
+2015-11-30 19:50:26	psyq	the version of icecat is not surported anymore
+2015-11-30 19:56:49	MatthewAllan93	on void?
+2015-11-30 19:58:19	psyq	yes
+2015-11-30 19:59:05	MatthewAllan93	thats weird because i am using at this moment
+2015-11-30 19:59:25	MatthewAllan93	oh on icecat
+2015-11-30 19:59:56	MatthewAllan93	go to here and download the latest nightly http://5digits.org/nightlies
+2015-11-30 20:01:38	psyq	Sweet thank you so much Matt I am ur number one fan now
+2015-11-30 20:01:40	psyq	hehheehe
+2015-11-30 20:01:56	psyq	I am really loving void now
+2015-11-30 20:02:09	MatthewAllan93	haha no problem :), always happy to help
+2015-11-30 20:14:28	psyq	Matt
+2015-11-30 20:16:13	MatthewAllan93	yes 
+2015-11-30 20:16:35	psyq	where was it I should edited to get the conky to work=?
+2015-11-30 20:17:04	MatthewAllan93	in the i3bar part of the i3 config 
+2015-11-30 20:17:32	psyq	that it's right
+2015-11-30 20:17:33	psyq	:)
+2015-11-30 20:17:54	MatthewAllan93	status_command /home/USER/.i3/conky.sh
+2015-11-30 20:18:01	MatthewAllan93	:)
+2015-11-30 20:19:19	psyq	Matt there is a thing that I didn't understand and that is the .i3 is now in .config
+2015-11-30 20:19:32	MatthewAllan93	oh it should be 
+2015-11-30 20:19:37	MatthewAllan93	*shouldn't
+2015-11-30 20:20:08	MatthewAllan93	have you ran i3 yet?
+2015-11-30 20:21:20	psyq	yes I am using it now and it is working
+2015-11-30 20:21:47	MatthewAllan93	oh could screenshot it for me?
+2015-11-30 20:24:04	psyq	the path?
+2015-11-30 20:24:30	psyq	sure
+2015-11-30 20:24:31	MatthewAllan93	no a screenshot of the screen, so i know if the default settings have been changed
+2015-11-30 20:25:15	MatthewAllan93	i had a look in .config on my machine and i have a i3 folder but it doesn't use it. it uses my settings in .i3 in my home folder
+2015-11-30 20:27:30	MatthewAllan93	also make sure to reload the window manager by modkey, shift and R
+2015-11-30 20:28:00	psyq	I did
+2015-11-30 20:28:11	psyq	where you want me to upload it?
+2015-11-30 20:28:11	MatthewAllan93	ok just making sure :)
+2015-11-30 20:28:33	MatthewAllan93	imgur? or a temporary website one?
+2015-11-30 20:32:39	psyq	http://imgur.com/0r6GaoR
+2015-11-30 20:33:51	MatthewAllan93	the top on the status_command that keeps happening to me lately, think it might have to do with one of the updates
+2015-11-30 20:34:21	psyq	okie what can we do about it
+2015-11-30 20:34:44	MatthewAllan93	don't know been trying to research it :(
+2015-11-30 20:34:49	MatthewAllan93	sorry
+2015-11-30 20:35:06	psyq	it is okie
+2015-11-30 20:37:18	MatthewAllan93	just to let you know the man page for i3, it says it looks in ~/.config/i3/config, /etc/xdg/i3/config, ~/.i3/config and then /etc/i3/config
+2015-11-30 20:37:20	MatthewAllan93	in that order
+2015-11-30 20:37:32	MatthewAllan93	for the configuration files
+2015-11-30 20:46:34	psyq	that is nice
+2015-11-30 20:46:43	psyq	then nothing is wrong hahaha
+2015-11-30 21:01:46	MatthewAllan93	haha oh ok :)
+2015-11-30 21:02:20	psyq	I still can't get it to work the conky
+2015-11-30 21:05:40	MatthewAllan93	me too :(, it was working before one update though
+2015-11-30 21:06:10	psyq	well I will default back to i3status then
+2015-11-30 21:06:26	MatthewAllan93	ok i am going to do more research on it anyway 
+2015-11-30 21:07:06	psyq	yeah me too I just don't like that it is giving me and error
+2015-11-30 21:09:19	psyq	Matt is there any good movie players that u can recommand?
+2015-11-30 21:09:28	MatthewAllan93	mpv
+2015-11-30 21:09:38	MatthewAllan93	its amazing haha
+2015-11-30 21:09:53	MatthewAllan93	or if you want a media center, kodi
+2015-11-30 21:11:04	psyq	just to play on my laptop
+2015-11-30 21:11:35	MatthewAllan93	mpv then :)
+2015-11-30 21:12:18	MatthewAllan93	also did you make conky.sh excutable by sudo chmod +x conky.sh
+2015-11-30 21:13:33	psyq	oohh no I didn't I used sh infront
+2015-11-30 21:14:00	MatthewAllan93	oh i would make it excutable
+2015-11-30 21:15:12	psyq	it is now
+2015-11-30 21:15:29	MatthewAllan93	ok, conky working or not?
+2015-11-30 21:16:35	psyq	same thing
+2015-11-30 21:18:57	MatthewAllan93	ah ok
+2015-11-30 21:21:41	MatthewAllan93	changing a few things around on my i3 config but nothing to do with conky, just yet but as i said i will be defintely researching it to see 
+2015-11-30 21:22:50	psyq	Matt you have a command in your config that is "exec --no-startup-id urxvtd -q -o -f &" <-- what is that for?
+2015-11-30 21:23:03	MatthewAllan93	to start the urxvt daemon
+2015-11-30 21:23:44	MatthewAllan93	i think you could take the & off though
+2015-11-30 21:24:39	psyq	okie but why are you starting the daemon up?
+2015-11-30 21:25:23	MatthewAllan93	its says on the arch wiki, rxvt-unicode can be daemonized to run clients within a single process in order to minimize the use of system resources
+2015-11-30 21:25:42	psyq	really
+2015-11-30 21:25:51	MatthewAllan93	yes
+2015-11-30 21:26:00	psyq	damn I will add that one in then
+2015-11-30 21:26:50	psyq	what are you using compton for?
+2015-11-30 21:27:06	MatthewAllan93	haha :), transparency for urxvt
+2015-11-30 21:28:06	psyq	hahahaha 
+2015-11-30 21:28:10	psyq	nice
+2015-11-30 21:28:37	psyq	I am downloading some wallpapers now just so I have something to look at XD
+2015-11-30 21:29:08	MatthewAllan93	i learned a lot of this from ldc's youtube channel :), thats Irishluck83 does videos for. That was before i joined the forums and irc channel :)
+2015-11-30 21:29:13	MatthewAllan93	oh good :)
+2015-11-30 21:31:02	psyq	Matt can you please walk me though your setup because it seems like that is a lot of very nice thing 
+2015-11-30 21:31:29	psyq	and I want to learn more about how to customize my desktop :)
+2015-11-30 21:31:37	MatthewAllan93	haha :), what would you like know?
+2015-11-30 21:32:32	psyq	well the last part of your config file from "setxkbmap gb &" and down really
+2015-11-30 21:33:02	MatthewAllan93	i would take the & off it because i can't remember my reason for putting that on
+2015-11-30 21:33:16	MatthewAllan93	but that loads the keyboard layout for great britain
+2015-11-30 21:34:07	psyq	and then it runs urxvt as a daemon
+2015-11-30 21:34:23	MatthewAllan93	yes 
+2015-11-30 21:35:12	psyq	unclutter what is that for?
+2015-11-30 21:35:22	MatthewAllan93	then compton -b runs compton as a daemon
+2015-11-30 21:35:36	MatthewAllan93	unclutter is to hide the mouse for sometime of inactivity
+2015-11-30 21:36:17	psyq	sweet 
+2015-11-30 21:36:47	MatthewAllan93	yes it is :)
+2015-11-30 21:37:03	MatthewAllan93	numlockx will turn your numlock on when the window manager starts
+2015-11-30 21:37:26	MatthewAllan93	nm-applet -t is if you have network-manager-applet installed, it will start it in the tray
+2015-11-30 21:37:42	MatthewAllan93	then the last one of that section is to open urxvt with tmux on workspace 1
+2015-11-30 21:38:11	psyq	and why is it you do that by the way?
+2015-11-30 21:38:22	MatthewAllan93	which?
+2015-11-30 21:39:28	psyq	the last part
+2015-11-30 21:40:19	MatthewAllan93	it is because when i first boot up my computer i usually like to login into irc via weechat, so i need a terminal and if i use tmux, i can use multi terminals because it is multiplexer
+2015-11-30 21:40:54	psyq	sweet
+2015-11-30 21:41:14	psyq	but why don't you just open a new terminal?
+2015-11-30 21:41:34	MatthewAllan93	most of the time, i like to be on one screen
+2015-11-30 21:43:00	psyq	okie that makes perfect since
+2015-11-30 21:43:15	psyq	Matt are you using any filemanager?
+2015-11-30 21:43:22	MatthewAllan93	i have changed my i3 folder to ~/.config/i3 because of the documentation of the order it loads in
+2015-11-30 21:43:29	MatthewAllan93	yes i use ranger and spacefm
+2015-11-30 21:44:03	psyq	you have any screenshots of them in action?
+2015-11-30 21:44:35	MatthewAllan93	not really sorry
+2015-11-30 21:45:14	psyq	okie
+2015-11-30 21:45:42	MatthewAllan93	both are really minimal :)
+2015-11-30 21:46:15	psyq	spacefm is that a GUI?
+2015-11-30 21:46:23	MatthewAllan93	yes it is
+2015-11-30 21:46:31	psyq	okie
+2015-11-30 21:47:12	psyq	oohh the tmux how do I navigate in that?
+2015-11-30 21:49:11	MatthewAllan93	i think to control and b will unbind the keys and then either " for horizontal and & for verticial, i think
+2015-11-30 21:49:32	MatthewAllan93	i might gnu screen soon to see what it is like
+2015-11-30 21:50:05	psyq	I heard that tmux is the best one
+2015-11-30 21:50:31	MatthewAllan93	yes i heard that also but want to see what it is like
+2015-11-30 21:50:33	MatthewAllan93	haha
+2015-11-30 21:50:52	psyq	but I don't know because I have never used any of them
+2015-11-30 21:51:03	MatthewAllan93	oh ok
+2015-11-30 21:57:40	psyq	Matt if I have named my workspaces and I want to run something in workspace 2 which is called workspace 2:IM how would I do that?
+2015-11-30 21:58:10	MatthewAllan93	exec --no-startup-id i3-msg 'workspace 2:IM; exec PROGRAM"
+2015-11-30 21:58:19	psyq	sweet
+2015-11-30 21:58:34	MatthewAllan93	i mean a single quotation mark sorry
+2015-11-30 21:58:41	MatthewAllan93	at the end
+2015-11-30 21:58:53	psyq	hehe okie
+2015-11-30 21:59:11	psyq	and the clipit what is it you are using that for?
+2015-11-30 21:59:55	MatthewAllan93	just a clipboard manager
+2015-11-30 22:00:09	psyq	oohh nice
+2015-11-30 22:00:32	psyq	so now I can copy and paste to and from terminal
+2015-11-30 22:39:12	psyq	matt
+2015-11-30 22:46:23	MatthewAllan93	oh good :)
+2015-11-30 22:47:23	MatthewAllan93	yes
+2015-11-30 22:49:35	psyq	I got everything to work now
+2015-11-30 22:49:48	MatthewAllan93	oh good
+2015-11-30 22:49:57	MatthewAllan93	what was the problem?
+2015-11-30 22:50:02	psyq	even the other thing with the urxvt -e tmux
+2015-11-30 22:50:20	MatthewAllan93	did you get conky to work?
+2015-11-30 22:50:49	◀▬▬	MatthewAllan93 (~weechat@unaffiliated/matthewallan93) has quit (Quit: WeeChat 1.3)
+2015-11-30 22:50:54	psyq	nnaaa not yet still looking at what they did after the update 
+2015-11-30 22:50:54	--	MatthewAllan93: No such nick/channel
+2015-11-30 22:51:12	▬▬▶	MatthewAllan93 (~weechat@unaffiliated/matthewallan93) is back on server
+2015-11-30 22:51:44	MatthewAllan93	sorry about exited my terminal by mistake haha
+2015-11-30 22:52:01	psyq	well it happens
+2015-11-30 22:52:15	MatthewAllan93	so did you get conky to work?
+2015-11-30 22:52:22	psyq	nnaaa not yet still looking at what they did after the update 
+2015-11-30 22:52:29	MatthewAllan93	ah ok
+2015-11-30 22:53:07	psyq	but I think it is the way we implement the conky in the statusbar
+2015-11-30 22:53:20	MatthewAllan93	oh
+2015-11-30 22:53:37	MatthewAllan93	thats the way i have done it for about a year now
+2015-11-30 22:53:49	psyq	I mean that might be it
+2015-11-30 22:53:57	MatthewAllan93	oh ok
+2015-11-30 22:54:13	psyq	the developers in i3 might have changed somethings
+2015-11-30 22:54:24	MatthewAllan93	i think that also
+2015-11-30 22:55:38	psyq	but I can find any documention on my theory
+2015-11-30 22:55:40	psyq	:/
+2015-11-30 22:59:51	MatthewAllan93	ah ok
+2015-11-30 23:17:19	psyq	hhmm
+2015-12-06 12:19:15	MatthewAllan93	sorry i don't get your question
+2015-12-06 12:20:55	psyq	well Arch is really easy to get to look the way you want for example setting up openbox was like the easiest thing I have ever tried and getting themes for openbox was easy too
+2015-12-06 12:21:22	psyq	I love both Arch and Void but I am more into Void I most say
+2015-12-06 12:22:40	psyq	Actually my problem is sticking to one distro hehehehe
+2015-12-06 12:23:40	MatthewAllan93	haha oh, i am the same. i switch distro like once a month haha
+2015-12-06 12:23:45	MatthewAllan93	*distros
+2015-12-06 12:42:33	psyq	okie really
+2015-12-06 12:43:57	psyq	that sounds like me hehehe
+2015-12-06 12:44:17	psyq	well I am going between gentoo, Arch and Void now hahahhaa
+2015-12-06 12:47:11	psyq	and now I am having the problem I can't remember how I got my urxvt to look the way I did on my openSUSE box
+2015-12-06 12:48:54	psyq	be right back
+2015-12-06 14:00:36	MatthewAllan93	ah ok
+2015-12-06 14:24:44	psyq	talk to you later matt
+2015-12-06 16:46:17	MatthewAllan93	zsh with the oh-my-zsh and the theme is called minimal :)
+2015-12-06 16:54:24	psyq	really
+2015-12-06 16:55:08	MatthewAllan93	which the theme name?
+2015-12-06 16:55:17	MatthewAllan93	haha
+2015-12-06 16:56:08	psyq	that is nice because I can't get my powerline theme to work on my voidlinux box and arch
+2015-12-06 16:56:09	psyq	:(
+2015-12-06 16:56:20	MatthewAllan93	oh :(
+2015-12-06 16:59:33	psyq	talk to you later
+2015-12-09 21:29:49	MatthewAllan93	hey :), just to let you know if you starred my configuration folder. i had to delete it because i got a error on the .config folder. so i recreated it, also i have change to i3status for now 
+2015-12-09 21:32:16	psyq	like me
+2015-12-09 21:32:27	psyq	you are not using the conky
+2015-12-09 21:32:55	MatthewAllan93	i mean starred my configuration repository, sorry
+2015-12-09 21:33:08	MatthewAllan93	yes but i also took it out of my i3 config file
+2015-12-09 21:33:39	psyq	oohh okie
+2015-12-09 21:33:57	MatthewAllan93	just thought i would let you know :)
+2015-12-09 21:34:04	psyq	it is okie 
+2015-12-09 21:34:06	psyq	thank you
+2015-12-09 21:34:38	psyq	MatthewAllan93: I just starred this url https://notabug.org/matthewallan93/
+2015-12-09 21:35:03	MatthewAllan93	ah ok :)
+2015-12-09 21:35:57	psyq	so it is not a problem
+2015-12-09 21:36:23	psyq	but you will remake the configurations repo or a new one?
+2015-12-09 21:41:02	--	irc: disconnected from server
+2015-12-09 22:01:20	MatthewAllan93	i have made a new one but took out my conky, tmux and vim files and put my modified i3 config file in it 
+2015-12-09 22:01:58	psyq	why you took out ur vim and tmux
+2015-12-09 22:02:37	MatthewAllan93	wanted to try out emacs and not really tmux that much recently. so i uninstalled it 
+2015-12-09 22:02:48	MatthewAllan93	*really using
+2015-12-09 22:05:10	psyq	emacs
+2015-12-09 22:05:22	psyq	isn't that an editor?
+2015-12-09 22:05:37	MatthewAllan93	yes it is a editor by gnu
+2015-12-09 22:06:07	psyq	what did you use tmux for?
+2015-12-09 22:06:32	MatthewAllan93	just to create other terminals in one terminal session
+2015-12-09 22:07:24	psyq	okie
+2015-12-09 22:07:45	psyq	so you are going to try out emacs for
+2015-12-09 22:23:38	psyq	MatthewAllan93: didn't you use vim?
+2015-12-09 23:02:17	MatthewAllan93	yes i did but not a lot 
+2015-12-09 23:02:34	MatthewAllan93	i used it for the usual editing files :)
+2015-12-09 23:13:47	psyq	okie so now you want to see if emacs is better
+2015-12-09 23:13:55	psyq	or you like it better I mean
+2015-12-09 23:14:17	MatthewAllan93	yes :)
+2015-12-09 23:14:41	psyq	that is always a good thing
+2015-12-09 23:59:52	--	irc: disconnected from server
+2015-12-13 23:38:00	MatthewAllan93	yes i am still using i3 but just wanted to configure awesome also :)
+2015-12-13 23:38:44	MatthewAllan93	i don't think you can download themes for it but you can change the colours of the status bar, window border, focused window border and a bit more
+2015-12-13 23:47:40	psyq	well that is not enough hehehe I like i3 because it is lightweight and simple but I want more you know
+2015-12-13 23:48:33	MatthewAllan93	i get what you mean
+2015-12-13 23:48:44	psyq	I was talking to Irish and he told me to go with Awesome or Xmonad
+2015-12-13 23:48:55	MatthewAllan93	ah yes you could :)
+2015-12-13 23:49:37	psyq	but I am not sure that I want to go Xmonad because it is in Haskell and Awesome is in lua
+2015-12-13 23:50:03	MatthewAllan93	yes that is the only problem, if you are not comfortable with programming
+2015-12-13 23:50:43	psyq	so I am thinking about trying out awesome and maybe later on try Xmonad
+2015-12-13 23:51:20	MatthewAllan93	yes you could do :)
+2015-12-13 23:51:34	MatthewAllan93	i was going to try xmonad sometime soon :)
+2015-12-13 23:51:43	MatthewAllan93	and also bspwm
+2015-12-13 23:51:56	psyq	programming is not the problem it is the time it takes to get into the the syntax and messing around with it and I remember a little bit of the lua so we will see
+2015-12-13 23:52:28	psyq	bspwm I was thinking about it but I am not so sure if I want it because of the binds
+2015-12-13 23:52:36	psyq	keybinds that is hahah
+2015-12-13 23:52:51	MatthewAllan93	ah ok i get what you mean haha
+2015-12-13 23:54:22	psyq	MatthewAllan93 are you going to do bspwm soon or?
+2015-12-14 00:03:07	MatthewAllan93	probably try it in a week or so
+2015-12-14 00:03:18	psyq	nice
+2015-12-14 01:48:24	--	irc: disconnected from server
+2015-12-14 20:55:10	MatthewAllan93	just installed it, ran the znc --makeconf command. add all the channels i like to chat on and then add the server to weechat 
+2015-12-14 20:55:12	MatthewAllan93	:)
+2015-12-14 20:55:30	MatthewAllan93	but the only thing i can't get to work just yet is my domain to appear on the join and leave part
+2015-12-14 20:55:32	psyq	really that is it
+2015-12-14 20:55:46	MatthewAllan93	yes :)
+2015-12-14 21:03:41	psyq	!arch++
+2015-12-15 00:58:15	--	irc: disconnected from server
+2015-12-16 23:07:49	MatthewAllan93	yes i am :)
+2015-12-16 23:28:37	psyq	it is really nice awesome 
+2015-12-16 23:28:48	psyq	but I still like i3wm too
+2015-12-16 23:29:11	psyq	I am trying out xmonad now just for fun
+2015-12-17 01:42:24	--	irc: disconnected from server
+2015-12-18 00:01:32	MatthewAllan93	sorry for the late reply only just seen your message from last night. i am the same about awesome, i3wm and xmonad :)
+2015-12-18 00:14:36	psyq	well I am starting to not like xmonad that much
+2015-12-18 00:14:48	psyq	but I will figure it out
+2015-12-18 00:14:52	psyq	I hope
+2015-12-18 00:55:51	--	irc: disconnected from server
+2015-12-20 20:56:46	MatthewAllan93	yes i did :)
+2015-12-20 20:57:00	MatthewAllan93	the "xorg-minimal" meta-package
+2015-12-20 20:57:09	psyq	the command was xbps-install -S xorg-minimal
+2015-12-20 20:57:11	psyq	okie
+2015-12-20 20:57:37	psyq	I just forgot about it and now I am installing void on my workstation at work
+2015-12-20 20:58:45	MatthewAllan93	oh good :), yes thats it
+2015-12-20 20:59:34	psyq	thank you :)
+2015-12-20 21:00:39	MatthewAllan93	no problem :)
+2015-12-20 21:01:24	MatthewAllan93	it install the bare essentials but if you need synaptics for example for a laptop. it won't install that
+2015-12-20 21:01:29	MatthewAllan93	*installs
+2015-12-20 21:02:27	psyq	it is okie
+2015-12-20 21:05:07	MatthewAllan93	Ok just thought I would let you know about it :).
+2015-12-20 21:05:28	psyq	thank you MatthewAllan93 :)
+2015-12-20 21:05:59	MatthewAllan93	No problem :), always happy to help :).
+2015-12-21 00:48:34	psyq	Matt u her?
+2015-12-21 00:48:41	psyq	are you here I mean
+2015-12-21 21:32:12	MatthewAllan93	i used a weechat chat called iset
+2015-12-21 21:33:07	psyq	okie do you have the config file or do you know how to reset it?
+2015-12-21 21:35:10	MatthewAllan93	i think mine has personal information e.g. password or something like that. but you could delete the .weechat folder and then open weechat again and it should be default
+2015-12-21 21:35:37	psyq	okie 
+2015-12-21 21:36:11	psyq	then it is back to figuring out how to customizing it hehehehe :P
+2015-12-21 21:36:16	psyq	darn
+2015-12-21 21:36:18	psyq	hahahah
+2015-12-21 21:36:38	MatthewAllan93	haha oh ok
+2015-12-21 21:37:27	psyq	yeah I forgot how I customized it, but anyways I didn't like the first one I made so I think it is all the same hahaha
+2015-12-21 21:38:37	MatthewAllan93	haha oh i get what you mean
+2015-12-21 21:39:09	psyq	and the funny thing is the #weechat channel is a bit dead
+2015-12-21 21:39:29	psyq	I asked a question there last night and no one answered hahaha
+2015-12-21 21:39:58	psyq	well it was 2 am here in Denmark that might explain it
+2015-12-21 21:45:38	MatthewAllan93	haha it might :P, but i would of thought someone would be on at that time
+2015-12-21 21:50:42	psyq	I didn't get any answer at all
+2015-12-21 21:52:00	MatthewAllan93	i know :(
+2015-12-21 21:53:20	MatthewAllan93	did you find the script i was talking about?
+2015-12-21 21:53:37	psyq	yeah the iset
+2015-12-21 21:54:06	MatthewAllan93	yes, oh good :)
+2015-12-21 21:54:32	MatthewAllan93	its a really good script went trying the customise weechat :)
+2015-12-21 21:54:37	MatthewAllan93	*to
+2015-12-21 21:55:31	psyq	okie is it making that sidebar with all the buffers in it?
+2015-12-21 21:58:44	MatthewAllan93	the buffers appear by using the buffers.pl script for weechat :)
+2015-12-21 21:59:09	MatthewAllan93	but iset just makes it so much easier to customise everything in weechat
+2015-12-21 21:59:10	psyq	okie then what is iset.pl for
+2015-12-21 21:59:19	psyq	okie
+2015-12-21 22:09:16	--	irc: disconnected from server
+2015-12-27 20:08:34	MatthewAllan93	its going alright thanks, went to manjaro linux for a day haha and then came back :)
+2015-12-27 20:08:43	MatthewAllan93	are you still on void or something else?
+2015-12-27 20:31:24	psyq	arch on this laptop
+2015-12-27 20:32:18	MatthewAllan93	ah ok :)
+2015-12-27 20:32:37	psyq	my desktop at work is void and the other work laptop is void too
+2015-12-27 20:33:08	psyq	but i am having some problems with the void and Xmonad
+2015-12-27 20:36:30	MatthewAllan93	ah ok :), why?
+2015-12-27 20:42:33	psyq	it doesn't work with the keybinds that i want
+2015-12-27 20:43:56	MatthewAllan93	ah that is strange, i haven't used xmonad before
+2015-12-27 21:01:19	psyq	yes but it is fine
+2015-12-27 21:06:36	psyq	I will find out what is wrong with it
+2015-12-27 23:14:34	psyq	matt are you busy?
+2015-12-28 02:00:42	--	irc: disconnected from server
+2015-12-29 21:11:35	MatthewAllan93	i would of said an error in the i3status configuration file
+2015-12-29 21:12:18	psyq	okie because it is only saying exit 1 as an error
+2015-12-29 21:12:53	MatthewAllan93	ah could you share the config file for it and i will check to see if i can find any errors in it
+2015-12-29 21:12:54	MatthewAllan93	:)
+2015-12-29 21:13:08	psyq	sure
+2015-12-29 21:13:11	psyq	pastebin?
+2015-12-29 21:14:04	MatthewAllan93	yes thats fine :)
+2015-12-29 21:15:51	psyq	http://pastebin.com/pwPDbKzK
+2015-12-29 21:22:49	MatthewAllan93	can't see any errors in it, so i copied it over to my machine and it runs, have you commented out conky in your i3 configuration file?
+2015-12-29 21:26:28	psyq	wait I think yes
+2015-12-29 21:28:10	psyq	MatthewAllan93 it is commented out
+2015-12-29 21:28:23	MatthewAllan93	ah ok 
+2015-12-29 21:28:44	MatthewAllan93	and you have i3status installed also
+2015-12-29 21:29:47	psyq	ooohhh I might have forgotten to do that
+2015-12-29 21:30:07	psyq	well it will have to wait til monday then
+2015-12-29 21:31:08	psyq	but I have noticed something about Void and that is that the ethernet card isn't named enp0sxx it is eno1 on my workstation at work
+2015-12-29 21:31:21	psyq	why is it changing the name to eno1
+2015-12-29 21:33:47	MatthewAllan93	i wouldn't know sorry
+2015-12-29 21:34:11	psyq	well it was worth the shoot
+2015-12-29 21:34:14	psyq	hehe
+2015-12-29 21:34:28	MatthewAllan93	haha
+2015-12-29 21:34:45	MatthewAllan93	i hope i helped with the i3status question though :)
+2015-12-29 21:35:17	psyq	on monday I will be trying to fix it and I need to update my documentation and get it up to my google drive
+2015-12-29 21:35:38	psyq	I think you are right that I forgot to install the i3status
+2015-12-29 21:35:55	MatthewAllan93	ah ok :), sounds good
+2016-01-02 18:34:53	MatthewAllan93	Hey not really just the same mostly :)
+2016-01-02 18:35:14	MatthewAllan93	Also found my awesome configuraiton file that I lost on my netbook :).
+2016-01-02 18:35:31	psyq	sweet
+2016-01-02 18:35:45	psyq	so how does your setup look like now?
+2016-01-02 18:36:23	MatthewAllan93	https://media.linuxdistrocommunity.com/media_entries/244/2015-12-13-101041_3840x1080_scrot.png
+2016-01-02 18:41:54	psyq	is that your irc.conf or your weechat.conf?
+2016-01-02 18:42:07	psyq	because it looks nice
+2016-01-02 18:43:39	psyq	how did you make the buffers.pl to look like that?
+2016-01-02 18:58:49	MatthewAllan93	the colours is in the weechat.conf file
+2016-01-02 18:59:17	MatthewAllan93	also the buffers colours and modifications are in that file :)
+2016-01-02 19:01:03	psyq	cool can I see your weechat.conf file?
+2016-01-02 19:01:33	psyq	more I am fed up with my design
+2016-01-02 19:02:20		[psyq away: I will be right back]
+2016-01-02 19:03:41	MatthewAllan93	ok i will put it on pastebin for an hour, is that ok?
+2016-01-02 19:05:22	MatthewAllan93	http://0bin.net/paste/ifI6iVXHKjiOnmNd#
+2016-01-02 19:05:43	MatthewAllan93	sorry wrong link http://0bin.net/paste/ifI6iVXHKjiOnmNd#+VSQ9hbQj66ASiVD5-rryPQpaOv49O9qxNBgjNuTeqR
+2016-01-02 21:55:29		[pzyq_aw back: gone 02:53:09]
+2016-01-02 21:57:03	psyq	MatthewAllan93: 
+2016-01-02 21:57:18	psyq	can you pastebin it again
+2016-01-02 21:57:38	psyq	I was at my brothers place so I didn't get it
+2016-01-02 22:01:21	MatthewAllan93	ah ok
+2016-01-02 22:01:22	MatthewAllan93	http://0bin.net/paste/ifI6iVXHKjiOnmNd#+VSQ9hbQj66ASiVD5-rryPQpaOv49O9qxNBgjNuTeqR
+2016-01-02 22:01:27	MatthewAllan93	thats the link :)
+2016-01-02 22:33:39	psyq	cool thanks
+2016-01-02 22:34:00	psyq	I will try it out
+2016-01-02 22:39:36	--	irc: disconnected from server
+2016-01-02 22:49:02	MatthewAllan93	can't remember exactly but in the entry for it, i think i did "" or something like that
+2016-01-02 22:50:04	psyq	but I most say I love this setup more then my old one
+2016-01-02 22:50:41	psyq	just one thing I need on my laptop that is a bigger res screen
+2016-01-02 22:51:14	psyq	so i am looking into buying a new laptop I just don't know which one yet
+2016-01-03 02:26:40	psyq	MatthewAllan93 you stil here?
+2016-01-03 03:57:29	ℹ	irc: disconnected from server
+2016-01-04 20:19:45	MatthewAllan93	Not sure about that because I was wondering the exact same thing haha.
+2016-01-04 20:20:47	psyq	damnit that is the soul reason I am still on arch
+2016-01-04 20:20:49	psyq	hehehehe
+2016-01-04 20:21:26	MatthewAllan93	haha :P, I haven't asked in the #voidlinux or #xbps about it 
+2016-01-04 20:22:13	psyq	well maybe I should do that 
+2016-01-04 20:24:31	MatthewAllan93	Yes maybe haha
+2016-01-04 20:25:18	psyq	done question asked
+2016-01-04 20:25:30	MatthewAllan93	Ok thanks :).
+2016-01-04 20:27:37	psyq	I hate that I need to hit the Esc key to switch buffers
+2016-01-04 20:29:30	MatthewAllan93	Oh why?
+2016-01-04 20:30:58	psyq	I want something faster
+2016-01-04 20:31:22	MatthewAllan93	Ah
+2016-01-04 20:31:38	psyq	even now that I am learning vim I want everything to be faster hahaha
+2016-01-04 20:33:13	MatthewAllan93	haha need more power :P
+2016-01-04 20:33:19	psyq	yeah
+2016-01-04 20:33:40	psyq	matt did you see the answer in #voidlinux
+2016-01-04 20:35:00	MatthewAllan93	Yes I did :), thanks :).
+2016-01-04 20:35:12	psyq	welcome
+2016-01-04 20:35:22	psyq	well you are on void now right
+2016-01-04 20:35:36	MatthewAllan93	Yes I am :).
+2016-01-04 20:35:47	psyq	did it work
+2016-01-04 20:36:49	MatthewAllan93	Well I changed my font to terminess powerline for urxvt and vim. But it does work for me after inputting fc-match
+2016-01-04 20:37:20	psyq	sweet
+2016-01-04 20:37:30	psyq	then I know it will work for me
+2016-01-04 20:37:47	psyq	but how does terminess powerline look like?
+2016-01-04 20:38:18	MatthewAllan93	sorry i meant i couldn't for now
+2016-01-04 20:43:10	psyq	okie
+2016-01-05 01:49:33	ℹ	irc: disconnected from server
+2016-01-05 22:18:51	MatthewAllan93	Not sure sorry.
+2016-01-05 22:23:15	psyq	I will find out cuz now I know why it is not working
+2016-01-05 22:23:42	psyq	void doesn't compile urxvt with unicode3 and frills
+2016-01-05 22:23:57	psyq	that is the reason it is not working
+2016-01-05 22:24:31	MatthewAllan93	Ah ok, makes sense.
+2016-01-05 22:25:13	psyq	yeah but the problem is now how do we enable them
+2016-01-05 22:27:29	MatthewAllan93	Probably as a configure arguement while compiling or in the template for the package.
+2016-01-05 22:27:47	psyq	hmm okie
+2016-01-10 21:43:01	MatthewAllan93	i3wm for now but still configuring awesome at the moment because I can't get dmenu to work properly with it yourself?
+2016-01-10 21:43:29	psyq	I am using Xmonad now
+2016-01-10 21:43:41	MatthewAllan93	Oh good :)
+2016-01-10 21:43:48	MatthewAllan93	What do you think of it?
+2016-01-10 21:44:07	psyq	it is really nice
+2016-01-10 21:44:19	MatthewAllan93	Oh good :)
+2016-01-10 21:44:20	psyq	but it is hard to getting started
+2016-01-10 21:44:33	MatthewAllan93	Oh is it :(.
+2016-01-10 21:45:25	psyq	yeah u need to learn Haskell but Haskell is so good to learn really I kinda like it
+2016-01-10 21:45:45	psyq	but I still like python, ruby/ruby on rails and perl
+2016-01-10 21:46:03	MatthewAllan93	Ah ok, might try it sometime :).
+2016-01-10 21:46:14	psyq	u should
+2016-01-10 21:46:28	psyq	it is fun to start from strecth
+2016-01-10 22:37:26	MatthewAllan93	Oh is it :).
+2016-01-10 23:21:02		[psyq back: gone 00:47:02]
+2016-01-10 23:26:33	psyq	yup
+2016-01-10 23:26:33	ℹ	[MatthewAllan93] is away: Auto away at Sun Jan 10 21:59:16 2016
+2016-01-10 23:30:36	ℹ	irc: disconnected from server
+2016-01-11 21:00:06	MatthewAllan93	It's good, I haven't really configured anymore upto now haha yourself?
+2016-01-11 21:03:26	psyq	well I am going all out on the Xmonad 
+2016-01-11 21:04:42	MatthewAllan93	Oh good :), I am going to try out awesome again soon and configure it. Then I might try out xmonad :).
+2016-01-11 21:16:32	psyq	hehehe I like Xmonad because it is giving a challange
+2016-01-11 21:39:48	ℹ	irc: disconnected from server
+2016-01-12 20:47:11	MatthewAllan93	Hey, oh that's good :) haha
+2016-01-12 20:47:19	psyq	hahah
+2016-01-12 20:47:20	psyq	yeah
+2016-01-12 20:47:53	psyq	I am kinda I don't know what to pick when it comes to wm's now hahahaha
+2016-01-12 20:48:00	psyq	even awesome
+2016-01-12 20:48:12	psyq	it is so funny
+2016-01-12 21:06:01	MatthewAllan93	haha i know what you mean, i pick what suits my workflow 
+2016-01-12 21:06:51	psyq	that is the problem they all suits my workflow
+2016-01-12 21:07:06	MatthewAllan93	haha ah ok :P
+2016-01-12 21:07:11	psyq	well Xmonad I like most I have to be honest
+2016-01-12 21:07:32	psyq	just having some problems with multiple monitors
+2016-01-12 21:10:39	MatthewAllan93	Oh ok :), what kind of issue?
+2016-01-12 21:13:19	psyq	I didn't make keybinds to control the workspaces on multiple monitors
+2016-01-12 21:14:36	MatthewAllan93	Oh ok
+2016-01-14 20:57:19	MatthewAllan93	No sorry but I will do some research
+2016-01-14 20:59:45	MatthewAllan93	Have you had a look at the man page for feh?
+2016-01-14 20:59:57	psyq	I will look into it now
+2016-01-14 21:03:43	psyq	it looks like it can
+2016-01-14 21:03:55	MatthewAllan93	Oh good :)
+2016-01-14 21:04:57	psyq	you can use it as a slideshow and it will change the background with a time interval
+2016-01-14 21:05:13	MatthewAllan93	:)
+2016-01-15 22:00:44	MatthewAllan93	For what?
+2016-01-15 22:01:03	psyq	your HVM
+2016-01-15 22:01:13	MatthewAllan93	Debian 8
+2016-01-15 22:01:18	psyq	or it is that you picked
+2016-01-15 22:01:50	MatthewAllan93	In the list on Gandi, it was Debian 8 (HVM).
+2016-01-15 22:02:50	psyq	what about specs?
+2016-01-15 22:10:01	MatthewAllan93	1 core, 256mb, 3gb disk
+2016-01-15 22:10:23	psyq	really you don't need more then that?
+2016-01-15 22:10:34	psyq	how about transfer?
+2016-01-15 22:10:58	MatthewAllan93	Not for my website and it is my first vps but I do quite a bit with it also.
+2016-01-15 22:11:06	MatthewAllan93	what do you mean transfer?
+2016-01-15 22:11:36	psyq	the network they have like 1 TB traffic etc
+2016-01-15 22:13:00	psyq	I just read it is 2 TB
+2016-01-15 22:13:16	MatthewAllan93	Ah ok, mine is 100.00 Mb of dedicated bandwidth but it can all be modified.
+2016-01-15 22:13:51	psyq	okie not when it is the first VPS you are going to buy now hehehe
+2016-01-15 22:14:17	psyq	you are running your irc bouncer too from that one?
+2016-01-15 22:14:39	MatthewAllan93	Mine really is proper basic haha. Yes I am using ZNC :).
+2016-01-15 22:15:26	psyq	it is actually cheaper then digitalocean with that setup
+2016-01-15 22:15:32	MatthewAllan93	I think that's what it says in the control panel about transfer but not totally sure about that.
+2016-01-15 22:15:40	MatthewAllan93	Oh is it.
+2016-01-15 22:15:45	psyq	yeah
+2016-01-15 22:15:55	MatthewAllan93	Oh :).
+2016-01-15 22:16:20	MatthewAllan93	I like that Gandi use open source email system aswell :D.
+2016-01-15 22:16:48	psyq	the cheapest one is 5 $ a mouth for 1cpu/523mb/20gb sdd/1TB network
+2016-01-15 22:17:43	MatthewAllan93	Ah
+2016-01-15 22:18:25	psyq	and I think I will need the 2 TB
+2016-01-15 22:18:50	MatthewAllan93	I get what you mean about the bandwidth now.
+2016-01-15 22:18:57	psyq	yeah
+2016-01-15 22:20:07	MatthewAllan93	I also don't want to create random accounts haha.
+2016-01-15 22:23:34	psyq	yeah me too
+2016-01-15 22:24:11	psyq	and I got an account at digitalocean and they don't provide domain names
+2016-01-15 22:24:55	MatthewAllan93	I know :(, I like that Gandi are a registar and also that they provide domain to open source organisations and projects :).
+2016-01-15 22:31:00	MatthewAllan93	*domains
+2016-01-15 23:31:21	psyq	MatthewAllan93 you still here
+2016-01-16 01:24:11	ℹ	irc: disconnected from server
+2016-01-16 14:36:41	MatthewAllan93	Hey :), I just installed it and did "znc --make-conf". Then went through all of the steps :), I also use the web ui sometimes for it :).
+2016-01-16 14:37:03	psyq	how do I connect to the web ui
+2016-01-16 14:37:51	MatthewAllan93	did you enable?
+2016-01-16 14:37:54	MatthewAllan93	*enable it?
+2016-01-16 14:38:30	MatthewAllan93	if so http://domain_name:port_number
+2016-01-16 14:38:51	MatthewAllan93	or the ip address of the vps and then port number after it
+2016-01-16 14:40:21	psyq	what port is that?
+2016-01-16 14:40:23	psyq	hehehe
+2016-01-16 14:40:35	psyq	I think I forgot it XD
+2016-01-16 14:41:18	MatthewAllan93	the port that you configure it to use when using the command "znc --make-conf"
+2016-01-16 14:41:23	MatthewAllan93	haha XD
+2016-01-16 14:41:36	psyq	shot how do I find it now
+2016-01-16 14:43:39	MatthewAllan93	cd into .znc/configs, there should be a znc.conf file and it should have the listener port in it :).
+2016-01-16 14:44:58	psyq	i forgot to put https
+2016-01-16 14:45:11	MatthewAllan93	haha
+2016-01-16 14:47:32	psyq	how do i set that it automatically identifies me with nickserv?
+2016-01-16 14:48:58	MatthewAllan93	i put it in a command in weechat
+2016-01-16 14:50:55	psyq	okie
+2016-01-16 15:17:23	ℹ	irc: disconnected from server

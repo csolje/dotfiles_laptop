@@ -1,0 +1,60 @@
+2015-11-07 19:51:43	revealed	??
+2015-11-07 19:52:02	revealed	Which hostname you mean?
+2015-11-07 19:52:19	revealed	unaffiliated?
+2015-11-07 19:52:39	Psyq	yes
+2015-11-07 19:53:10	revealed	https://freenode.net/faq.shtml#cloaks
+2015-11-07 19:54:00	revealed	Register your account, go to #freenode and ask nicely for a cloak.
+2015-11-07 19:56:26	Psyq	so I have to ask for it in #freenode
+2015-11-07 19:56:43	revealed	Its all descibed in the faq
+2015-11-07 19:57:28	revealed	Ehm, i think so, yes. I was lucky it just took 5 minutes...
+2015-11-07 19:57:37	revealed	i asked. "May i have a cloak please?"
+2015-11-07 19:57:51	revealed	then i waited some time.... like 5 mins or so and the OP cloaked my account.
+2015-11-07 19:58:04	revealed	And i was answering thankful.
+2015-11-07 20:02:39	Psyq	well we will see I just asked
+2015-11-07 20:05:30	Psyq	how will I know if I got it?
+2015-11-07 20:06:22	revealed	I think they will tell you or you will se in log on connect
+2015-11-07 20:06:28	revealed	just wait i think they give response
+2015-11-07 20:06:36	Psyq	okie
+2015-11-07 20:12:09	Psyq	they just gave me that cloak nice heheh
+2015-11-07 20:12:44	revealed	good
+2015-11-07 20:13:09	Psyq	I need to learn more shortcuts for weechat
+2015-11-07 20:13:13	Psyq	hehehehe
+2015-11-07 21:00:54	Psyq	what do you mean with OSD?
+2015-11-07 21:01:18	revealed	ehm on screen display
+2015-11-07 21:01:24	revealed	my keyboard has volume keys
+2015-11-07 21:01:32	revealed	pressing these shows a onscreen display
+2015-11-07 21:02:09	revealed	like such: https://svn.reviewboard.kde.org/media/uploaded/images/2011/09/06/volume-label-percent.png
+2015-11-07 21:02:28	revealed	but its not working on my leap machine
+2015-11-07 21:02:45	Psyq	arrhh
+2015-11-07 21:02:49	revealed	even not with 15.08.0.2 so im confused
+2015-11-07 21:03:24	Psyq	is it a laptop you are using?
+2015-11-07 21:03:49	revealed	yes+
+2015-11-07 21:04:15	revealed	IBM Thinkpad T60 2008 43 G
+2015-11-07 21:04:34	revealed	the keys itselves are workin
+2015-11-07 21:04:39	revealed	its just not showing the OSD
+2015-11-07 21:05:18	Psyq	I have the same problem with my laptop Thinkpad x230
+2015-11-07 21:05:28	revealed	oh
+2015-11-07 21:05:37	revealed	then im not alone :)
+2015-11-07 21:05:45	Psyq	yes
+2016-01-15 23:51:34	revealed	hi there im fine thx. How do you do?
+2016-01-15 23:51:48	revealed	Currently waiting for a samba build to finish to test a bugfix
+2016-01-15 23:52:04	revealed	Do you know where Pahzeus_Tux is gone to?
+2016-01-16 00:11:05	psyq	no I haven't seen him in a long time
+2016-01-16 00:11:26	revealed	ye, me too wonder what happened since he seemed to be banned
+2016-01-16 00:11:33	revealed	did not hear nothing of him
+2016-01-16 00:11:46	psyq	the same here
+2016-01-16 00:12:02	psyq	but why would he get banned
+2016-01-16 00:12:10	revealed	hard... this stuff is still building. Quite intensive that samba stuff
+2016-01-16 00:12:13	revealed	dont know
+2016-01-16 00:12:20	revealed	just heard that
+2016-01-16 00:12:24	psyq	it is really
+2016-01-16 00:19:51	revealed	now it has green arrow
+2016-01-16 00:21:45	revealed	classy and mirrors are slow now sadly
+2016-01-16 00:29:03	psyq	 I know it is like that now
+2016-01-16 00:35:32	revealed	nice the patch works :)
+2016-01-16 00:36:48	psyq	thats good
+2016-01-16 00:37:31	revealed	now another user added a patch as attachement but i dont know if i have to test this also
+2016-01-16 00:37:44	revealed	for a further related mechanism 
+2016-01-16 00:59:46	psyq	sweet
+2016-01-16 00:59:46	ℹ	revealed: No such nick/channel
+2016-01-16 01:24:11	ℹ	irc: disconnected from server

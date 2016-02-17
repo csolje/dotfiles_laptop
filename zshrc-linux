@@ -1,0 +1,112 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/home/chrs/.oh-my-zsh
+ZSH_THEME="powerline"
+#ZSH_THEME="avit"
+#ZSH_THEME="michelebologna"
+#ZSH_THEME="mortalscumbag"
+#ZSH_THEME="mrtazz"
+
+#POWERLINE_RIGHT_A="date"
+#POWERLINE_RIGHT_A="exit-status"
+#POWERLINE_FULL_CURRENT_PATH="true"
+POWERLINE_DETECT_SSH="true"
+#POWERLINE_SHOW_GIT_ON_RIGHT="true"
+POWERLINE_DATE_FORMAT="%D{%d-%m}"
+POWERLINE_HIDE_HOST_NAME="true"
+POWERLINE_DETECT_SSH="true"
+POWERLINE_GIT_CLEAN="✔"
+POWERLINE_GIT_DIRTY="✘"
+POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
+POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
+POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
+POWERLINE_GIT_UNTRACKED="%F{cyan}✭%F{black}"
+POWERLINE_GIT_RENAMED="➜"
+POWERLINE_GIT_UNMERGED="═"
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' special-dirs true
+zstyle :compinstall filename '/home/chrs/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=9000
+SAVEHIST=9000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+
+# Set to this to use case-sensitive completion
+CASE_SENSITIVE="true"
+
+# Comment this out to disable bi-weekly auto-update checks
+DISABLE_AUTO_UPDATE="true"
+
+COMPLETION_WAITING_DOTS="true"
+# User configuration
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+## Alias
+## Vim stuff
+alias e='vim'
+alias eV='vim ~/.vimrc'
+
+## Zsh Stuff
+alias eZ='vim ~/.zshrc'
+alias Z='source ~/.zshrc'
+
+## X Resources Stuff
+alias eX='vim ~/.Xresources'
+alias XTR='xrdb -merge ~/.Xresources'
+
+alias exi='vim ~/.xinitrc'
+alias exm='vim ~/.xmonad/xmonad.hs'
+alias eo='vim ~/.config/openbox/rc.xml'
+alias eoa='vim ~/.config/openbox/autostart.sh'
+alias ewi='vim ~/.weechat/irc.conf'
+alias ew='vim ~/.weechat/weechat.conf'
+alias ei3c='vim ~/.config/i3/config'
+alias eb='vim ~/.bashrc'
+alias k='exit'
+alias cda='cd ~/.config/awesome'
+alias cdo='cd ~/.config/openbox'
+alias cdo='cd ~/.config/i3'
+alias cdg='cd ~/Git'
+alias cdc='cd ~/Git/configfiles'
+alias Shutdown='sudo shutdown -h now'
+
+## Pacman
+alias Y='yaourt'
+alias pac='sudo pacman -S'
+alias pac-r='sudo pacman -R'
+alias pac-s='sudo pacman -Ss'
+alias Update='sudo pacman -Syu'
+alias Sync='sudo pacman -Syy'
+alias reload='source'
+alias irc='weechat-curses'
+alias crunchy='mpv --fs=no --pause --vf=gradfun --vo=opengl-hq:scale=ewa_lanczossharp:cscale=ewa_lanczossharp:scale-antiring=0.7:icc-profile-auto:interpolation --ytdl-raw-options=username=pzyq,Password=3243Csolje-1837,format=720p,sub-lang=en' 
+
+# SSH Connections
+alias fifo='ssh -2 zyq3@ps20611.dreamhost.com'
+alias seedbox='ssh -2 zyq@triton.seedboxes.cc'
+alias appletv='ssh -2 root@10.0.0.8'
+alias mojolinsrv1='ssh zyq@146.185.166.206'
+alias s-chrs-t.sst.dk="ssh -2 adm_chrs@s-chrs-t.sst.dk"
+alias loki="ssh -2 chrs@loki.lanerd.net"
+
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)

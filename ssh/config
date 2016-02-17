@@ -1,0 +1,31 @@
+Host *
+    Protocol 2
+    ServerAliveInterval 300
+    ServerAliveCountMax 30
+    Compression yes
+    CompressionLevel 6
+
+Host loki
+    HostName loki.lanerd.net
+    User chrs
+
+Host gw
+    HostName gw.lanerd.net
+    User chrs
+
+Host heimdall
+    HostName heimdall.sanerds.net
+    User zyq
+
+Host mon
+    HostName syslog
+    User chrs
+
+Host chrstest
+    HostName s-chrs-t-sst.dk
+    User adm_chrs
+
+Host fifo
+    HostName ps20611.dreamhostps.com
+    User zyq
+

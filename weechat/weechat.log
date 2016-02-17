@@ -1,0 +1,19 @@
+[2016-01-16 17:54:16] WeeChat 1.3 (compiled on Dec 28 2015 23:40:33)
+[2016-01-16 17:54:16] Reading configuration file sec.conf
+[2016-01-16 17:54:16] Reading configuration file weechat.conf
+[2016-01-16 17:54:16] Reading configuration file plugins.conf
+[2016-01-16 17:54:16] Reading configuration file charset.conf
+[2016-01-16 17:54:16] Reading configuration file logger.conf
+[2016-01-16 17:54:16] Reading configuration file exec.conf
+[2016-01-16 17:54:16] Reading configuration file trigger.conf
+[2016-01-16 17:54:16] Reading configuration file aspell.conf
+[2016-01-16 17:54:16] Reading configuration file alias.conf
+[2016-01-16 17:54:16] Reading configuration file xfer.conf
+[2016-01-16 17:54:16] Reading configuration file irc.conf
+[2016-01-16 17:54:16] Reading configuration file relay.conf
+[2016-01-16 17:54:16] Reading configuration file buffers.conf
+[2016-01-16 17:54:16] Reading configuration file iset.conf
+[2016-01-16 17:54:16] Reading configuration file urlgrab.conf
+[2016-01-16 17:54:16] Reading configuration file colorize_nicks.conf
+[2016-01-16 17:54:16] Reading configuration file script.conf
+[2016-01-16 17:54:31] irc: connecting to server chat.sanerds.net/4444 (SSL)...
