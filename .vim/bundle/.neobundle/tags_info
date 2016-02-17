@@ -1,0 +1,12 @@
+ctrlp.vim
+neobundle.vim
+nerdtree
+nerdtree-git-plugin
+powerline
+vim-airline
+vim-coffee-script
+vim-easymotion
+vim-fugitive
+vim-gitgutter
+vim-powerline
+vim-surround
