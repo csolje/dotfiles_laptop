@@ -5,6 +5,7 @@ ZSH_THEME="powerline"
 #ZSH_THEME="michelebologna"
 #ZSH_THEME="mortalscumbag"
 #ZSH_THEME="mrtazz"
+#ZSH_THEME="minimal"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
@@ -25,7 +26,6 @@ POWERLINE_GIT_UNMERGED="═"
 
 # The following lines were added by compinstall
 
-zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+r:|[._-]=** r:|=** l:|=*'
@@ -57,6 +57,8 @@ COMPLETION_WAITING_DOTS="true"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+archey3
+
 source $ZSH/oh-my-zsh.sh
 
 ## Alias
@@ -64,8 +66,13 @@ source $ZSH/oh-my-zsh.sh
 alias e='vim'
 alias eV='vim ~/.vimrc'
 
+## Neovim stuff
+alias v='nvim'
+alias vN='nvim ~/.config/nvim/init.vim'
+
 ## Zsh Stuff
 alias eZ='vim ~/.zshrc'
+alias vZ='nvim ~/.zshrc'
 alias Z='source ~/.zshrc'
 
 ## X Resources Stuff
@@ -81,31 +88,56 @@ alias ew='vim ~/.weechat/weechat.conf'
 alias ei3c='vim ~/.config/i3/config'
 alias eb='vim ~/.bashrc'
 alias k='exit'
+
+## X Resources and xinitrc Stuff
+alias vX='nvim ~/.Xresources'
+alias XTR='xrdb -merge ~/.Xresources'
+alias vxi='nvim ~/.xinitrc'
+
+## Config Stuff
+alias vxm='nvim ~/.xmonad/xmonad.hs'
+alias vo='nvim ~/.config/openbox/rc.xml'
+alias voa='nvim ~/.config/openbox/autostart.sh'
+alias vwi='nvim ~/.weechat/irc.conf'
+alias vw='nvim ~/.weechat/weechat.conf'
+alias vi3c='nvim ~/.config/i3/config'
+alias vb='nvim ~/.bashrc'
+alias k='exit'
+
+## Navigation
 alias cda='cd ~/.config/awesome'
 alias cdo='cd ~/.config/openbox'
-alias cdo='cd ~/.config/i3'
+alias cdi='cd ~/.config/i3'
 alias cdg='cd ~/Git'
 alias cdc='cd ~/Git/configfiles'
 alias Shutdown='sudo shutdown -h now'
+
+## Xbps
+alias xbps='sudo xbps-install -S'
+alias xbps-s='sudo xbps-query -Rs'
+alias xbps-sync='sudo xbps-install -Suv'
 
 ## Pacman
 alias Y='yaourt'
 alias pac='sudo pacman -S'
 alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
-alias Update='sudo pacman -Syu'
+alias Update='sudo pacman -Syu --force'
 alias Sync='sudo pacman -Syy'
+
+## Apps
 alias reload='source'
 alias irc='weechat-curses'
-alias crunchy='mpv --fs=no --pause --vf=gradfun --vo=opengl-hq:scale=ewa_lanczossharp:cscale=ewa_lanczossharp:scale-antiring=0.7:icc-profile-auto:interpolation --ytdl-raw-options=username=pzyq,Password=3243Csolje-1837,format=720p,sub-lang=en' 
+alias startvm='vboxmanage startvm WorkDesktop --type headless'
 
-# SSH Connections
-alias fifo='ssh -2 zyq3@ps20611.dreamhost.com'
-alias seedbox='ssh -2 zyq@triton.seedboxes.cc'
-alias appletv='ssh -2 root@10.0.0.8'
-alias mojolinsrv1='ssh zyq@146.185.166.206'
-alias s-chrs-t.sst.dk="ssh -2 adm_chrs@s-chrs-t.sst.dk"
-alias loki="ssh -2 chrs@loki.lanerd.net"
+## Tmux
+alias tnew='tmux new -s'
+alias tattach='tmux a -t'
+
+## Remote Desktop
+alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
+alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003281.ssi.ad &"
+alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
