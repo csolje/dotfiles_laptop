@@ -14,11 +14,11 @@ set encoding=utf-8
 
 " start vundler
 filetype off
-set rtp+=~/.config/nvim/bundle/vundle/
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#rc('~/.config/nvim/bundle')
 
 " core plugins
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'ctrlpvim/ctrlp.vim'
 
