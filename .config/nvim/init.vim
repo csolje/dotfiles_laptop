@@ -128,7 +128,8 @@ set history=100
 set undolevels=100
 
 " set <leader>
-let mapleader=","
+"let mapleader=","
+let mapleader = "\<Space>"
 
 " enable mouse
 set mouse=a
