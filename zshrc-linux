@@ -1,17 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/chrs/.oh-my-zsh
 ZSH_THEME="powerline"
-#ZSH_THEME="avit"
-#ZSH_THEME="michelebologna"
-#ZSH_THEME="mortalscumbag"
-#ZSH_THEME="mrtazz"
 #ZSH_THEME="minimal"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
 #POWERLINE_FULL_CURRENT_PATH="true"
-POWERLINE_DETECT_SSH="true"
 #POWERLINE_SHOW_GIT_ON_RIGHT="true"
+POWERLINE_DETECT_SSH="true"
 POWERLINE_DATE_FORMAT="%D{%d-%m}"
 POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_DETECT_SSH="true"
@@ -58,8 +54,24 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 archey3
+# Export settings
+export EDITOR="vim"
+export PAGER="less"
+export BROWSER="qutebrowser"
+export BROWSERCLI="w3m"
+export MOVPLAY="mpv"
+export PICVIEW="feh"
+export SNDPLAY="mpv"
+export TERMINAL="uxterm"
+export PULSE_LATENCY_MSEC=60
+export TERM="xterm-256color"
 
-source $ZSH/oh-my-zsh.sh
+# File Extensions
+for ext in html org php com net no;    do alias -s $ext=$BROWSER; done
+for ext in txt tex py PKGBUID;        do alias -s $ext=$EDITOR; done
+for ext in png jpg gif;            do alias -s $ext=$PICVIEW; done
+for ext in mpg wmv avi mkv;        do alias -s $ext=$MOVPLAY; done
+for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 
 ## Alias
 ## Vim stuff
@@ -105,17 +117,37 @@ alias vb='nvim ~/.bashrc'
 alias k='exit'
 
 ## Navigation
-alias cda='cd ~/.config/awesome'
-alias cdo='cd ~/.config/openbox'
-alias cdi='cd ~/.config/i3'
-alias cdg='cd ~/Git'
-alias cdc='cd ~/Git/configfiles'
+alias cdA='cd ~/.config/awesome'
+alias cdO='cd ~/.config/openbox'
+alias cdI='cd ~/.config/i3'
+alias cdG='cd ~/Git'
+alias cdC='cd ~/Git/configfiles'
+alias cdD='cd ~/Git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 
 ## Xbps
 alias xbps='sudo xbps-install -S'
 alias xbps-s='sudo xbps-query -Rs'
 alias xbps-sync='sudo xbps-install -Suv'
+
+## Gentoo
+alias HowLong='genlop -t'
+alias OneShot='emerge --oneshot portage'
+alias I='time emerge -av'
+alias S='emerge -s'
+alias sync='time emerge --sync'
+alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
+alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
+alias Esync='eix-sync'
+alias Eupdate='eix --update'
+alias cdP='cd /etc/portage && sudo su'
+alias cdU='cd /etc/portage/package.use && sudo su'
+alias cdB='cd /etc/portage/package.mask && sudo su'
+alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
+alias eM='sudo vim /etc/portage/make.conf'
+
+## Net
+alias NM='sudo /etc/init.d/NetworkManager restart'
 
 ## Pacman
 alias Y='yaourt'
@@ -124,11 +156,20 @@ alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
 alias Update='sudo pacman -Syu --force'
 alias Sync='sudo pacman -Syy'
+alias Log='tail -f /var/log/pacman.log'
+alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
 ## Apps
 alias reload='source'
 alias irc='weechat-curses'
 alias startvm='vboxmanage startvm WorkDesktop --type headless'
+
+## News and Music
+alias MP='ncmpcpp'
+alias news='newsbeuter'
+alias M='mpv'
+
+
 
 ## Tmux
 alias tnew='tmux new -s'
@@ -141,4 +182,6 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git archlinux vi-mode themes zsh-completions color-command)
+source /home/chrs/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
