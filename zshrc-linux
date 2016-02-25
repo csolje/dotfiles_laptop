@@ -156,7 +156,7 @@ alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
 alias Update='sudo pacman -Syu --force'
 alias Sync='sudo pacman -Syy'
-alias Log='tail -f /var/log/pacman.log'
+alias pacLog='tail -f /var/log/pacman.log'
 alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
 ## Apps
