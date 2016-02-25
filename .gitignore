@@ -7,5 +7,5 @@
 .config/nvim/bundle/vim-devicons/
 .vim/bundle/ctrlp.vim/
 .config/nvim/tmp/
-.config/nvim/bundle/gundo.vim
-.vim/bundle/ctrlp.vim
+.config/nvim/bundle/gundo.vim/
+.vim/bundle/ctrlp.vim/
