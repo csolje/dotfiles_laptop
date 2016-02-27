@@ -64,7 +64,7 @@ syntax enable			"use syntax highlighting
 						" shiftwidth
 
 " Neo bundle stuff
-set runtimepath+=~/.vim/bundle/neobundle.vim
+set runtimepath^=~/.vim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle (Required!)
 NeoBundleFetch 'Shougo/neobundle.vim'
