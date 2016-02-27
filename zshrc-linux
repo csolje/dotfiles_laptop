@@ -53,7 +53,6 @@ COMPLETION_WAITING_DOTS="true"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-archey3
 # Export settings
 export EDITOR="vim"
 export PAGER="less"
@@ -130,15 +129,15 @@ alias xbps-s='sudo xbps-query -Rs'
 alias xbps-sync='sudo xbps-install -Suv'
 
 ## Gentoo
-alias HowLong='genlop -t'
-alias OneShot='emerge --oneshot portage'
-alias I='time emerge -av'
-alias S='emerge -s'
-alias sync='time emerge --sync'
-alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
-alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
-alias Esync='eix-sync'
-alias Eupdate='eix --update'
+alias HowLong='sudo genlop -t'
+alias OneShot='sudo emerge --oneshot portage'
+alias I='sudo time emerge -av'
+alias S='sudo emerge -s'
+alias sync='sudo time emerge --sync'
+alias Uworld='sudo time emerge --ask --verbose --update --newuse --deep @world'
+alias Uworld-bdeps='sudo time emerge --ask --newuse --update --deep --with-bdeps=y @world'
+alias Esync='sudo eix-sync'
+alias Eupdate='sudo eix --update'
 alias cdP='cd /etc/portage && sudo su'
 alias cdU='cd /etc/portage/package.use && sudo su'
 alias cdB='cd /etc/portage/package.mask && sudo su'
