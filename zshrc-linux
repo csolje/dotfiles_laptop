@@ -167,8 +167,6 @@ alias MP='ncmpcpp'
 alias news='newsbeuter'
 alias M='mpv'
 
-
-
 ## Tmux
 alias tnew='tmux new -s'
 alias tattach='tmux a -t'
