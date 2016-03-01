@@ -3,6 +3,8 @@ export ZSH=/home/chrs/.oh-my-zsh
 ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
 
+screenfetch
+
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
 #POWERLINE_FULL_CURRENT_PATH="true"
@@ -166,8 +168,6 @@ alias startvm='vboxmanage startvm WorkDesktop --type headless'
 alias MP='ncmpcpp'
 alias news='newsbeuter'
 alias M='mpv'
-
-
 
 ## Tmux
 alias tnew='tmux new -s'
