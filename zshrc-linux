@@ -3,7 +3,7 @@ export ZSH=/home/chrs/.oh-my-zsh
 ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
 
-screenfetch
+#screenfetch
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
