@@ -159,6 +159,9 @@ alias Sync='sudo pacman -Syy'
 alias pacLog='tail -f /var/log/pacman.log'
 alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
+## Misc
+alias starwars='telnet towel.blinkenlights.nl'
+
 ## Apps
 alias reload='source'
 alias irc='weechat-curses'
