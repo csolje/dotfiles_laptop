@@ -34,10 +34,10 @@ URxvt.geometry: 125x33
 !!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=20:antialias=true
 !
 !!!DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=15:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=15:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=15:antialias=true
+URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=12:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=12:antialias=true
 !
 !!!Droid Sans
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
