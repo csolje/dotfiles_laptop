@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/chrs/.oh-my-zsh
+export ZSH=/Users/csolje/.oh-my-zsh
 ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
 
@@ -29,7 +29,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' special-dirs true
-zstyle :compinstall filename '/home/chrs/.zshrc'
+zstyle :compinstall filename '/Users/csolje/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -53,7 +53,6 @@ COMPLETION_WAITING_DOTS="true"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-archey3
 # Export settings
 export EDITOR="vim"
 export PAGER="less"
@@ -183,5 +182,5 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git archlinux vi-mode themes zsh-completions color-command)
-source /home/chrs/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/csolje/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
