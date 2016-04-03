@@ -1,0 +1,12 @@
+#####
+## SSH Notes
+#####
+
+## Agent forwarding
+# Forwarding your local ssh keys to the server so that the connections 
+# made from that server will have the your crediticals
+ssh -A <hostname>
+
+## Remote port forward
+
+ssh -R 
