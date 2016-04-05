@@ -22,7 +22,7 @@ Host mon
     User chrs
 
 Host chrstest
-    HostName s-chrs-t-sst.dk
+    HostName s-chrs-t.sst.dk
     User adm_chrs
 
 Host fifo
