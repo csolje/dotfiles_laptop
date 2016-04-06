@@ -47,9 +47,9 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'rhysd/clever-f.vim'
 
 " Shougo
-"Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete.nvim'
 
-Plugin 'ryanoasis/vim-devicons'
+"Plugin 'ryanoasis/vim-devicons'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'junegunn/fzf.vim'
 
