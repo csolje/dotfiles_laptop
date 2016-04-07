@@ -161,6 +161,7 @@ alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
 ## Misc
 alias starwars='telnet towel.blinkenlights.nl'
+alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 
 ## Apps
 alias reload='source'
