@@ -9,4 +9,4 @@ ssh -A <hostname>
 
 ## Remote port forward
 
-ssh -R 
+ssh -R 	7777:localhost:22 
