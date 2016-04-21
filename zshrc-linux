@@ -114,6 +114,7 @@ alias voA='nvim ~/.config/openbox/autostart.sh'
 alias vwI='nvim ~/.weechat/irc.conf'
 alias vW='nvim ~/.weechat/weechat.conf'
 alias vi3C='nvim ~/.config/i3/config'
+alias vsC='nvim ~/.ssh/config'
 alias vb='nvim ~/.bashrc'
 alias k='exit'
 

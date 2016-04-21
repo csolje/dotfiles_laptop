@@ -5,14 +5,6 @@ Host *
     Compression yes
     CompressionLevel 6
 
-Host loki
-    HostName loki.lanerd.net
-    User chrs
-
-Host gw
-    HostName gw.lanerd.net
-    User chrs
-
 Host heimdall
     HostName heimdall.sanerds.net
     User zyq
@@ -39,4 +31,12 @@ Host s-genepi2-p
 
 Host s-genepi3-t
     HostName s-genepi3-t.ssi.ad
+    User adm_chrs
+
+Host oslo
+    HostName oslo.sst.dk
+    User adm_chrs
+
+Host oslotest
+    HostName s-ldb2-t.sst.dk
     User adm_chrs
