@@ -183,7 +183,7 @@ mode "browser" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
+bindsym $mod+b mode "browser"
 
 # AUTOSTART APPLICATIONS
 exec setxkbmap dk
