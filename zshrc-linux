@@ -180,6 +180,8 @@ alias tattach='tmux a -t'
 
 ## Remote Desktop
 alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
+alias dksund="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk"
+alias dksundtest="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk"
 alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003281.ssi.ad &"
 alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
 #alias sst="xfreerdp /u:adm_chrs@sst.dk +clipboard /w:1920 /h:1080"

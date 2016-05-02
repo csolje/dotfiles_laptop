@@ -161,9 +161,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-    status_command i3status
-    #status_command /home/chrs/.config/i3/conky.sh
-	font pango:DejaVu Sans Mono for powerline 9
+	status_command i3status
+	#status_command /home/chrs/.config/i3/conky.sh
+        font pango:DejaVu Sans Mono for powerline 9
 }
 # Volume Control
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume 
@@ -187,12 +187,12 @@ bindsym $mod+b mode "browser"
 
 # AUTOSTART APPLICATIONS
 exec setxkbmap dk
-#exec sh ~/.config/i3/scripts/res.sh
+exec sh ~/.config/i3/scripts/res.sh
 #exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --restore
 exec --no-startup-id numlockx
-exec --no-startup-id clipit
+exec --no-startup-id xclip
 #exec --no-startup-id xmodmap ~/.speedswapper 
 #exec --no-startup-id nm-applet &
 #exec --no-startup-id nitrogen --restore
