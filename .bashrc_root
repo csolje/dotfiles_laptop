@@ -1,0 +1,70 @@
+# .bashrc
+
+## Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+## Uncomment the following line if you don't like systemctl's auto-paging feature:
+## export SYSTEMD_PAGER=
+
+## Setting up prompt
+PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
+
+
+## User specific aliases and functions
+alias ls='ls --color=auto'
+alias la='ls -al'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias k='exit'
+
+## Alias
+## Vim stuff
+alias e='vim'
+alias eV='vim ~/.vimrc'
+
+## Neovim stuff
+alias v='nvim'
+alias vN='nvim ~/.config/nvim/init.vim'
+
+## Bash
+alias eB='vim ~/.bashrc'
+alias k='exit'
+
+## Config Stuff
+alias vsC='nvim ~/.ssh/config'
+alias vB='nvim ~/.bashrc'
+alias vpK='nvim /etc/portage/package.accept_keywords'
+alias k='exit'
+
+## Navigation
+alias Shutdown='shutdown -h now'
+
+## Gentoo
+alias HowLong='genlop -t'
+alias OneShot='emerge --oneshot portage'
+alias I='time emerge -av'
+alias S='emerge -s'
+alias sync='time emerge --sync'
+alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
+alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
+alias Esync='eix-sync'
+alias Eupdate='eix-update'
+alias cdP='cd /etc/portage'
+alias cdU='cd /etc/portage/package.use'
+alias cdB='cd /etc/portage/package.mask'
+alias cdK='cd /etc/portage/package.accept_keywords'
+alias eM='sudo vim /etc/portage/make.conf'
+alias kernel='cd /usr/src/linux && make clean && make -j5 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --lvm --luks --no-zfs --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg'
+
+## Misc
+alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
+
+## Apps
+alias reload='source'
+
+## Tmux
+alias tnew='tmux new -s'
+alias tattach='tmux a -t'
