@@ -1,8 +1,8 @@
 # .bashrc
 
 ## Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ -f /etc/bash/bashrc ]; then
+	. /etc/bash/bashrc
 fi
 
 ## Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -10,7 +10,6 @@ fi
 
 ## Setting up prompt
 PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
-
 
 ## User specific aliases and functions
 alias ls='ls --color=auto'
@@ -30,7 +29,7 @@ alias v='nvim'
 alias vN='nvim ~/.config/nvim/init.vim'
 
 ## Bash
-alias eB='vim ~/.bashrc'
+glias eB='vim ~/.bashrc'
 alias k='exit'
 
 ## Config Stuff
@@ -64,7 +63,7 @@ alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias ryper2='ssh -fNR 8888:localhost:22 tunnel@ryper.org'
 
 ## Apps
-alias reload='source'
+glias reload='source'
 
 ## Tmux
 alias tnew='tmux new -s'
