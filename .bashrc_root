@@ -29,13 +29,13 @@ alias v='nvim'
 alias vN='nvim ~/.config/nvim/init.vim'
 
 ## Bash
-glias eB='vim ~/.bashrc'
-alias k='exit'
+alias eB='vim ~/.bashrc'
 
 ## Config Stuff
 alias vsC='nvim ~/.ssh/config'
 alias vB='nvim ~/.bashrc'
 alias vpK='nvim /etc/portage/package.accept_keywords'
+alias epK='vim /etc/portage/package.accept_keywords'
 alias k='exit'
 
 ## Navigation
@@ -63,7 +63,7 @@ alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias ryper2='ssh -fNR 8888:localhost:22 tunnel@ryper.org'
 
 ## Apps
-glias reload='source'
+alias reload='source'
 
 ## Tmux
 alias tnew='tmux new -s'
