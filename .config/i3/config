@@ -189,7 +189,7 @@ bindsym $mod+b mode "browser"
 # AUTOSTART APPLICATIONS
 exec setxkbmap dk
 exec sh ~/.config/i3/scripts/res.sh
-#exec --no-startup-id urxvtd -q -o -f
+exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --restore
 exec --no-startup-id numlockx
