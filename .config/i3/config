@@ -187,13 +187,15 @@ mode "browser" {
 bindsym $mod+b mode "browser"
 
 # AUTOSTART APPLICATIONS
-exec setxkbmap dk
+exec setxkbmap -layout dk
 exec sh ~/.config/i3/scripts/res.sh
-#exec --no-startup-id urxvtd -q -o -f
+exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --restore
 exec --no-startup-id numlockx
 exec --no-startup-id xclip
+exec --no-startup-id compton -b
+exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/*
 exec --no-startup-id "/usr/bin/x11vnc -display :0 -localhost -forever"
 #exec --no-startup-id xmodmap ~/.speedswapper 
 #exec --no-startup-id nm-applet &
