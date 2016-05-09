@@ -9,6 +9,10 @@ Host heimdall
     HostName heimdall.sanerds.net
     User zyq
 
+Host kamau
+    HostName kamau.sanerds.net
+    User zyq
+
 Host mon
     HostName syslog
     User chrs
