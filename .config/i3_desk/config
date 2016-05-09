@@ -211,6 +211,11 @@ font pango:DejaVu Sans Mono for powerline 10
 
 new_window none
 
+# Assign workspaces to monitors
+workspace 1 output VGA1
+workspace 2 output HDMI2
+workspace 3 output HDMI1
+
 # Assign programs to workspace				
 #assign [class="google-chrome"] 4:Web
 #assign [class="^firefox$"] 4:Web
