@@ -81,7 +81,6 @@ alias vW='nvim ~/.weechat/weechat.conf'
 alias vi3C='nvim ~/.config/i3/config'
 alias vsC='nvim ~/.ssh/config'
 alias vb='nvim ~/.bashrc'
-alias k='exit'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
@@ -145,9 +144,9 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
-alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
-alias dksund="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk"
-alias dksundtest="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk"
-alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &"
-alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
-#alias sst="xfreerdp /u:adm_chrs@sst.dk +clipboard /w:1920 /h:1080"
+alias ssi='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad'
+alias dksund='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk'
+alias dksundtest='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk'
+alias ssin='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
+alias sst='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk'
+alias rdp='xfreerdp +clipboard /w:1920 /h:1080'
