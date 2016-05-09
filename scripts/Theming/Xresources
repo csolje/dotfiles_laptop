@@ -1,24 +1,25 @@
+URxvt.termName: rxvt
 URxvt.urgentOnBell: off
 URxvt.visualBell: off
 URxvt.iso14755: off
 URxvt.iso14755_52: off
-URxvt.meta8: true
+!URxvt.meta8: true
 URxvt.depth: 32
-URxvt.iconFile: /usr/share/icons/breeze-dark/apps/software/utilities-terminal.svg
+!URxvt.iconFile: /usr/share/icons/breeze-dark/apps/software/utilities-terminal.svg
 !URxvt.iconFile: /usr/share/icons/Humanity/apps/128/utilities-terminal.svg
-URxvt.metaSendsEscape: true
+!URxvt.metaSendsEscape: true
 
-URxvt.internalBorder: 0
-URxvt.externalBorder: 0
+URxvt.internalBorder:0
+URxvt.externalBorder:0
 
-URxvt.scrollBar: off
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
+URxvt.scrollBar:off
+URxvt.cursorBlink:true
+URxvt.cursorUnderline:false
 URxvt.cursorColor:#757575
-URxvt.saveLines: 10000
-URxvt.scrollTtyOutput:   false
-URxvt.scrollWithBuffer:  true
-URxvt.scrollTtyKeypress: true
+URxvt.saveLines:10000
+URxvt.scrollTtyOutput:false
+URxvt.scrollWithBuffer:true
+URxvt.scrollTtyKeypress:true
 
 urxvt*depth:32
 urxvt*foreground:#ADADAD
@@ -34,10 +35,10 @@ URxvt.geometry: 125x33
 !!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=20:antialias=true
 !
 !!!DejaVu Sans
-URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=15:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=15:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=15:antialias=true
+!URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=15:antialias=true:hinting=true
+!URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=15:antialias=true:hinting=true
+!URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=15:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=15:antialias=true
 !
 !!!Droid Sans
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
@@ -94,7 +95,7 @@ URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=1
 !! Disable screen printing by overriding the default print pipe.
 !URxvt.print-pipe: "cat >/dev/null"
 !
-URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+URxvt.perl-ext-common:default,keyboard-select,url-select,clipboard
 !
 !URxvt.keysym.M-x           	: perl:keyboard-select:activate
 !URxvt.keysym.M-u           	: perl:url-select:select_next
@@ -116,30 +117,30 @@ URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
 !URxvt.keysym.Control-Shift-C: perl:clipboard:copy
 !URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 !
-URxvt.keysym.C-S-c: perl:clipboard:copy
-URxvt.keysym.C-S-p: perl:clipboard:paste
+URxvt.keysym.C-S-c:perl:clipboard:copy
+URxvt.keysym.C-S-p:perl:clipboard:paste
 
 !! Black
 URxvt.color0:  #5c5c5c
 URxvt.color8:  #4c4c4c
 !! Red
-!URxvt.color1:  #cd0000
-!URxvt.color9:  #ff0000
+URxvt.color1:  #cd0000
+URxvt.color9:  #ff0000
 !! Green
-!URxvt.color2:  #00cd00
-!URxvt.color10: #00ff00
+URxvt.color2:  #00cd00
+URxvt.color10: #00ff00
 !! Yellow
-!URxvt.color3:  #cdcd00
-!URxvt.color11: #ffff00
+URxvt.color3:  #cdcd00
+URxvt.color11: #ffff00
 !! Blue
-!URxvt.color4:  #1e90ff
-!URxvt.color12: #4682b4
+URxvt.color4:  #1e90ff
+URxvt.color12: #4682b4
 !! Magenta
-!URxvt.color5:  #cd00cd
-!URxvt.color13: #ff00ff
+URxvt.color5:  #cd00cd
+URxvt.color13: #ff00ff
 !! Cyan
-!URxvt.color6:  #00cdcd
-!URxvt.color14: #00ffff
+URxvt.color6:  #00cdcd
+URxvt.color14: #00ffff
 !! White
-!URxvt.color7:  #cfcfcf
-!URxvt.color15: #a8a8a8
+URxvt.color7:  #cfcfcf
+URxvt.color15: #a8a8a8
