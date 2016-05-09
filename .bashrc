@@ -149,4 +149,4 @@ alias dksund='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:a
 alias dksundtest='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk'
 alias ssin='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
 alias sst='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk'
-alias rdp='xfreerdp +clipboard /w:1920 /h:1080'
+alias rdp='~/bin/rdp.sh'
