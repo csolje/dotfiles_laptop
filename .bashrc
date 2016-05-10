@@ -37,6 +37,7 @@ alias la='ls -al'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias k='exit'
 
 ## Vim stuff
 alias e='vim'
@@ -65,7 +66,7 @@ alias eoA='vim ~/.config/openbox/autostart.sh'
 alias ewI='vim ~/.weechat/irc.conf'
 alias eW='vim ~/.weechat/weechat.conf'
 alias ei3C='vim ~/.config/i3/config'
-alias k='exit'
+
 
 ## X Resources and xinitrc Stuff
 alias vX='nvim ~/.Xresources'
@@ -89,11 +90,6 @@ alias cdI='cd ~/.config/i3'
 alias cdG='cd ~/Git'
 alias cdD='cd ~/Git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
-
-## Xbps
-alias xbps='sudo xbps-install -S'
-alias xbps-s='sudo xbps-query -Rs'
-alias xbps-sync='sudo xbps-install -Suv'
 
 ## Gentoo
 alias HowLong='sudo genlop -t'

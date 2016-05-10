@@ -13,6 +13,11 @@ Host mon
     HostName syslog
     User chrs
 
+Host monadm
+    HostName syslog
+    User adm_chrs
+    IdentityFile ~/.ssh/id_adm_chrs_ed25519
+
 Host chrstest
     HostName s-chrs-t.sst.dk
     User adm_chrs
