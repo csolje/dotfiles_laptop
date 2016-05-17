@@ -1,0 +1,1 @@
+rsync -e 'ssh -p 7777' --dry-run --recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --exclude=/local --exclude=/packages --exclude=/.git /usr/portage/ root@localhost:/usr/portage/
