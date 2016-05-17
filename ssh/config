@@ -1,0 +1,52 @@
+Host *
+    Protocol 2
+    ServerAliveInterval 300
+    ServerAliveCountMax 30
+    Compression yes
+    CompressionLevel 6
+
+Host heimdall
+    HostName heimdall.sanerds.net
+    User zyq
+
+Host kamau
+    HostName kamau.sanerds.net
+    User zyq
+
+Host mon
+    HostName syslog
+    User chrs
+
+Host monadm
+    HostName syslog
+    User adm_chrs
+    IdentityFile ~/.ssh/id_adm_chrs_ed25519
+
+Host chrstest
+    HostName s-chrs-t.sst.dk
+    User adm_chrs
+
+Host fifo
+    HostName ps20611.dreamhostps.com
+    User zyq
+
+Host s-genepi1-p
+    HostName s-genepi1-p.ssi.ad
+    User adm_chrs
+    IdentityFile ~/.ssh/id_adm_chrs_ed25519
+
+Host s-genepi2-p
+    HostName s-genepi2-p.ssi.ad
+    User adm_chrs
+
+Host s-genepi3-t
+    HostName s-genepi3-t.ssi.ad
+    User adm_chrs
+
+Host oslo
+    HostName oslo.sst.dk
+    User adm_chrs
+
+Host oslotest
+    HostName s-ldb2-t.sst.dk
+    User adm_chrs
