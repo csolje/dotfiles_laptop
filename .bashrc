@@ -39,49 +39,53 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias k='exit'
 
+## Emacs stuff
+alias e='emacs -nw'
+alias eE='emacs -nw ~/.emacs'
+
 ## Vim stuff
-alias e='vim'
-alias eV='vim ~/.vimrc'
+alias v='vim'
+alias vV='vim ~/.vimrc'
 
 ## Neovim stuff
-alias v='nvim'
-alias vN='nvim ~/.config/nvim/init.vim'
+alias nv='nvim'
+alias nvN='nvim ~/.config/nvim/init.vim'
 
 ## Zsh Stuff
-alias eZ='vim ~/.zshrc'
-alias vZ='nvim ~/.zshrc'
+alias vZ='vim ~/.zshrc'
+alias nvZ='nvim ~/.zshrc'
 alias Z='source ~/.zshrc'
 
 ## Bash Stuff
-alias eB='vim ~/.bashrc'
-alias vB='nvim ~/.bashrc'
+alias vB='vim ~/.bashrc'
+alias nvB='nvim ~/.bashrc'
 
 ## X Resources Stuff
-alias eX='vim ~/.Xresources'
+alias vX='vim ~/.Xresources'
 alias XTR='xrdb -merge ~/.Xresources'
-alias exI='vim ~/.xinitrc'
-alias exM='vim ~/.xmonad/xmonad.hs'
-alias eO='vim ~/.config/openbox/rc.xml'
-alias eoA='vim ~/.config/openbox/autostart.sh'
-alias ewI='vim ~/.weechat/irc.conf'
-alias eW='vim ~/.weechat/weechat.conf'
-alias ei3C='vim ~/.config/i3/config'
+alias vxI='vim ~/.xinitrc'
+alias vxM='vim ~/.xmonad/xmonad.hs'
+alias vO='vim ~/.config/openbox/rc.xml'
+alias voA='vim ~/.config/openbox/autostart.sh'
+alias vwI='vim ~/.weechat/irc.conf'
+alias vW='vim ~/.weechat/weechat.conf'
+alias vi3C='vim ~/.config/i3/config'
 
 
 ## X Resources and xinitrc Stuff
-alias vX='nvim ~/.Xresources'
+alias nvX='nvim ~/.Xresources'
 alias XTR='xrdb -merge ~/.Xresources'
-alias vxI='nvim ~/.xinitrc'
+alias nvxI='nvim ~/.xinitrc'
 
 ## Config Stuff
-alias vxM='nvim ~/.xmonad/xmonad.hs'
-alias vO='nvim ~/.config/openbox/rc.xml'
-alias voA='nvim ~/.config/openbox/autostart.sh'
-alias vwI='nvim ~/.weechat/irc.conf'
-alias vW='nvim ~/.weechat/weechat.conf'
-alias vi3C='nvim ~/.config/i3/config'
-alias vsC='nvim ~/.ssh/config'
-alias vb='nvim ~/.bashrc'
+alias nvxM='nvim ~/.xmonad/xmonad.hs'
+alias nvO='nvim ~/.config/openbox/rc.xml'
+alias nvoA='nvim ~/.config/openbox/autostart.sh'
+alias nvwI='nvim ~/.weechat/irc.conf'
+alias nvW='nvim ~/.weechat/weechat.conf'
+alias nvi3C='nvim ~/.config/i3/config'
+alias nvsC='nvim ~/.ssh/config'
+alias nvb='nvim ~/.bashrc'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
