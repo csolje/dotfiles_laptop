@@ -12,19 +12,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 "let g:airline_theme='murmur'
 
-
-"colorscheme wombat256
-"colorscheme tango
-"colorscheme railscasts
-"colorscheme vividchalk
-"colorscheme distinguished
-"colorscheme monokai
-colorscheme ir_black
-"colorscheme gotham
-"colorscheme jellybeans 
-"colorscheme desertEx
-"colorscheme codeblocks_dark
-
 " Pathogen
 execute pathogen#infect()
 syntax on
@@ -80,6 +67,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+" Colors
+NeoBundle 'flazz/vim-colorschemes'
 " Untils
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'bling/vim-airline'
@@ -92,6 +81,8 @@ filetype plugin indent on 			" Required:
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
  NeoBundleCheck
+
+colorscheme ir_black
 
 " Key mappings
 
