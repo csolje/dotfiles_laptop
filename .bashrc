@@ -63,19 +63,7 @@ alias nvB='nvim ~/.bashrc'
 ## X Resources Stuff
 alias vX='vim ~/.Xresources'
 alias XTR='xrdb -merge ~/.Xresources'
-alias vxI='vim ~/.xinitrc'
-alias vxM='vim ~/.xmonad/xmonad.hs'
-alias vO='vim ~/.config/openbox/rc.xml'
-alias voA='vim ~/.config/openbox/autostart.sh'
-alias vwI='vim ~/.weechat/irc.conf'
-alias vW='vim ~/.weechat/weechat.conf'
-alias vi3C='vim ~/.config/i3/config'
-
-
-## X Resources and xinitrc Stuff
 alias nvX='nvim ~/.Xresources'
-alias XTR='xrdb -merge ~/.Xresources'
-alias nvxI='nvim ~/.xinitrc'
 
 ## Config Stuff
 alias nvxM='nvim ~/.xmonad/xmonad.hs'
@@ -86,6 +74,14 @@ alias nvW='nvim ~/.weechat/weechat.conf'
 alias nvi3C='nvim ~/.config/i3/config'
 alias nvsC='nvim ~/.ssh/config'
 alias nvb='nvim ~/.bashrc'
+alias vxI='vim ~/.xinitrc'
+alias nvxI='nvim ~/.xinitrc'
+alias vxM='vim ~/.xmonad/xmonad.hs'
+alias vO='vim ~/.config/openbox/rc.xml'
+alias voA='vim ~/.config/openbox/autostart.sh'
+alias vwI='vim ~/.weechat/irc.conf'
+alias vW='vim ~/.weechat/weechat.conf'
+alias vi3C='vim ~/.config/i3/config'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
@@ -127,7 +123,7 @@ alias Unlock='sudo rm /var/lib/pacman/db.lck'
 ## Misc
 alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
-alias sshhome='ssh -fNR 7777:localhost:22 chrs@home.sanerds.net'
+alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 
 ## Apps
 alias reload='source'

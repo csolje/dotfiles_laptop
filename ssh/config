@@ -42,6 +42,7 @@ Host s-genepi2-p
 Host s-genepi3-t
     HostName s-genepi3-t.ssi.ad
     User adm_chrs
+    IdentityFile ~/.ssh/id_adm_chrs_ed25519
 
 Host oslo
     HostName oslo.sst.dk
