@@ -167,18 +167,26 @@ bar {
         font pango:DejaVu Sans Mono for powerline 9
 }
 # Volume Control
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume 
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# pactl
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume 
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up  #increase sound volume 
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute # mute sound
+# PulseAudio
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up  #increase sound volume 
+#bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute # mute sound
+
+# amixer
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 sset Master playback 5%+ #increase sound volume 
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 1 sset Master playback 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer -c 1 sset Master playback toggle # mute sound
+
 
 # Launch browsers
 mode "browser" {
     bindsym f exec firefox
-    bindsym c exec chromium
+    bindsym c exec chromium-browser
     bindsym q exec qutebrowser
 
     bindsym Return mode "default"
