@@ -40,7 +40,6 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Main configuration, override the defaults to your liking.
 myConfig = defaultConfig { modMask= mod1Mask
-					--, terminal = "urxvt"
 					, terminal = "terminator"
 					, workspaces = myWorkspaces
 					, keys = myKeys
@@ -66,7 +65,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- launch a terminal
 	--[ ((mod1Mask,              xK_Return), spawn "urxvt")
 	[ ((mod1Mask,              xK_Return), spawn $ XMonad.terminal conf) 
-	[ ((mod1Mask .|. shiftMask,xK_Return), spawn "urxvtc") 
+	, ((mod1Mask .|. shiftMask,xK_Return), spawn "urxvtc") 
 
 -- launch dmenu
 	, ((modMask,               xK_d     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
@@ -164,15 +163,15 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 		, (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 myManageHook = composeAll
-    [ className =? "stalonetray"    --> doIgnore
-      , className =? "Steam"        --> doFullFloat
-      , title =? "LIMBO"            --> doIgnore
-      , title =? "FEZ"              --> doIgnore
-      , title =? "NMRIH"            --> doFullFloat
-      , className =? "MPlayer"      --> doFullFloat
-      , manageDocks
-      , isFullscreen                --> (doF W.focusDown <+> doFullFloat)
-    ]
+        [ className =? "stalonetray"    --> doIgnore
+        , className =? "Steam"          --> doFullFloat
+        , title =? "LIMBO"              --> doIgnore
+        , title =? "FEZ"                --> doIgnore
+        , title =? "NMRIH"              --> doFullFloat
+        , className =? "MPlayer"        --> doFullFloat
+        , manageDocks
+        , isFullscreen                  --> (doF W.focusDown <+> doFullFloat)
+        ]
 
 -- Mouse bindings
  

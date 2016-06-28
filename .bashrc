@@ -13,7 +13,9 @@ if [[ $- != *i* ]] ; then
 	# Shell is non-interactive.  Be done now!
 	return
 fi
-
+if [[ "$TERM" == *rxvt* ]]; then
+	exec zsh
+fi
 
 # Put your fun stuff here.
 # Export settings
