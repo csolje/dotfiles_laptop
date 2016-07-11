@@ -60,6 +60,7 @@ alias kernel='cd /usr/src/linux && make clean && make -j5 && make modules_instal
 
 ## Misc
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
+alias home='ssh -fNR 7777:localhost:22 chrs@home.sanerds.net'
 alias ryper2='ssh -fNR 8888:localhost:22 tunnel@ryper.org'
 
 ## Apps

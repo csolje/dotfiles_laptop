@@ -4,27 +4,6 @@ set mouse=a
 "set foldmethod=indent
 set rnu
 
-let g:Powerline_symbols = "fancy"
-let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
-let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
-let g:airLine#entensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
-"let g:airline_theme='murmur'
-
-
-"colorscheme wombat256
-"colorscheme tango
-"colorscheme railscasts
-"colorscheme vividchalk
-"colorscheme distinguished
-"colorscheme monokai
-colorscheme ir_black
-"colorscheme gotham
-"colorscheme jellybeans 
-"colorscheme desertEx
-"colorscheme codeblocks_dark
-
 " Pathogen
 execute pathogen#infect()
 syntax on
@@ -69,7 +48,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle (Required!)
 NeoBundleFetch 'Shougo/neobundle.vim'
 " Fuzzy finding for files
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 "Move around easier
 NeoBundle 'Lokaltog/vim-easymotion'
 "File navigation
@@ -80,9 +59,12 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+" Colors
+NeoBundle 'flazz/vim-colorschemes'
 " Untils
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'powerline/powerline'
 
@@ -92,6 +74,14 @@ filetype plugin indent on 			" Required:
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
  NeoBundleCheck
+
+colorscheme ir_black
+let g:Powerline_symbols = "fancy"
+let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
+let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
+let g:airLine#entensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " Key mappings
 
