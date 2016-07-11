@@ -1,3 +1,4 @@
+.DS_Store
 .config/nvim/bundle/
 .vim/bundle/
 .config/nvim/tmp/
