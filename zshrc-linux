@@ -76,31 +76,24 @@ for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 
 ## Alias
 ## Vim stuff
-alias e='vim'
-alias eV='vim ~/.vimrc'
+alias v='vim'
+alias vV='vim ~/.vimrc'
 
 ## Neovim stuff
-alias v='nvim'
-alias vN='nvim ~/.config/nvim/init.vim'
+alias nv='nvim'
+alias nvN='nvim ~/.config/nvim/init.vim'
 
 ## Zsh Stuff
-alias eZ='vim ~/.zshrc'
-alias vZ='nvim ~/.zshrc'
+alias vZ='vim ~/.zshrc'
+alias nvZ='nvim ~/.zshrc'
 alias Z='source ~/.zshrc'
 
 ## X Resources Stuff
-alias eX='vim ~/.Xresources'
+alias vX='vim ~/.Xresources'
+alias nvxI='vim ~/.xinitrc'
+alias nvX='nvim ~/.Xresources'
+alias nvxI='nvim ~/.xinitrc'
 alias XTR='xrdb -merge ~/.Xresources'
-
-alias exI='vim ~/.xinitrc'
-alias exM='vim ~/.xmonad/xmonad.hs'
-alias eO='vim ~/.config/openbox/rc.xml'
-alias eoA='vim ~/.config/openbox/autostart.sh'
-alias ewI='vim ~/.weechat/irc.conf'
-alias eW='vim ~/.weechat/weechat.conf'
-alias ei3C='vim ~/.config/i3/config'
-alias eB='vim ~/.bashrc'
-alias k='exit'
 
 ## X Resources and xinitrc Stuff
 alias vX='nvim ~/.Xresources'
@@ -108,15 +101,22 @@ alias XTR='xrdb -merge ~/.Xresources'
 alias vxI='nvim ~/.xinitrc'
 
 ## Config Stuff
-alias vxM='nvim ~/.xmonad/xmonad.hs'
-alias vO='nvim ~/.config/openbox/rc.xml'
-alias voA='nvim ~/.config/openbox/autostart.sh'
-alias vwI='nvim ~/.weechat/irc.conf'
-alias vW='nvim ~/.weechat/weechat.conf'
-alias vi3C='nvim ~/.config/i3/config'
-alias vsC='nvim ~/.ssh/config'
-alias vb='nvim ~/.bashrc'
-alias k='exit'
+alias vxM='vim ~/.xmonad/xmonad.hs'
+alias vO='vim ~/.config/openbox/rc.xml'
+alias voA='vim ~/.config/openbox/autostart.sh'
+alias vwI='vim ~/.weechat/irc.conf'
+alias vW='vim ~/.weechat/weechat.conf'
+alias vi3C='vim ~/.config/i3/config'
+alias vsC='vim ~/.ssh/config'
+alias vb='vim ~/.bashrc'
+
+alias nvxM='nvim ~/.xmonad/xmonad.hs'
+alias nvO='nvim ~/.config/openbox/rc.xml'
+alias nvoA='nvim ~/.config/openbox/autostart.sh'
+alias nvwI='nvim ~/.weechat/irc.conf'
+alias nvW='nvim ~/.weechat/weechat.conf'
+alias nvi3C='nvim ~/.config/i3/config'
+alias nvB='nvim ~/.bashrc'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
@@ -134,18 +134,18 @@ alias xbps-sync='sudo xbps-install -Suv'
 ## Gentoo
 alias HowLong='sudo genlop -t'
 alias OneShot='sudo emerge --oneshot portage'
-alias I='sudo time emerge -av'
+alias I='sudo emerge -av'
 alias S='sudo emerge -s'
-alias sync='sudo time emerge --sync'
-alias Uworld='sudo time emerge --ask --verbose --update --newuse --deep @world'
-alias Uworld-bdeps='sudo time emerge --ask --newuse --update --deep --with-bdeps=y @world'
+alias sync='sudo emerge --sync'
+alias Uworld='sudo emerge --ask --verbose --update --newuse --deep @world'
+alias Uworld-bdeps='sudo emerge --ask --newuse --update --deep --with-bdeps=y @world'
 alias Esync='sudo eix-sync'
 alias Eupdate='sudo eix-update'
 alias cdP='cd /etc/portage && sudo su'
 alias cdU='cd /etc/portage/package.use && sudo su'
 alias cdB='cd /etc/portage/package.mask && sudo su'
 alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
-alias eM='sudo vim /etc/portage/make.conf'
+alias vM='sudo vim /etc/portage/make.conf'
 
 ## Net
 alias NM='sudo /etc/init.d/NetworkManager restart'

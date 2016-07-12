@@ -88,8 +88,12 @@ alias Z='source ~/.zshrc'
 
 ## X Resources Stuff
 alias vX='vim ~/.Xresources'
+alias vxI='vim ~/.xinitrc'
+alias nvX='nvim ~/.Xresources'
+alias nvxI='nvim ~/.xinitrc'
 alias XTR='xrdb -merge ~/.Xresources'
 
+## Config Stuff
 alias vxI='vim ~/.xinitrc'
 alias vxM='vim ~/.xmonad/xmonad.hs'
 alias vO='vim ~/.config/openbox/rc.xml'
@@ -99,12 +103,6 @@ alias vW='vim ~/.weechat/weechat.conf'
 alias vi3C='vim ~/.config/i3/config'
 alias vB='vim ~/.bashrc'
 
-## X Resources and xinitrc Stuff
-alias nvX='nvim ~/.Xresources'
-alias XTR='xrdb -merge ~/.Xresources'
-alias nvxI='nvim ~/.xinitrc'
-
-## Config Stuff
 alias nvxM='nvim ~/.xmonad/xmonad.hs'
 alias nvO='nvim ~/.config/openbox/rc.xml'
 alias nvoA='nvim ~/.config/openbox/autostart.sh'
@@ -167,8 +165,6 @@ alias startvm='vboxmanage startvm WorkDesktop --type headless'
 alias MP='ncmpcpp'
 alias news='newsbeuter'
 alias M='mpv'
-
-
 
 ## Tmux
 alias tnew='tmux new -s'
