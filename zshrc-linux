@@ -125,6 +125,7 @@ alias cdI='cd ~/.config/i3'
 alias cdG='cd ~/Git'
 alias cdD='cd ~/Git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
+alias k='exit'
 
 ## Xbps
 alias xbps='sudo xbps-install -S'

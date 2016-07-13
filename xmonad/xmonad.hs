@@ -65,7 +65,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- launch a terminal
 	--[ ((mod1Mask,              xK_Return), spawn "urxvt")
 	[ ((mod1Mask,              xK_Return), spawn $ XMonad.terminal conf) 
-	, ((mod1Mask .|. shiftMask,xK_Return), spawn "urxvtc") 
+	, ((mod1Mask .|. shiftMask,xK_Return), spawn "urxvt½") 
 
 -- launch dmenu
 	, ((modMask,               xK_d     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
