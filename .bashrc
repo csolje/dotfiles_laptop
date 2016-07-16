@@ -127,7 +127,7 @@ alias Unlock='sudo rm /var/lib/pacman/db.lck'
 alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
-alias sshvnc='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
+alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
 alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@kamau.sanerds.net'
 
 ## Apps
