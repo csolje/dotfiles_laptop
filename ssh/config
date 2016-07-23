@@ -13,6 +13,11 @@ Host kamau
     HostName kamau.sanerds.net
     User zyq
 
+Host diskstation
+	HostName 10.0.0.4
+	User root
+	Port 2222
+
 Host mon
     HostName syslog
     User chrs
@@ -21,10 +26,6 @@ Host monadm
     HostName syslog
     User adm_chrs
     IdentityFile ~/.ssh/id_adm_chrs_ed25519
-
-Host chrstest
-    HostName s-chrs-t.sst.dk
-    User adm_chrs
 
 Host fifo
     HostName ps20611.dreamhostps.com
