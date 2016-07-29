@@ -14,9 +14,9 @@ PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[
 ## User specific aliases and functions
 alias ls='ls --color=auto'
 alias la='ls -al'
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
 alias k='exit'
 
 ## Alias
