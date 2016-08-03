@@ -5,6 +5,10 @@ Host *
     Compression yes
     CompressionLevel 6
 
+Host bigmojo
+	HostName bigmojo.haxus.org
+	User psyq
+
 Host heimdall
     HostName heimdall.sanerds.net
     User zyq
