@@ -6,7 +6,7 @@ Host *
     CompressionLevel 6
 
 Host bigmojo
-	HostName bigmojo.haxus.org
+	HostName haxus.org
 	User zyq
 
 Host heimdall
