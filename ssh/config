@@ -9,13 +9,17 @@ Host bigmojo
 	HostName haxus.org
 	User zyq
 
-Host heimdall
-    HostName heimdall.sanerds.net
-    User zyq
-
 Host kamau
     HostName kamau.sanerds.net
     User zyq
+
+Host mojokvmint
+	HostName 10.0.0.3
+	User zyq
+
+Host mojokvm
+	HostName home.haxus.org
+	User zyq
 
 Host diskstation
 	HostName 10.0.0.4

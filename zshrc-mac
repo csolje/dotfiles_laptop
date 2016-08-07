@@ -111,7 +111,7 @@ alias nvW='nvim ~/.weechat/weechat.conf'
 alias nvi3C='nvim ~/.config/i3/config'
 alias nvB='nvim ~/.bashrc'
 
-## Navigation
+## MISC
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
