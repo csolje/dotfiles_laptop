@@ -184,3 +184,4 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 plugins=(git archlinux vi-mode themes zsh-completions color-command)
 source /Users/csolje/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+export PATH="/usr/local/sbin:$PATH"
