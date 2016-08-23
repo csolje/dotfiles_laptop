@@ -5,6 +5,10 @@ Host *
     Compression yes
     CompressionLevel 6
 
+Host home
+	HostName home.haxus.org
+	User chrs
+
 Host bigmojo
 	HostName haxus.org
 	User zyq
@@ -27,6 +31,10 @@ Host diskstation
 	User root
 	Port 2222
 
+Host fifo
+    HostName ps20611.dreamhostps.com
+    User zyq
+
 Host mon
     HostName syslog
     User chrs
@@ -35,10 +43,6 @@ Host monadm
     HostName syslog
     User adm_chrs
     IdentityFile ~/.ssh/id_adm_chrs_ed25519
-
-Host fifo
-    HostName ps20611.dreamhostps.com
-    User zyq
 
 Host s-genepi1-p
     HostName s-genepi1-p.ssi.ad
