@@ -91,7 +91,7 @@ alias cdD='cd ~/Git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 
 ## Gentoo
-alias kernel='cd /usr/src/linux && make clean && make -j2 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg && echo SUCCESS || echo FAILED'
+alias kernel='mount /boot && cd /usr/src/linux && make clean && make -j2 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg && umount /boot && echo SUCCESS || echo FAILED'
 alias HowLong='sudo genlop -t'
 alias OneShot='sudo emerge --oneshot portage'
 alias I='time emerge -av'

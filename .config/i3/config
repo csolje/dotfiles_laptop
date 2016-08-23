@@ -39,7 +39,8 @@ bindsym $mod+Shift+Control+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # Lock screen
-bindsym $mod+Shift+z exec --no-startup-id xlock -mode matrix
+#bindsym $mod+Shift+z exec --no-startup-id xlock -mode matrix
+bindsym $mod+Shift+z exec --no-startup-id i3lock -c 000000
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -199,14 +200,14 @@ exec --no-startup-id xclip
 exec --no-startup-id compton -b
 exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/*
 exec --no-startup-id "/usr/bin/x11vnc -display :0 -localhost -forever"
+exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000" 
 #exec --no-startup-id xmodmap ~/.speedswapper 
-#exec --no-startup-id nm-applet &
 #exec --no-startup-id nitrogen --restore
-#exec --no-startup-id xcompmgr
 #exec --no-startup-id i3-msg 'workspace 2:IM; exec urxvt -e tmux'
 
 # Fonts
-font pango:DejaVu Sans Mono for powerline 10
+font pango:DejaVu Sans Mono for powerline 12
+
 
 # New windows style
 # border
@@ -214,5 +215,4 @@ font pango:DejaVu Sans Mono for powerline 10
 new_window none
 
 # Assign programs to workspace				
-#assign [class="google-chrome"] 4:Web
 #assign [class="^firefox$"] 4:Web
