@@ -68,6 +68,7 @@ alias XTR='xrdb -merge ~/.Xresources'
 alias nvX='nvim ~/.Xresources'
 
 ## Config Stuff
+alias nvsK='nvim ~/.ssh/known_hosts'
 alias nvxM='nvim ~/.xmonad/xmonad.hs'
 alias nvO='nvim ~/.config/openbox/rc.xml'
 alias nvoA='nvim ~/.config/openbox/autostart.sh'
@@ -75,6 +76,7 @@ alias nvwI='nvim ~/.weechat/irc.conf'
 alias nvW='nvim ~/.weechat/weechat.conf'
 alias nvi3C='nvim ~/.config/i3/config'
 alias nvsC='nvim ~/.ssh/config'
+alias nvsK='nvim ~/.ssh/known_hosts'
 alias nvb='nvim ~/.bashrc'
 alias nvxI='nvim ~/.xinitrc'
 alias vxI='vim ~/.xinitrc'
@@ -84,6 +86,8 @@ alias voA='vim ~/.config/openbox/autostart.sh'
 alias vwI='vim ~/.weechat/irc.conf'
 alias vW='vim ~/.weechat/weechat.conf'
 alias vi3C='vim ~/.config/i3/config'
+alias vsC='vim ~/.ssh/config'
+alias vsK='vim ~/.ssh/known_hosts'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
@@ -143,5 +147,5 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
-lias ssin='xfreerdp /cert-ignore -grab-keyboard / multimon /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
+alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
 alias rdp='~/bin/rdp.sh'
