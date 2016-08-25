@@ -43,52 +43,13 @@ alias k='exit'
 
 ## Vim stuff
 alias v='vim'
-alias vV='vim ~/.vimrc'
 
 ## Neovim stuff
 alias nv='nvim'
-alias nvN='nvim ~/.config/nvim/init.vim'
-
-## Zsh Stuff
-alias vZ='vim ~/.zshrc'
-alias nvZ='nvim ~/.zshrc'
-alias Z='source ~/.zshrc'
 
 ## Bash Stuff
 alias vB='vim ~/.bashrc'
 alias nvB='nvim ~/.bashrc'
-
-## X Resources Stuff
-alias vX='vim ~/.Xresources'
-alias XTR='xrdb -merge ~/.Xresources'
-alias nvX='nvim ~/.Xresources'
-
-## Config Stuff
-alias nvxM='nvim ~/.xmonad/xmonad.hs'
-alias nvO='nvim ~/.config/openbox/rc.xml'
-alias nvoA='nvim ~/.config/openbox/autostart.sh'
-alias nvwI='nvim ~/.weechat/irc.conf'
-alias nvW='nvim ~/.weechat/weechat.conf'
-alias nvi3C='nvim ~/.config/i3/config'
-alias nvsC='nvim ~/.ssh/config'
-alias nvb='nvim ~/.bashrc'
-alias nvxI='nvim ~/.xinitrc'
-alias vxI='vim ~/.xinitrc'
-alias vxM='vim ~/.xmonad/xmonad.hs'
-alias vO='vim ~/.config/openbox/rc.xml'
-alias voA='vim ~/.config/openbox/autostart.sh'
-alias vwI='vim ~/.weechat/irc.conf'
-alias vW='vim ~/.weechat/weechat.conf'
-alias vi3C='vim ~/.config/i3/config'
-
-## Navigation
-alias cdA='cd ~/.config/awesome'
-alias cdO='cd ~/.config/openbox'
-alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/Git'
-alias cdD='cd ~/Git/dotfiles'
-
-alias Shutdown='sudo shutdown -h now'
 
 ## Gentoo
 alias kernel='mount /boot && cd /usr/src/linux && make clean && make -j2 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --luks --lvm --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg && umount /boot && echo SUCCESS || echo FAILED'
