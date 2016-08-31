@@ -12,6 +12,9 @@ Host home
 Host bigmojo
 	HostName haxus.org
 	User zyq
+Host bigmojoroot
+	HostName haxus.org
+	User root
 
 Host kamau
     HostName kamau.sanerds.net
@@ -25,6 +28,9 @@ Host mojokvm
 	HostName home.haxus.org
 	User zyq
 	Port 8888
+Host mojogen
+	HostName 10.0.0.69
+	User chrs
 
 Host diskstation
 	HostName 10.0.0.4
