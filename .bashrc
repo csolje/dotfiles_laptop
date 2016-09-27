@@ -132,6 +132,10 @@ alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
+<<<<<<< HEAD
+alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
+=======
+>>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 
 ## Apps
 alias reload='source'
@@ -147,5 +151,8 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
+<<<<<<< HEAD
+=======
 alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
+>>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 alias rdp='~/bin/rdp.sh'
