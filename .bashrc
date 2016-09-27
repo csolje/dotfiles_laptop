@@ -129,12 +129,11 @@ alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
-alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@kamau.sanerds.net'
+alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
 
 ## Apps
 alias reload='source'
 alias irc='weechat-curses'
-alias startvm='vboxmanage startvm WorkDesktop --type headless'
 
 ## News and Music
 alias MP='ncmpcpp'
@@ -146,9 +145,4 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
-alias ssi='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad'
-alias dksund='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk'
-alias dksundtest='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk'
-alias ssin='xfreerdp /cert-ignore -grab-keyboard / multimon /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
-alias sst='xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk'
 alias rdp='~/bin/rdp.sh'

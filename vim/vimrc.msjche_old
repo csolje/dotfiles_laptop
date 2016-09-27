@@ -42,48 +42,38 @@ syntax enable			"use syntax highlighting
 						" will delete the amount of spaces equal to 
 						" shiftwidth
 
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" Neo bundle stuff
+set runtimepath^=~/.vim/bundle/neobundle.vim
+call neobundle#begin(expand('~/.vim/bundle/'))
+" Let NeoBundle manage NeoBundle (Required!)
+NeoBundleFetch 'Shougo/neobundle.vim'
+" Fuzzy finding for files
+NeoBundle 'ctrlpvim/ctrlp.vim'
+"Move around easier
+NeoBundle 'Lokaltog/vim-easymotion'
+"File navigation
+NeoBundle 'scrooloose/nerdtree'
+"Coffeescript integration and syntax highlighting
+NeoBundle 'kchmck/vim-coffee-script'
+" Git helpers
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+" Colors
+NeoBundle 'flazz/vim-colorschemes'
+" Untils
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'powerline/powerline'
 
-" Required:
-set runtimepath^=/home/zyq/.vim/repos/github.com/Shougo/dein.vim
+call neobundle#end()
+filetype plugin indent on 			" Required:
 
-" Required:
-call dein#begin(expand('/home/zyq/.vim'))
-
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
-
-" Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('Lokaltog/vim-easymotion')
-call dein#add('scrooloose/nerdtree')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('tpope/vim-fugitive')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('Xuyuanp/nerdtree-git-plugin')
-call dein#add('flazz/vim-colorschemes')
-call dein#add('tpope/vim-surround')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('Lokaltog/vim-powerline')
-call dein#add('powerline/powerline')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-" Required:
-call dein#end()
-
-" Required:
-filetype plugin indent on
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+ NeoBundleCheck
 
 colorscheme ir_black
 "colorscheme candyman
