@@ -42,7 +42,6 @@ syntax enable			"use syntax highlighting
 						" will delete the amount of spaces equal to 
 						" shiftwidth
 
-<<<<<<< HEAD
 " Neo bundle stuff
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -75,51 +74,49 @@ filetype plugin indent on 			" Required:
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
  NeoBundleCheck
-=======
 if &compatible
   set nocompatible               " Be iMproved
 endif
-
+"
+"" Required:
+"set runtimepath^=/home/zyq/.vim/repos/github.com/Shougo/dein.vim
+"
+"" Required:
+"call dein#begin(expand('/home/zyq/.vim'))
+"
+"" Let dein manage dein
+"" Required:
+"call dein#add('Shougo/dein.vim')
+"
+"" Add or remove your plugins here:
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('ctrlpvim/ctrlp.vim')
+"call dein#add('Lokaltog/vim-easymotion')
+"call dein#add('scrooloose/nerdtree')
+"call dein#add('kchmck/vim-coffee-script')
+"call dein#add('tpope/vim-fugitive')
+"call dein#add('airblade/vim-gitgutter')
+"call dein#add('Xuyuanp/nerdtree-git-plugin')
+"call dein#add('flazz/vim-colorschemes')
+"call dein#add('tpope/vim-surround')
+"call dein#add('vim-airline/vim-airline')
+"call dein#add('vim-airline/vim-airline-themes')
+"call dein#add('Lokaltog/vim-powerline')
+"call dein#add('powerline/powerline')
+"call dein#add('Shougo/neosnippet-snippets')
+"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+"
+"" Required:
+"call dein#end()
+"
 " Required:
-set runtimepath^=/home/zyq/.vim/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin(expand('/home/zyq/.vim'))
-
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
-
-" Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('Lokaltog/vim-easymotion')
-call dein#add('scrooloose/nerdtree')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('tpope/vim-fugitive')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('Xuyuanp/nerdtree-git-plugin')
-call dein#add('flazz/vim-colorschemes')
-call dein#add('tpope/vim-surround')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('Lokaltog/vim-powerline')
-call dein#add('powerline/powerline')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-" Required:
-call dein#end()
-
-" Required:
-filetype plugin indent on
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
->>>>>>> 41cf11864b7096ac236bc727fd253ed80a6be50f
-
+"filetype plugin indent on
+"
+"" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+"
 colorscheme ir_black
 "colorscheme candyman
 let g:Powerline_symbols = "fancy"
