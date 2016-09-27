@@ -133,7 +133,7 @@ alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
 <<<<<<< HEAD
-alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
+alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
 =======
 >>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 
