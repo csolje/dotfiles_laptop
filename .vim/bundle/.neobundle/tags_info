@@ -4,7 +4,9 @@ nerdtree
 nerdtree-git-plugin
 powerline
 vim-airline
+vim-airline-themes
 vim-coffee-script
+vim-colorschemes
 vim-easymotion
 vim-fugitive
 vim-gitgutter
