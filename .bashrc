@@ -68,6 +68,7 @@ alias XTR='xrdb -merge ~/.Xresources'
 alias nvX='nvim ~/.Xresources'
 
 ## Config Stuff
+alias nvsK='nvim ~/.ssh/known_hosts'
 alias nvxM='nvim ~/.xmonad/xmonad.hs'
 alias nvO='nvim ~/.config/openbox/rc.xml'
 alias nvoA='nvim ~/.config/openbox/autostart.sh'
@@ -75,6 +76,7 @@ alias nvwI='nvim ~/.weechat/irc.conf'
 alias nvW='nvim ~/.weechat/weechat.conf'
 alias nvi3C='nvim ~/.config/i3/config'
 alias nvsC='nvim ~/.ssh/config'
+alias nvsK='nvim ~/.ssh/known_hosts'
 alias nvb='nvim ~/.bashrc'
 alias nvxI='nvim ~/.xinitrc'
 alias vxI='vim ~/.xinitrc'
@@ -84,6 +86,8 @@ alias voA='vim ~/.config/openbox/autostart.sh'
 alias vwI='vim ~/.weechat/irc.conf'
 alias vW='vim ~/.weechat/weechat.conf'
 alias vi3C='vim ~/.config/i3/config'
+alias vsC='vim ~/.ssh/config'
+alias vsK='vim ~/.ssh/known_hosts'
 
 ## Navigation
 alias cdA='cd ~/.config/awesome'
@@ -111,7 +115,6 @@ alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
 alias eM='sudo vim /etc/portage/make.conf'
 
 ## Net
-alias NM='sudo /etc/init.d/NetworkManager restart'
 alias externalip='sh ~/bin/externalip.sh'
 
 ## Pacman
@@ -129,7 +132,10 @@ alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
+<<<<<<< HEAD
 alias sshkamau='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
+=======
+>>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 
 ## Apps
 alias reload='source'
@@ -145,4 +151,8 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
+<<<<<<< HEAD
+=======
+alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
+>>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 alias rdp='~/bin/rdp.sh'

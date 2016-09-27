@@ -157,13 +157,13 @@ alias pacLog='tail -f /var/log/pacman.log'
 alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
 ## SSH stuff
-alias vSSHC='vim ~/.ssh/config'
-alias vSSHK='vim ~/.ssh/known_hosts'
+alias vsC='vim ~/.ssh/config'
+alias vsK='vim ~/.ssh/known_hosts'
 
 ## Apps
 alias reload='source'
 alias irc='weechat-curses'
-alias startvm='vboxmanage startvm WorkDesktop --type headless'
+alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 
 ## News and Music
 alias MP='ncmpcpp'
@@ -184,3 +184,4 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 plugins=(git archlinux vi-mode themes zsh-completions color-command)
 source /Users/csolje/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+export PATH="/usr/local/sbin:$PATH"
