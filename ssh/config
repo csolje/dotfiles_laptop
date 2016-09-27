@@ -10,6 +10,12 @@ Host router
 	User root
 	IdentityFile ~/.ssh/id_rsa
 
+Host routerext
+	HostName home.haxus.org
+	User root
+	IdentityFile ~/.ssh/id_rsa
+	Port 2222
+
 Host home
 	HostName home.haxus.org
 	User chrs
