@@ -52,11 +52,8 @@ alias vB='vim ~/.bashrc'
 alias nvB='nvim ~/.bashrc'
 
 ## Gentoo
-<<<<<<< HEAD
 alias kernel='cd /usr/src/linux && make clean && make -j4 && make modules_install && make install && emerge -v1 @module-rebuild && grub2-mkconfig -o /boot/grub/grub.cfg && echo SUCCESS || echo FAILED'
-=======
 alias kernel='mount /boot && cd /usr/src/linux && make clean && make -j2 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --luks --lvm --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg && umount /boot && echo SUCCESS || echo FAILED'
->>>>>>> 605b216482c3e1267ed563a338a3b4fdca8b49d1
 alias HowLong='sudo genlop -t'
 alias OneShot='sudo emerge --oneshot portage'
 alias I='time emerge -av'
