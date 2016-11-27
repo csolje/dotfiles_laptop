@@ -36,6 +36,9 @@ Host bigmojo6
 Host kamau
     HostName kamau.sanerds.net
     User zyq
+Host testweb
+	HostName 310bbb67baf8b93b
+	User root
 
 Host mojokvmint
 	HostName 10.0.0.3
