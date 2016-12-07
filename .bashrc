@@ -93,8 +93,8 @@ alias vsK='vim ~/.ssh/known_hosts'
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/Git'
-alias cdD='cd ~/Git/dotfiles'
+alias cdG='cd ~/git'
+alias cdD='cd ~/git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 
 ## Gentoo

@@ -59,6 +59,11 @@ Host fifo
     HostName ps20611.dreamhostps.com
     User zyq
 
+Host lawson
+	HostName clothingbylawson.dk
+	User clothing 
+	Port 2200
+
 #Host oslotest
 #    HostName s-ldb2-t.sst.dk
 #    User adm_chrs
