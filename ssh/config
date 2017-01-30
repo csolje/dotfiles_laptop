@@ -41,11 +41,11 @@ Host testweb
 	HostName 310bbb67baf8b93b
 	User root
 
-Host mojokvmint
+Host kvmint
 	HostName 10.0.0.3
 	User zyq
 
-Host mojokvm
+Host kvm
 	HostName home.haxus.org
 	User zyq
 	Port 8888
