@@ -205,7 +205,7 @@ exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000"
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id i3-msg 'workspace 2:IM; exec urxvt -e tmux'
 #exec --no-startup-id xrandr --output DP2 --auto --left-of DP1-2 && xrandr --output DP2 --primary && xrandr --output eDP1 --off
-exec --no-startup-id xrandr --output DP1-1 --auto --left-of DP1-2 && xrandr --output DP2 --right-of DP1-2 && xrandr --output DP1-1 --primary && xrandr --output eDP1 --off
+#exec --no-startup-id xrandr --output DP1-2 --auto --left-of DP1-1 && xrandr --output DP1-2 --primary && xrandr --output eDP1 --off
 
 # Fonts
 font pango:DejaVu Sans Mono for powerline 12
