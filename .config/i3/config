@@ -229,8 +229,8 @@ set $WS9 "9"
 set $WS10 "10"
 
 ## Assign workspace to monitor
-workspace $WS1 output DP2
-workspace $WS2 output DP1-2
+#workspace $WS1 output DP2
+#workspace $WS2 output DP1-2
 
 # Assign programs to workspace				
 #assign [class="^firefox$"] 4:Web
