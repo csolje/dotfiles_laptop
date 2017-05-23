@@ -205,7 +205,8 @@ exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000"
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id i3-msg 'workspace 2:IM; exec urxvt -e tmux'
 #exec --no-startup-id xrandr --output DP2 --auto --left-of DP1-2 && xrandr --output DP2 --primary && xrandr --output eDP1 --off
-#exec --no-startup-id xrandr --output DP1-2 --auto --left-of DP1-1 && xrandr --output DP1-2 --primary && xrandr --output eDP1 --off
+#exec --no-startup-id xrandr --output DP-3-1 --auto --left-of DP-3-2 && xrandr --output DP2 --right-of DP1-2 && xrandr --output DP-3-1 --primary && xrandr --output eDP1 --off
+exec --no-startup-id xrandr --output DP-3-1 --auto --left-of DP-3-2 && xrandr --output DP-3-1 --primary && xrandr --output eDP1 --off
 
 # Fonts
 font pango:DejaVu Sans Mono for powerline 12
@@ -217,20 +218,20 @@ font pango:DejaVu Sans Mono for powerline 12
 new_window none
 
 ## Rename workspace
-set $WS1 "1:irc"
-set $WS2 "2:term"
+set $WS1 "1:term"
+set $WS2 "2:irc"
 set $WS3 "3:web"
 set $WS4 "4:misc"
 set $WS5 "5"
 set $WS6 "6"
 set $WS7 "7"
 set $WS8 "8"
-set $WS9 "9"
-set $WS10 "10"
+set $WS9 "9:IM"
+set $WS10 "10:Vid"
 
 ## Assign workspace to monitor
-#workspace $WS1 output DP2
-#workspace $WS2 output DP1-2
+workspace $WS1 output DP-3-1
+workspace $WS2 output DP-3-2
 
 # Assign programs to workspace				
 #assign [class="^firefox$"] 4:Web

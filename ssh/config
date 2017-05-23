@@ -21,15 +21,15 @@ Host home
 	HostName home.haxus.org
 	User chrs
 
-Host bigmojo
+Host odin
 	HostName haxus.org
 	User zyq
 
-Host bigmojoroot
+Host odinroot
 	HostName haxus.org
 	User root
 
-Host bigmojo6
+Host odin6
 	HostName bigmojo.haxus.org	
 	User zyq
 
@@ -37,11 +37,23 @@ Host kamau
     HostName kamau.sanerds.net
     User zyq
 
-Host mojokvmint
+Host testweb
+	HostName 310bbb67baf8b93b
+	User root
+
+Host kvmintroot
+	HostName 10.0.0.3
+	User root
+
+Host kvmint
 	HostName 10.0.0.3
 	User zyq
 
-Host mojokvm
+Host kvmint
+	HostName 10.0.0.3
+	User zyq
+
+Host kvm
 	HostName home.haxus.org
 	User zyq
 	Port 8888
@@ -58,6 +70,16 @@ Host diskstation
 Host fifo
     HostName ps20611.dreamhostps.com
     User zyq
+
+Host lawson
+	HostName clothingbylawson.dk
+	User clothing 
+	Port 2200
+
+Host prestatst
+	HostName haxus.dk
+	User christy
+	Port 2200
 
 #Host oslotest
 #    HostName s-ldb2-t.sst.dk
