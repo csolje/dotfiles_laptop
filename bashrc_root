@@ -1,0 +1,84 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+if [[ "$TERM" == *rxvt* ]]; then
+	exec zsh
+fi
+
+# Put your fun stuff here.
+# Export settings
+export EDITOR="vim"
+export PAGER="less"
+export BROWSER="qutebrowser"
+export BROWSERCLI="w3m"
+export MOVPLAY="mpv"
+export PICVIEW="feh"
+export SNDPLAY="mpv"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# User specific aliases and functions
+PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
+
+## Alias
+alias ls='ls --color=auto'
+alias la='ls -al'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias k='exit'
+
+## Vim stuff
+alias v='vim'
+
+## Neovim stuff
+alias nv='nvim'
+
+## Bash Stuff
+alias vB='vim ~/.bashrc'
+alias nvB='nvim ~/.bashrc'
+
+## Gentoo
+alias kernel='cd /usr/src/linux && make clean && make -j4 && make modules_install && make install && emerge -v1 @module-rebuild && grub2-mkconfig -o /boot/grub/grub.cfg && echo SUCCESS || echo FAILED'
+#alias kernel='mount /boot && cd /usr/src/linux && make clean && make -j2 && make modules_install && make install && emerge -v1 @module-rebuild && genkernel --luks --lvm --install initramfs && grub2-mkconfig -o /boot/grub/grub.cfg && umount /boot && echo SUCCESS || echo FAILED'
+alias HowLong='genlop -t'
+alias OneShot='emerge --oneshot portage'
+alias I='time emerge -av'
+alias S='time emerge -s'
+alias R='time emerge -cav'
+alias sync='time emerge --sync'
+alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
+alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
+alias Esync='time eix-sync'
+alias Eupdate='time eix-update'
+alias cdP='cd /etc/portage'
+alias cdU='cd /etc/portage/package.use'
+alias cdB='cd /etc/portage/package.mask'
+alias cdK='cd /etc/portage/package.accept_keywords'
+alias eM='vim /etc/portage/make.conf'
+
+## Net
+alias externalip='sh ~/bin/externalip.sh'
+
+## SSH STUFF
+alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
+
+## Apps
+alias reload='source'
+
+## Tmux
+alias tnew='tmux new -s'
+alias tattach='tmux a -t'
