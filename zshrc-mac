@@ -164,6 +164,7 @@ alias vsK='vim ~/.ssh/known_hosts'
 alias reload='source'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
+alias tor='ssh -L 8080:localhost:8080 odin'
 
 ## News and Music
 alias MP='ncmpcpp'
