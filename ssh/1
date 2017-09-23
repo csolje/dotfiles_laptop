@@ -1,0 +1,94 @@
+Host *
+    Protocol 2
+    ServerAliveInterval 300
+    ServerAliveCountMax 30
+    Compression yes
+
+Host router
+	HostName 10.0.0.1
+	User root
+	IdentityFile ~/.ssh/id_rsa
+	Port 22
+
+Host routerext
+	HostName home.haxus.org
+	User root
+	IdentityFile ~/.ssh/id_rsa
+	Port 2222
+
+Host home
+	HostName home.haxus.org
+	User chrs
+
+Host odin
+	HostName haxus.org
+	User zyq
+	port 6144
+
+Host odinroot
+	HostName haxus.org
+	User root
+	port 6144
+
+Host odin6
+	HostName bigmojo.haxus.org	
+	User zyq
+	port 6144
+
+Host odintor
+	HostName haxus.org
+	User tor
+	port 6144
+
+Host torrent
+	HostName haxus.org
+	User zyq
+	LocalForward 8080 localhost:8080
+
+Host kamau
+    HostName kamau.sanerds.net
+    User zyq
+
+Host testweb
+	HostName 310bbb67baf8b93b
+	User root
+
+Host kvmintroot
+	HostName 10.0.0.3
+	User root
+
+Host kvmint
+	HostName 10.0.0.3
+	User zyq
+
+Host kvmint
+	HostName 10.0.0.3
+	User zyq
+
+Host kvm
+	HostName home.haxus.org
+	User zyq
+	Port 8888
+
+Host mojogen
+	HostName 10.0.0.69
+	User chrs
+
+Host diskstation
+	HostName 10.0.0.4
+	User root
+	Port 2222
+
+Host fifo
+    HostName ps20611.dreamhostps.com
+    User zyq
+
+Host lawson
+	HostName clothingbylawson.dk
+	User clothing 
+	Port 2200
+
+#Host oslotest
+#    HostName s-ldb2-t.sst.dk
+#    User adm_chrs
+#    IdentityFile ~/.ssh/id_adm_chrs_ed25519
