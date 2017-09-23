@@ -3,7 +3,6 @@ Host *
     ServerAliveInterval 300
     ServerAliveCountMax 30
     Compression yes
-    CompressionLevel 6
 
 Host router
 	HostName 10.0.0.1
@@ -24,21 +23,26 @@ Host home
 Host odin
 	HostName haxus.org
 	User zyq
+	port 6144
 
 Host odinroot
 	HostName haxus.org
 	User root
+	port 6144
 
 Host odin6
 	HostName bigmojo.haxus.org	
 	User zyq
+	port 6144
 
 Host odintor
 	HostName haxus.org
 	User tor
+	port 6144
 
 Host torrent
 	HostName haxus.org
+	User zyq
 	LocalForward 8080 localhost:8080
 
 Host kamau
