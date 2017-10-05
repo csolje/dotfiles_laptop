@@ -53,19 +53,15 @@ Host testweb
 	HostName 310bbb67baf8b93b
 	User root
 
-Host kvmintroot
+Host kvmroot
 	HostName 10.0.0.3
 	User root
 
-Host kvmint
-	HostName 10.0.0.3
-	User zyq
-
-Host kvmint
-	HostName 10.0.0.3
-	User zyq
-
 Host kvm
+	HostName 10.0.0.3
+	User zyq
+
+Host kvmext
 	HostName home.haxus.org
 	User zyq
 	Port 8888
