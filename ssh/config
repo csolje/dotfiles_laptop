@@ -31,9 +31,15 @@ Host odinroot
 	port 6144
 
 Host odin6
-	HostName bigmojo.haxus.org	
+	HostName odin.haxus.org	
 	User zyq
 	port 6144
+
+Host odin6root
+	HostName odin.haxus.org	
+	User root
+	port 6144
+
 
 Host odintor
 	HostName haxus.org
