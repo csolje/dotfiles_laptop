@@ -116,6 +116,8 @@ alias eM='sudo vim /etc/portage/make.conf'
 
 ## Net
 alias externalip='sh ~/bin/externalip.sh'
+alias StartVPN='sudo /etc/init.d/openvpn.odin-udp start'
+alias StopVPN='sudo /etc/init.d/openvpn.odin-udp stop'
 
 ## Pacman
 alias Y='yaourt'
