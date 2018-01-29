@@ -66,10 +66,10 @@ alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @w
 alias Esync='time eix-sync'
 alias Eupdate='time eix-update'
 alias cdP='cd /etc/portage'
-alias cdU='cd /etc/portage/package.use'
+alias vpU='vim /etc/portage/package.use'
 alias cdB='cd /etc/portage/package.mask'
 alias cdK='cd /etc/portage/package.accept_keywords'
-alias eM='vim /etc/portage/make.conf'
+alias vM='vim /etc/portage/make.conf'
 
 ## Net
 alias externalip='sh ~/bin/externalip.sh'

@@ -164,6 +164,7 @@ alias vsK='vim ~/.ssh/known_hosts'
 alias reload='source'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
+alias tor='ssh -L 8080:localhost:8080 odin'
 
 ## News and Music
 alias MP='ncmpcpp'
@@ -185,3 +186,6 @@ plugins=(git archlinux vi-mode themes zsh-completions color-command)
 source /Users/csolje/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
