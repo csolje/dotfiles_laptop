@@ -55,8 +55,8 @@ Host kamau
     HostName kamau.sanerds.net
     User zyq
 
-Host testweb
-	HostName 310bbb67baf8b93b
+Host tradepro
+	HostName 172.104.167.62
 	User root
 
 Host kvmroot
