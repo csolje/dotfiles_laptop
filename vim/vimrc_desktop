@@ -4,11 +4,11 @@ set mouse=a
 "set foldmethod=indent
 set rnu
 
-augroup numbertoggle
-	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-	autocmd BufLeave,FocusLost,InsertEnter * set norelavtivenumber
-augroup END
+"augroup numbertoggle
+"	autocmd!
+"	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"	autocmd BufLeave,FocusLost,InsertEnter * set norelavtivenumber
+"augroup END
 
 let g:Powerline_symbols = "fancy"
 let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
@@ -28,8 +28,8 @@ let g:airline_left_sep = ''
 "let g:airline_theme='ubaryd'
 "let g:airline_theme='laederon'
 "let g:airline_theme='kolor'
-let g:airline_theme='molokai'
-"let g:airline_theme='powerlineish'
+"let g:airline_theme='molokai'
+let g:airline_theme='powerlineish'
 
 "colorscheme wombat256
 "colorscheme tango
@@ -37,8 +37,8 @@ let g:airline_theme='molokai'
 "colorscheme vividchalk
 "colorscheme distinguished
 "colorscheme monokai
-colorscheme molokai
-"colorscheme ir_black
+"colorscheme molokai
+colorscheme ir_black
 "colorscheme neodark
 "colorscheme gotham
 "colorscheme jellybeans 
@@ -53,37 +53,37 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set nocompatible        " don't use old settings that vi used.  
-						" Use the newer features that vim offers
+set nocompatible				" don't use old settings that vi used.  
+								" Use the newer features that vim offers
 
 " Make the leader key be space
 let mapleader = "\<Space>"
 
-set backspace=2       	" make backspace able to go over end of lines
-set laststatus=2    	"always show the status line
-set t_Co=256        	"set colors to 256
+set backspace=2					" make backspace able to go over end of lines
+set laststatus=2				"always show the status line
+set t_Co=256					"set colors to 256
 
-set number          	"show line number on side
-"set nornu           	"do not make the line numbers relative to cursor
-set mousehide       	"hide mouse cursor while typing
-set showmode        	"display the current mode
-set cursorline      	"highlight the current line
-set backspace=2			"make backspace able to go over end of lines
+set number						"show line number on side
+"set nornu						"do not make the line numbers relative to cursor
+set mousehide					"hide mouse cursor while typing
+set showmode					"display the current mode
+set cursorline					"highlight the current line
+set backspace=2					"make backspace able to go over end of lines
 set backspace=indent,eol,start	"Set regular backspace during insert mode
 
-syntax enable			"use syntax highlighting
+syntax enable					"use syntax highlighting
 
 
 " Tab stops
-	set tabstop=4    	" when you press tab, it will move forward 
-						" by 4 spaces
+	set tabstop=4				" when you press tab, it will move forward 
+								" by 4 spaces
 " ----------------------------------------------------------------------
-	set shiftwidth=4 	" the number of spaces the >>, <<, >, and < 
-						" commands will move by will be 4
+	set shiftwidth=4			" the number of spaces the >>, <<, >, and < 
+								" commands will move by will be 4
 " ----------------------------------------------------------------------
-	set smarttab 		" pressing backspace on a blank indented line 
-						" will delete the amount of spaces equal to 
-						" shiftwidth
+	set smarttab				" pressing backspace on a blank indented line 
+								" will delete the amount of spaces equal to 
+								" shiftwidth
 
 " Neo bundle stuff
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -92,24 +92,24 @@ syntax enable			"use syntax highlighting
 			NeoBundleFetch 'Shougo/neobundle.vim'
 		" Fuzzy finding for files
 			NeoBundle 'kien/ctrlp.vim'
-		"Move around easier
+		" Move around easier
 			NeoBundle 'Lokaltog/vim-easymotion'
-		"File navigation
+		" File navigation
 			NeoBundle 'scrooloose/nerdtree'
-		"Coffeescript integration and syntax highlighting
+		" Coffeescript integration and syntax highlighting
 			NeoBundle 'kchmck/vim-coffee-script'
-		"Vim-Airline
+		" Vim-Airline
 			NeoBundle 'bling/vim-airline'
 		" Gotham theme
 			NeoBundle 'whatyouhide/vim-gotham'
 
 	call neobundle#end()
 
-  filetype plugin indent on 			" Required:
+	filetype plugin indent on 			" Required:
 
-	 " If there are uninstalled bundles found on startup,
-	 " this will conveniently prompt you to install them.
-	 NeoBundleCheck
+	" If there are uninstalled bundles found on startup,
+	" this will conveniently prompt you to install them.
+	NeoBundleCheck
 
 
 " Key mappings
