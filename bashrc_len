@@ -60,7 +60,9 @@ alias Z='source ~/.zshrc'
 
 ## Bash Stuff
 alias vB='vim ~/.bashrc'
+alias vP='vim ~/.bash_profile'
 alias nvB='nvim ~/.bashrc'
+alias nvP='nvim ~/.bash_profile'
 
 ## X Resources Stuff
 alias vX='vim ~/.Xresources'
