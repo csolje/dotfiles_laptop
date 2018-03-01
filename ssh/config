@@ -63,6 +63,12 @@ Host tradeproV1
 	HostName 139.162.7.92
 	User root
 
+Host clothingbylawson
+	HostName pro4.chosting.dk
+	port 222
+	User clothing
+	IdentityFile ~/.ssh/id_rsa
+
 Host kvmroot
 	HostName 10.0.0.3
 	User root
