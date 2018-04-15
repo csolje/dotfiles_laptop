@@ -1,7 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/csolje/.oh-my-zsh
-ZSH_THEME="powerline"
+#ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
+#ZSH_THEME="Lambda"
+#ZSH_THEME="nanotech"
+ZSH_THEME="norm"
+#ZSH_THEME="simple"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
@@ -165,6 +169,7 @@ alias reload='source'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 alias tor='ssh -L 8080:localhost:8080 odin'
+alias externalip='sh ~/bin/externalip.sh'
 
 ## News and Music
 alias MP='ncmpcpp'
