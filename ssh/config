@@ -40,7 +40,6 @@ Host odin6root
 	User root
 	port 6144
 
-
 Host odintor
 	HostName haxus.org
 	User tor
@@ -67,6 +66,12 @@ Host clothingbylawson
 	HostName pro4.chosting.dk
 	port 222
 	User clothing
+	IdentityFile ~/.ssh/id_rsa
+
+Host hiiyou
+	HostName hiiyou.org
+	port 18765
+	User hiiyou
 	IdentityFile ~/.ssh/id_rsa
 
 Host kvmroot

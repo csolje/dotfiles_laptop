@@ -3,9 +3,11 @@ export ZSH=/Users/csolje/.oh-my-zsh
 #ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
 #ZSH_THEME="Lambda"
-#ZSH_THEME="nanotech"
-ZSH_THEME="norm"
+#ZSH_THEME="norm"
 #ZSH_THEME="simple"
+#ZSH_THEME="fletcherm"
+#ZSH_THEME="lambda-gitster"
+ZSH_THEME="node"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
@@ -119,9 +121,20 @@ alias nvB='nvim ~/.bashrc'
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/Git'
-alias cdC='cd ~/Git/configfiles'
-alias cdD='cd ~/Git/dotfiles'
+alias cls='clear'
+## Git Stuff
+alias cdG='cd ~/GitHub'
+alias cdC='cd ~/GitHub/configfiles'
+alias cdD='cd ~/GitHub/dotfiles'
+alias cdPp='cd ~/GitHub/Pluralsight_Courses'
+alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
+alias cdDs='cd ~/GitHub/datascience'
+alias cdH='cd ~/GitHub/hiiYou'
+
+
+
+
+## Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'
 alias k=exit
 
@@ -188,9 +201,12 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git archlinux vi-mode themes zsh-completions color-command)
-source /Users/csolje/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/csolje/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
