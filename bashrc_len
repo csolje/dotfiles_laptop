@@ -133,6 +133,7 @@ alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
 alias eM='sudo vim /etc/portage/make.conf'
 
 ## Net
+alias NM='sudo /etc/init.d/NetworkManager restart'
 alias externalip='sh ~/bin/externalip.sh'
 
 ## Pacman
@@ -145,17 +146,23 @@ alias pac-sync='sudo pacman -Syy'
 alias pacLog='tail -f /var/log/pacman.log'
 alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
+## SSH stuff
+alias vsC='vim ~/.ssh/config'
+alias vsK='vim ~/.ssh/known_hosts'
+
 ## Misc
 alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
-alias sshhome='ssh -fNR 7777:localhost:22 tunnel@home.sanerds.net'
 alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
 alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
 alias tor='ssh -L 8080:localhost:8080 odin'
 
 ## Apps
-alias reload='source'
+alias reloadV='source ~/.vimrc'
+alias reloadB='source ~/.bashrc'
 alias irc='weechat-curses'
+alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
+alias tor='ssh -L 8080:localhost:8080 odin'
 
 ## News and Music
 alias MP='ncmpcpp'

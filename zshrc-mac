@@ -189,7 +189,8 @@ alias vsC='vim ~/.ssh/config'
 alias vsK='vim ~/.ssh/known_hosts'
 
 ## Apps
-alias reload='source'
+alias reloadV='source ~/.vimrc'
+alias reloadZ='source ~/.zshrc'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 alias tor='ssh -L 8080:localhost:8080 odin'
