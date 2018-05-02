@@ -79,6 +79,14 @@ for ext in mpg wmv avi mkv;        do alias -s $ext=$MOVPLAY; done
 for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 
 ## Alias
+## Listing folders
+alias ls='ls'
+alias la='ls -alh'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+
 ## Vim stuff
 alias v='vim'
 alias vV='vim ~/.vimrc'
@@ -122,6 +130,7 @@ alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
 alias cls='clear'
+
 ## Git Stuff
 alias cdG='cd ~/GitHub'
 alias cdC='cd ~/GitHub/configfiles'
@@ -131,8 +140,10 @@ alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
 alias cdDs='cd ~/GitHub/datascience'
 alias cdH='cd ~/GitHub/hiiYou'
 
-
-
+## VSTS Stuff
+alias cdV='cd ~/va-solutions'
+alias cdVb='cd ~/va-solutions/BI'
+alias cdVp='cd ~/va-solutions/PowerApps'
 
 ## Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'

@@ -74,6 +74,13 @@ Host hiiyou
 	User hiiyou
 	IdentityFile ~/.ssh/id_rsa
 
+Host mobilechefs
+	HostName mobilechefs.com
+	port 18765
+	User mobilechefs
+	IdentityFile ~/.ssh/id_rsa
+
+
 Host kvmroot
 	HostName 10.0.0.3
 	User root

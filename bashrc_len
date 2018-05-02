@@ -40,15 +40,10 @@ PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w\[\033[33m\]\$(pa
 
 ## Alias
 alias ls='ls'
-alias la='ls -al'
+alias la='ls -alh'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias k='exit'
-
-## Emacs stuff
-alias e='emacs -nw'
-alias eE='emacs -nw ~/.emacs'
 
 ## Vim stuff
 alias v='vim'
@@ -96,13 +91,28 @@ alias vi3C='vim ~/.config/i3/config'
 alias vsC='vim ~/.ssh/config'
 alias vsK='vim ~/.ssh/known_hosts'
 
-## Navigation
+## MISC
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/git'
-alias cdD='cd ~/git/dotfiles'
+
+## Git Stuff
+alias cdG='cd ~/GitHub'
+alias cdC='cd ~/GitHub/configfiles'
+alias cdD='cd ~/GitHub/dotfiles'
+alias cdPp='cd ~/GitHub/Puralsight_Courses'
+alias cdPsh='~/GitHub/PowerShell_Scripts'
+alias cdDs='~/GitHub/datascience'
+alias cdH='~/GitHub/hiiyou'
+
+## VSTS Stuff
+alias cdV='cd ~/va-solutions'
+alias cdVb='cd ~/va-solutions/BI'
+alias cdVp='cd ~/va-solutions/PowerApps'
+
+## Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'
+alias k='exit'
 
 ## Gentoo
 alias HowLong='sudo genlop -t'
