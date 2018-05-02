@@ -95,6 +95,7 @@ alias vsK='vim ~/.ssh/known_hosts'
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
+alias cls='clear'
 
 ## Git Stuff
 alias cdG='cd ~/GitHub'
