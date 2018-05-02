@@ -173,6 +173,7 @@ alias nvM='sudo vim /etc/portage/make.conf'
 
 ## Net
 alias NM='sudo /etc/init.d/NetworkManager restart'
+alias externalip='sh ~/bin/externalip.sh'
 
 ## Pacman
 alias Y='yaourt'
@@ -188,13 +189,19 @@ alias Unlock='sudo rm /var/lib/pacman/db.lck'
 alias vsC='vim ~/.ssh/config'
 alias vsK='vim ~/.ssh/known_hosts'
 
+## MISC
+alias starwars='telnet towel.blinkenlights.nl'
+alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
+alias sshvnc='ssh -fNR 8000:localhost:5901 chrs@home.sanerds.net'
+alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
+alias tor='ssh -L 8080:localhost:8080 odin'
+
 ## Apps
 alias reloadV='source ~/.vimrc'
 alias reloadZ='source ~/.zshrc'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 alias tor='ssh -L 8080:localhost:8080 odin'
-alias externalip='sh ~/bin/externalip.sh'
 
 ## News and Music
 alias MP='ncmpcpp'
