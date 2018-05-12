@@ -3,6 +3,8 @@ set pastetoggle=<F2>
 set mouse=a
 "set foldmethod=indent
 set rnu
+set cursorline
+hi CursorLine term=underline cterm=underline guibg=yollow
 
 "augroup numbertoggle
 "	autocmd!
@@ -18,6 +20,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
+let g:airline#extensions#tabline#enabled = 1
 
 "Airline Themes
 "let g:airline_theme='dark'
@@ -37,8 +40,8 @@ let g:airline_theme='powerlineish'
 "colorscheme vividchalk
 "colorscheme distinguished
 "colorscheme monokai
-"colorscheme molokai
-colorscheme ir_black
+colorscheme molokai
+"colorscheme ir_black
 "colorscheme neodark
 "colorscheme gotham
 "colorscheme jellybeans 
@@ -51,7 +54,6 @@ let g:neodark#terminal_transparent = 1
 " Pathogen
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
 
 set nocompatible				" don't use old settings that vi used.  
 								" Use the newer features that vim offers
@@ -85,31 +87,55 @@ syntax enable					"use syntax highlighting
 								" will delete the amount of spaces equal to 
 								" shiftwidth
 
-" Neo bundle stuff
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
-	call neobundle#begin(expand('~/.vim/bundle/'))
-		" Let NeoBundle manage NeoBundle (Required!)
-			NeoBundleFetch 'Shougo/neobundle.vim'
-		" Fuzzy finding for files
-			NeoBundle 'kien/ctrlp.vim'
-		" Move around easier
-			NeoBundle 'Lokaltog/vim-easymotion'
-		" File navigation
-			NeoBundle 'scrooloose/nerdtree'
-		" Coffeescript integration and syntax highlighting
-			NeoBundle 'kchmck/vim-coffee-script'
-		" Vim-Airline
-			NeoBundle 'bling/vim-airline'
-		" Gotham theme
-			NeoBundle 'whatyouhide/vim-gotham'
+" Plugins
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" start plugin defintion
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'itchyny/lightline.vim'      
+Plugin 'Lokaltog/vim-easymotion'    
+Plugin 'tpope/vim-surround'         
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'powerline/powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tomasr/molokai'
+" -- Web Development
+Plugin 'Shutnik/jshint2.vim'        
+Plugin 'mattn/emmet-vim'            
+Plugin 'kchmck/vim-coffee-script'   
+Plugin 'groenewege/vim-less'        
+Plugin 'skammer/vim-css-color'      
+Plugin 'hail2u/vim-css3-syntax'     
+Plugin 'digitaltoad/vim-jade'   
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'https://github.com/shmargum/vim-sass-colors.git'
+Plugin 'zeekay/vim-beautify'
 
-	call neobundle#end()
 
-	filetype plugin indent on 			" Required:
-
-	" If there are uninstalled bundles found on startup,
-	" this will conveniently prompt you to install them.
-	NeoBundleCheck
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
 " Key mappings
@@ -129,6 +155,7 @@ syntax enable					"use syntax highlighting
 
 	" tab stuff
 		nnoremap tn :tabnew<cr>
+		nnoremap tc :tabclose<cr>
 		nnoremap tk :tabnext<cr>
 		nnoremap tj :tabprev<cr>
 		nnoremap th :tabfirst<cr>

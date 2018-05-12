@@ -131,6 +131,7 @@ alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
 alias cls='clear'
 
+### Dev Stuff
 ## Git Stuff
 alias cdG='cd ~/GitHub'
 alias cdC='cd ~/GitHub/configfiles'
@@ -139,6 +140,9 @@ alias cdPp='cd ~/GitHub/Pluralsight_Courses'
 alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
 alias cdDs='cd ~/GitHub/datascience'
 alias cdH='cd ~/GitHub/hiiYou'
+
+## Dev Env
+alias cdDev='cd ~/GitHub/DevEnv'
 
 ## VSTS Stuff
 alias cdV='cd ~/va-solutions'
