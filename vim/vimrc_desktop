@@ -1,10 +1,11 @@
+set nocompatible				" don't use old settings that vi used.
 set paste
 set pastetoggle=<F2>
 set mouse=a
 "set foldmethod=indent
 set rnu
 set cursorline
-hi CursorLine term=underline cterm=underline guibg=yollow
+hi CursorLine term=underline cterm=underline
 
 "augroup numbertoggle
 "	autocmd!
@@ -38,16 +39,11 @@ let g:airline_theme='powerlineish'
 "colorscheme tango
 "colorscheme railscasts
 "colorscheme vividchalk
-"colorscheme distinguished
+colorscheme distinguished
 "colorscheme monokai
-colorscheme molokai
+"colorscheme molokai
 "colorscheme ir_black
-"colorscheme neodark
-"colorscheme gotham
-"colorscheme jellybeans 
-"volorscheme desertEx
-"colorscheme skittles_berry
-"colorscheme codeblocks_dark
+"colorscheme jellybeans
 
 let g:neodark#terminal_transparent = 1
 
@@ -55,12 +51,13 @@ let g:neodark#terminal_transparent = 1
 execute pathogen#infect()
 syntax on
 
-set nocompatible				" don't use old settings that vi used.  
-								" Use the newer features that vim offers
 
 " Make the leader key be space
 let mapleader = "\<Space>"
 
+set nowrap
+set autoindent
+set copyindent
 set backspace=2					" make backspace able to go over end of lines
 set laststatus=2				"always show the status line
 set t_Co=256					"set colors to 256
@@ -69,74 +66,94 @@ set number						"show line number on side
 "set nornu						"do not make the line numbers relative to cursor
 set mousehide					"hide mouse cursor while typing
 set showmode					"display the current mode
-set cursorline					"highlight the current line
+set showmatch					"set show matching parenthesis
+set ignorecase					"ignore case when searching
+set smartcase					"ignore case if search pattern is all lowercase,
+								"case-sensitive otherwisei
+
+set hlsearch      				" highlight search terms
+set incsearch     				" show search matches as you type
+set history=1000         		" remember more commands and search history
+set undolevels=1000      		" use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+set title						" change the terminal's title
+set visualbell					" don't beep
+set noerrorbells				" don't beep
+"set cursorline					"highlight the current line
 set backspace=2					"make backspace able to go over end of lines
 set backspace=indent,eol,start	"Set regular backspace during insert mode
+set nobackup					"Disables the file backup
+set noswapfile					"Doesn't create a swap file
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" Clears the search register
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+" Strip all trailing whitespace from a file, using ,W
+nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
 syntax enable					"use syntax highlighting
 
 
 " Tab stops
-	set tabstop=4				" when you press tab, it will move forward 
+	set tabstop=4				" when you press tab, it will move forward
 								" by 4 spaces
-" ----------------------------------------------------------------------
-	set shiftwidth=4			" the number of spaces the >>, <<, >, and < 
+	set softtabstop=4
+	set expandtab
+" ------------------------------------------------------------------------------------------
+	set shiftwidth=4			" the number of spaces the >>, <<, >, and <
 								" commands will move by will be 4
-" ----------------------------------------------------------------------
-	set smarttab				" pressing backspace on a blank indented line 
-								" will delete the amount of spaces equal to 
+	set shiftround    			" use multiple of shiftwidth when indenting with '<' and '>'
+" ------------------------------------------------------------------------------------------
+	set smarttab				" pressing backspace on a blank indented line
+								" will delete the amount of spaces equal to
 								" shiftwidth
 
 " Plugins
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/bundle')
+
+" Make sure you use single quotes
 " start plugin defintion
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'itchyny/lightline.vim'      
-Plugin 'Lokaltog/vim-easymotion'    
-Plugin 'tpope/vim-surround'         
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'powerline/powerline'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tomasr/molokai'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-surround'
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Lokaltog/vim-powerline'
+Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
 " -- Web Development
-Plugin 'Shutnik/jshint2.vim'        
-Plugin 'mattn/emmet-vim'            
-Plugin 'kchmck/vim-coffee-script'   
-Plugin 'groenewege/vim-less'        
-Plugin 'skammer/vim-css-color'      
-Plugin 'hail2u/vim-css3-syntax'     
-Plugin 'digitaltoad/vim-jade'   
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'https://github.com/shmargum/vim-sass-colors.git'
-Plugin 'zeekay/vim-beautify'
+Plug 'Shutnik/jshint2.vim'
+Plug 'mattn/emmet-vim'
+Plug 'kchmck/vim-coffee-script'
+"Plug 'groenewege/vim-less'
+"Plug 'skammer/vim-css-color'
+"Plug 'hail2u/vim-css3-syntax'
+"Plug 'whatyouhide/vim-gotham'
+"Plug 'https://github.com/shmargum/vim-sass-colors.git'
+Plug 'zeekay/vim-beautify'
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+" Initialize plugin system
+call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
+
+" Autocmd
+autocmd filetype html,xml set listchars-=tab:>.		" HTML and XML files, tabs disabled
 
 " Key mappings
 
@@ -166,7 +183,7 @@ filetype plugin indent on    " required
 		nnoremap <s-tab> :tabnext<cr>
 		inoremap <s-tab> <esc>:tabnext<cr>
 
-	" <alt-q> to exit Insert	
+	" <alt-q> to exit Insert
 		inoremap <leader>j <esc>
 
 	" <c-shift-tab> to go to previous tab
@@ -177,23 +194,31 @@ filetype plugin indent on    " required
 		nnoremap <leader>f :CtrlPClearCache<cr>:CtrlP .<cr>
 
 	" space-o to open the file browser
-		nnoremap <leader>o :NERDTreeToggle<cr>
+	    nnoremap <leader>o :NERDTreeToggle<cr>
 
 	" space-s to save
 		nnoremap <leader>s :w<cr>
 
 	" space-shift-s to save as
-		nnoremap <leader><s-s> :w 
+		nnoremap <leader><s-s> :w
 
 	" space-q to quit (doesn't save, watch out!)
 		nnoremap <leader>q :q!<cr>
-	
+
 	" alt-x to Esc
 		inoremap <a-d> <esc>
 
+    " Leader v for vertical split
+        nnoremap <c-v> :vsplit<cr>
+        vnoremap <c-v> :vsplit<cr>
+
+    " Leader h for horizontal split
+        nnoremap <c-h> :split<cr>
+        vnoremap <c-h> :split<cr>
+
 	" pageup and page down
-		nnoremap <leader>u :PageUp
-		nnoremap <leader>d :PageDown
+		nnoremap <leader>u :<PageUp><cr>
+		nnoremap <leader>d :<PageDown><cr>
 
 	" space-1 insert "!" commenting
 		nnoremap <leader>1 :norm i!<cr>
@@ -217,10 +242,15 @@ filetype plugin indent on    " required
 
 	" edit config files
 		nnoremap <leader>ez :tabnew ~/.zshrc<cr>
-	
+
 	" set relative number
 "	 	nnoremap <c-n> set rnu<cr>
 "	 	nnoremap <c-s-n> set number<cr>
+    " Clears the search register
+        nnoremap <silent> <leader>/ :nohlsearch<CR>
+    " Strip all trailing whitespace from a file, using ,W
+        nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
 
 function! NumberToggle()
   if(&relativenumber == 1)
