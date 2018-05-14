@@ -1,0 +1,269 @@
+set nocompatible				" don't use old settings that vi used.
+set paste
+set pastetoggle=<F2>
+set mouse=a
+"set foldmethod=indent
+set rnu
+set cursorline
+hi CursorLine term=underline cterm=underline
+
+"augroup numbertoggle
+"	autocmd!
+"	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"	autocmd BufLeave,FocusLost,InsertEnter * set norelavtivenumber
+"augroup END
+
+let g:Powerline_symbols = "fancy"
+let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
+let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
+let g:airline_powerline_fonts = 1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+let g:airline#extensions#tabline#enabled = 1
+
+"Airline Themes
+"let g:airline_theme='dark'
+"let g:airline_theme='badwolf'
+"let g:airline_theme='ravenpower'
+"let g:airline_theme='simple'
+"let g:airline_theme='term'
+"let g:airline_theme='ubaryd'
+"let g:airline_theme='laederon'
+"let g:airline_theme='kolor'
+"let g:airline_theme='molokai'
+let g:airline_theme='powerlineish'
+
+"colorscheme wombat256
+"colorscheme tango
+"colorscheme railscasts
+"colorscheme vividchalk
+colorscheme distinguished
+"colorscheme monokai
+"colorscheme molokai
+"colorscheme ir_black
+"colorscheme jellybeans
+
+let g:neodark#terminal_transparent = 1
+
+" Pathogen
+execute pathogen#infect()
+syntax on
+
+
+" Make the leader key be space
+let mapleader = "\<Space>"
+
+set nowrap
+set autoindent
+set copyindent
+set backspace=2					" make backspace able to go over end of lines
+set laststatus=2				"always show the status line
+set t_Co=256					"set colors to 256
+
+set number						"show line number on side
+"set nornu						"do not make the line numbers relative to cursor
+set mousehide					"hide mouse cursor while typing
+set showmode					"display the current mode
+set showmatch					"set show matching parenthesis
+set ignorecase					"ignore case when searching
+set smartcase					"ignore case if search pattern is all lowercase,
+								"case-sensitive otherwisei
+
+set hlsearch      				" highlight search terms
+set incsearch     				" show search matches as you type
+set history=1000         		" remember more commands and search history
+set undolevels=1000      		" use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+set title						" change the terminal's title
+set visualbell					" don't beep
+set noerrorbells				" don't beep
+"set cursorline					"highlight the current line
+set backspace=2					"make backspace able to go over end of lines
+set backspace=indent,eol,start	"Set regular backspace during insert mode
+set nobackup					"Disables the file backup
+set noswapfile					"Doesn't create a swap file
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" Clears the search register
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+" Strip all trailing whitespace from a file, using ,W
+nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+syntax enable					"use syntax highlighting
+
+
+" Tab stops
+	set tabstop=4				" when you press tab, it will move forward
+								" by 4 spaces
+	set softtabstop=4
+" ------------------------------------------------------------------------------------------
+	set shiftwidth=4			" the number of spaces the >>, <<, >, and <
+								" commands will move by will be 4
+	set shiftround    			" use multiple of shiftwidth when indenting with '<' and '>'
+" ------------------------------------------------------------------------------------------
+	set smarttab				" pressing backspace on a blank indented line
+								" will delete the amount of spaces equal to
+								" shiftwidth
+
+" Plugins
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" start plugin defintion
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/L9'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'powerline/powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tomasr/molokai'
+" -- Web Development
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'groenewege/vim-less'
+Plugin 'skammer/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'https://github.com/shmargum/vim-sass-colors.git'
+Plugin 'zeekay/vim-beautify'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" Autocmd
+autocmd filetype html,xml set listchars-=tab:>.		" HTML and XML files, tabs disabled
+
+" Key mappings
+
+	" I hate the Escape key
+		imap jj <Esc>
+
+	" easymotion <leader> remap
+	" Easymotion shortcut
+		map <leader>e <leader><leader>W
+		map <leader>e <leader><leader>W
+
+"	" space-n to open a new file (in a new tab)
+		nnoremap <leader>n :tabnew<cr>
+"	" space-t to open a new tab
+"		nnoremap <leader>t :tabnew<cr>
+
+	" tab stuff
+		nnoremap tn :tabnew<cr>
+		nnoremap tc :tabclose<cr>
+		nnoremap tk :tabnext<cr>
+		nnoremap tj :tabprev<cr>
+		nnoremap th :tabfirst<cr>
+		nnoremap tl :tablast<cr>
+
+
+	" <shift-tab> to go to next tab
+		nnoremap <s-tab> :tabnext<cr>
+		inoremap <s-tab> <esc>:tabnext<cr>
+
+	" <alt-q> to exit Insert
+		inoremap <leader>j <esc>
+
+	" <c-shift-tab> to go to previous tab
+		nnoremap <c-s-tab> :tabprev<cr>
+		inoremap <c-s-tab> <esc>:tabprev<cr>
+
+	" space-f to open fuzzy file finder
+		nnoremap <leader>f :CtrlPClearCache<cr>:CtrlP .<cr>
+
+	" space-o to open the file browser
+		nnoremap <leader>o :NERDTreeToggle<cr>
+
+	" space-s to save
+		nnoremap <leader>s :w<cr>
+
+	" space-shift-s to save as
+		nnoremap <leader><s-s> :w
+
+	" space-q to quit (doesn't save, watch out!)
+		nnoremap <leader>q :q!<cr>
+
+	" alt-x to Esc
+		inoremap <a-d> <esc>
+
+	" pageup and page down
+		nnoremap <leader>u :PageUp
+		nnoremap <leader>d :PageDown
+
+	" space-1 insert "!" commenting
+		nnoremap <leader>1 :norm i!<cr>
+		vnoremap <leader>1 :norm i!<cr>
+
+	" space-' insert """ commenting
+		nnoremap <leader>' :norm i"<cr>
+		vnoremap <leader>' :norm i"<cr>
+
+	" space-3 insert "#" commenting
+		nnoremap <leader>3 :norm i#<cr>
+		vnoremap <leader>3 :norm i#<cr>
+
+	" space-- insert "--" commenting
+		nnoremap <leader>- :norm i--<cr>
+		vnoremap <leader>- :norm i--<cr>
+
+	" space-6 uncomment
+		nnoremap <leader>6 :norm ^x<cr>
+		vnoremap <leader>6 :norm ^x<cr>
+
+	" edit config files
+		nnoremap <leader>ez :tabnew ~/.zshrc<cr>
+
+	" set relative number
+"	 	nnoremap <c-n> set rnu<cr>
+"	 	nnoremap <c-s-n> set number<cr>
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <c-n> :call NumberToggle()<cr>
+
+" Key mappings that might be new
+	" space-rv to reload vimrc
+		nnoremap <leader>rv :source<Space>$MYVIMRC<cr>
+
+	" space-ev to edit the vimrc file (think: edit-vim)
+		nnoremap <leader>ev :tabnew $MYVIMRC<cr>
+
+" Other keymappings to make the experience less painful
+  "make j and k keys go up normally instead of to the previous line number
+    nnoremap j gj
+    nnoremap k gk
+
+" vim: set ft=vim :
