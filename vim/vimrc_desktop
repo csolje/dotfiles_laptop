@@ -1,250 +1,23 @@
 " {{{ Initial settings
-set nocompatible				" don't use old settings that vi used.
-set paste
+set nocompatible                " don't use old settings that vi used.
+set nopaste
 set pastetoggle=<F2>
 set mouse=a
 set rnu
-"set cursorline
-"hi clear CursorLine
-"hi CursorLine term=underline cterm=underline gui=underline
+set termguicolors
+set cursorline
 
-"augroup numbertoggle
-"	autocmd!
-"	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-"	autocmd BufLeave,FocusLost,InsertEnter * set norelavtivenumber
-"augroup END
-" }}}
-" {{{ Color configurations
-let g:Powerline_symbols = "fancy"
-let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
-let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
-let g:airline_powerline_fonts = 1
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
-let g:airline#extensions#tabline#enabled = 1
-
-"Airline Themes
-"let g:airline_theme='dark'
-"let g:airline_theme='badwolf'
-"let g:airline_theme='ravenpower'
-"let g:airline_theme='simple'
-"let g:airline_theme='term'
-"let g:airline_theme='ubaryd'
-"let g:airline_theme='laederon'
-"let g:airline_theme='kolor'
-"let g:airline_theme='molokai'
-let g:airline_theme='powerlineish'
-
-"colorscheme wombat256
-"colorscheme tango
-"colorscheme railscasts
-"colorscheme vividchalk
-colorscheme distinguished
-"colorscheme monokai
-"colorscheme molokai
-"colorscheme ir_black
-"colorscheme jellybeans
-
-let g:neodark#terminal_transparent = 1
 " }}}
 
-" Pathogen
-execute pathogen#infect()
-syntax on
-
+" {{{ Key mappings
 
 "{{{ Make the leader key be space
 let mapleader = "\<Space>"
 
 " }}}
 
-" {{{ Settings
-set hidden
-set nowrap
-set autoindent
-" Make the keyboard fast
-set ttyfast
-set timeout timeoutlen=1000 ttimeoutlen=50
-set updatetime=1000
-set copyindent
-set backspace=2                 " make backspace able to go over end of lines
-set laststatus=2                "always show the status line
-set t_Co=256                    "set colors to 256
-
-set number                      "show line number on side
-"set nornu                      "do not make the line numbers relative to cursor
-set mousehide                   "hide mouse cursor while typing
-set showmode                    "display the current mode
-set showmatch                   "set show matching parenthesis
-set ignorecase                  "ignore case when searching
-set smartcase                   "ignore case if search pattern is all lowercase,
-                                "case-sensitive otherwisei
-
-set hlsearch                    " highlight search terms
-set incsearch                   " show search matches as you type
-set nohlsearch                  " clears out highlights by hitting enter
-set history=1000                " remember more commands and search history
-set undolevels=1000             " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
-set foldenable                  " enable folding
-set foldcolumn=2                " add a fold column
-set foldmethod=marker           " detect triple-{ style fold markers
-set foldlevelstart=99           " start out with everything unfolded
-set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
-                                " which commands trigger auto-unfold
-set showcmd                     " show (partial) command in the last line of the screen
-                                "    this also shows visual selection info
-set nomodeline                  " disable mode lines (security measure)
-"set ttyfast                    " always use a fast terminal
-set nocursorline                " don't highlight the current line (useful for quick orientation, but also slow to redraw)
-
-set title                       " change the terminal's title
-set visualbell                  " don't beep
-set noerrorbells                " don't beep
-"set cursorline                 "highlight the current line
-set backspace=2                 "make backspace able to go over end of lines
-set backspace=indent,eol,start  "Set regular backspace during insert mode
-set nobackup                    "Disables the file backup
-set noswapfile                  "Doesn't create a swap file
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
-set path+=**
-set wildmenu
-set wildmode=list:longest,full
-
-syntax enable                   "use syntax highlighting
-
-
-" Tab stops
-set tabstop=4                   " when you press tab, it will move forward
-                                " by 4 spaces
-set softtabstop=4
-set expandtab
-" ------------------------------------------------------------------------------------------
-set shiftwidth=4                " the number of spaces the >>, <<, >, and <
-                                " commands will move by will be 4
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-" ------------------------------------------------------------------------------------------
-set smarttab                    " pressing backspace on a blank indented line
-                                " will delete the amount of spaces equal to shiftwidth
-
-" }}}
-
-
-" {{{ Plugins and Settings
-" {{{ Settings vim-plug
-"*****************************************************************************
-"" Vim-PLug core
-"*****************************************************************************
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-endif
-
-let vimplug_exists=expand('~/.vim/autoload/plug.vim')
-
-let g:vim_bootstrap_langs = "go,html,javascript,perl,php,python"
-let g:vim_bootstrap_editor = "vim"				" nvim or vim
-
-if !filereadable(vimplug_exists)
-  if !executable("curl")
-    echoerr "You have to install curl or first install vim-plug yourself!"
-    execute "q!"
-  endif
-  echo "Installing Vim-Plug..."
-  echo ""
-  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  let g:not_finish_vimplug = "yes"
-
-  autocmd VimEnter * PlugInstall
-endif
-
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/bundle')
-
-" Make sure you use single quotes
-" start plugin defintion
-
-" }}}
-
-
-Plug 'Lokaltog/vim-easymotion'
-Plug 'tpope/vim-surround'
-
-" vim-commentary: gc is an operator to toggle comments; gcc linewise
-Plug 'tpope/vim-commentary'
-
-" vim-repeat: make vim-commentary and vim-surround work with .
-Plug 'tpope/vim-repeat'
-
-" vim-liquid: syntax stuff
-Plug 'tpope/vim-liquid'
-
-" vim-markdown: some stuff for fenced language highlighting
-Plug 'tpope/vim-markdown'
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'yaml', 'haml', 'bash=sh', 'javascript']
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'jiangmiao/auto-pairs'
-Plug 'flazz/vim-colorschemes'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'Lokaltog/vim-powerline'
-Plug 'powerline/powerline'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tomasr/molokai'
-" -- Web Development
-Plug 'Shutnik/jshint2.vim'
-Plug 'mattn/emmet-vim'
-Plug 'skammer/vim-css-color'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'https://github.com/shmargum/vim-sass-colors.git'
-Plug 'zeekay/vim-beautify'
-
-" }}}
-
-" {{{ netrw: Configuration
-"     ====================
-
-let g:netrw_banner=0        " disable banner
-let g:netrw_browse_split=4  " open in prior window
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
-" hide gitignore'd files
-let g:netrw_list_hide=netrw_gitignore#Hide()
-" hide dotfiles by default (this is the string toggled by netrw-gh)
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-
-" }}}
-
-" </PLUGINS>
-
-" {{{ VUNDLE TEARDOWN
-
-" All of your Plugins must be added before the following line
-" Initialize plugin system
-call plug#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-
-" }}}
-
-" {{{ Autocmd
-autocmd filetype html,xml set listchars-=tab:>.		" HTML and XML files, tabs disabled
-
-" }}}
-
-" {{{ Key mappings
-
 " I hate the Escape key
-inoremap jk <Esc>
+inoremap jj <Esc>
 
 " easymotion <leader> remap
 " Easymotion shortcut
@@ -365,4 +138,287 @@ nnoremap j gj
 nnoremap k gk
 
 " }}}
+
+" {{{ Settings
+set hidden
+set nowrap
+set autoindent
+" Make the keyboard fast
+set ttyfast                     " always use a fast terminal
+set timeout timeoutlen=1000 ttimeoutlen=50
+set updatetime=1000
+set copyindent
+set backspace=2                 " make backspace able to go over end of lines
+set laststatus=2                "always show the status line
+set t_Co=256                    "set colors to 256
+
+set number                      "show line number on side
+"set nornu                      "do not make the line numbers relative to cursor
+set mousehide                   "hide mouse cursor while typing
+set noshowmode                    "display the current mode
+set showmatch                   "set show matching parenthesis
+set ignorecase                  "ignore case when searching
+set smartcase                   "ignore case if search pattern is all lowercase,
+                                "case-sensitive otherwisei
+if v:version > 703 || v:version == 703 && has('patch541')
+  set formatoptions+=j                " remove comment leader when joining comment lines
+endif
+
+set formatoptions+=n                  " smart auto-indenting inside numbered lists
+set guifont=Source\ Code\ Pro\ Light:h13
+set guioptions-=T                     " don't show toolbar
+set hidden                            " allows you to hide buffers with unsaved changes without being prompted
+
+if !has('nvim')
+  " Sync with corresponding nvim settings in ~/.vim/plugin/autocmds.vim:
+  set highlight+=@:ColorColumn        " ~/@ at end of window, 'showbreak'
+  set highlight+=N:DiffText           " make current line number stand out a little
+  set highlight+=c:LineNr             " blend vertical separators with line numbers
+endif
+
+set hlsearch                    " highlight search terms
+set incsearch                   " show search matches as you type
+set nohlsearch                  " clears out highlights by hitting enter
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set foldenable                  " enable folding
+set foldcolumn=2                " add a fold column
+set foldmethod=marker           " detect triple-{ style fold markers
+set foldlevelstart=99           " start out with everything unfolded
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+                                " which commands trigger auto-unfold
+set showcmd                     " show (partial) command in the last line of the screen
+                                "    this also shows visual selection info
+set nomodeline                  " disable mode lines (security measure)
+"set nocursorline                " don't highlight the current line (useful for quick orientation, but also slow to redraw)
+set lazyredraw                        " don't bother updating screen during macro playback
+
+if has('linebreak')
+  set linebreak                       " wrap long lines at characters in 'breakat'
+endif
+
+set title                       " change the terminal's title
+set visualbell                  " don't beep
+set noerrorbells                " don't beep
+set backspace=2                 "make backspace able to go over end of lines
+set backspace=indent,eol,start  "Set regular backspace during insert mode
+if exists('$SUDO_USER')
+  set nobackup                        " don't create root-owned files
+  set nowritebackup                   " don't create root-owned files
+else
+  set backupdir=~/local/.vim/tmp/backup
+  set backupdir+=~/.vim/tmp/backup    " keep backup files out of the way
+  set backupdir+=.
+endif
+if exists('$SUDO_USER')
+  set noswapfile                      " don't create root-owned files
+else
+  set directory=~/local/.vim/tmp/swap//
+  set directory+=~/.vim/tmp/swap//    " keep swap files out of the way
+  set directory+=.
+endif
+"set nobackup                    "Disables the file backup
+"set noswapfile                  "Doesn't create a swap file
+if exists('&belloff')
+  set belloff=all                     " never ring the bell for any reason
+endif
+if exists('+colorcolumn')
+  " Highlight up to 255 columns (this is the current Vim max) beyond 'textwidth'
+  let &l:colorcolumn='+' . join(range(0, 254), ',+')
+endif
+
+set list                              " show whitespace
+set listchars=nbsp:⦸                  " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
+set listchars+=tab:▷┅                 " WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7)
+                                      " + BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL (U+2505, UTF-8: E2 94 85)
+set listchars+=extends:»              " RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
+set listchars+=precedes:«             " LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
+set listchars+=trail:•                " BULLET (U+2022, UTF-8: E2 80 A2)
+set nojoinspaces                      " don't autoinsert two spaces after '.', '?', '!' for join command
+
+set path+=**
+set wildmenu
+set wildmode=list:longest,full
+
+syntax enable                   "use syntax highlighting
+
+
+" Tab stops
+set tabstop=4                   " when you press tab, it will move forward
+                                " by 4 spaces
+set softtabstop=4
+set expandtab
+" ------------------------------------------------------------------------------------------
+set shiftwidth=4                " the number of spaces the >>, <<, >, and <
+                                " commands will move by will be 4
+set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+" ------------------------------------------------------------------------------------------
+set smarttab                    " pressing backspace on a blank indented line
+                                " will delete the amount of spaces equal to shiftwidth
+
+" }}}
+
+" {{{ Color configurations
+let base16colorspace=256
+let g:Powerline_symbols = "fancy"
+let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
+let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
+let g:airline_powerline_fonts = 1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+let g:airline#extensions#tabline#enabled = 1
+
+"Airline Themes
+"let g:airline_theme='dark'
+"let g:airline_theme='badwolf'
+"let g:airline_theme='ravenpower'
+"let g:airline_theme='simple'
+"let g:airline_theme='bubblegum'
+"let g:airline_theme='laederon'
+"let g:airline_theme='molokai'
+"let g:airline_theme='powerlineish'
+"let g:airline_theme='base16'
+"let g:airline_theme='base16_tomorrow'
+"let g:airline_theme='distinguished'
+
+"colorscheme wombat256
+"colorscheme tango
+"colorscheme railscasts
+"colorscheme vividchalk
+"colorscheme base16-tomorrow-night
+"colorscheme monokai
+"colorscheme molokai
+"colorscheme ir_black
+"colorscheme jellybeans
+
+let g:neodark#terminal_transparent = 1
+let g:deoplete#enable_at_startup = 1
+" }}}
+
+" Pathogen
+execute pathogen#infect()
+syntax on
+
+
+
+" {{{ Plugins and Settings
+" {{{ Settings vim-plug
+"*****************************************************************************
+"" Vim-PLug core
+"*****************************************************************************
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+endif
+
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+
+let g:vim_bootstrap_langs = "go,html,javascript,perl,php,python"
+let g:vim_bootstrap_editor = "vim"				" nvim or vim
+
+if !filereadable(vimplug_exists)
+  if !executable("curl")
+    echoerr "You have to install curl or first install vim-plug yourself!"
+    execute "q!"
+  endif
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/bundle')
+
+" Make sure you use single quotes
+" start plugin defintion
+
+" }}}
+
+Plug 'chriskempson/base16-vim'
+Plug 'chrisbra/vim-zsh'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-surround'
+
+" vim-commentary: gc is an operator to toggle comments; gcc linewise
+Plug 'tpope/vim-commentary'
+
+" vim-repeat: make vim-commentary and vim-surround work with .
+Plug 'tpope/vim-repeat'
+
+" vim-liquid: syntax stuff
+Plug 'tpope/vim-liquid'
+
+" vim-markdown: some stuff for fenced language highlighting
+Plug 'tpope/vim-markdown'
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'yaml', 'haml', 'bash=sh', 'javascript']
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'jiangmiao/auto-pairs'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Lokaltog/vim-powerline'
+Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
+" -- Web Development
+Plug 'Shutnik/jshint2.vim'
+Plug 'mattn/emmet-vim'
+Plug 'skammer/vim-css-color'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'https://github.com/shmargum/vim-sass-colors.git'
+Plug 'zeekay/vim-beautify'
+
+" }}}
+
+" {{{ netrw: Configuration
+"     ====================
+
+let g:netrw_banner=0        " disable banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+" hide gitignore'd files
+let g:netrw_list_hide=netrw_gitignore#Hide()
+" hide dotfiles by default (this is the string toggled by netrw-gh)
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" }}}
+
+" </PLUGINS>
+
+" {{{ VUNDLE TEARDOWN
+
+" All of your Plugins must be added before the following line
+" Initialize plugin system
+call plug#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" }}}
+
+" {{{ Autocmd
+autocmd filetype html,xml set listchars-=tab:>.		" HTML and XML files, tabs disabled
+
+" }}}
+if filereadable(expand("~/.vimrc_background"))
+ " let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 " vim: set ft=vim :

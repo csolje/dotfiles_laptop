@@ -1,5 +1,9 @@
+# {{{ ZSH Color and settings
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/csolje/.oh-my-zsh
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 #ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
 #ZSH_THEME="Lambda"
@@ -54,9 +58,16 @@ CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
-# User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# }}}
+ 
+# {{{ User configuration
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Export settings
@@ -78,7 +89,9 @@ for ext in png jpg gif;            do alias -s $ext=$PICVIEW; done
 for ext in mpg wmv avi mkv;        do alias -s $ext=$MOVPLAY; done
 for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 
-## Alias
+# }}}
+
+## {{{ Alias
 ## Listing folders
 alias ls='ls'
 alias la='ls -alh'
@@ -90,6 +103,8 @@ alias mv='mv -i'
 ## Vim stuff
 alias v='vim'
 alias vV='vim ~/.vimrc'
+alias e='nvim'
+alias eV='nvim ~/.config/nvim/init.vim'
 
 ## Zsh Stuff
 alias vZ='vim ~/.zshrc'
@@ -120,7 +135,7 @@ alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
 alias cls='clear'
 
-### Dev Stuff
+### {{{ Dev Stuff
 ## Git Stuff
 alias cdG='cd ~/GitHub'
 alias cdC='cd ~/GitHub/configfiles'
@@ -138,16 +153,22 @@ alias cdV='cd ~/va-solutions'
 alias cdVb='cd ~/va-solutions/BI'
 alias cdVp='cd ~/va-solutions/PowerApps'
 
-## Shutdown and exit terminal
+# }}}
+
+## {{{ Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'
 alias k=exit
 
-## Xbps
+# }}}
+
+## {{{ Xbps
 alias xbps='sudo xbps-install -S'
 alias xbps-s='sudo xbps-query -Rs'
 alias xbps-sync='sudo xbps-install -Suv'
 
-## Gentoo
+# }}}
+
+## {{{ Gentoo
 alias HowLong='genlop -t'
 alias OneShot='emerge --oneshot portage'
 alias I='time emerge -av'
@@ -162,13 +183,17 @@ alias cdU='cd /etc/portage/package.use && sudo su'
 alias cdB='cd /etc/portage/package.mask && sudo su'
 alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
 alias vM='sudo vim /etc/portage/make.conf'
-alias nvM='sudo vim /etc/portage/make.conf'
+alias eM='sudo nvim /etc/portage/make.conf'
 
-## Net
+# }}}
+
+## {{{ Net
 alias NM='sudo /etc/init.d/NetworkManager restart'
 alias externalip='sh ~/bin/externalip.sh'
 
-## Pacman
+# }}}
+
+## {{{ Pacman
 alias Y='yaourt'
 alias pac='sudo pacman -S'
 alias pac-r='sudo pacman -R'
@@ -178,37 +203,53 @@ alias Sync='sudo pacman -Syy'
 alias pacLog='tail -f /var/log/pacman.log'
 alias Unlock='sudo rm /var/lib/pacman/db.lck'
 
-## SSH stuff
+# }}}
+
+## {{{ SSH stuff
 alias vsC='vim ~/.ssh/config'
 alias vsK='vim ~/.ssh/known_hosts'
 
-## MISC
+# }}}
+
+## {{{ MISC
 alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshvnc='ssh -fNR 8000:localhost:5901 chrs@home.sanerds.net'
 alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
 alias tor='ssh -L 8080:localhost:8080 odin'
 
-## Apps
+# }}}
+
+## {{{ Apps
 alias reloadV='source ~/.vimrc'
 alias reloadZ='source ~/.zshrc'
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 alias tor='ssh -L 8080:localhost:8080 odin'
 
-## News and Music
+# }}}
+
+## {{{ News and Music
 alias MP='ncmpcpp'
 alias news='newsbeuter'
 alias M='mpv'
+ 
+# }}}
 
-## Tmux
-alias tnew='tmux new -s'
-alias tattach='tmux a -t'
+## {{{ Tmux
+alias t='tmux new -s'
+alias ta='tmux a -t'
 
-## Remote Desktop
+# }}}
+
+## {{{ Remote Desktop
 alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
 alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003281.ssi.ad &"
 alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
+
+# }}}
+
+# }}}
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
@@ -217,8 +258,6 @@ source /Users/csolje/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
