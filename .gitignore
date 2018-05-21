@@ -1,4 +1,6 @@
 .DS_Store
-.vim/bundle/
 .config/nvim/tmp/
 .config/nvim/bundle/
+vim/.vim/bundle/
+vim/.vim/tmp
+vim.vim/sessions
