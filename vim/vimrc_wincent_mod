@@ -37,13 +37,9 @@ nnoremap tj :tabprev<cr>
 nnoremap th :tabfirst<cr>
 nnoremap tl :tablast<cr>
 
-
 " <shift-tab> to go to next tab
 nnoremap <s-tab> :tabnext<cr>
 inoremap <s-tab> <esc>:tabnext<cr>
-
-" <alt-q> to exit Insert
-inoremap <leader>j <esc>
 
 " <c-shift-tab> to go to previous tab
 nnoremap <c-s-tab> :tabprev<cr>
@@ -51,8 +47,14 @@ inoremap <c-s-tab> <esc>:tabprev<cr>
 
 " }}}
 
-" space-f to open fuzzy file finder
-nnoremap <leader>f :CtrlPClearCache<cr>:CtrlP .<cr>
+" {{{ Buffer management
+" closing a buffer
+nnoremap <c-b>d :bd<cr>
+
+
+" }}}
+" space-f to open fuzzy file finder for CtrlP plugin
+"nnoremap <leader>f :CtrlPClearCache<cr>:CtrlP .<cr>
 
 " space-o to open the file browser
 nnoremap <leader>o :NERDTreeToggle<cr>
@@ -97,6 +99,10 @@ vnoremap <leader>3 :norm i#<cr>
 " space-- insert "--" commenting
 nnoremap <leader>- :norm i--<cr>
 vnoremap <leader>- :norm i--<cr>
+
+" space-7 insert "//" commenting
+nnoremap <leader>7 :norm i//<cr>
+vnoremap <leader>7 :norm i//<cr>
 
 " space-6 uncomment
 nnoremap <leader>6 :norm ^x<cr>
@@ -449,6 +455,9 @@ let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'yaml', 'haml', 'ba
 Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
     \ }
+Plug 'wincent/ferret'
+Plug 'Yggdroot/indentLine'
+Plug 'SirVer/ultisnips'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdtree'
