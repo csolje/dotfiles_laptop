@@ -5,112 +5,117 @@ Host *
     Compression yes
 
 Host router
-	HostName 10.0.0.1
-	User root
-	IdentityFile ~/.ssh/id_rsa
-	Port 22
+    HostName 10.0.0.1
+    User root
+    IdentityFile ~/.ssh/id_rsa
+    Port 22
 
 Host routerext
-	HostName home.haxus.org
-	User root
-	IdentityFile ~/.ssh/id_rsa
-	Port 2222
+    HostName home.haxus.org
+    User root
+    IdentityFile ~/.ssh/id_rsa
+    Port 2222
 
 Host home
-	HostName home.haxus.org
-	User chrs
+    HostName home.haxus.org
+    User chrs
 
 Host odin
-	HostName haxus.org
-	User zyq
-	port 6144
+    HostName haxus.org
+    User zyq
+    port 6144
 
 Host odinroot
-	HostName haxus.org
-	User root
-	port 6144
+    HostName haxus.org
+    User root
+    port 6144
 
 Host odin6
-	HostName odin.haxus.org	
-	User zyq
-	port 6144
+    HostName odin.haxus.org
+    User zyq
+    port 6144
 
 Host odin6root
-	HostName odin.haxus.org	
-	User root
-	port 6144
+    HostName odin.haxus.org
+    User root
+    port 6144
 
 Host odintor
-	HostName haxus.org
-	User tor
-	port 6144
+    HostName haxus.org
+    User tor
+    port 6144
 
 Host torrent
-	HostName haxus.org
-	User zyq
-	LocalForward 8080 localhost:8080
+    HostName haxus.org
+    User zyq
+    LocalForward 8080 localhost:8080
 
 Host kamau
     HostName kamau.sanerds.net
     User zyq
 
+Host coredev
+    HostName coredev.northeurope.cloudapp.azure.com
+    User psyq
+    IdentityFile ~/.ssh/id_rsa
+
 Host tradeproV2
-	HostName 172.104.167.62
-	User root
+    HostName 172.104.167.62
+    User root
 
 Host tradeproV1
-	HostName 139.162.7.92
-	User root
+    HostName 139.162.7.92
+    User root
 
 Host clothingbylawson
-	HostName pro4.chosting.dk
-	port 222
-	User clothing
-	IdentityFile ~/.ssh/id_rsa
+    HostName pro4.chosting.dk
+    port 222
+    User clothing
+    IdentityFile ~/.ssh/id_rsa
 
 Host hiiyou
-	HostName hiiyou.org
-	port 18765
-	User hiiyou
-	IdentityFile ~/.ssh/id_rsa
+    HostName hiiyou.org
+    port 18765
+    User hiiyou
+    IdentityFile ~/.ssh/id_rsa
 
 Host mobilechefs
-	HostName mobilechefs.com
-	port 18765
-	User mobilechefs
-	IdentityFile ~/.ssh/id_rsa
+    HostName mobilechefs.com
+    port 18765
+    User mobilechefs
+    IdentityFile ~/.ssh/id_rsa
 
 
 Host kvmroot
-	HostName 10.0.0.3
-	User root
+    HostName 10.0.0.3
+    User root
 
 Host kvm
-	HostName 10.0.0.3
-	User zyq
+    HostName 10.0.0.3
+    User zyq
 
 Host kvmext
-	HostName home.haxus.org
-	User zyq
-	Port 8888
+    HostName home.haxus.org
+    User zyq
+    Port 8888
 
 Host mojogen
-	HostName 10.0.0.69
-	User chrs
+    HostName 10.0.0.69
+    User chrs
 
 Host diskstation
-	HostName 10.0.0.4
-	User root
-	Port 2222
+    HostName 10.0.0.4
+    User root
+    Port 2222
 
 Host fifo
     HostName ps20611.dreamhostps.com
     User zyq
 
 Host lawson
-	HostName clothingbylawson.dk
-	User clothing 
-	Port 2200
+    HostName clothingbylawson.dk
+    User clothing
+    Port 2200
 
 #Host oslotest
 #    HostName s-ldb2-t.sst.dk

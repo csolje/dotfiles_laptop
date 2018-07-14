@@ -107,6 +107,9 @@ alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
 alias cdDs='cd ~/GitHub/datascience'
 alias cdH='cd ~/GitHub/hiiYou'
 
+## Golang Stuff
+alias cdGoL='cd ~/go/src/github.com/LinuxDistroCommunity'
+
 ## Dev Env
 alias cdDev='cd ~/GitHub/DevEnv'
 
