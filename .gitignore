@@ -3,5 +3,5 @@
 .config/nvim/bundle/
 vim/.vim/bundle/
 vim/.vim/tmp
-vim.vim/sessions
+vim/.vim/sessions
 vim/.vim/pack/
