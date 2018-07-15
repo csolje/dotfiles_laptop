@@ -108,7 +108,8 @@ alias cdDs='cd ~/GitHub/datascience'
 alias cdH='cd ~/GitHub/hiiYou'
 
 ## Golang Stuff
-alias cdGoL='cd ~/go/src/github.com/LinuxDistroCommunity'
+alias cdGol='cd ~/go/src/github.com/LinuxDistroCommunity'
+alias cdGo='cd ~/go/src/github.com'
 
 ## Dev Env
 alias cdDev='cd ~/GitHub/DevEnv'
