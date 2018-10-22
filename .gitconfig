@@ -67,6 +67,7 @@
     ai = add --interactive
     # repo cleanup
     both-merged = "!git-both-merged"
+    cleanup = "remote prune origin"
 
     # grep on filename
     f = "!git ls-files | grep -i"
