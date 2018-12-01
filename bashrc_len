@@ -36,7 +36,7 @@ parse_git_branch() {
 
 # User specific aliases and functions
 #PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
-PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[31m\]$\[\e[0m\] "
+#PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[31m\]$\[\e[0m\] "
 
 ## Alias
 alias ls='ls'
