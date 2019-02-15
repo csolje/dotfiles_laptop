@@ -11,8 +11,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 #ZSH_THEME="simple"
 #ZSH_THEME="fletcherm"
 #ZSH_THEME="lambda-gitster"
-#ZSH_THEME="node"
-ZSH_THEME="af-magic"
+ZSH_THEME="node"
+#ZSH_THEME="af-magic"
 
 #POWERLINE_RIGHT_A="date"
 #POWERLINE_RIGHT_A="exit-status"
@@ -273,4 +273,4 @@ if [ -f '/Users/csolje/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/cso
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/csolje/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/csolje/google-cloud-sdk/completion.zsh.inc'; fi
-export HOMEBREW_GITHUB_API_TOKEN=dc9acac932d4ba23cf8214f2d6db9460420beead
+export HOMEBREW_GITHUB_API_TOKEN=d0069dbf9f1288cc1659087079c4e8da89560777

@@ -68,7 +68,7 @@ Host tradeproV1
     User root
 
 Host clothingbylawson
-    HostName pro4.chosting.dk
+    HostName pro6.chosting.dk
     port 222
     User clothing
     IdentityFile ~/.ssh/id_rsa
