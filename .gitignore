@@ -5,3 +5,4 @@ vim/.vim/bundle
 vim/.vim/tmp
 vim/.vim/sessions
 vim/.vim/pack
+bin/terraform
