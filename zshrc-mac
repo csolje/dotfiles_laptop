@@ -144,6 +144,7 @@ alias cdPp='cd ~/GitHub/Pluralsight_Courses'
 alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
 alias cdDs='cd ~/GitHub/datascience'
 alias vgG='vim ~/.gitconfig'
+alias vgC='vim ~/.gitconfig'
 
 ## Golang stuff
 alias cdGol='cd ~/go/src/github.com/LinuxDistroCommunity'
