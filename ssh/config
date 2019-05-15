@@ -111,6 +111,7 @@ Host diskstation
 Host fifo
     HostName ps20611.dreamhostps.com
     User zyq
+    IdentityFile ~/.ssh/id_ed25519
 
 Host lawson
     HostName clothingbylawson.dk
