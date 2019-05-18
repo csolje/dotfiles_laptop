@@ -26,6 +26,7 @@ export BROWSERCLI="w3m"
 export MOVPLAY="mpv"
 export PICVIEW="feh"
 export SNDPLAY="mpv"
+export TERM="st"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

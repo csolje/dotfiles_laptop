@@ -26,6 +26,7 @@ export BROWSERCLI="w3m"
 export MOVPLAY="mpv"
 export PICVIEW="feh"
 export SNDPLAY="mpv"
+export TERM="st"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -34,16 +35,12 @@ export SNDPLAY="mpv"
 PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
 
 ## Alias
-alias ls='ls --color=auto'
+alias ls='ls -a --color=auto'
 alias la='ls -al'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias k='exit'
-
-## Emacs stuff
-alias e='emacs -nw'
-alias eE='emacs -nw ~/.emacs'
 
 ## Vim stuff
 alias v='vim'
@@ -98,21 +95,21 @@ alias cdD='cd ~/git/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 
 ## Gentoo
-alias HowLong='sudo genlop -t'
-alias OneShot='sudo emerge --oneshot portage'
-alias I='sudo emerge -av'
-alias S='sudo emerge -s'
-alias R='sudo emerge -cav'
-alias sync='sudo emerge --sync'
-alias Uworld='sudo emerge --ask --verbose --update --newuse --deep @world'
-alias Uworld-bdeps='sudo emerge --ask --newuse --update --deep --with-bdeps=y @world'
-alias Esync='sudo eix-sync'
-alias Eupdate='sudo eix-update'
-alias cdP='cd /etc/portage && sudo su'
-alias cdU='cd /etc/portage/package.use && sudo su'
-alias cdB='cd /etc/portage/package.mask && sudo su'
-alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
-alias eM='sudo vim /etc/portage/make.conf'
+#alias HowLong='sudo genlop -t'
+#alias OneShot='sudo emerge --oneshot portage'
+#alias I='sudo emerge -av'
+#alias S='sudo emerge -s'
+#alias R='sudo emerge -cav'
+#alias sync='sudo emerge --sync'
+#alias Uworld='sudo emerge --ask --verbose --update --newuse --deep @world'
+#alias Uworld-bdeps='sudo emerge --ask --newuse --update --deep --with-bdeps=y @world'
+#alias Esync='sudo eix-sync'
+#alias Eupdate='sudo eix-update'
+#alias cdP='cd /etc/portage && sudo su'
+#alias cdU='cd /etc/portage/package.use && sudo su'
+#alias cdB='cd /etc/portage/package.mask && sudo su'
+#alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
+#alias eM='sudo vim /etc/portage/make.conf'
 
 ## Net
 alias externalip='sh ~/bin/externalip.sh'
@@ -120,7 +117,7 @@ alias StartVPN='sudo /etc/init.d/openvpn.odin-udp start'
 alias StopVPN='sudo /etc/init.d/openvpn.odin-udp stop'
 
 ## Pacman
-alias Y='yaourt'
+alias Y='yay'
 alias pac='sudo pacman -S'
 alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
@@ -151,4 +148,4 @@ alias tattach='tmux a -t'
 
 ## Remote Desktop
 alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
-alias rdp='~/bin/rdp.sh'
+alias rdp='~/.scripts/rdp.sh'
