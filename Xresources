@@ -28,17 +28,30 @@ URxvt.foreground: 15
 URxvt.geometry: 125x33
 
 !!Inconsolata
-!!URxvt.font: xft:Inconsolata for Powerline:pixelsize=20:antialias=true:hinting=true
-!!URxvt.boldFont: xft:Inconsolata for Powerline:bold:pixelsize=20:antialias=true:hinting=true
-!!URxvt.italicFont: xft:Inconsolata for Powerline:italic:pixelsize=20:antialias=true:hinting=true
-!!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=20:antialias=true
+!URxvt.font: xft:Inconsolata for Powerline:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldFont: xft:Inconsolata for Powerline:bold:pixelsize=20:antialias=true:hinting=true
+!URxvt.italicFont: xft:Inconsolata for Powerline:italic:pixelsize=20:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=20:antialias=true
 !
+!*.font: xft:Inconsolata:pixelsize=16
+!*.boldFont: xft:Inconsolata:bold:pixelsize=16
+!*.italicFont: xft:Inconsolata:italic:pixelsize=16
+!*.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=16
+!!!Sourc Code Pro
+!*.font:xft:Source Code Pro:pixelsize=16
+!*.boldFont:xft:Source Code Pro:bold:pixelsize=16
+!*.italicFont:xft:Source Code Pro:italic:pixelsize=16
+!*.bolditalicFont:xft:Source Code Pro:bold:italic:pixelsize=16
 !!!DejaVu Sans
 URxvt.font: xft:Dejavu Sans Mono for Powerline:pixelsize=12:antialias=true:hinting=true
 URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=12:antialias=true:hinting=true
 URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:pixelsize=12:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:pixelsize=12:antialias=true
 !
+!*.font: xft:Dejavu Sans Mono:pixelsize=12:antialias=true:hinting=true
+!*.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+!*.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=12:antialias=true:hinting=true
+!*.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=12:antialias=true
 !!!Droid Sans
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=18:antialias=true:hinting=true
 !URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixelsize=18:antialias=true:hinting=true
@@ -120,8 +133,10 @@ URxvt.keysym.C-S-c: perl:clipboard:copy
 URxvt.keysym.C-S-p: perl:clipboard:paste
 
 !! Black
-URxvt.color0:  #5c5c5c
-URxvt.color8:  #4c4c4c
+*.color0:  #5c5c5c
+!URxvt.color0:  #5c5c5c
+*.color8:  #4c4c4c
+!URxvt.color8:  #4c4c4c
 !! Red
 !URxvt.color1:  #cd0000
 !URxvt.color9:  #ff0000

@@ -16,7 +16,11 @@ fi
 if [[ "$TERM" == *rxvt* ]]; then
 	exec zsh
 fi
-
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+      [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+              eval "$("$BASE16_SHELL/profile_helper.sh")"
 # Put your fun stuff here.
 # Export settings
 export EDITOR="vim"
@@ -90,8 +94,8 @@ alias vsK='vim ~/.ssh/known_hosts'
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/git'
-alias cdD='cd ~/git/dotfiles'
+alias cdG='cd ~/GitHub'
+alias cdD='cd ~/GitHub/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 
 ## Gentoo

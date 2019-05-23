@@ -31,6 +31,7 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec --no-startup-id gnome-terminal
 bindsym $mod+Return exec --no-startup-id st
+#bindsym $mod+Shift+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Shift+Control+Return exec --no-startup-id terminator
 
@@ -144,10 +145,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ae resize grow width 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -172,11 +173,11 @@ bar {
         #font pango:Source Code Pro 9
 }
 # Volume Control
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume 
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up  #increase sound volume 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up  #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute # mute sound
 
@@ -195,6 +196,7 @@ bindsym $mod+b mode "browser"
 exec setxkbmap -layout dk
 #exec sh ~/.config/i3/scripts/res.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --restore
@@ -203,8 +205,8 @@ exec --no-startup-id xclip
 exec --no-startup-id compton -b
 exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/*
 exec --no-startup-id "/usr/bin/x11vnc -display :0 -localhost -forever"
-exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000" 
-#exec --no-startup-id xmodmap ~/.scripts/.speedswapper 
+exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000"
+#exec --no-startup-id xmodmap ~/.scripts/.speedswapper
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id i3-msg 'workspace 2:IM; exec urxvt -e tmux'
 #exec --no-startup-id xrandr --output DP2 --auto --left-of DP1-2 && xrandr --output DP2 --primary && xrandr --output eDP1 --off
@@ -237,5 +239,5 @@ set $WS10 "10:Vid"
 workspace $WS1 output DP-3-1
 workspace $WS2 output DP-3-2
 
-# Assign programs to workspace				
+# Assign programs to workspace
 #assign [class="^firefox$"] 4:Web
