@@ -35,8 +35,12 @@ export TERM="st"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
 # User specific aliases and functions
-PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
+export GIT_PS1_SHOWDIRTYSTATE=1
+#export PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
+PS1='\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w\[\033[33m\]$(__git_ps1
+)\[\033[00m\]\[\e[31m\]$\[\e[0m\] '
 
 ## Alias
 alias ls='ls -a --color=auto'
@@ -153,3 +157,5 @@ alias tattach='tmux a -t'
 ## Remote Desktop
 alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@ssi.ad /v:STD003516.ssi.ad &'
 alias rdp='~/.scripts/rdp.sh'
+. /usr/share/git/completion/git-completion.bash
+. /usr/share/git/git-prompt.sh
