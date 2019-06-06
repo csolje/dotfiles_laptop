@@ -16,6 +16,8 @@ fi
 if [[ "$TERM" == *rxvt* ]]; then
 	exec zsh
 fi
+shopt -s autocd # Allows you to cd into directory merely by tyoing the directory
+name.
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
@@ -52,6 +54,7 @@ alias k='exit'
 
 ## Vim stuff
 alias v='vim'
+alias sv='sudo vim'
 alias vV='vim ~/.vimrc'
 
 ## Neovim stuff
@@ -125,7 +128,8 @@ alias StartVPN='sudo /etc/init.d/openvpn.odin-udp start'
 alias StopVPN='sudo /etc/init.d/openvpn.odin-udp stop'
 
 ## Pacman
-alias Y='yay'
+alias y='yay'
+alias p='sudo pacman'
 alias pac='sudo pacman -S'
 alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
@@ -159,3 +163,5 @@ alias ssin='xfreerdp /cert-ignore +clipboard -grab-keyboard /sec:rdp /f /u:chrs@
 alias rdp='~/.scripts/rdp.sh'
 . /usr/share/git/completion/git-completion.bash
 . /usr/share/git/git-prompt.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

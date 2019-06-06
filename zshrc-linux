@@ -1,7 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/chrs/.oh-my-zsh
-ZSH_THEME="powerline"
+#ZSH_THEME="powerline"
 #ZSH_THEME="minimal"
+#ZSH_THEME="Lambda"
+ZSH_THEME="norm"
+#ZSH_THEME="simple"
+#ZSH_THEME="fletcherm"
+#ZSH_THEME="lambda-gister"
+#ZSH_THEME="node"
+#ZSH_THEME="af-magic"
 
 #screenfetch
 
@@ -63,9 +70,9 @@ export BROWSERCLI="w3m"
 export MOVPLAY="mpv"
 export PICVIEW="feh"
 export SNDPLAY="mpv"
-export TERMINAL="uxterm"
 export PULSE_LATENCY_MSEC=60
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
+export TERM="st"
 
 # File Extensions
 for ext in html org php com net no;    do alias -s $ext=$BROWSER; done
@@ -77,6 +84,7 @@ for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 ## Alias
 ## Vim stuff
 alias v='vim'
+alias sv='sudo vim'
 alias vV='vim ~/.vimrc'
 
 ## Neovim stuff
@@ -150,12 +158,16 @@ alias vM='sudo vim /etc/portage/make.conf'
 
 ## Net
 alias NM='sudo /etc/init.d/NetworkManager restart'
+alias yt="youtube-dl --add-metadata -ic" # Downloads video link
+alias yta="youtube-dl --add-metadata -xic" # Downloads only audio
 
 ## Pacman
-alias Y='yaourt'
+alias y='yay'
+alias p='sudo pacman'
 alias pac='sudo pacman -S'
 alias pac-r='sudo pacman -R'
 alias pac-s='sudo pacman -Ss'
+alias Upgrade='sudo pacman -Syu'
 alias Update='sudo pacman -Syu --force'
 alias Sync='sudo pacman -Syy'
 alias pacLog='tail -f /var/log/pacman.log'
@@ -169,6 +181,7 @@ alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias reload='source'
 alias irc='weechat-curses'
 alias startvm='vboxmanage startvm WorkDesktop --type headless'
+alias r='ranger'
 
 ## News and Music
 alias MP='ncmpcpp'
@@ -180,15 +193,17 @@ alias tnew='tmux new -s'
 alias tattach='tmux a -t'
 
 ## Remote Desktop
-alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
-alias dksund="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk"
-alias dksundtest="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk"
-alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &"
-alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
+#alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
+#alias dksund="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksund.dk"
+#alias dksundtest="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@dksundtest.dk"
+#alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003516.ssi.ad &"
+#alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
 #alias sst="xfreerdp /u:adm_chrs@sst.dk +clipboard /w:1920 /h:1080"
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux vi-mode themes zsh-completions color-command)
-source /home/chrs/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(git archlinux vi-mode themes tmux zsh-completions colorize)
+source /home/chrs/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
