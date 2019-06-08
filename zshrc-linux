@@ -98,15 +98,11 @@ alias Z='source ~/.zshrc'
 
 ## X Resources Stuff
 alias vX='vim ~/.Xresources'
-alias nvxI='vim ~/.xinitrc'
+alias vxI='vim ~/.xinitrc'
 alias nvX='nvim ~/.Xresources'
 alias nvxI='nvim ~/.xinitrc'
 alias XTR='xrdb -merge ~/.Xresources'
 
-## X Resources and xinitrc Stuff
-alias vX='nvim ~/.Xresources'
-alias XTR='xrdb -merge ~/.Xresources'
-alias vxI='nvim ~/.xinitrc'
 
 ## Config Stuff
 alias vxM='vim ~/.xmonad/xmonad.hs'
@@ -130,8 +126,8 @@ alias nvB='nvim ~/.bashrc'
 alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
-alias cdG='cd ~/Git'
-alias cdD='cd ~/Git/dotfiles'
+alias cdG='cd ~/GitHub'
+alias cdD='cd ~/GitHub/dotfiles'
 alias Shutdown='sudo shutdown -h now'
 alias k='exit'
 
@@ -165,7 +161,7 @@ alias yta="youtube-dl --add-metadata -xic" # Downloads only audio
 alias y='yay'
 alias p='sudo pacman'
 alias pac='sudo pacman -S'
-alias pac-r='sudo pacman -R'
+alias pac-r='sudo pacman -Rcns'
 alias pac-s='sudo pacman -Ss'
 alias Upgrade='sudo pacman -Syu'
 alias Update='sudo pacman -Syu --force'
@@ -202,7 +198,8 @@ alias tattach='tmux a -t'
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux vi-mode themes tmux zsh-completions colorize)
+#plugins=(git archlinux vi-mode themes tmux zsh-completions colorize)
+plugins=(git archlinux vi-mode themes tmux colorize)
 source /home/chrs/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
