@@ -5,10 +5,11 @@ export ZSH=/home/chrs/.oh-my-zsh
 #ZSH_THEME="Lambda"
 #ZSH_THEME="norm"
 #ZSH_THEME="simple"
-ZSH_THEME="fletcherm"
+#ZSH_THEME="fletcherm"
 #ZSH_THEME="lambda-gister"
 #ZSH_THEME="node"
 #ZSH_THEME="af-magic"
+ZSH_THEME="fox"
 
 #screenfetch
 
