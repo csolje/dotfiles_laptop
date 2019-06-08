@@ -31,8 +31,8 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec --no-startup-id gnome-terminal
 bindsym $mod+Return exec --no-startup-id st
-#bindsym $mod+Shift+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Shift+Return exec --no-startup-id urxvt
+#bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Shift+Control+Return exec --no-startup-id terminator
 
 
@@ -186,6 +186,7 @@ mode "browser" {
     bindsym f exec firefox
     bindsym c exec chromium
     bindsym q exec qutebrowser
+    bindsym n exec netsurf
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
