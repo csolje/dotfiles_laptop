@@ -87,6 +87,7 @@ for ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done
 alias v='vim'
 alias sv='sudo vim'
 alias vV='vim ~/.vimrc'
+alias vK='vim ~/.vim/plugins/mappings/keybindings.vim'
 
 ## Neovim stuff
 alias nv='nvim'
@@ -113,7 +114,7 @@ alias vwI='vim ~/.weechat/irc.conf'
 alias vW='vim ~/.weechat/weechat.conf'
 alias vi3C='vim ~/.config/i3/config'
 alias vsC='vim ~/.ssh/config'
-alias vb='vim ~/.bashrc'
+alias vB='vim ~/.bashrc'
 
 alias nvxM='nvim ~/.xmonad/xmonad.hs'
 alias nvO='nvim ~/.config/openbox/rc.xml'
