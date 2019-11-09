@@ -183,10 +183,10 @@ bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute # mute sound
 
 # Launch browsers
 mode "browser" {
-    bindsym f exec firefox
-    bindsym c exec chromium
-    bindsym q exec qutebrowser
-    bindsym n exec netsurf
+    bindsym --release f exec firefox; mode "default"
+    bindsym --release c exec chromium; mode "default"
+    bindsym --release  q exec qutebrowser; mode "default"
+    bindsym --release n exec netsurf; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
