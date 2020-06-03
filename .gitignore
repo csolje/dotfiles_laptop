@@ -1,6 +1,9 @@
 .DS_Store
 .config/nvim/tmp
 .config/nvim/bundle
+vim/autoload
+vim/bundle
+vim/colors
 vim/.vim/bundle
 vim/.vim/tmp
 vim/.vim/sessions
