@@ -118,6 +118,17 @@ Host lawson
     User clothing
     Port 2200
 
+Host pup-p-01
+    HostName 10.0.30.105
+    User csolje
+    IdentityFile ~/.ssh/id_rsa
+
+Host pup-ta-01
+    HostName 10.0.20.120
+    User csolje
+    IdentityFile ~/.ssh/id_rsa
+
+
 #Host oslotest
 #    HostName s-ldb2-t.sst.dk
 #    User adm_chrs
