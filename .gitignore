@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .config/nvim/tmp
 .config/nvim/bundle
@@ -12,3 +13,16 @@ vim/.vim/ftplugin
 vim/.vim/ftdetect
 bin/terraform
 *.un~
+=======
+.DS_Store
+.config/nvim/tmp/*
+.config/nvim/bundle/*
+vim/.vim-mac/bundle/*
+vim/.vim-mac/tmp/*
+vim/.vim-mac/sessions/*
+vim/.vim-mac/pack/*
+vim/.vim-linux/tmp/*
+bin/terraform
+*.un~
+*.swp
+>>>>>>> 29bd933e25b0361af408d1a821fa2ddf0ba47160
