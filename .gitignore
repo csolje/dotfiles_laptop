@@ -8,5 +8,7 @@ vim/.vim/bundle
 vim/.vim/tmp
 vim/.vim/sessions
 vim/.vim/pack
+vim/.vim/ftplugin
+vim/.vim/ftdetect
 bin/terraform
 *.un~
