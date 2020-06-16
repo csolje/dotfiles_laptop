@@ -1,1 +1,1 @@
-/Users/csolje/.vim/bundle/ultisnips/ftdetect/snippets.vim
+C:/Users/csolje/.vim/bundle/ultisnips/ftdetect/snippets.vim
