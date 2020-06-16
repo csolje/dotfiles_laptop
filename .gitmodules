@@ -1,0 +1,42 @@
+[submodule "vim/.vim-linux/pack/bundle/opt/base16-vim"]
+	path = vim/.vim-linux/pack/bundle/opt/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-airline"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-airline-themes"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-easymotion"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-zsh"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-zsh
+	url = https://github.com/chrisbra/vim-zsh.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-repeat"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-surround"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-markdown"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/.vim-linux/pack/bundle/opt/command-t"]
+	path = vim/.vim-linux/pack/bundle/opt/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-fugitive"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-pathogen"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/.vim-linux/pack/bundle/opt/vim-colorschemes"]
+	path = vim/.vim-linux/pack/bundle/opt/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/.vim-linux/pack/bundle/opt/auto-pairs"]
+	path = vim/.vim-linux/pack/bundle/opt/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/.vim-linux/pack/bundle/opt/tcomment_vim"]
+	path = vim/.vim-linux/pack/bundle/opt/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git

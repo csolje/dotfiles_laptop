@@ -10,8 +10,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 #ZSH_THEME="norm"
 #ZSH_THEME="simple"
 #ZSH_THEME="fletcherm"
-#ZSH_THEME="lambda-gitster"
-ZSH_THEME="node"
+ZSH_THEME="lambda-gitster"
+#ZSH_THEME="node"
 #ZSH_THEME="af-magic"
 
 #POWERLINE_RIGHT_A="date"
@@ -134,6 +134,7 @@ alias cdA='cd ~/.config/awesome'
 alias cdO='cd ~/.config/openbox'
 alias cdI='cd ~/.config/i3'
 alias cls='clear'
+alias weather='curl wttr.in'
 
 ### {{{ Dev Stuff
 ## Git Stuff
@@ -258,7 +259,7 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux vi-mode themes zsh-completions color-command)
+plugins=(git archlinux vi-mode themes tmux osx iterm2 zsh-completions color-command)
 source /Users/csolje/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"

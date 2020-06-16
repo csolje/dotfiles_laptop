@@ -57,6 +57,7 @@ Host kamau
 Host coredev
     HostName coredev.northeurope.cloudapp.azure.com
     User psyq
+    port 8888
     IdentityFile ~/.ssh/id_rsa
 
 Host tradeproV2
