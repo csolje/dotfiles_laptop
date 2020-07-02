@@ -1,15 +1,14 @@
 # core {{{
 [core]
-    editor = /usr/local/bin/vim
-	excludesfile = /Users/chso02/.gitignore_global
-    autocrlf = input
-    pager=less -x4
+    editor          = /usr/local/bin/vim
+	excludesfile    = /Users/chso02/.gitignore_global
+    autocrlf        = input
 
 # }}}
 # user {{{
 [user]
-	name = Christian Solje
-	email = christian.solje@aller.com
+	name    = Christian Solje
+	email   = christian.solje@aller.com
 
 # }}}
 # include sendemail config {{{
@@ -19,27 +18,27 @@
 # }}}
 # color {{{
 [color]
-    ui = true
-    branch = auto
-    diff = auto
-    status = auto
+    ui      = true
+    branch  = auto
+    diff    = auto
+    status  = auto
 
 [color "branch"]
     current = red reverse
-    local = blue
-    remote = green
+    local   = blue
+    remote  = green
 
 [color "diff"]
-    meta = yellow
-    frag = magenta
-    old = red bold
-    new = green
-    plain = white
+    meta    = yellow
+    frag    = magenta
+    old     = red bold
+    new     = green
+    plain   = white
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added       = yellow
+    changed     = green
+    untracked   = cyan
 
 # }}}
 # push/pull/diff/options {{{
@@ -182,11 +181,11 @@
 
 [difftool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [pull]
 	rebase = false
 [commit]
-	template = /Users/chso02/.stCommitMsg
+	template = /Users/chso02/.gitmessage
