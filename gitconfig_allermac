@@ -9,7 +9,7 @@
 # user {{{
 [user]
     name = Christian Solje
-    email = csolje@gmail.com
+    email = christian.solje@aller.com
 
 # }}}
 # include sendemail config {{{
