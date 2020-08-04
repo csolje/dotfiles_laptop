@@ -7,5 +7,6 @@ vim/.vim-mac/sessions/*
 vim/.vim-mac/pack/*
 vim/.vim-linux/tmp/*
 bin/terraform
+.vscode
 *.un~
 *.swp
