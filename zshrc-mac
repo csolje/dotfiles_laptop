@@ -99,6 +99,9 @@ alias vV='vim ~/.vimrc'
 alias e='nvim'
 alias eV='nvim ~/.config/nvim/init.vim'
 
+## VSCode
+alias code='code-insiders'
+
 ## Zsh Stuff
 alias vZ='vim ~/.zshrc'
 alias nvZ='nvim ~/.zshrc'
@@ -132,75 +135,15 @@ alias weather='curl wttr.in'
 ### {{{ Dev Stuff
 ## Git Stuff
 alias cdG='cd ~/GitHub'
-alias cdC='cd ~/GitHub/configfiles'
 alias cdD='cd ~/GitHub/dotfiles'
-alias cdPp='cd ~/GitHub/Pluralsight_Courses'
-alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
-alias cdDs='cd ~/GitHub/datascience'
-alias vgG='vim ~/.gitconfig'
 alias vgC='vim ~/.gitconfig'
 
 ## Golang stuff
 alias cdGol='cd ~/go/src/github.com/LinuxDistroCommunity'
 alias cdGo='cd ~/go/src/github.com'
 
-## Dev Env
-alias cdDev='cd ~/GitHub/DevEnv'
-
-## VSTS Stuff
-alias cdV='cd ~/va-solutions'
-alias cdVb='cd ~/va-solutions/BI'
-alias cdVp='cd ~/va-solutions/PowerApps'
-
-# }}}
-
-## {{{ Shutdown and exit terminal
-alias Shutdown='sudo shutdown -h now'
-alias k=exit
-
-# }}}
-
-## {{{ Xbps
-alias xbps='sudo xbps-install -S'
-alias xbps-s='sudo xbps-query -Rs'
-alias xbps-sync='sudo xbps-install -Suv'
-
-# }}}
-
-## {{{ Gentoo
-alias HowLong='genlop -t'
-alias OneShot='emerge --oneshot portage'
-alias I='time emerge -av'
-alias S='emerge -s'
-alias sync='time emerge --sync'
-alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
-alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
-alias Esync='eix-sync'
-alias Eupdate='eix --update'
-alias cdP='cd /etc/portage && sudo su'
-alias cdU='cd /etc/portage/package.use && sudo su'
-alias cdB='cd /etc/portage/package.mask && sudo su'
-alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
-alias vM='sudo vim /etc/portage/make.conf'
-alias eM='sudo nvim /etc/portage/make.conf'
-
-# }}}
-
-## {{{ Net
-alias NM='sudo /etc/init.d/NetworkManager restart'
-alias externalip='sh ~/bin/externalip.sh'
-
-# }}}
-
-## {{{ Pacman
-alias Y='yaourt'
-alias pac='sudo pacman -S'
-alias pac-r='sudo pacman -R'
-alias pac-s='sudo pacman -Ss'
-alias Update='sudo pacman -Syu --force'
-alias Sync='sudo pacman -Syy'
-alias pacLog='tail -f /var/log/pacman.log'
-alias Unlock='sudo rm /var/lib/pacman/db.lck'
+## {{{ Exit terminal
+alias k='exit'
 
 # }}}
 
